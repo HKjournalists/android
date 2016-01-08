@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>android是我在安卓里定义提供给js的调用的类名称</title>
+	<script>
+	//android是我在安卓里定义提供给js的调用的类名称
+	function loadHtml(url){
+		document.getElementById("info").innerHTML=android.load(url);
+	}function t(){
+		android.capture();
+	}
+	function post(url){
+		var info = document.getElementById("info");
+		document.getElementById("info").innerHTML=android.post(url,"这里是json格式的数据");
+	}
+	function get(url){
+	document.getElementById("info").innerHTML=android.get(url);
+	}function result(){
+		document.getElementById("info").innerHTML=android.result('http://www.baidu.com');
+	}
+	//获取新闻信息
+	function getNew(url){
+	url=url+"&userid="+android.getUserId()+"&areaids="+android.getAreaids();
+	document.getElementById("info").innerHTML=android.get(url);
+	}
+	function getUserId(){
+		document.getElementById("info").innerHTML=android.getUserId();
+	}function getUsername(){
+		document.getElementById("info").innerHTML=android.getUsername();
+	}function getAreaids(){
+		document.getElementById("info").innerHTML=android.getAreaids();
+	}
+    </script>
+</head>
+<body>
+<span onclick="getUserId();">获取用户id</span>
+<span onclick="getUsername();">获取用户名</span>
+<span onclick="getAreaids();">获取地区</span>
+<span onclick="getNew('http://cunli.zhanyaa.com/yifaapi/app/newslist.php?orderby=time_down&pagesize=10&page=1&type=1');">新闻</span>
+<span onclick="loadHtml('http://10.18.10.9/index.html');">加载指定静态页面</span>
+<div id="info"></div>
+</body>
+</html>

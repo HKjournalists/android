@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">阿凡提</string>
+    <string name="password">密码:</string>
+    <string name="username">用户名:</string>
+    <string name="action_sign_in">登录</string>
+    <string name="refresh">浏览</string>
+
+    <string name="dummy_button">免登直接进入</string>
+    <string name="dummy_content">阿凡提\n汽车后市场\n行业领导者</string>
+</resources>
