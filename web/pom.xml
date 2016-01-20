@@ -6,12 +6,14 @@
 	<version>8.8</version>
 	<packaging>war</packaging>
 	<name>web</name>
-	<description>spring</description>
+	<description>云计算</description>
 	<properties>
 		<log4j.versin>2.5</log4j.versin>
 		<spring.version>4.2.0.RELEASE</spring.version>
 		<freemarker.version>2.3.20</freemarker.version>
 		<kafka.version>0.9.0.0</kafka.version>
+		<hbase.version>1.1.2</hbase.version>
+		<hadoop.version>2.7.1</hadoop.version>
 		<system.encode>UTF-8</system.encode>
 	</properties>
 	<dependencies>
@@ -20,6 +22,16 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+			<version>${hadoop.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-client</artifactId> 
+			<version>${hbase.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.kafka</groupId>

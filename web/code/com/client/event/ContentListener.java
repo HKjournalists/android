@@ -9,5 +9,4 @@ public class ContentListener implements ApplicationListener<ContentEvent> {
 		System.err.println("ContentListener收到一个牛逼的事件" + event.getSource()
 				+ event.getMessage());
 	}
-
 }

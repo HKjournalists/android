@@ -1,7 +1,6 @@
 package com.client.common;
 
 import java.io.PrintWriter;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -9,7 +8,6 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
 public class ExceptionHandler implements HandlerExceptionResolver {
-
 	@Override
 	@ResponseBody
 	public ModelAndView resolveException(HttpServletRequest request,
@@ -24,5 +22,4 @@ public class ExceptionHandler implements HandlerExceptionResolver {
 		}
 		return null;
 	}
-
 }

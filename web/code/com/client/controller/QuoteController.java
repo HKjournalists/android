@@ -1,4 +1,4 @@
-package com.client.action;
+package com.client.controller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,7 +14,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import com.client.event.ContentEvent;
 
 @Controller
-@RequestMapping("/quote")
+@RequestMapping("/index")
 public class QuoteController {
 	protected static final Logger log = LogManager
 			.getLogger(QuoteController.class);
