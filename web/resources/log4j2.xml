@@ -15,29 +15,25 @@
 				<SizeBasedTriggeringPolicy size="100 MB" />
 			</Policies>
 		</RollingFile>
-		<Kafka name="kafkalog" topic="kafkalog">
-			<PatternLayout charset="UTF-8"
-				pattern="%-5level %d:%L %logger{36} - %msg%n" />
-			<Property name="bootstrap.servers">hbasemaster:9092</Property>
-			<Property name="timeout.ms">3</Property>
-			<Property name="acks">-1</Property>
-		</Kafka>
+		<Async name="aylog">
+			<AppenderRef ref="logfile" />
+		</Async>
 	</Appenders>
 	<loggers>
 		<logger name="org.apache.struts2" level="debug" additivity="false">
-			<AppenderRef ref="kafkalog" />
+			<AppenderRef ref="aylog" />
 		</logger>
 		<logger name="java.sql" level="debug" additivity="false">
-			<AppenderRef ref="kafkalog" />
+			<AppenderRef ref="aylog" />
 		</logger>
 		<logger name="org.apache.ibatis" level="debug" additivity="false">
-			<AppenderRef ref="kafkalog" />
+			<AppenderRef ref="aylog" />
 		</logger>
 		<logger name="org.apache.kafka" level="debug" additivity="false">
-			<AppenderRef ref="kafkalog" />
+			<AppenderRef ref="aylog" />
 		</logger>
 		<root level="debug" includeLocation="true">
-			<AppenderRef ref="kafkalog" />
+			<AppenderRef ref="aylog" />
 		</root>
 	</loggers>
 </configuration>

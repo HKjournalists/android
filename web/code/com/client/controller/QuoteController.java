@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+import com.client.common.HbaseUtils;
 import com.client.event.ContentEvent;
 
 @Controller
@@ -22,6 +23,7 @@ public class QuoteController {
 	@ResponseBody
 	@RequestMapping("/request/{id}")
 	public String request(@PathVariable String id) throws Exception {
+		HbaseUtils.put(id);
 		log.info("request{}", id);
 		return id;
 	}
@@ -47,6 +49,7 @@ public class QuoteController {
 	public String payback(@RequestBody String body, @PathVariable String id)
 			throws Exception {
 		try {
+			HbaseUtils.put(body);
 			log.info("支付结果返回{}数据{}", id, body);
 		} catch (Exception e) {
 			((ServletRequestAttributes) RequestContextHolder
