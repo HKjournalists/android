@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.action.extension" value="htm"/>
+	<constant name="struts.objectFactory" value="spring"/>
+	<constant name="struts.objectFactory.spring.autoWire" value="name" />
+	<constant name="struts.custom.i18n.resources" value="message"/>
+	<constant name="struts.freemarker.templatesCache" value="true" />
+
+	<package name="struts-bx" extends="struts-default" namespace="">
+		<result-types>
+			<result-type name="json" class="org.apache.struts2.json.JSONResult" />
+		</result-types>
+		<interceptors>
+			<interceptor name="logInterceptor"
+				class="com.chengniu.client.interceptor.LogInterceptor"></interceptor>
+			<interceptor name="appInterceptor"
+				class="com.chengniu.client.interceptor.AppInterceptor" />
+			<interceptor name="providerInterceptor"
+				class="com.chengniu.client.interceptor.ProviderInterceptor" />
+			<interceptor-stack name="commonStack">
+				<interceptor-ref name="chainStack" />
+				<interceptor-ref name="logInterceptor" />
+			</interceptor-stack>
+			<interceptor-stack name="appStack">
+				<interceptor-ref name="chainStack" />
+				<interceptor-ref name="logInterceptor" />
+				<interceptor-ref name="appInterceptor" />
+			</interceptor-stack>
+			<interceptor-stack name="providerStack">
+				<interceptor-ref name="chainStack" />
+				<interceptor-ref name="logInterceptor" />
+				<interceptor-ref name="providerInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="appStack"></default-interceptor-ref>
+		<default-action-ref name="index"></default-action-ref>
+		<global-results>
+			<result name="json" type="json"></result>
+			<result name="redirect" type="redirect">${returnURL}</result>
+			<result name="home" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">index</param>
+			</result>
+			<result name="ajax" type="freemarker">/page/ajax.ftl</result>
+			<result name="success" type="freemarker">/page/ajax.ftl</result>
+			<result name="logout" type="redirect">${returnURL}</result>
+			<result name="result" type="freemarker">/page/result.ftl</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="disposeException" />
+		</global-exception-mappings>
+		<action name="index" class="com.chengniu.client.action.IndexAction" />
+	</package>
+	<include file="struts_baoxian.xml"></include>
+</struts>

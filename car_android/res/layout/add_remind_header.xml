@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kplus.car.widget.RegularTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="驾照分何时更新，车险何时到期...？为爱车设置智能养车备忘提醒，养车省时省心！"
+    android:textSize="16sp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="16dp"
+    android:textColor="@color/daze_orangered5"
+    android:background="@color/daze_white_smoke9"/>

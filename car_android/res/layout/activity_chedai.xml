@@ -1,0 +1,242 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/daze_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_detailpage"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_marginTop="27dp">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="236dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="false"
+                android:max="365"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:indeterminate="false"
+                android:max="365"
+                android:progressDrawable="@drawable/stroke_oval"
+                android:id="@+id/" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/date_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/daze_red500"
+                        android:textSize="90sp"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/tian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="8dp"
+                        android:text="天"
+                        android:textColor="@color/daze_red500"
+                        android:textSize="26sp"/>
+
+                </LinearLayout>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距下次还款"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@drawable/warning_not_text"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="下次还款时间"
+                android:textColor="@color/daze_red500"
+                android:textSize="16sp"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@null"
+                android:textColor="@color/daze_red500"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@color/daze_white"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="18dp"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="horizontal">
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="还款金额"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:textSize="14sp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/set_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="设置还款金额"
+                    android:textColor="@color/daze_blue3"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:id="@+id/money_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@null"
+                        android:textColor="@color/daze_black2"
+                        android:textSize="30sp"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@null"
+                        android:textColor="@color/daze_darkgrey9"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/left_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="9dp"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <com.kplus.car.widget.DashLineView
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="18dp"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="@null"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/daze_darkgrey7"
+                android:visibility="visible"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/vehicle_auth"
+                android:layout_width="135dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/stroke_corner"
+                android:gravity="center"
+                android:text="车辆认证"
+                android:textColor="@color/daze_black2"
+                android:textSize="16sp"
+                android:visibility="invisible"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="36dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="车辆认证，查违章快35%"
+                android:textColor="@color/daze_orangered5"
+                android:textSize="14sp"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

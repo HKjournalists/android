@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cn_white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/cn_timeline_color"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/cn_service_evalute"
+        android:textColor="@color/cn_common_cars_bgcolor"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/cn_timeline_color"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--显示已评分等级的自定义控件-->
+        <com.kplus.car.carwash.widget.CNStarGradeLinearlayout
+            android:id="@+id/sgStarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvStarsGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/sgStarView"
+            android:gravity="center"
+            android:text="@null"
+            android:textColor="@color/cn_oranger_color"
+            android:textSize="30sp"
+            android:textStyle="italic"/>
+    </RelativeLayout>
+
+    <com.kplus.car.widget.RegularEditText
+        android:id="@+id/etEvaluateContent"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="left"
+        android:layout_margin="20dp"
+        android:background="@drawable/cn_edittext_bg_shape"
+        android:gravity="left"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/cn_font_color"
+        android:textSize="16sp"/>
+
+    <!--android:hint="@string/cn_evalute_hint"-->
+
+    <Button
+        android:id="@+id/btnSubmitEvaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_submit_evalute_selector"
+        android:padding="10dp"
+        android:text="@string/cn_submit_evalute"
+        android:textColor="@color/cn_white"
+        android:textSize="16sp"/>
+
+</LinearLayout>

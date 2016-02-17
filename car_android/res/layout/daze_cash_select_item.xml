@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="@color/daze_white"
+    android:gravity="center" >
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvCashInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/font_body1" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvCashDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/font_body2"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone" />
+
+</LinearLayout>

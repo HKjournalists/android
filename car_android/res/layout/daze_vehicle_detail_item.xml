@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/daze_bgcolor" >
+    <LinearLayout
+        android:id="@+id/payOnlineHead"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可在线缴费违章"
+            style="@style/font_body2"
+            android:layout_marginLeft="24dp" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/payOnlineNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="14dp" />
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="条，罚款"
+            style="@style/font_body2"/>
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/payOnlineMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="14dp" />
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            style="@style/font_body2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/disposingHead"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="处理中违章"
+            style="@style/font_body2"
+            android:layout_marginLeft="24dp" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/disposingNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="14dp" />
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="条，罚款"
+            style="@style/font_body2"/>
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/disposingMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="14dp" />
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            style="@style/font_body2"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/serviceHead"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="gone" >
+        <com.kplus.car.widget.RegularTextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/daze_can_use_ticket_payment"
+	        android:paddingLeft="24dp"
+	        style="@style/font_body2"
+	        android:layout_centerVertical="true"/>
+        <com.kplus.car.widget.RegularTextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="前往 >"
+	        android:paddingLeft="24dp"
+	        android:paddingRight="24dp"
+	        android:textSize="14dp"
+	        android:textColor="@color/daze_blue3"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/unSupportHead"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="gone" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/unsupportLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="以下违章暂时无法在线处理"
+	            style="@style/font_body2"
+	            android:layout_marginLeft="24dp" />
+	        <com.kplus.car.widget.RegularTextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="查看附近违章处理点 >"
+		        android:paddingLeft="24dp"
+		        android:paddingRight="24dp"
+		        android:textSize="14dp"
+		        android:textColor="@color/daze_blue3"
+		        android:layout_alignParentRight="true"/>
+	        <com.kplus.car.widget.RegularTextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/unsupportLabel"
+	            android:layout_marginTop="5dp"
+	            android:text="在违章处理点取得处罚决定书后,罚款可通过橙牛在线缴纳"
+	            style="@style/font_caption"
+	            android:layout_marginLeft="24dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/oldAgainstHead"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="gone" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已处理违章"
+            style="@style/font_body2"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp" />
+    </RelativeLayout>
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/daze_white"
+	    android:paddingLeft="16dp"
+	    android:paddingTop="16dp"
+	    android:paddingBottom="16dp"
+	    android:paddingRight="24dp" >
+	    <CheckBox
+	        android:id="@+id/checkView"
+	        android:layout_width="18dp"
+	        android:layout_height="18dp"
+	        android:button="@drawable/daze_against_record_list_checkbox"
+	        android:clickable="false" />
+		<LinearLayout
+		    android:id="@+id/detailView"
+		    android:layout_toRightOf="@+id/checkView"
+		    android:layout_marginLeft="16dp"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" >
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >		
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/vehicle_detail_listItem_score"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            style="@style/font_body1" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/vehicle_detail_listItem_money"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@+id/vehicle_detail_listItem_score"
+		            android:layout_marginLeft="24dp"
+		            style="@style/font_body1"/>
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/vehicle_detail_recordType"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@+id/vehicle_detail_listItem_money"
+		            android:layout_marginLeft="24dp"
+		            style="@style/font_body1"/>
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/vehicle_detail_listItem_error_recovery"
+		            android:layout_width="40dp"
+		            android:layout_height="20dp"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@+id/vehicle_detail_listItem_money"
+		            android:layout_marginLeft="16dp"
+		            android:text="纠错"
+		            android:textColor="@color/daze_orangered4"
+		            android:textSize="11dp"
+		            android:background="@drawable/daze_correct_bg"
+		            android:gravity="center"
+		            android:visibility="gone"/>
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/listItem_payment_status"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:text="未缴费"
+		            style="@style/font_caption"
+		            android:visibility="visible" />			
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/vehicle_detail_listItem_status"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_toLeftOf="@+id/listItem_payment_status"
+		            android:layout_marginRight="8dp"
+		            android:layout_centerVertical="true"
+		            android:text="未处理"
+		            style="@style/font_caption"
+		            android:visibility="visible" />
+			    </RelativeLayout>
+			    <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/vehicle_detail_listItem_behavior"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="8dp"
+		            style="@style/font_body1" />
+			    <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/vehicle_detail_listItem_address"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="8dp"
+		            style="@style/font_caption" />
+			    <RelativeLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="8dp" >
+			        <com.kplus.car.widget.RegularTextView
+			            android:id="@+id/vehicle_detail_listItem_time"
+			            android:layout_centerVertical="true"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            style="@style/font_caption" />
+			        <com.kplus.car.widget.RegularTextView
+			            android:id="@+id/data_source"
+			            android:layout_alignParentRight="true"
+			            android:layout_centerVertical="true"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            style="@style/font_caption" />
+			    </RelativeLayout>			    
+	    </LinearLayout>
+	</RelativeLayout>
+	<RelativeLayout
+	    android:id="@+id/vehicle_detail_alert_to_upload"
+	    android:layout_width="match_parent"
+	    android:layout_height="64dp"
+	    android:paddingLeft="24dp"
+	    android:paddingRight="24dp"
+	    android:background="@color/daze_yellow50"
+	    android:visibility="gone" >
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:gravity="center_vertical" >
+			<LinearLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+			    <com.kplus.car.widget.RegularTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="订单编号:"
+		            style="@style/font_body2" />
+			    <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvOrderNumber"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            style="@style/font_body1" />
+			</LinearLayout>
+	        <LinearLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="8dp" >
+			    <com.kplus.car.widget.RegularTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="提交时间:"
+		            style="@style/font_body2" />
+			    <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvOrderSubmitTime"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            style="@style/font_body1" />
+			</LinearLayout>
+	    </LinearLayout>
+	    <com.kplus.car.widget.RegularTextView
+	        android:id="@+id/tvOrderStatus"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:text="请上传证件"
+	        android:textColor="@color/daze_orange"
+	        android:textSize="14dp" />
+	</RelativeLayout>
+	<com.kplus.car.widget.RegularTextView
+	    android:id="@+id/tvBottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="100dp" />
+</LinearLayout>

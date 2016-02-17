@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianVehicleModelMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianVehicleModel" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="vehicle_code" property="vehicleCode" jdbcType="VARCHAR" />
+    <result column="brand_name" property="brandName" jdbcType="VARCHAR" />
+    <result column="family_name" property="familyName" jdbcType="VARCHAR" />
+    <result column="standard_name" property="standardName" jdbcType="VARCHAR" />
+    <result column="vehicle_type" property="vehicleType" jdbcType="VARCHAR" />
+    <result column="vehicle_source" property="vehicleSource" jdbcType="VARCHAR" />
+    <result column="alias_name" property="aliasName" jdbcType="VARCHAR" />
+    <result column="gear_box_name" property="gearBoxName" jdbcType="VARCHAR" />
+    <result column="configure_name" property="configureName" jdbcType="VARCHAR" />
+    <result column="group_name" property="groupName" jdbcType="VARCHAR" />
+    <result column="seat" property="seat" jdbcType="INTEGER" />
+    <result column="displacement_tag" property="displacementTag" jdbcType="VARCHAR" />
+    <result column="displacement" property="displacement" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="tax_price" property="taxPrice" jdbcType="VARCHAR" />
+    <result column="marktime_id" property="marktimeId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, vehicle_code, brand_name, family_name, standard_name, vehicle_type, vehicle_source, 
+    alias_name, gear_box_name, configure_name, group_name, seat, displacement_tag, displacement, 
+    price, tax_price, marktime_id
+  </sql>
+  <select id="queryByCode" resultMap="BaseResultMap" parameterType="string" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_baoxian_vehicle_model_fanhua
+    where vehicle_code =  #{vehicleCode,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianVehicleModel" >
+    insert into t_baoxian_vehicle_model_fanhua (id, vehicle_code, brand_name, 
+      family_name, standard_name, vehicle_type, 
+      vehicle_source, alias_name, gear_box_name, 
+      configure_name, group_name, seat, 
+      displacement_tag, displacement, price, 
+      tax_price, marktime_id)
+    values (#{id,jdbcType=INTEGER}, #{vehicleCode,jdbcType=VARCHAR}, #{brandName,jdbcType=VARCHAR}, 
+      #{familyName,jdbcType=VARCHAR}, #{standardName,jdbcType=VARCHAR}, #{vehicleType,jdbcType=VARCHAR}, 
+      #{vehicleSource,jdbcType=VARCHAR}, #{aliasName,jdbcType=VARCHAR}, #{gearBoxName,jdbcType=VARCHAR}, 
+      #{configureName,jdbcType=VARCHAR}, #{groupName,jdbcType=VARCHAR}, #{seat,jdbcType=INTEGER}, 
+      #{displacementTag,jdbcType=VARCHAR}, #{displacement,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, 
+      #{taxPrice,jdbcType=VARCHAR}, #{marktimeId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.chengniu.client.pojo.BaoxianVehicleModel" >
+    insert into t_baoxian_vehicle_model_fanhua
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="vehicleCode != null" >
+        vehicle_code,
+      </if>
+      <if test="brandName != null" >
+        brand_name,
+      </if>
+      <if test="familyName != null" >
+        family_name,
+      </if>
+      <if test="standardName != null" >
+        standard_name,
+      </if>
+      <if test="vehicleType != null" >
+        vehicle_type,
+      </if>
+      <if test="vehicleSource != null" >
+        vehicle_source,
+      </if>
+      <if test="aliasName != null" >
+        alias_name,
+      </if>
+      <if test="gearBoxName != null" >
+        gear_box_name,
+      </if>
+      <if test="configureName != null" >
+        configure_name,
+      </if>
+      <if test="groupName != null" >
+        group_name,
+      </if>
+      <if test="seat != null" >
+        seat,
+      </if>
+      <if test="displacementTag != null" >
+        displacement_tag,
+      </if>
+      <if test="displacement != null" >
+        displacement,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="taxPrice != null" >
+        tax_price,
+      </if>
+      <if test="marktimeId != null" >
+        marktime_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleCode != null" >
+        #{vehicleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="brandName != null" >
+        #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="familyName != null" >
+        #{familyName,jdbcType=VARCHAR},
+      </if>
+      <if test="standardName != null" >
+        #{standardName,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleType != null" >
+        #{vehicleType,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleSource != null" >
+        #{vehicleSource,jdbcType=VARCHAR},
+      </if>
+      <if test="aliasName != null" >
+        #{aliasName,jdbcType=VARCHAR},
+      </if>
+      <if test="gearBoxName != null" >
+        #{gearBoxName,jdbcType=VARCHAR},
+      </if>
+      <if test="configureName != null" >
+        #{configureName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupName != null" >
+        #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="seat != null" >
+        #{seat,jdbcType=INTEGER},
+      </if>
+      <if test="displacementTag != null" >
+        #{displacementTag,jdbcType=VARCHAR},
+      </if>
+      <if test="displacement != null" >
+        #{displacement,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="taxPrice != null" >
+        #{taxPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="marktimeId != null" >
+        #{marktimeId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chengniu.client.pojo.BaoxianVehicleModel" >
+    update t_baoxian_vehicle_model_fanhua
+    <set >
+      <if test="vehicleCode != null" >
+        vehicle_code = #{vehicleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="brandName != null" >
+        brand_name = #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="familyName != null" >
+        family_name = #{familyName,jdbcType=VARCHAR},
+      </if>
+      <if test="standardName != null" >
+        standard_name = #{standardName,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleType != null" >
+        vehicle_type = #{vehicleType,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleSource != null" >
+        vehicle_source = #{vehicleSource,jdbcType=VARCHAR},
+      </if>
+      <if test="aliasName != null" >
+        alias_name = #{aliasName,jdbcType=VARCHAR},
+      </if>
+      <if test="gearBoxName != null" >
+        gear_box_name = #{gearBoxName,jdbcType=VARCHAR},
+      </if>
+      <if test="configureName != null" >
+        configure_name = #{configureName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupName != null" >
+        group_name = #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="seat != null" >
+        seat = #{seat,jdbcType=INTEGER},
+      </if>
+      <if test="displacementTag != null" >
+        displacement_tag = #{displacementTag,jdbcType=VARCHAR},
+      </if>
+      <if test="displacement != null" >
+        displacement = #{displacement,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="taxPrice != null" >
+        tax_price = #{taxPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="marktimeId != null" >
+        marktime_id = #{marktimeId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+   <select id="page" resultMap="BaseResultMap" parameterType="com.kplus.orders.rpc.dto.PageSearchVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_baoxian_vehicle_model_fanhua
+    where vehicle_code like CONCAT('%',#{keyword,jdbcType=VARCHAR},'%') or standard_name like CONCAT('%',#{keyword,jdbcType=VARCHAR},'%')
+    <include refid="common.page"></include>
+  </select>
+   <select id="pageCount" resultType="int"  parameterType="com.kplus.orders.rpc.dto.PageSearchVO" >
+    select 
+    count(*)
+    from t_baoxian_vehicle_model_fanhua
+    where  vehicle_code  like CONCAT('%',#{keyword,jdbcType=VARCHAR},'%') or standard_name like CONCAT('%',#{keyword,jdbcType=VARCHAR},'%')
+  </select>
+</mapper>

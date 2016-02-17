@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianCompanyMapper">
+    <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianCompany">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="code" property="code" jdbcType="VARCHAR"/>
+        <result column="city_code" property="cityCode" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="company_name" property="companyName" jdbcType="VARCHAR"/>
+        <result column="pic" property="pic" jdbcType="VARCHAR"/>
+        <result column="baidu_name" property="baiduName" jdbcType="VARCHAR"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+        <result column="province" property="province" jdbcType="VARCHAR"/>
+        <result column="max_rebate" property="maxRebate" jdbcType="REAL"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="create_by" property="createBy" jdbcType="BIGINT"/>
+        <result column="update_by" property="updateBy" jdbcType="BIGINT"/>
+        <result column="open_info" property="openInfo" jdbcType="INTEGER"/>
+        <result column="support_auto_quote" property="supportAutoQuote" jdbcType="BIT"/>
+        <result column="support_automatic" property="supportAutomatic" jdbcType="BIT"/>
+        <result column="sync_flag" property="syncFlag" jdbcType="BIT"/>
+        <result column="channel" property="channel" jdbcType="VARCHAR"/>
+        <result column="pic_small" property="picSmall" jdbcType="VARCHAR"/>
+        <result column="channel_status" property="channelStatus" jdbcType="BIT"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, code, city_code, name, company_name, pic, baidu_name, remark, province, max_rebate,
+        create_time, update_time, create_by, update_by, open_info, support_auto_quote, support_automatic, channel,
+        pic_small, sync_flag, channel_status
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from baoxian_company
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <select id="list" resultMap="BaseResultMap" parameterType="com.chengniu.client.pojo.BaoxianCompanyVO">
+        select
+        <include refid="Base_Column_List"/>
+        from baoxian_company where city_code = #{cityCode,jdbcType=VARCHAR} and (open_info =
+        #{userType,jdbcType=INTEGER} or open_info = 2) and deleted = 0
+    </select>
+    <select id="queryCode" resultMap="BaseResultMap" parameterType="com.chengniu.client.pojo.BaoxianCompany">
+        select
+        <include refid="Base_Column_List"/>
+        from baoxian_company where code = #{code,jdbcType=VARCHAR} and city_code = #{cityCode,jdbcType=VARCHAR} and deleted = 0 limit
+        0,1
+    </select>
+    <select id="openCount" resultType="int" parameterType="com.chengniu.client.pojo.BaoxianCompanyVO">
+        select count(*) from baoxian_company where
+        <if test="province != null">
+            province = #{province,jdbcType=VARCHAR}
+        </if>
+        <if test="cityCode != null">
+            city_code = #{cityCode,jdbcType=VARCHAR}
+        </if>
+        <if test="cityCode != null || province != null">
+            and
+        </if>(open_info = #{userType,jdbcType=INTEGER} or open_info = 2) and deleted = 0
+    </select>
+    <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianCompany">
+        INSERT INTO baoxian_company
+        (`id`,`code`,`city_code`,`name`,`company_name`,`pic`,`baidu_name`,`remark`,`province`,
+        `create_time`,`open_info`,`support_auto_quote`,`support_automatic`,`channel`,`pic_small`,`sync_flag`, `channel_status`)
+        VALUES
+        (#{id,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{cityCode,jdbcType=VARCHAR},
+        #{name,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR},
+        #{baiduName,jdbcType=VARCHAR},#{remark,jdbcType=VARCHAR},
+        #{province,jdbcType=VARCHAR},#{createTime, jdbcType=TIMESTAMP},
+        #{openInfo, jdbcType=INTEGER},#{supportAutoQuote, jdbcType=BIT},
+        #{supportAutomatic, jdbcType=BIT}, #{channel, jdbcType=VARCHAR},
+        #{picSmall, jdbcType=VARCHAR},#{syncFlag, jdbcType=BIT}, #{channelStatus, jdbcType=BIT})
+    </insert>
+    <update id="updateEnabled" parameterType="com.chengniu.client.pojo.BaoxianCompany">
+        UPDATE baoxian_company
+        SET channel_status=#{channelStatus, jdbcType=BIT}, sync_flag=#{syncFlag, jdbcType=BIT}, update_time=#{updateTime, jdbcType=TIMESTAMP}
+        WHERE id=#{id,jdbcType=VARCHAR}
+    </update>
+    <select id="findAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from baoxian_company where deleted = 0
+    </select>
+    <select id="queryCompaniesInCityByChannel" resultMap="BaseResultMap" parameterType="com.chengniu.client.pojo.BaoxianCompany">
+        select
+        <include refid="Base_Column_List"/>
+        from baoxian_company
+        WHERE channel=#{channel, jdbcType=VARCHAR} and city_code=#{cityCode, jdbcType=VARCHAR} and deleted = 0
+    </select>
+</mapper>

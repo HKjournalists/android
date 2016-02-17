@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianUnderwritingRequestMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianUnderwritingRequest" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="baoxian_intent_id" property="baoxianIntentId" jdbcType="VARCHAR" />
+    <result column="baoxian_base_info_id" property="baoxianBaseInfoId" jdbcType="VARCHAR" />
+    <result column="user_type" property="userType" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+    <result column="vehicle_model_price" property="vehicleModelPrice" jdbcType="INTEGER" />
+    <result column="vehicle_model_code" property="vehicleModelCode" jdbcType="VARCHAR" />
+    <result column="vehicle_model_name" property="vehicleModelName" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER"/>
+    <result column="fail_type" property="failType" jdbcType="INTEGER"/>
+    <result column="fail_message" property="failMessage" jdbcType="VARCHAR"/>
+    <result column="jqx" property="jqx" jdbcType="BIT" />
+    <result column="jqx_status" property="jqxStatus" jdbcType="TINYINT" />
+    <result column="syx" property="syx" jdbcType="BIT" />
+    <result column="syx_status" property="syxStatus" jdbcType="TINYINT" />
+    <result column="ccs" property="ccs" jdbcType="BIT" />
+    <result column="ccs_status" property="ccsStatus" jdbcType="TINYINT" />
+    <result column="szx" property="szx" jdbcType="VARCHAR" />
+    <result column="szx_status" property="szxStatus" jdbcType="TINYINT" />
+    <result column="szx_bjmp" property="szxBjmp" jdbcType="BIT" />
+    <result column="szx_bjmp_status" property="szxBjmpStatus" jdbcType="TINYINT" />
+    <result column="csx" property="csx" jdbcType="VARCHAR" />
+    <result column="csx_status" property="csxStatus" jdbcType="TINYINT" />
+    <result column="ckx" property="ckx" jdbcType="VARCHAR" />
+    <result column="ckx_status" property="ckxStatus" jdbcType="TINYINT" />
+    <result column="dqx" property="dqx" jdbcType="VARCHAR" />
+    <result column="dqx_status" property="dqxStatus" jdbcType="TINYINT" />
+    <result column="blx" property="blx" jdbcType="VARCHAR" />
+    <result column="blx_status" property="blxStatus" jdbcType="TINYINT" />
+    <result column="hfx" property="hfx" jdbcType="VARCHAR" />
+    <result column="hfx_status" property="hfxStatus" jdbcType="TINYINT" />
+    <result column="zrx" property="zrx" jdbcType="VARCHAR" />
+    <result column="zrx_status" property="zrxStatus" jdbcType="TINYINT" />
+    <result column="csx_bjmp" property="csxBjmp" jdbcType="BIT" />
+    <result column="csx_bjmp_status" property="csxBjmpStatus" jdbcType="TINYINT" />
+    <result column="ckx_bjmp" property="ckxBjmp" jdbcType="BIT" />
+    <result column="ckx_bjmp_status" property="ckxBjmpStatus" jdbcType="TINYINT" />
+    <result column="ssx_bjmp" property="ssxBjmp" jdbcType="BIT" />
+    <result column="ssx_bjmp_status" property="ssxBjmpStatus" jdbcType="TINYINT" />
+    <result column="dqx_bjmp" property="dqxBjmp" jdbcType="BIT" />
+    <result column="dqx_bjmp_status" property="dqxBjmpStatus" jdbcType="TINYINT" />
+    <result column="blx_bjmp" property="blxBjmp" jdbcType="BIT" />
+    <result column="blx_bjmp_status" property="blxBjmpStatus" jdbcType="TINYINT" />
+    <result column="hfx_bjmp" property="hfxBjmp" jdbcType="BIT" />
+    <result column="hfx_bjmp_status" property="hfxBjmpStatus" jdbcType="TINYINT" />
+    <result column="zrx_bjmp" property="zrxBjmp" jdbcType="BIT" />
+    <result column="zrx_bjmp_status" property="zrxBjmpStatus" jdbcType="TINYINT" />
+    <result column="ssx" property="ssx" jdbcType="VARCHAR" />
+    <result column="ssx_status" property="ssxStatus" jdbcType="TINYINT" />
+    <result column="sjzrx" property="sjzrx" jdbcType="VARCHAR" />
+    <result column="sjzrx_status" property="sjzrxStatus" jdbcType="TINYINT" />
+    <result column="sjzrx_bjmp" property="sjzrxBjmp" jdbcType="BIT" />
+    <result column="sjzrx_bjmp_status" property="sjzrxBjmpStatus" jdbcType="TINYINT" />
+    <result column="tyx" property="tyx" jdbcType="BIT" />
+    <result column="tyx_status" property="tyxStatus" jdbcType="TINYINT" />
+    <result column="zdzxc" property="zdzxc" jdbcType="BIT" />
+    <result column="zdzxc_status" property="zdzxcStatus" jdbcType="TINYINT" />
+    <result column="jbx_bjmp" property="jbxBjmp" jdbcType="BIT" />
+    <result column="jbx_bjmp_status" property="jbxBjmpStatus" jdbcType="TINYINT" />
+    <result column="xzsbssx" property="xzsbssx" jdbcType="BIT" />
+    <result column="xzsbssx_status" property="xzsbssxStatus" jdbcType="TINYINT" />
+    <result column="xzsbssx_bjmp" property="xzsbssxBjmp" jdbcType="BIT" />
+    <result column="xzsbssx_bjmp_status" property="xzsbssxBjmpStatus" jdbcType="TINYINT" />
+    <result column="cpcssx" property="cpcssx" jdbcType="BIT" />
+    <result column="cpcssx_status" property="cpcssxStatus" jdbcType="TINYINT" />
+    <result column="zrmcty" property="zrmcty" jdbcType="BIT" />
+    <result column="zrmcty_status" property="zrmctyStatus" jdbcType="TINYINT" />
+    <result column="ssmcty" property="ssmcty" jdbcType="BIT" />
+    <result column="ssmcty_status" property="ssmctyStatus" jdbcType="TINYINT" />
+    <result column="kxmpety" property="kxmpety" jdbcType="VARCHAR" />
+    <result column="kxmpety_status" property="kxmpetyStatus" jdbcType="TINYINT" />
+    <result column="dcsgmpty" property="dcsgmpty" jdbcType="BIT" />
+    <result column="dcsgmpty_status" property="dcsgmptyStatus" jdbcType="TINYINT" />
+    <result column="cshwzrx" property="cshwzrx" jdbcType="BIT" />
+    <result column="cshwzrx_status" property="cshwzrxStatus" jdbcType="TINYINT" />
+    <result column="cshwzrx_bjmp" property="cshwzrxBjmp" jdbcType="BIT" />
+    <result column="cshwzrx_bjmp_status" property="cshwzrxBjmpStatus" jdbcType="TINYINT" />
+    <result column="scxlwpssx" property="scxlwpssx" jdbcType="BIT" />
+    <result column="scxlwpssx_status" property="scxlwpssxStatus" jdbcType="TINYINT" />
+    <result column="jlcty" property="jlcty" jdbcType="BIT" />
+    <result column="jlcty_status" property="jlctyStatus" jdbcType="TINYINT" />
+    <result column="jdctsssx" property="jdctsssx" jdbcType="BIT" />
+    <result column="jdctsssx_status" property="jdctsssxStatus" jdbcType="TINYINT" />
+    <result column="tzckzx" property="tzckzx" jdbcType="BIT" />
+    <result column="tzckzx_status" property="tzckzxStatus" jdbcType="TINYINT" />
+    <result column="jsshfwjzrx" property="jsshfwjzrx" jdbcType="BIT" />
+    <result column="jsshfwjzrx_status" property="jsshfwjzrxStatus" jdbcType="TINYINT" />
+    <result column="xlqjfybcx" property="xlqjfybcx" jdbcType="BIT" />
+    <result column="xlqjfybcx_status" property="xlqjfybcxStatus" jdbcType="TINYINT" />
+    <result column="jdcssbxwfzddsftyx" property="jdcssbxwfzddsftyx" jdbcType="BIT" />
+    <result column="jdcssbxwfzddsftyx_status" property="jdcssbxwfzddsftyxStatus" jdbcType="TINYINT" />
+    <result column="sgzrmpltytk" property="sgzrmpltytk" jdbcType="VARCHAR" />
+    <result column="sgzrmpltytk_status" property="sgzrmpltytkStatus" jdbcType="TINYINT" />
+    <result column="dcjcdssx" property="dcjcdssx" jdbcType="VARCHAR" />
+    <result column="dcjcdssx_status" property="dcjcdssxStatus" jdbcType="TINYINT" />
+    <result column="bjmpx" property="bjmpx" jdbcType="BIT" />
+    <result column="bjmpx_status" property="bjmpxStatus" jdbcType="TINYINT" />
+    <result column="fjx_bjmp" property="fjxBjmp" jdbcType="BIT" />
+    <result column="fjx_bjmp_status" property="fjxBjmpStatus" jdbcType="TINYINT" />
+    <result column="fjcsryzrx_bjmp" property="fjcsryzrxBjmp" jdbcType="BIT" />
+    <result column="fjcsryzrx_bjmp_status" property="fjcsryzrxBjmpStatus" jdbcType="TINYINT" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="last_operation_no" property="lastOperationNo" jdbcType="INTEGER" />
+  </resultMap>
+   <resultMap id="statisticsMap" type="com.chengniu.client.pojo.StatisticsMap" >
+  	 	<result column="date" property="date" jdbcType="VARCHAR" />
+   		<result column="total" property="total" jdbcType="INTEGER" />
+   </resultMap>
+  <sql id="Base_Column_List" >
+    id, baoxian_intent_id, baoxian_base_info_id, user_type, user_id, mobile,
+    city_code, city_name, vehicle_model_price, vehicle_model_code, vehicle_model_name,
+    status, fail_type, fail_message, jqx, jqx_status, syx, syx_status, ccs, ccs_status, szx, szx_status, szx_bjmp,
+    szx_bjmp_status, csx, csx_status, ckx, ckx_status, dqx, dqx_status, blx, blx_status, 
+    hfx, hfx_status, zrx, zrx_status, csx_bjmp, csx_bjmp_status, ckx_bjmp, ckx_bjmp_status, 
+    ssx_bjmp, ssx_bjmp_status, dqx_bjmp, dqx_bjmp_status, blx_bjmp, blx_bjmp_status, 
+    hfx_bjmp, hfx_bjmp_status, zrx_bjmp, zrx_bjmp_status, ssx, ssx_status, sjzrx, sjzrx_status, 
+    sjzrx_bjmp, sjzrx_bjmp_status, tyx, tyx_status, zdzxc, zdzxc_status, jbx_bjmp, jbx_bjmp_status, 
+    xzsbssx, xzsbssx_status, xzsbssx_bjmp, xzsbssx_bjmp_status, cpcssx, cpcssx_status, 
+    zrmcty, zrmcty_status, ssmcty, ssmcty_status, kxmpety, kxmpety_status, dcsgmpty, 
+    dcsgmpty_status, cshwzrx, cshwzrx_status, cshwzrx_bjmp, cshwzrx_bjmp_status, scxlwpssx, 
+    scxlwpssx_status, jlcty, jlcty_status, jdctsssx, jdctsssx_status, tzckzx, tzckzx_status, 
+    jsshfwjzrx, jsshfwjzrx_status, xlqjfybcx, xlqjfybcx_status, jdcssbxwfzddsftyx, jdcssbxwfzddsftyx_status, 
+    sgzrmpltytk, sgzrmpltytk_status, dcjcdssx, dcjcdssx_status, bjmpx, bjmpx_status, 
+    fjx_bjmp, fjx_bjmp_status, fjcsryzrx_bjmp, fjcsryzrx_bjmp_status, remark, create_time, 
+    update_time, last_operation_no
+  </sql>
+  <!-- 查询 -->
+  <select id="queryByIntentId" resultMap="BaseResultMap" parameterType="java.lang.String">
+  select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_request
+    where baoxian_intent_id = #{baoxianIntentId,jdbcType=VARCHAR}
+    LIMIT 1
+   </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_request
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingRequest" >
+    insert into baoxian_underwriting_request (id, baoxian_intent_id, baoxian_base_info_id,
+      user_type, user_id, mobile,
+      city_code, city_name, vehicle_model_price, vehicle_model_code, vehicle_model_name,
+      status, fail_type, fail_message, jqx, jqx_status,
+      syx, syx_status, ccs, ccs_status, 
+      szx, szx_status, szx_bjmp, 
+      szx_bjmp_status, csx, csx_status, 
+      ckx, ckx_status, dqx, 
+      dqx_status, blx, blx_status, 
+      hfx, hfx_status, zrx, 
+      zrx_status, csx_bjmp, csx_bjmp_status, 
+      ckx_bjmp, ckx_bjmp_status, ssx_bjmp, 
+      ssx_bjmp_status, dqx_bjmp, dqx_bjmp_status, 
+      blx_bjmp, blx_bjmp_status, hfx_bjmp, 
+      hfx_bjmp_status, zrx_bjmp, zrx_bjmp_status, 
+      ssx, ssx_status, sjzrx, 
+      sjzrx_status, sjzrx_bjmp, sjzrx_bjmp_status, 
+      tyx, tyx_status, zdzxc, zdzxc_status, 
+      jbx_bjmp, jbx_bjmp_status, xzsbssx, 
+      xzsbssx_status, xzsbssx_bjmp, xzsbssx_bjmp_status, 
+      cpcssx, cpcssx_status, zrmcty, 
+      zrmcty_status, ssmcty, ssmcty_status, 
+      kxmpety, kxmpety_status, dcsgmpty, 
+      dcsgmpty_status, cshwzrx, cshwzrx_status, 
+      cshwzrx_bjmp, cshwzrx_bjmp_status, scxlwpssx, 
+      scxlwpssx_status, jlcty, jlcty_status, 
+      jdctsssx, jdctsssx_status, tzckzx, 
+      tzckzx_status, jsshfwjzrx, jsshfwjzrx_status, 
+      xlqjfybcx, xlqjfybcx_status, jdcssbxwfzddsftyx, 
+      jdcssbxwfzddsftyx_status, sgzrmpltytk, sgzrmpltytk_status, 
+      dcjcdssx, dcjcdssx_status, bjmpx, 
+      bjmpx_status, fjx_bjmp, fjx_bjmp_status, 
+      fjcsryzrx_bjmp, fjcsryzrx_bjmp_status, remark, 
+      create_time, update_time, last_operation_no
+      )
+    values (#{id,jdbcType=VARCHAR}, #{baoxianIntentId,jdbcType=VARCHAR}, #{baoxianBaseInfoId,jdbcType=VARCHAR},
+      #{userType,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR},
+      #{cityCode,jdbcType=VARCHAR}, #{cityName,jdbcType=VARCHAR},
+      #{vehicleModelPrice,jdbcType=INTEGER}, #{vehicleModelCode,jdbcType=VARCHAR}, #{vehicleModelName,jdbcType=VARCHAR},
+      #{status,jdbcType=INTEGER}, #{failType,jdbcType=INTEGER}, #{failMessage,jdbcType=VARCHAR},
+      #{jqx,jdbcType=BIT}, #{jqxStatus,jdbcType=TINYINT},
+      #{syx,jdbcType=BIT}, #{syxStatus,jdbcType=TINYINT}, #{ccs,jdbcType=BIT}, #{ccsStatus,jdbcType=TINYINT}, 
+      #{szx,jdbcType=VARCHAR}, #{szxStatus,jdbcType=TINYINT}, #{szxBjmp,jdbcType=BIT}, 
+      #{szxBjmpStatus,jdbcType=TINYINT}, #{csx,jdbcType=VARCHAR}, #{csxStatus,jdbcType=TINYINT}, 
+      #{ckx,jdbcType=VARCHAR}, #{ckxStatus,jdbcType=TINYINT}, #{dqx,jdbcType=VARCHAR}, 
+      #{dqxStatus,jdbcType=TINYINT}, #{blx,jdbcType=VARCHAR}, #{blxStatus,jdbcType=TINYINT}, 
+      #{hfx,jdbcType=VARCHAR}, #{hfxStatus,jdbcType=TINYINT}, #{zrx,jdbcType=VARCHAR}, 
+      #{zrxStatus,jdbcType=TINYINT}, #{csxBjmp,jdbcType=BIT}, #{csxBjmpStatus,jdbcType=TINYINT}, 
+      #{ckxBjmp,jdbcType=BIT}, #{ckxBjmpStatus,jdbcType=TINYINT}, #{ssxBjmp,jdbcType=BIT}, 
+      #{ssxBjmpStatus,jdbcType=TINYINT}, #{dqxBjmp,jdbcType=BIT}, #{dqxBjmpStatus,jdbcType=TINYINT}, 
+      #{blxBjmp,jdbcType=BIT}, #{blxBjmpStatus,jdbcType=TINYINT}, #{hfxBjmp,jdbcType=BIT}, 
+      #{hfxBjmpStatus,jdbcType=TINYINT}, #{zrxBjmp,jdbcType=BIT}, #{zrxBjmpStatus,jdbcType=TINYINT}, 
+      #{ssx,jdbcType=VARCHAR}, #{ssxStatus,jdbcType=TINYINT}, #{sjzrx,jdbcType=VARCHAR}, 
+      #{sjzrxStatus,jdbcType=TINYINT}, #{sjzrxBjmp,jdbcType=BIT}, #{sjzrxBjmpStatus,jdbcType=TINYINT}, 
+      #{tyx,jdbcType=BIT}, #{tyxStatus,jdbcType=TINYINT}, #{zdzxc,jdbcType=BIT}, #{zdzxcStatus,jdbcType=TINYINT}, 
+      #{jbxBjmp,jdbcType=BIT}, #{jbxBjmpStatus,jdbcType=TINYINT}, #{xzsbssx,jdbcType=BIT}, 
+      #{xzsbssxStatus,jdbcType=TINYINT}, #{xzsbssxBjmp,jdbcType=BIT}, #{xzsbssxBjmpStatus,jdbcType=TINYINT}, 
+      #{cpcssx,jdbcType=BIT}, #{cpcssxStatus,jdbcType=TINYINT}, #{zrmcty,jdbcType=BIT}, 
+      #{zrmctyStatus,jdbcType=TINYINT}, #{ssmcty,jdbcType=BIT}, #{ssmctyStatus,jdbcType=TINYINT}, 
+      #{kxmpety,jdbcType=VARCHAR}, #{kxmpetyStatus,jdbcType=TINYINT}, #{dcsgmpty,jdbcType=BIT}, 
+      #{dcsgmptyStatus,jdbcType=TINYINT}, #{cshwzrx,jdbcType=BIT}, #{cshwzrxStatus,jdbcType=TINYINT}, 
+      #{cshwzrxBjmp,jdbcType=BIT}, #{cshwzrxBjmpStatus,jdbcType=TINYINT}, #{scxlwpssx,jdbcType=BIT}, 
+      #{scxlwpssxStatus,jdbcType=TINYINT}, #{jlcty,jdbcType=BIT}, #{jlctyStatus,jdbcType=TINYINT}, 
+      #{jdctsssx,jdbcType=BIT}, #{jdctsssxStatus,jdbcType=TINYINT}, #{tzckzx,jdbcType=BIT}, 
+      #{tzckzxStatus,jdbcType=TINYINT}, #{jsshfwjzrx,jdbcType=BIT}, #{jsshfwjzrxStatus,jdbcType=TINYINT}, 
+      #{xlqjfybcx,jdbcType=BIT}, #{xlqjfybcxStatus,jdbcType=TINYINT}, #{jdcssbxwfzddsftyx,jdbcType=BIT}, 
+      #{jdcssbxwfzddsftyxStatus,jdbcType=TINYINT}, #{sgzrmpltytk,jdbcType=VARCHAR}, #{sgzrmpltytkStatus,jdbcType=TINYINT}, 
+      #{dcjcdssx,jdbcType=VARCHAR}, #{dcjcdssxStatus,jdbcType=TINYINT}, #{bjmpx,jdbcType=BIT}, 
+      #{bjmpxStatus,jdbcType=TINYINT}, #{fjxBjmp,jdbcType=BIT}, #{fjxBjmpStatus,jdbcType=TINYINT}, 
+      #{fjcsryzrxBjmp,jdbcType=BIT}, #{fjcsryzrxBjmpStatus,jdbcType=TINYINT}, #{remark,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{lastOperationNo,jdbcType=INTEGER}
+      )
+  </insert>
+  <delete id="deleteById">
+  delete from baoxian_underwriting_request where id = #{id,jdbcType=VARCHAR}</delete>
+  <insert id="insertSelective" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingRequest" >
+    insert into baoxian_underwriting_request
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="baoxianIntentId != null" >
+        baoxian_intent_id,
+      </if>
+      <if test="baoxianBaseInfoId != null">
+        baoxian_base_info_id,
+      </if>
+      <if test="userType != null" >
+        user_type,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="mobile != null" >
+        mobile,
+      </if>
+      <if test="cityCode != null">
+        city_code,
+      </if>
+      <if test="cityName != null">
+        city_name,
+      </if>
+      <if test="vehicleModelPrice != null">
+        vehicle_model_price,
+      </if>
+      <if test="vehicleModelCode != null">
+        vehicle_model_code,
+      </if>
+      <if test="vehicleModelName != null">
+        vehicle_model_name,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="failType != null">
+        fail_type,
+      </if>
+      <if test="failMessage != null">
+        fail_message,
+      </if>
+      <if test="jqx != null" >
+        jqx,
+      </if>
+      <if test="jqxStatus != null" >
+        jqx_status,
+      </if>
+      <if test="syx != null" >
+        syx,
+      </if>
+      <if test="syxStatus != null" >
+        syx_status,
+      </if>
+      <if test="ccs != null" >
+        ccs,
+      </if>
+      <if test="ccsStatus != null" >
+        ccs_status,
+      </if>
+      <if test="szx != null" >
+        szx,
+      </if>
+      <if test="szxStatus != null" >
+        szx_status,
+      </if>
+      <if test="szxBjmp != null" >
+        szx_bjmp,
+      </if>
+      <if test="szxBjmpStatus != null" >
+        szx_bjmp_status,
+      </if>
+      <if test="csx != null" >
+        csx,
+      </if>
+      <if test="csxStatus != null" >
+        csx_status,
+      </if>
+      <if test="ckx != null" >
+        ckx,
+      </if>
+      <if test="ckxStatus != null" >
+        ckx_status,
+      </if>
+      <if test="dqx != null" >
+        dqx,
+      </if>
+      <if test="dqxStatus != null" >
+        dqx_status,
+      </if>
+      <if test="blx != null" >
+        blx,
+      </if>
+      <if test="blxStatus != null" >
+        blx_status,
+      </if>
+      <if test="hfx != null" >
+        hfx,
+      </if>
+      <if test="hfxStatus != null" >
+        hfx_status,
+      </if>
+      <if test="zrx != null" >
+        zrx,
+      </if>
+      <if test="zrxStatus != null" >
+        zrx_status,
+      </if>
+      <if test="csxBjmp != null" >
+        csx_bjmp,
+      </if>
+      <if test="csxBjmpStatus != null" >
+        csx_bjmp_status,
+      </if>
+      <if test="ckxBjmp != null" >
+        ckx_bjmp,
+      </if>
+      <if test="ckxBjmpStatus != null" >
+        ckx_bjmp_status,
+      </if>
+      <if test="ssxBjmp != null" >
+        ssx_bjmp,
+      </if>
+      <if test="ssxBjmpStatus != null" >
+        ssx_bjmp_status,
+      </if>
+      <if test="dqxBjmp != null" >
+        dqx_bjmp,
+      </if>
+      <if test="dqxBjmpStatus != null" >
+        dqx_bjmp_status,
+      </if>
+      <if test="blxBjmp != null" >
+        blx_bjmp,
+      </if>
+      <if test="blxBjmpStatus != null" >
+        blx_bjmp_status,
+      </if>
+      <if test="hfxBjmp != null" >
+        hfx_bjmp,
+      </if>
+      <if test="hfxBjmpStatus != null" >
+        hfx_bjmp_status,
+      </if>
+      <if test="zrxBjmp != null" >
+        zrx_bjmp,
+      </if>
+      <if test="zrxBjmpStatus != null" >
+        zrx_bjmp_status,
+      </if>
+      <if test="ssx != null" >
+        ssx,
+      </if>
+      <if test="ssxStatus != null" >
+        ssx_status,
+      </if>
+      <if test="sjzrx != null" >
+        sjzrx,
+      </if>
+      <if test="sjzrxStatus != null" >
+        sjzrx_status,
+      </if>
+      <if test="sjzrxBjmp != null" >
+        sjzrx_bjmp,
+      </if>
+      <if test="sjzrxBjmpStatus != null" >
+        sjzrx_bjmp_status,
+      </if>
+      <if test="tyx != null" >
+        tyx,
+      </if>
+      <if test="tyxStatus != null" >
+        tyx_status,
+      </if>
+      <if test="zdzxc != null" >
+        zdzxc,
+      </if>
+      <if test="zdzxcStatus != null" >
+        zdzxc_status,
+      </if>
+      <if test="jbxBjmp != null" >
+        jbx_bjmp,
+      </if>
+      <if test="jbxBjmpStatus != null" >
+        jbx_bjmp_status,
+      </if>
+      <if test="xzsbssx != null" >
+        xzsbssx,
+      </if>
+      <if test="xzsbssxStatus != null" >
+        xzsbssx_status,
+      </if>
+      <if test="xzsbssxBjmp != null" >
+        xzsbssx_bjmp,
+      </if>
+      <if test="xzsbssxBjmpStatus != null" >
+        xzsbssx_bjmp_status,
+      </if>
+      <if test="cpcssx != null" >
+        cpcssx,
+      </if>
+      <if test="cpcssxStatus != null" >
+        cpcssx_status,
+      </if>
+      <if test="zrmcty != null" >
+        zrmcty,
+      </if>
+      <if test="zrmctyStatus != null" >
+        zrmcty_status,
+      </if>
+      <if test="ssmcty != null" >
+        ssmcty,
+      </if>
+      <if test="ssmctyStatus != null" >
+        ssmcty_status,
+      </if>
+      <if test="kxmpety != null" >
+        kxmpety,
+      </if>
+      <if test="kxmpetyStatus != null" >
+        kxmpety_status,
+      </if>
+      <if test="dcsgmpty != null" >
+        dcsgmpty,
+      </if>
+      <if test="dcsgmptyStatus != null" >
+        dcsgmpty_status,
+      </if>
+      <if test="cshwzrx != null" >
+        cshwzrx,
+      </if>
+      <if test="cshwzrxStatus != null" >
+        cshwzrx_status,
+      </if>
+      <if test="cshwzrxBjmp != null" >
+        cshwzrx_bjmp,
+      </if>
+      <if test="cshwzrxBjmpStatus != null" >
+        cshwzrx_bjmp_status,
+      </if>
+      <if test="scxlwpssx != null" >
+        scxlwpssx,
+      </if>
+      <if test="scxlwpssxStatus != null" >
+        scxlwpssx_status,
+      </if>
+      <if test="jlcty != null" >
+        jlcty,
+      </if>
+      <if test="jlctyStatus != null" >
+        jlcty_status,
+      </if>
+      <if test="jdctsssx != null" >
+        jdctsssx,
+      </if>
+      <if test="jdctsssxStatus != null" >
+        jdctsssx_status,
+      </if>
+      <if test="tzckzx != null" >
+        tzckzx,
+      </if>
+      <if test="tzckzxStatus != null" >
+        tzckzx_status,
+      </if>
+      <if test="jsshfwjzrx != null" >
+        jsshfwjzrx,
+      </if>
+      <if test="jsshfwjzrxStatus != null" >
+        jsshfwjzrx_status,
+      </if>
+      <if test="xlqjfybcx != null" >
+        xlqjfybcx,
+      </if>
+      <if test="xlqjfybcxStatus != null" >
+        xlqjfybcx_status,
+      </if>
+      <if test="jdcssbxwfzddsftyx != null" >
+        jdcssbxwfzddsftyx,
+      </if>
+      <if test="jdcssbxwfzddsftyxStatus != null" >
+        jdcssbxwfzddsftyx_status,
+      </if>
+      <if test="sgzrmpltytk != null" >
+        sgzrmpltytk,
+      </if>
+      <if test="sgzrmpltytkStatus != null" >
+        sgzrmpltytk_status,
+      </if>
+      <if test="dcjcdssx != null" >
+        dcjcdssx,
+      </if>
+      <if test="dcjcdssxStatus != null" >
+        dcjcdssx_status,
+      </if>
+      <if test="bjmpx != null" >
+        bjmpx,
+      </if>
+      <if test="bjmpxStatus != null" >
+        bjmpx_status,
+      </if>
+      <if test="fjxBjmp != null" >
+        fjx_bjmp,
+      </if>
+      <if test="fjxBjmpStatus != null" >
+        fjx_bjmp_status,
+      </if>
+      <if test="fjcsryzrxBjmp != null" >
+        fjcsryzrx_bjmp,
+      </if>
+      <if test="fjcsryzrxBjmpStatus != null" >
+        fjcsryzrx_bjmp_status,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="lastOperationNo != null" >
+        last_operation_no,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianIntentId != null" >
+        #{baoxianIntentId,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianBaseInfoId != null" >
+        #{baoxianBaseInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null">
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null">
+        #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelPrice != null">
+        #{vehicleModelPrice,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleModelCode != null">
+        #{vehicleModelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelName != null">
+        #{vehicleModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status, jdbcType=INTEGER},
+      </if>
+      <if test="failType != null">
+        #{failType, jdbcType=INTEGER},
+      </if>
+      <if test="failMessage != null" >
+        #{failMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="jqx != null" >
+        #{jqx,jdbcType=BIT},
+      </if>
+      <if test="jqxStatus != null" >
+        #{jqxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="syx != null" >
+        #{syx,jdbcType=BIT},
+      </if>
+      <if test="syxStatus != null" >
+        #{syxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ccs != null" >
+        #{ccs,jdbcType=BIT},
+      </if>
+      <if test="ccsStatus != null" >
+        #{ccsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="szx != null" >
+        #{szx,jdbcType=VARCHAR},
+      </if>
+      <if test="szxStatus != null" >
+        #{szxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="szxBjmp != null" >
+        #{szxBjmp,jdbcType=BIT},
+      </if>
+      <if test="szxBjmpStatus != null" >
+        #{szxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="csx != null" >
+        #{csx,jdbcType=VARCHAR},
+      </if>
+      <if test="csxStatus != null" >
+        #{csxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ckx != null" >
+        #{ckx,jdbcType=VARCHAR},
+      </if>
+      <if test="ckxStatus != null" >
+        #{ckxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="dqx != null" >
+        #{dqx,jdbcType=VARCHAR},
+      </if>
+      <if test="dqxStatus != null" >
+        #{dqxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="blx != null" >
+        #{blx,jdbcType=VARCHAR},
+      </if>
+      <if test="blxStatus != null" >
+        #{blxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="hfx != null" >
+        #{hfx,jdbcType=VARCHAR},
+      </if>
+      <if test="hfxStatus != null" >
+        #{hfxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="zrx != null" >
+        #{zrx,jdbcType=VARCHAR},
+      </if>
+      <if test="zrxStatus != null" >
+        #{zrxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="csxBjmp != null" >
+        #{csxBjmp,jdbcType=BIT},
+      </if>
+      <if test="csxBjmpStatus != null" >
+        #{csxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ckxBjmp != null" >
+        #{ckxBjmp,jdbcType=BIT},
+      </if>
+      <if test="ckxBjmpStatus != null" >
+        #{ckxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ssxBjmp != null" >
+        #{ssxBjmp,jdbcType=BIT},
+      </if>
+      <if test="ssxBjmpStatus != null" >
+        #{ssxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="dqxBjmp != null" >
+        #{dqxBjmp,jdbcType=BIT},
+      </if>
+      <if test="dqxBjmpStatus != null" >
+        #{dqxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="blxBjmp != null" >
+        #{blxBjmp,jdbcType=BIT},
+      </if>
+      <if test="blxBjmpStatus != null" >
+        #{blxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="hfxBjmp != null" >
+        #{hfxBjmp,jdbcType=BIT},
+      </if>
+      <if test="hfxBjmpStatus != null" >
+        #{hfxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="zrxBjmp != null" >
+        #{zrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="zrxBjmpStatus != null" >
+        #{zrxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ssx != null" >
+        #{ssx,jdbcType=VARCHAR},
+      </if>
+      <if test="ssxStatus != null" >
+        #{ssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="sjzrx != null" >
+        #{sjzrx,jdbcType=VARCHAR},
+      </if>
+      <if test="sjzrxStatus != null" >
+        #{sjzrxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="sjzrxBjmp != null" >
+        #{sjzrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="sjzrxBjmpStatus != null" >
+        #{sjzrxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="tyx != null" >
+        #{tyx,jdbcType=BIT},
+      </if>
+      <if test="tyxStatus != null" >
+        #{tyxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="zdzxc != null" >
+        #{zdzxc,jdbcType=BIT},
+      </if>
+      <if test="zdzxcStatus != null" >
+        #{zdzxcStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jbxBjmp != null" >
+        #{jbxBjmp,jdbcType=BIT},
+      </if>
+      <if test="jbxBjmpStatus != null" >
+        #{jbxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="xzsbssx != null" >
+        #{xzsbssx,jdbcType=BIT},
+      </if>
+      <if test="xzsbssxStatus != null" >
+        #{xzsbssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="xzsbssxBjmp != null" >
+        #{xzsbssxBjmp,jdbcType=BIT},
+      </if>
+      <if test="xzsbssxBjmpStatus != null" >
+        #{xzsbssxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="cpcssx != null" >
+        #{cpcssx,jdbcType=BIT},
+      </if>
+      <if test="cpcssxStatus != null" >
+        #{cpcssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="zrmcty != null" >
+        #{zrmcty,jdbcType=BIT},
+      </if>
+      <if test="zrmctyStatus != null" >
+        #{zrmctyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ssmcty != null" >
+        #{ssmcty,jdbcType=BIT},
+      </if>
+      <if test="ssmctyStatus != null" >
+        #{ssmctyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="kxmpety != null" >
+        #{kxmpety,jdbcType=VARCHAR},
+      </if>
+      <if test="kxmpetyStatus != null" >
+        #{kxmpetyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="dcsgmpty != null" >
+        #{dcsgmpty,jdbcType=BIT},
+      </if>
+      <if test="dcsgmptyStatus != null" >
+        #{dcsgmptyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="cshwzrx != null" >
+        #{cshwzrx,jdbcType=BIT},
+      </if>
+      <if test="cshwzrxStatus != null" >
+        #{cshwzrxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="cshwzrxBjmp != null" >
+        #{cshwzrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="cshwzrxBjmpStatus != null" >
+        #{cshwzrxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="scxlwpssx != null" >
+        #{scxlwpssx,jdbcType=BIT},
+      </if>
+      <if test="scxlwpssxStatus != null" >
+        #{scxlwpssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jlcty != null" >
+        #{jlcty,jdbcType=BIT},
+      </if>
+      <if test="jlctyStatus != null" >
+        #{jlctyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jdctsssx != null" >
+        #{jdctsssx,jdbcType=BIT},
+      </if>
+      <if test="jdctsssxStatus != null" >
+        #{jdctsssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="tzckzx != null" >
+        #{tzckzx,jdbcType=BIT},
+      </if>
+      <if test="tzckzxStatus != null" >
+        #{tzckzxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jsshfwjzrx != null" >
+        #{jsshfwjzrx,jdbcType=BIT},
+      </if>
+      <if test="jsshfwjzrxStatus != null" >
+        #{jsshfwjzrxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="xlqjfybcx != null" >
+        #{xlqjfybcx,jdbcType=BIT},
+      </if>
+      <if test="xlqjfybcxStatus != null" >
+        #{xlqjfybcxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jdcssbxwfzddsftyx != null" >
+        #{jdcssbxwfzddsftyx,jdbcType=BIT},
+      </if>
+      <if test="jdcssbxwfzddsftyxStatus != null" >
+        #{jdcssbxwfzddsftyxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="sgzrmpltytk != null" >
+        #{sgzrmpltytk,jdbcType=VARCHAR},
+      </if>
+      <if test="sgzrmpltytkStatus != null" >
+        #{sgzrmpltytkStatus,jdbcType=TINYINT},
+      </if>
+      <if test="dcjcdssx != null" >
+        #{dcjcdssx,jdbcType=VARCHAR},
+      </if>
+      <if test="dcjcdssxStatus != null" >
+        #{dcjcdssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="bjmpx != null" >
+        #{bjmpx,jdbcType=BIT},
+      </if>
+      <if test="bjmpxStatus != null" >
+        #{bjmpxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="fjxBjmp != null" >
+        #{fjxBjmp,jdbcType=BIT},
+      </if>
+      <if test="fjxBjmpStatus != null" >
+        #{fjxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="fjcsryzrxBjmp != null" >
+        #{fjcsryzrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="fjcsryzrxBjmpStatus != null" >
+        #{fjcsryzrxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastOperationNo != null" >
+        #{lastOperationNo,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingRequest" >
+    update baoxian_underwriting_request
+    <set >
+      <if test="vehicleModelPrice != null">
+        vehicle_model_price = #{vehicleModelPrice,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleModelCode != null">
+        vehicle_model_code = #{vehicleModelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelName != null">
+        vehicle_model_name = #{vehicleModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status, jdbcType=INTEGER},
+      </if>
+      <if test="failType != null">
+        fail_type = #{failType, jdbcType=INTEGER},
+      </if>
+      <if test="failMessage != null" >
+        fail_message = #{failMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="jqx != null" >
+        jqx = #{jqx,jdbcType=BIT},
+      </if>
+      <if test="jqxStatus != null" >
+        jqx_status = #{jqxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="syx != null" >
+        syx = #{syx,jdbcType=BIT},
+      </if>
+      <if test="syxStatus != null" >
+        syx_status = #{syxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ccs != null" >
+        ccs = #{ccs,jdbcType=BIT},
+      </if>
+      <if test="ccsStatus != null" >
+        ccs_status = #{ccsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="szx != null" >
+        szx = #{szx,jdbcType=VARCHAR},
+      </if>
+      <if test="szxStatus != null" >
+        szx_status = #{szxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="szxBjmp != null" >
+        szx_bjmp = #{szxBjmp,jdbcType=BIT},
+      </if>
+      <if test="szxBjmpStatus != null" >
+        szx_bjmp_status = #{szxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="csx != null" >
+        csx = #{csx,jdbcType=VARCHAR},
+      </if>
+      <if test="csxStatus != null" >
+        csx_status = #{csxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ckx != null" >
+        ckx = #{ckx,jdbcType=VARCHAR},
+      </if>
+      <if test="ckxStatus != null" >
+        ckx_status = #{ckxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="dqx != null" >
+        dqx = #{dqx,jdbcType=VARCHAR},
+      </if>
+      <if test="dqxStatus != null" >
+        dqx_status = #{dqxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="blx != null" >
+        blx = #{blx,jdbcType=VARCHAR},
+      </if>
+      <if test="blxStatus != null" >
+        blx_status = #{blxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="hfx != null" >
+        hfx = #{hfx,jdbcType=VARCHAR},
+      </if>
+      <if test="hfxStatus != null" >
+        hfx_status = #{hfxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="zrx != null" >
+        zrx = #{zrx,jdbcType=VARCHAR},
+      </if>
+      <if test="zrxStatus != null" >
+        zrx_status = #{zrxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="csxBjmp != null" >
+        csx_bjmp = #{csxBjmp,jdbcType=BIT},
+      </if>
+      <if test="csxBjmpStatus != null" >
+        csx_bjmp_status = #{csxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ckxBjmp != null" >
+        ckx_bjmp = #{ckxBjmp,jdbcType=BIT},
+      </if>
+      <if test="ckxBjmpStatus != null" >
+        ckx_bjmp_status = #{ckxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ssxBjmp != null" >
+        ssx_bjmp = #{ssxBjmp,jdbcType=BIT},
+      </if>
+      <if test="ssxBjmpStatus != null" >
+        ssx_bjmp_status = #{ssxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="dqxBjmp != null" >
+        dqx_bjmp = #{dqxBjmp,jdbcType=BIT},
+      </if>
+      <if test="dqxBjmpStatus != null" >
+        dqx_bjmp_status = #{dqxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="blxBjmp != null" >
+        blx_bjmp = #{blxBjmp,jdbcType=BIT},
+      </if>
+      <if test="blxBjmpStatus != null" >
+        blx_bjmp_status = #{blxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="hfxBjmp != null" >
+        hfx_bjmp = #{hfxBjmp,jdbcType=BIT},
+      </if>
+      <if test="hfxBjmpStatus != null" >
+        hfx_bjmp_status = #{hfxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="zrxBjmp != null" >
+        zrx_bjmp = #{zrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="zrxBjmpStatus != null" >
+        zrx_bjmp_status = #{zrxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ssx != null" >
+        ssx = #{ssx,jdbcType=VARCHAR},
+      </if>
+      <if test="ssxStatus != null" >
+        ssx_status = #{ssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="sjzrx != null" >
+        sjzrx = #{sjzrx,jdbcType=VARCHAR},
+      </if>
+      <if test="sjzrxStatus != null" >
+        sjzrx_status = #{sjzrxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="sjzrxBjmp != null" >
+        sjzrx_bjmp = #{sjzrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="sjzrxBjmpStatus != null" >
+        sjzrx_bjmp_status = #{sjzrxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="tyx != null" >
+        tyx = #{tyx,jdbcType=BIT},
+      </if>
+      <if test="tyxStatus != null" >
+        tyx_status = #{tyxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="zdzxc != null" >
+        zdzxc = #{zdzxc,jdbcType=BIT},
+      </if>
+      <if test="zdzxcStatus != null" >
+        zdzxc_status = #{zdzxcStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jbxBjmp != null" >
+        jbx_bjmp = #{jbxBjmp,jdbcType=BIT},
+      </if>
+      <if test="jbxBjmpStatus != null" >
+        jbx_bjmp_status = #{jbxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="xzsbssx != null" >
+        xzsbssx = #{xzsbssx,jdbcType=BIT},
+      </if>
+      <if test="xzsbssxStatus != null" >
+        xzsbssx_status = #{xzsbssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="xzsbssxBjmp != null" >
+        xzsbssx_bjmp = #{xzsbssxBjmp,jdbcType=BIT},
+      </if>
+      <if test="xzsbssxBjmpStatus != null" >
+        xzsbssx_bjmp_status = #{xzsbssxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="cpcssx != null" >
+        cpcssx = #{cpcssx,jdbcType=BIT},
+      </if>
+      <if test="cpcssxStatus != null" >
+        cpcssx_status = #{cpcssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="zrmcty != null" >
+        zrmcty = #{zrmcty,jdbcType=BIT},
+      </if>
+      <if test="zrmctyStatus != null" >
+        zrmcty_status = #{zrmctyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="ssmcty != null" >
+        ssmcty = #{ssmcty,jdbcType=BIT},
+      </if>
+      <if test="ssmctyStatus != null" >
+        ssmcty_status = #{ssmctyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="kxmpety != null" >
+        kxmpety = #{kxmpety,jdbcType=VARCHAR},
+      </if>
+      <if test="kxmpetyStatus != null" >
+        kxmpety_status = #{kxmpetyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="dcsgmpty != null" >
+        dcsgmpty = #{dcsgmpty,jdbcType=BIT},
+      </if>
+      <if test="dcsgmptyStatus != null" >
+        dcsgmpty_status = #{dcsgmptyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="cshwzrx != null" >
+        cshwzrx = #{cshwzrx,jdbcType=BIT},
+      </if>
+      <if test="cshwzrxStatus != null" >
+        cshwzrx_status = #{cshwzrxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="cshwzrxBjmp != null" >
+        cshwzrx_bjmp = #{cshwzrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="cshwzrxBjmpStatus != null" >
+        cshwzrx_bjmp_status = #{cshwzrxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="scxlwpssx != null" >
+        scxlwpssx = #{scxlwpssx,jdbcType=BIT},
+      </if>
+      <if test="scxlwpssxStatus != null" >
+        scxlwpssx_status = #{scxlwpssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jlcty != null" >
+        jlcty = #{jlcty,jdbcType=BIT},
+      </if>
+      <if test="jlctyStatus != null" >
+        jlcty_status = #{jlctyStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jdctsssx != null" >
+        jdctsssx = #{jdctsssx,jdbcType=BIT},
+      </if>
+      <if test="jdctsssxStatus != null" >
+        jdctsssx_status = #{jdctsssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="tzckzx != null" >
+        tzckzx = #{tzckzx,jdbcType=BIT},
+      </if>
+      <if test="tzckzxStatus != null" >
+        tzckzx_status = #{tzckzxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jsshfwjzrx != null" >
+        jsshfwjzrx = #{jsshfwjzrx,jdbcType=BIT},
+      </if>
+      <if test="jsshfwjzrxStatus != null" >
+        jsshfwjzrx_status = #{jsshfwjzrxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="xlqjfybcx != null" >
+        xlqjfybcx = #{xlqjfybcx,jdbcType=BIT},
+      </if>
+      <if test="xlqjfybcxStatus != null" >
+        xlqjfybcx_status = #{xlqjfybcxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="jdcssbxwfzddsftyx != null" >
+        jdcssbxwfzddsftyx = #{jdcssbxwfzddsftyx,jdbcType=BIT},
+      </if>
+      <if test="jdcssbxwfzddsftyxStatus != null" >
+        jdcssbxwfzddsftyx_status = #{jdcssbxwfzddsftyxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="sgzrmpltytk != null" >
+        sgzrmpltytk = #{sgzrmpltytk,jdbcType=VARCHAR},
+      </if>
+      <if test="sgzrmpltytkStatus != null" >
+        sgzrmpltytk_status = #{sgzrmpltytkStatus,jdbcType=TINYINT},
+      </if>
+      <if test="dcjcdssx != null" >
+        dcjcdssx = #{dcjcdssx,jdbcType=VARCHAR},
+      </if>
+      <if test="dcjcdssxStatus != null" >
+        dcjcdssx_status = #{dcjcdssxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="bjmpx != null" >
+        bjmpx = #{bjmpx,jdbcType=BIT},
+      </if>
+      <if test="bjmpxStatus != null" >
+        bjmpx_status = #{bjmpxStatus,jdbcType=TINYINT},
+      </if>
+      <if test="fjxBjmp != null" >
+        fjx_bjmp = #{fjxBjmp,jdbcType=BIT},
+      </if>
+      <if test="fjxBjmpStatus != null" >
+        fjx_bjmp_status = #{fjxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="fjcsryzrxBjmp != null" >
+        fjcsryzrx_bjmp = #{fjcsryzrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="fjcsryzrxBjmpStatus != null" >
+        fjcsryzrx_bjmp_status = #{fjcsryzrxBjmpStatus,jdbcType=TINYINT},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastOperationNo != null" >
+        last_operation_no = #{lastOperationNo,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="update" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingRequest" >
+    update baoxian_underwriting_request
+    set
+      status = #{status, jdbcType=INTEGER},
+      jqx = #{jqx,jdbcType=BIT},
+      jqx_status = #{jqxStatus,jdbcType=TINYINT},
+      syx = #{syx,jdbcType=BIT},
+      syx_status = #{syxStatus,jdbcType=TINYINT},
+      ccs = #{ccs,jdbcType=BIT},
+      ccs_status = #{ccsStatus,jdbcType=TINYINT},
+      szx = #{szx,jdbcType=VARCHAR},
+      szx_status = #{szxStatus,jdbcType=TINYINT},
+      szx_bjmp = #{szxBjmp,jdbcType=BIT},
+      szx_bjmp_status = #{szxBjmpStatus,jdbcType=TINYINT},
+      csx = #{csx,jdbcType=VARCHAR},
+      csx_status = #{csxStatus,jdbcType=TINYINT},
+      ckx = #{ckx,jdbcType=VARCHAR},
+      ckx_status = #{ckxStatus,jdbcType=TINYINT},
+      dqx = #{dqx,jdbcType=VARCHAR},
+      dqx_status = #{dqxStatus,jdbcType=TINYINT},
+      blx = #{blx,jdbcType=VARCHAR},
+      blx_status = #{blxStatus,jdbcType=TINYINT},
+      hfx = #{hfx,jdbcType=VARCHAR},
+      hfx_status = #{hfxStatus,jdbcType=TINYINT},
+      zrx = #{zrx,jdbcType=VARCHAR},
+      zrx_status = #{zrxStatus,jdbcType=TINYINT},
+      csx_bjmp = #{csxBjmp,jdbcType=BIT},
+      csx_bjmp_status = #{csxBjmpStatus,jdbcType=TINYINT},
+      ckx_bjmp = #{ckxBjmp,jdbcType=BIT},
+      ckx_bjmp_status = #{ckxBjmpStatus,jdbcType=TINYINT},
+      ssx_bjmp = #{ssxBjmp,jdbcType=BIT},
+      ssx_bjmp_status = #{ssxBjmpStatus,jdbcType=TINYINT},
+      dqx_bjmp = #{dqxBjmp,jdbcType=BIT},
+      dqx_bjmp_status = #{dqxBjmpStatus,jdbcType=TINYINT},
+      blx_bjmp = #{blxBjmp,jdbcType=BIT},
+      blx_bjmp_status = #{blxBjmpStatus,jdbcType=TINYINT},
+      hfx_bjmp = #{hfxBjmp,jdbcType=BIT},
+      hfx_bjmp_status = #{hfxBjmpStatus,jdbcType=TINYINT},
+      zrx_bjmp = #{zrxBjmp,jdbcType=BIT},
+      zrx_bjmp_status = #{zrxBjmpStatus,jdbcType=TINYINT},
+      ssx = #{ssx,jdbcType=VARCHAR},
+      ssx_status = #{ssxStatus,jdbcType=TINYINT},
+      sjzrx = #{sjzrx,jdbcType=VARCHAR},
+      sjzrx_status = #{sjzrxStatus,jdbcType=TINYINT},
+      sjzrx_bjmp = #{sjzrxBjmp,jdbcType=BIT},
+      sjzrx_bjmp_status = #{sjzrxBjmpStatus,jdbcType=TINYINT},
+      tyx = #{tyx,jdbcType=BIT},
+      tyx_status = #{tyxStatus,jdbcType=TINYINT},
+      zdzxc = #{zdzxc,jdbcType=BIT},
+      zdzxc_status = #{zdzxcStatus,jdbcType=TINYINT},
+      jbx_bjmp = #{jbxBjmp,jdbcType=BIT},
+      jbx_bjmp_status = #{jbxBjmpStatus,jdbcType=TINYINT},
+      xzsbssx = #{xzsbssx,jdbcType=BIT},
+      xzsbssx_status = #{xzsbssxStatus,jdbcType=TINYINT},
+      xzsbssx_bjmp = #{xzsbssxBjmp,jdbcType=BIT},
+      xzsbssx_bjmp_status = #{xzsbssxBjmpStatus,jdbcType=TINYINT},
+      cpcssx = #{cpcssx,jdbcType=BIT},
+      cpcssx_status = #{cpcssxStatus,jdbcType=TINYINT},
+      zrmcty = #{zrmcty,jdbcType=BIT},
+      zrmcty_status = #{zrmctyStatus,jdbcType=TINYINT},
+      ssmcty = #{ssmcty,jdbcType=BIT},
+      ssmcty_status = #{ssmctyStatus,jdbcType=TINYINT},
+      kxmpety = #{kxmpety,jdbcType=VARCHAR},
+      kxmpety_status = #{kxmpetyStatus,jdbcType=TINYINT},
+      dcsgmpty = #{dcsgmpty,jdbcType=BIT},
+      dcsgmpty_status = #{dcsgmptyStatus,jdbcType=TINYINT},
+      cshwzrx = #{cshwzrx,jdbcType=BIT},
+      cshwzrx_status = #{cshwzrxStatus,jdbcType=TINYINT},
+      cshwzrx_bjmp = #{cshwzrxBjmp,jdbcType=BIT},
+      cshwzrx_bjmp_status = #{cshwzrxBjmpStatus,jdbcType=TINYINT},
+      scxlwpssx = #{scxlwpssx,jdbcType=BIT},
+      scxlwpssx_status = #{scxlwpssxStatus,jdbcType=TINYINT},
+      jlcty = #{jlcty,jdbcType=BIT},
+      jlcty_status = #{jlctyStatus,jdbcType=TINYINT},
+      jdctsssx = #{jdctsssx,jdbcType=BIT},
+      jdctsssx_status = #{jdctsssxStatus,jdbcType=TINYINT},
+      tzckzx = #{tzckzx,jdbcType=BIT},
+      tzckzx_status = #{tzckzxStatus,jdbcType=TINYINT},
+      jsshfwjzrx = #{jsshfwjzrx,jdbcType=BIT},
+      jsshfwjzrx_status = #{jsshfwjzrxStatus,jdbcType=TINYINT},
+      xlqjfybcx = #{xlqjfybcx,jdbcType=BIT},
+      xlqjfybcx_status = #{xlqjfybcxStatus,jdbcType=TINYINT},
+      jdcssbxwfzddsftyx = #{jdcssbxwfzddsftyx,jdbcType=BIT},
+      jdcssbxwfzddsftyx_status = #{jdcssbxwfzddsftyxStatus,jdbcType=TINYINT},
+      sgzrmpltytk = #{sgzrmpltytk,jdbcType=VARCHAR},
+      sgzrmpltytk_status = #{sgzrmpltytkStatus,jdbcType=TINYINT},
+      dcjcdssx = #{dcjcdssx,jdbcType=VARCHAR},
+      dcjcdssx_status = #{dcjcdssxStatus,jdbcType=TINYINT},
+      bjmpx = #{bjmpx,jdbcType=BIT},
+      bjmpx_status = #{bjmpxStatus,jdbcType=TINYINT},
+      fjx_bjmp = #{fjxBjmp,jdbcType=BIT},
+      fjx_bjmp_status = #{fjxBjmpStatus,jdbcType=TINYINT},
+      fjcsryzrx_bjmp = #{fjcsryzrxBjmp,jdbcType=BIT},
+      fjcsryzrx_bjmp_status = #{fjcsryzrxBjmpStatus,jdbcType=TINYINT},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateStatus" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingRequest" >
+    update baoxian_underwriting_request
+    set
+    status = #{status, jdbcType=INTEGER},
+     <if test="failMessage != null" >
+        fail_message=#{failMessage,jdbcType=VARCHAR},
+      </if>
+    update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+	<select id="statistics" resultMap="statisticsMap" parameterType="com.kplus.orders.rpc.dto.PageSearchVO">
+	  SELECT a.date,count(*) total from
+			(select  DATE_FORMAT(t.create_time,"%Y%m%d") date,t.id  from 
+ 		  baoxian_underwriting_request r LEFT JOIN  baoxian_intent t on r.baoxian_intent_id=t.id 
+		where <if test="userType != null" >
+        r.user_type = #{userType,jdbcType=INTEGER} and
+      </if>
+       <if test="cityCode != null" >
+        r.city_code = #{cityCode,jdbcType=INTEGER} and
+      </if> 
+       t.create_time> #{startDate,jdbcType=TIMESTAMP} and  #{endDate,jdbcType=TIMESTAMP}> t.create_time 
+        <if test="status != null and status == 1" >
+			and r.status in (99,100) 
+ 		 </if>
+      <if test="statisticsType != null and statisticsType == 1" >
+			 GROUP BY date,t.user_id,t.user_type 
+ 		 </if>
+ 		   <if test="statisticsType == null or statisticsType != 1" >
+			 GROUP BY t.id 
+ 		 </if>)a
+ 		   GROUP BY date
+	</select>
+</mapper>

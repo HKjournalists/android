@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/daze_bgcolor" >
+
+    <RelativeLayout
+        android:id="@+id/model_select_top"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/daze_title_bar" >
+
+        <LinearLayout
+            android:id="@+id/model_select_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/daze_activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/daze_but_icons_back" />
+        </LinearLayout>
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择车型"
+            android:textColor="@color/daze_black2"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/brand_select_loading"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/brand_select_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/model_select_top"
+        android:background="@color/daze_white1" >
+
+        <ListView
+            android:id="@+id/brand_select_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/daze_darkgrey7"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:listSelector="#00000000"
+            android:scrollbars="none" />
+
+        <com.kplus.car.widget.MyLetterListView
+            android:id="@+id/brand_select_list_letter"
+            android:layout_width="30dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/daze_bgcolor"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/model_select_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/model_select_top"
+        android:background="@color/daze_translucence"
+        android:visibility="gone" >
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/daze_white_smoke2" >
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvNoFind"
+                android:layout_width="185dp"
+                android:layout_height="44dp"
+		        android:gravity="center"
+		        android:text="找不到您的车型？"
+		        android:textSize="14sp"
+		        android:textStyle="bold"
+		        android:textColor="@color/daze_blue3"
+		        android:background="@color/daze_bgcolor" />
+            <ListView
+                android:id="@+id/listSelfMode"
+                android:layout_below="@+id/tvNoFind"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:background="@color/daze_bgcolor"
+	            android:dividerHeight="0dp"
+	            android:fadingEdge="none"
+	            android:listSelector="#00000000"
+	            android:scrollbars="none"
+	            android:divider="@null" ></ListView>
+            <com.kplus.car.widget.RegularTextView
+                android:layout_below="@+id/listSelfMode"
+		        android:id="@+id/model_select_item_title"
+		        android:layout_width="185dp"
+		        android:layout_height="wrap_content"
+		        android:background="@color/daze_bgcolor"
+		        android:paddingLeft="20dp"
+		        android:paddingTop="15dp"
+		        android:paddingBottom="10dp"
+		        android:textAppearance="?android:textAppearanceMedium"
+		        android:textColor="@color/daze_vehicle_mode_selected_item_title"
+		        android:textSize="13sp" />
+	        <ListView
+	            android:id="@+id/model_select_list"
+	            android:layout_below="@+id/model_select_item_title"
+	            android:layout_alignParentLeft="true"
+	            android:layout_width="185dp"
+	            android:layout_height="match_parent"
+	            android:background="@color/daze_bgcolor"
+	            android:cacheColorHint="#00000000"
+	            android:dividerHeight="1dp"
+	            android:fadingEdge="none"
+	            android:listSelector="#00000000"
+	            android:scrollbars="none"
+	            android:divider="@color/daze_darkgrey7" />
+       		<LinearLayout
+                android:id="@+id/llHide"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/daze_white_smoke2"
+                android:gravity="center" >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/daze_item_arrow"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+            </RelativeLayout>
+            
+    </RelativeLayout>
+
+    <include layout="@layout/daze_loading" />
+
+</RelativeLayout>

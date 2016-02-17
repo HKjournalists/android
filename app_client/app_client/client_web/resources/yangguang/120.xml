@@ -1,0 +1,46 @@
+<Request>
+	<InputsList>
+		<Inputs type='insuredInfo'>
+			<input name='insuredIdNo'>${beibaorenCardNum!}</input>
+			<input name='insuredEmail'>${mobile!}@chengniu.com</input>
+			<input name='insuredName'>${beibaorenCardName!}</input>
+			<input name='insuredMobile'>${mobile!}</input>
+		</Inputs>
+		<Inputs type='applicantInfo'>
+			<input name='applicantEmail'>${mobile!}@chengniu.com</input>
+			<input name='applicantIdNo'>${toubaorenCardNum!}</input>
+			<input name='applicantMobile'>${mobile!}</input>
+			<input name='applicantName'>${toubaorenCardName!}</input>
+		</Inputs>
+		<Inputs type='ownerInfo'>
+			<input name='ownerName'>${idCardName!}</input>
+			<input name='ownerMobile'>${mobile!}</input>
+			<input name='ownerIdNo'>${idCardNum!}</input>
+			<input name='ownerEmail'>${mobile!}@chengniu.com</input>
+		</Inputs>
+		<Inputs type='deliveryInfo'>
+			<input name='sendDate'>${sendDate?string("yyyy-MM-dd")!}</input>
+			<input name='addresseeName'>${idCardName!}</input>
+			<input name='addresseeMobile'>${(peisong.peisongMobile)!}</input>
+			<input name='addresseeProvince'>${(peisong.peisongProvince)!}</input>
+			<input name='addresseeCity'>${(peisong.peisongCity)!}</input>
+			<input name='addresseeTown'>${(peisong.peisongTown)!}</input>
+			<input name='insuredaddresseeDetails'>${(peisong.idCardAddress)!""}</input>
+			<input name='addresseeDetails'>${(peisong.peisongAddress)!}</input>
+		</Inputs>
+		<Inputs type='CarThroughCity'>
+			<input name='carPlace'>${carPlace!}</input>
+		</Inputs>
+	</InputsList>
+	<Order>
+		<TBOrderId>${id!}</TBOrderId>
+		<SubOrderList>
+			<SubOrder type='force'>
+				<TBOrderId>${id!}</TBOrderId>
+			</SubOrder>
+			<SubOrder type='biz'>
+				<TBOrderId>${id!}</TBOrderId>
+			</SubOrder>
+		</SubOrderList>
+	</Order>
+</Request>

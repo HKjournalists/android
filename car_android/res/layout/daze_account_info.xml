@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/daze_white" >
+
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/daze_bgcolor" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/daze_white_up_darkgray_down">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/cashBalanceLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/cashBalanceTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/daze_black2"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元"
+                        style="@style/font_caption"/>
+
+                </LinearLayout>
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="账户余额"
+                    style="@style/font_caption"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/voucherLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/voucherTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/daze_black2"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张"
+                        style="@style/font_caption"/>
+
+                </LinearLayout>
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="代金券"
+                    style="@style/font_caption"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fuliLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/fuliTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/daze_black2"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="条"
+                        style="@style/font_caption"
+                        android:layout_gravity="bottom"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/new_fuli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NEW"
+                        android:textColor="@color/daze_white"
+                        android:textSize="10sp"
+                        android:background="@drawable/red_corner_2"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="车主福利"
+                    style="@style/font_caption"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/daze_bgcolor" />
+
+    <RelativeLayout
+        android:id="@+id/rlMyOrder"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/daze_white_up_darkgray_down" >
+        <ImageView
+            android:id="@+id/ivOrderImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/mine_order"
+            android:scaleType="center" />
+        <com.kplus.car.widget.RegularTextView
+            android:layout_toRightOf="@+id/ivOrderImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:text="我的订单"
+            style="@style/font_body1" />
+        <com.kplus.car.widget.RegularTextView
+            android:layout_toLeftOf="@+id/tvOrderNumber"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text=""
+            style="@style/font_caption" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvOrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="48dp"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:textColor="@color/daze_orangered5"
+            android:text="0笔新订单" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/daze_gonext_24"
+            android:scaleType="center" />
+    </RelativeLayout>
+
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/daze_bgcolor"
+        android:layout_marginLeft="56dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlPromoCode"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/daze_white_up_darkgray_down" >
+        <ImageView
+            android:id="@+id/ivPromoCode"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/mine_promocode"
+            android:scaleType="center" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvPromoCodeLabel"
+            android:layout_toRightOf="@+id/ivPromoCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:text="优惠码"
+            style="@style/font_body1" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/promoCodeExchange"
+            android:layout_width="56dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="兑换"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="14sp"
+            android:background="@drawable/stroke_corner_orange_2"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/daze_white" >
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvVehicleNumber"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="车牌号"
+        style="@style/font_body1"
+        android:layout_centerVertical="true"
+        android:paddingLeft="20dp" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvTime"
+        android:layout_toLeftOf="@+id/tvStatus"
+        android:layout_marginRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        style="@style/font_caption" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已认证"
+        android:textColor="@color/daze_orangered5"
+        android:textSize="14dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp" />
+</RelativeLayout>

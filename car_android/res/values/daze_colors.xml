@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 烟白色 -->
+    <color name="daze_bgcolor">#f2f2f2</color>
+    <color name="daze_white_smoke">#F5F5F5</color>
+    <color name="daze_white_smoke1">#D0D0D0</color>
+    <color name="daze_white_smoke2">#cccccc</color>
+    <color name="daze_white_smoke3">#ececec</color>
+    <color name="daze_white_smoke4">#fbfbfb</color><!-- 违章列表背景色 -->
+    <color name="daze_white_smoke5">#e6e6e6</color>
+    <color name="daze_white_smoke6">#f1f1f1</color>
+    <color name="daze_white_smoke7">#fff3e0</color>
+    <color name="daze_white_smoke8">#d6cbc7</color>
+    <color name="daze_white_smoke9">#f8f4e8</color>
+    <color name="daze_white_smoke10">#f9f6e9</color>
+    <color name="daze_white_smoke11">#f8f8f8</color>
+    <!-- 亮钢兰色 -->
+    <color name="daze_lightsteel_blue">#B0C4DE</color>
+    <color name="daze_lightsteel_blue1">#2AABB4</color>
+    <color name="daze_blue">#0B4770</color>
+    <color name="daze_blue1">#1b469b</color>
+    <color name="daze_blue2">#378BBC</color>
+    <color name="daze_blue3">#41a4f4</color>
+    <color name="daze_blue4">#107cbc</color>
+    <color name="daze_blue5">#5bb1f6</color>
+
+    <color name="daze_light_blue">#FF3CC8F0</color>
+    <color name="daze_light_blue1">#D9EDF7</color>
+    <color name="daze_light_blue2">#20abb4</color>
+    <color name="daze_light_blue3">#78b8dc</color>
+    <color name="daze_light_blue4">#2286c7</color>
+    <color name="daze_light_blue5">#a3d0f0</color>
+
+    <!-- 银色 -->
+    <color name="daze_silver">#C0C0C0</color>
+    <!-- 桔黄色 -->
+    <color name="daze_bisque">#ffe4c4</color>
+    <color name="daze_orange">#FF9C00</color>
+    <color name="daze_pink">#f38268</color>
+    <!-- 红橙色 -->
+    <color name="daze_orangered">#fb6236</color>
+    <color name="daze_orangered1">#ff8f45</color>
+    <color name="daze_orangered2">#ed6e22</color>
+    <color name="daze_orangered3">#f28167</color>
+    <color name="daze_orangered4">#ffb718</color>
+    <color name="daze_orangered5">#ff7e2e</color>
+    <color name="daze_orangered5_ht">#80ff7e2e</color>
+    <color name="daze_orangered6">#ff7e2e</color>
+    <color name="daze_orangered7">#ffea3a</color>
+    <color name="daze_orangered8">#ffdfb1</color>
+    <color name="daze_orangered9">#ffcc80</color>
+    <color name="daze_orangered10">#febe96</color>
+    <color name="daze_orangered11">#fff2df</color>
+    <color name="daze_orangered12">#ffd9bf</color>
+    <color name="daze_orangered13">#fef8e2</color>
+    <color name="daze_orangered14">#ffe9bf</color>
+
+    <color name="daze_orangered15">#fa975e</color>
+    <color name="daze_orangered16">#ffc543</color>
+    <color name="daze_orangered17">#ababab</color>
+
+    <color name="daze_orangered18">#fd7e2d</color>
+    <color name="daze_orangered19">#ffb717</color>
+    <color name="daze_orangered20">#979797</color>
+
+    <!-- 暗灰色 -->
+    <color name="daze_light_grey1">#b1b0b1</color>
+    <color name="daze_light_grey">#c0c0c0</color>
+    <color name="daze_grey">#a9a9a9</color>
+    <color name="daze_darkgrey">#9c9c9c</color>
+    <color name="daze_darkgrey1">#5d5a5d</color>
+    <color name="daze_darkgrey2">#636363</color>
+    <color name="daze_darkgrey3">#666666</color>
+    <color name="daze_darkgrey4">#999999</color>
+    <color name="daze_darkgrey5">#ededed</color>
+    <color name="daze_darkgrey6">#60879c</color>
+    <color name="daze_darkgrey7">#e8e8e8</color><!-- 列表分割线 -->
+    <color name="daze_darkgrey8">#b3b3b3</color>
+    <color name="daze_darkgrey9">#989898</color>
+    <color name="daze_darkgrey10">#f7f5f4</color>
+    <!-- 微软雅黑 -->
+    <color name="daze_light_black">#333333</color>
+    <color name="daze_light_yellow">#FCFBCB</color>
+    <color name="daze_black1">#3c3d3e</color>
+    <color name="daze_black2">#4c4c4c</color>
+    <color name="daze_black3">#666666</color>
+    <color name="daze_black">#000000</color>
+    <color name="daze_black4">#4b4b4b</color>
+    <color name="daze_black5">#242b2d</color>
+    <color name="daze_white">#ffffff</color>
+    <color name="daze_white1">#f0f0f0</color>
+    <color name="daze_red">#ff0000</color>
+    <color name="daze_light_red">#F2DEDE</color>
+    <color name="daze_light_red2">#ee9999</color>
+    <color name="daze_light_green">#dfe6d8</color>
+    <color name="daze_green">#339933</color>
+    <color name="daze_green1">#41a4f4</color>
+    <color name="daze_greened">#69bc3a</color>
+    <color name="daze_coffee">#723e10</color>
+    <!-- 半透明 -->
+    <color name="daze_translucence">#40000000</color>
+    <color name="daze_translucence1">#15000000</color>
+    <color name="daze_translucence2">#88000000</color>
+    <color name="daze_translucence3">#aa000000</color>
+    <color name="daze_translucence4">#80ffffff</color>
+    <color name="daze_translucence5">#cc4c4c4c</color>
+    <color name="daze_translucence6">#cc000000</color>
+    <color name="daze_load_normal_begin">#b5b5b5</color>
+    <color name="daze_load_normal_end">#808080</color>
+    <!-- 深绿色 -->
+    <color name="daze_darkgreen">#1faab3</color>
+    <color name="daze_light_green50">#f0f7e8</color>
+    <color name="daze_light_green500">#8ac249</color>
+    <!-- 暗红色 -->
+    <color name="daze_darkred">#dd5152</color>
+    <color name="daze_darkred1">#e57373</color>
+    <color name="daze_darkred2">#f44336</color>
+    <color name="daze_darkred3">#f88e86</color>
+    <color name="daze_red50">#ffeaed</color>
+    <color name="daze_red500">#f34235</color>
+    <color name="daze_red501">#fcc7c3</color>
+	<color name="daze_yellow50">#fdf7e1</color>
+
+    <color name="progress_gray">#d7ccc8</color>
+</resources>

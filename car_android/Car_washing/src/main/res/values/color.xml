@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cn_transparent">#00000000</color>
+    <color name="cn_white">#ffffff</color>
+    <color name="cn_black">#000000</color>
+    <color name="cn_red">#ff0000</color>
+    <color name="cn_carloc_tranblack">#dd242b2d</color>
+    <color name="cn_service_tranblack">#88000000</color>
+
+    <color name="cn_transparent_black">#55000000</color>
+
+    <!-- 背景色 -->
+    <color name="cn_white_bgcolor">#ffffff</color>
+
+    <!--导航上字体的颜色，橙色-->
+    <color name="cn_oranger_color">#fd7e2d</color>
+    <color name="cn_oranger_color1">#ffb718</color>
+
+    <!--界面上item空隙处的颜色，灰色-->
+    <color name="cn_space_color">#f1f1f1</color>
+    <!--界面上item分隔线的颜色-->
+    <color name="cn_line_color">#e7e7e7</color>
+
+    <!--字体颜色-->
+    <color name="cn_font_color">#989898</color>
+
+    <!--支付按钮字体及边框线颜色-->
+    <color name="cn_pay_color">#fff576</color>
+
+    <!--所有按下去的颜色，到时要统一修改-->
+    <color name="cn_press_color">#aaaaaa</color>
+
+    <!--上门洗车服务的item的背景颜色-->
+    <color name="cn_washing_service_bgcolor">#f1f1f1</color>
+
+    <!--选择服务中上面的广播背景颜色-->
+    <color name="cn_service_broadcast_bgcolor">#fff39f</color>
+
+    <!--常用车辆的背景色-->
+    <color name="cn_common_cars_bgcolor">#4c4c4c</color>
+    <!--时间轴的颜色-->
+    <color name="cn_timeline_color">#e8e8e8</color>
+
+    <color name="cn_white_smoke2">#cccccc</color>
+
+    <!--tab选中的颜色-->
+    <color name="cn_orangered5">#ff7e2e</color>
+    <!--优惠价格的颜色-->
+    <color name="cn_coupon_price">#02ce6f</color>
+
+    <color name="yellow">#ffd500</color>
+    <color name="dark_yellow">#dfba00</color>
+
+    <color name="cn_orderlist_bgcolor">#f2f2f2</color>
+    <color name="cn_load_normal_end">#808080</color>
+
+    <!--绘制地图中范围边界线的颜色-->
+    <color name="cn_area_line">#4344fa</color>
+</resources>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+	default-autowire="byName">
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="fileEncoding" value="utf-8"/>
+        <property name="locations">
+            <list>
+                <value>classpath:custom.properties</value>
+                <value>classpath:message.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <context:component-scan base-package="com.chengniu.client">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+    <bean id="exceptionResolver" class="com.chengniu.client.interceptor.ExceptionHandler" />
+
+    <bean id="memcachedClient" class="com.whalin.MemCached.MemCachedClient">
+        <constructor-arg>
+            <value>neeaMemcachedPool</value>
+        </constructor-arg>
+    </bean>
+
+	<bean id="memcachedPool" class="com.whalin.MemCached.SockIOPool"
+		factory-method="getInstance" init-method="initialize" destroy-method="shutDown">
+		<constructor-arg>
+			<value>neeaMemcachedPool</value>
+		</constructor-arg>
+		<property name="servers">
+			<list>
+				<value>${memcache.server}</value>
+			</list>
+		</property>
+		<property name="initConn">
+			<value>20</value>
+		</property>
+		<property name="minConn">
+			<value>10</value>
+		</property>
+		<property name="maxConn">
+			<value>50</value>
+		</property>
+		<property name="maintSleep">
+			<value>30</value>
+		</property>
+		<property name="nagle">
+			<value>false</value>
+		</property>
+		<property name="socketTO">
+			<value>3000</value>
+		</property>
+	</bean>
+
+	<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${dataSource.driver:com.mysql.jdbc.Driver}" />
+		<property name="jdbcUrl" value="${dataSource.url}" />
+		<property name="username" value="${dataSource.username}" />
+		<property name="password" value="${dataSource.password}" />
+		<property name="idleConnectionTestPeriodInMinutes" value="60" />
+		<property name="idleMaxAgeInMinutes" value="240" />
+		<property name="maxConnectionsPerPartition" value="${dataSource.maxActive}" />
+		<property name="minConnectionsPerPartition" value="10" />
+		<property name="partitionCount" value="3" />
+		<property name="acquireIncrement" value="5" />
+		<property name="statementsCacheSize" value="100" />
+		<property name="releaseHelperThreads" value="3" />
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="globalRollbackOnParticipationFailure" value="false" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- 配置事务传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="insert*" propagation="REQUIRED" />
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="dispose*" propagation="REQUIRED" />
+			<tx:method name="submit*" propagation="REQUIRED" />
+			<tx:method name="resume*" propagation="REQUIRED" />
+			<tx:method name="check*" propagation="REQUIRED" />
+			<tx:method name="initiate*" propagation="REQUIRED" />
+            <tx:method name="validate*" propagation="REQUIRED" />
+            <tx:method name="cancel*" propagation="REQUIRED" />
+            <tx:method name="sync*" propagation="REQUIRED" />
+            <tx:method name="handle*" propagation="REQUIRED" />
+			<!--<tx:method name="*" read-only="true" propagation="SUPPORTS" />-->
+		</tx:attributes>
+	</tx:advice>
+	<!-- 配置哪些类的哪些方法参与事务 -->
+	<aop:config>
+		<aop:advisor pointcut="execution(* com.chengniu.client.service..*.*(..))"
+                                                 advice-ref="txAdvice" />
+	</aop:config>
+
+    <!-- messageRPCService接口 -->
+    <bean name="messageRPCService"
+          class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl"
+                  value="${hessian.common_message.url}/rpc/shortMessageService" />
+        <property name="serviceInterface"
+                  value="com.daze.common.api.service.ShortMessageService" />
+    </bean>
+    <bean id="messagePushService"
+          class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl"
+                  value="${hessian.common_message.url}/rpc/messagePushService" />
+        <property name="serviceInterface"
+                  value="com.daze.common.api.service.MessagePushService" />
+    </bean>
+
+	<!-- userVehicleRPCService接口 -->
+	<bean name="userVehicleRPCService"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${hessian.user.url}/rpc/userVehicleRPCService" />
+		<property name="serviceInterface"
+			value="com.kplus.user.rpc.service.UserVehicleRPCService" />
+	</bean>
+	<!-- ordersRPCService接口 -->
+	<bean name="userRPCService"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${hessian.user.url}/rpc/userRPCService" />
+		<property name="serviceInterface" value="com.kplus.user.rpc.service.UserRPCService" />
+	</bean>
+	<!-- ordersRPCService接口 -->
+	<bean name="ordersRPCService"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${hessian.orders.url}/rpc/ordersRPCService" />
+		<property name="serviceInterface"
+			value="com.kplus.orders.rpc.service.OrdersRPCService" />
+	</bean>
+	<bean name="ordersBaseInfoRPCService"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${hessian.providers.url}/rpc/ordersBaseInfoRPCService" />
+		<property name="serviceInterface"
+			value="com.providers.rpc.service.OrderBaseInfoRPCService" />
+	</bean>
+	<!-- providerRPCService接口 -->
+	<bean name="providerRPCService"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl"
+			value="${hessian.providers.url}/rpc/providerRPCService" />
+		<property name="serviceInterface" value="com.providers.rpc.service.ProviderRPCService" />
+	</bean>
+	<!-- 支付服务接口 -->
+	<bean name="fundRPCFacade"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${rpc.payment.serviceUrl}" />
+		<property name="serviceInterface"
+			value="com.daze.intergation.rpc.service.FundRPCFacade" />
+	</bean>
+
+</beans>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/model_select_item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/daze_bgcolor"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/daze_vehicle_mode_selected_item_title"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/model_select_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/model_select_item_title"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:background="@color/daze_white"
+        android:singleLine="true"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/daze_load_normal_end"
+        android:textSize="16sp" />
+
+</RelativeLayout>

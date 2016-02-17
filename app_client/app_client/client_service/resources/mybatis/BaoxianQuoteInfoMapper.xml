@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianQuoteInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianQuoteInfo" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="baoxian_underwriting_id" property="baoxianUnderwritingId" jdbcType="VARCHAR" />
+    <result column="request_time" property="requestTime" jdbcType="TIMESTAMP" />
+    <result column="request_url" property="requestUrl" jdbcType="VARCHAR" />
+    <result column="response_time" property="responseTime" jdbcType="TIMESTAMP" />
+    <result column="response_status" property="responseStatus" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="BIT" />
+    <result column="total_charge" property="totalCharge" jdbcType="VARCHAR" />
+    <result column="quote_id" property="quoteId" jdbcType="VARCHAR" />
+    <result column="sub_quote_id" property="subQuoteId" jdbcType="VARCHAR" />
+    <result column="step" property="step" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.chengniu.client.pojo.BaoxianQuoteInfoWithBLOBs" extends="BaseResultMap" >
+    <result column="response" property="response" jdbcType="LONGVARCHAR" />
+    <result column="request" property="request" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, baoxian_underwriting_id, request_time, request_url, response_time, response_status, 
+    status, total_charge, quote_id, sub_quote_id, step
+  </sql>
+  <sql id="Blob_Column_List" >
+    response, request
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from baoxian_quote_info
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianQuoteInfoWithBLOBs" >
+    insert into baoxian_quote_info (id, baoxian_underwriting_id, request_time, 
+      request_url, response_time, response_status, 
+      status, total_charge, quote_id, sub_quote_id,
+      step, response, request
+      )
+    values (#{id,jdbcType=VARCHAR}, #{baoxianUnderwritingId,jdbcType=VARCHAR}, #{requestTime,jdbcType=TIMESTAMP}, 
+      #{requestUrl,jdbcType=VARCHAR}, #{responseTime,jdbcType=TIMESTAMP}, #{responseStatus,jdbcType=VARCHAR}, 
+      #{status,jdbcType=BIT}, #{totalCharge,jdbcType=VARCHAR}, #{quoteId,jdbcType=VARCHAR}, #{subQuoteId,jdbcType=VARCHAR},
+      #{step,jdbcType=INTEGER}, #{response,jdbcType=LONGVARCHAR}, #{request,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="queryLastRequestInfo" resultMap="ResultMapWithBLOBs" parameterType="com.chengniu.client.pojo.BaoxianQuoteInfoWithBLOBs" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_quote_info
+    where  baoxian_underwriting_id =  #{baoxianUnderwritingId,jdbcType=VARCHAR}
+    and status = true
+     <if test="step != null" >
+        and step = #{step,jdbcType=INTEGER}
+      </if>
+      order by request_time desc limit 0,1
+  </select>
+  <select id="queryLastByQuoteIdAndStep" resultMap="ResultMapWithBLOBs" parameterType="com.chengniu.client.pojo.BaoxianQuoteInfoWithBLOBs" >
+    select
+    id, baoxian_underwriting_id, request_time, request_url, response_time, response_status,
+    status, total_charge, quote_id, sub_quote_id, step, response
+    from baoxian_quote_info
+    where  quote_id = #{quoteId,jdbcType=VARCHAR}
+    and status = true
+    <if test="step != null" >
+      and step = #{step,jdbcType=INTEGER}
+    </if>
+    order by request_time desc limit 0,1
+  </select>
+   <select id="queryByQuoteId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_quote_info
+    where   quote_id = #{quoteId,jdbcType=VARCHAR}
+    and status = true
+    order by request_time desc limit 0,1
+  </select>
+    <select id="queryByUnderwritingIdAndQuoteId" resultMap="ResultMapWithBLOBs"
+            parameterType="com.chengniu.client.pojo.BaoxianQuoteInfoWithBLOBs" >
+        select
+        <include refid="Base_Column_List" />
+        from baoxian_quote_info
+        where   baoxian_underwriting_id = #{baoxianUnderwritingId} and quote_id = #{quoteId,jdbcType=VARCHAR}
+        and status = true
+        order by request_time desc limit 0,1
+    </select>
+  <update id="update" parameterType="com.chengniu.client.pojo.BaoxianQuoteInfoWithBLOBs" >
+    update baoxian_quote_info
+    <set >
+      <if test="baoxianUnderwritingId != null" >
+        baoxian_underwriting_id = #{baoxianUnderwritingId,jdbcType=VARCHAR},
+      </if>
+      <if test="requestTime != null" >
+        request_time = #{requestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="requestUrl != null" >
+        request_url = #{requestUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="responseTime != null" >
+        response_time = #{responseTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="responseStatus != null" >
+        response_status = #{responseStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=BIT},
+      </if>
+      <if test="totalCharge != null" >
+        total_charge = #{totalCharge,jdbcType=VARCHAR},
+      </if>
+      <if test="quoteId != null" >
+        quote_id = #{quoteId,jdbcType=VARCHAR},
+      </if>
+      <if test="subQuoteId != null" >
+        sub_quote_id = #{subQuoteId,jdbcType=VARCHAR},
+      </if>
+      <if test="step != null" >
+        step = #{step,jdbcType=INTEGER},
+      </if>
+      <if test="response != null" >
+        response = #{response,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="request != null" >
+        request = #{request,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+   <update id="updateUnderWritingId" parameterType="com.chengniu.client.pojo.BaoxianQuoteInfoWithBLOBs" >
+    update baoxian_quote_info set baoxian_underwriting_id = #{quoteId,jdbcType=VARCHAR}
+    where  baoxian_underwriting_id = #{baoxianUnderwritingId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateReponse" parameterType="com.chengniu.client.pojo.BaoxianQuoteInfoWithBLOBs" >
+    update baoxian_quote_info
+    set 
+      response_time = #{responseTime,jdbcType=TIMESTAMP},
+      response_status = #{responseStatus,jdbcType=VARCHAR},
+      status = #{status,jdbcType=BIT},
+      <if test="totalCharge != null" >
+        total_charge = #{totalCharge,jdbcType=VARCHAR},
+      </if>
+      quote_id = #{quoteId,jdbcType=VARCHAR},
+      sub_quote_id = #{subQuoteId,jdbcType=VARCHAR},
+      response = #{response,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateStatus" parameterType="com.chengniu.client.pojo.BaoxianQuoteInfo" >
+    update baoxian_quote_info
+    set baoxian_underwriting_id = #{baoxianUnderwritingId,jdbcType=VARCHAR},
+      request_time = #{requestTime,jdbcType=TIMESTAMP},
+      request_url = #{requestUrl,jdbcType=VARCHAR},
+      response_time = #{responseTime,jdbcType=TIMESTAMP},
+      response_status = #{responseStatus,jdbcType=VARCHAR},
+      status = #{status,jdbcType=BIT},
+      total_charge = #{totalCharge,jdbcType=VARCHAR},
+      quote_id = #{quoteId,jdbcType=VARCHAR},
+      sub_quote_id = #{subQuoteId,jdbcType=VARCHAR},
+      step = #{step,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

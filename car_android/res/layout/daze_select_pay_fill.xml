@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlSelectPayFill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20000000"
+    android:visibility="visible"  >
+    <LinearLayout
+        android:id="@+id/firstTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f8f8f8"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="24dp"
+        android:gravity="center"
+        android:visibility="gone">               
+             <Button
+              android:id="@+id/fillAccountButton"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:background="@drawable/daze_btn_bg"
+              android:gravity="center"
+              android:text="填写收款账号"
+              android:textColor="@color/daze_textcolor2"
+              android:textSize="13sp" />
+            <com.kplus.car.widget.RegularTextView
+		        android:layout_marginTop="10dp"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+				android:text="退款将返还至您填写的收款账号中"
+		        android:gravity="center"
+		        style="@style/font_caption"/>     
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/secondTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="#f8f8f8"
+        android:padding="24dp"
+        android:visibility="gone" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/refundHintMessage" 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="退款信息已提交，款项将退回至您的银行卡"
+            style="@style/font_body1"/>
+        <LinearLayout 
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal">
+	         <com.kplus.car.widget.RegularTextView
+	             android:id="@+id/cardNumber"
+	             android:layout_height="wrap_content"
+	             android:layout_width="wrap_content"             
+	             style="@style/font_caption2"/>
+	         <com.kplus.car.widget.RegularTextView
+	             android:id="@+id/userName"
+	             android:layout_height="wrap_content"
+	             android:layout_width="wrap_content"
+	             style="@style/font_caption2"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" >
+            <Button
+                android:id="@+id/refundChange"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/daze_btn_bg"
+                android:gravity="center"
+                android:text="修改收款信息"
+                android:textColor="@color/daze_textcolor2"
+                android:textSize="13sp" />
+            <com.kplus.car.widget.RegularTextView
+                style="@style/font_body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="信息有误？" />
+        </RelativeLayout>        
+    </LinearLayout> 
+</RelativeLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/orderTitleRoot"
+    android:layout_width="match_parent"
+    android:layout_height="81dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/daze_white"
+    android:weightSum="4" >
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvSubmitOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="提交订单"
+            android:textSize="16dp"
+            android:textColor="@color/daze_orangered4" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@id/tvSubmitOrder"
+          	android:layout_marginTop="16dp" >
+            <ImageView
+	            android:id="@+id/ivHaveSubmitOrder"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_ring1"
+	            android:scaleType="fitXY"
+	            android:visibility="visible" />
+            <ImageView
+	            android:id="@+id/ivNowSubmitOrder"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_circle1"
+	            android:scaleType="fitXY"
+	            android:visibility="visible" />
+            <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/tvHaveSubmitOrder"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_toRightOf="@id/ivHaveSubmitOrder"
+	            android:layout_centerVertical="true"
+	            android:background="@color/daze_blue3" />
+	        <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/tvNowSubmitOrder"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_toRightOf="@id/ivHaveSubmitOrder"
+	            android:layout_centerVertical="true"
+	            android:background="@color/daze_orangered4"
+	            android:visibility="visible" />
+        </RelativeLayout>        
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvPayOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="在线支付"
+            android:textSize="16dp"
+            android:textColor="@color/daze_darkgrey9" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@id/tvPayOnline"
+          	android:layout_marginTop="16dp" >
+	        <com.kplus.car.widget.DashLineView
+	            android:id="@+id/willPayOnline"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_centerVertical="true" />
+            <ImageView
+	            android:id="@+id/ivWillPayOnline"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_circle2"
+	            android:scaleType="fitXY"
+	            android:visibility="visible" />
+            <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/tvHavePayOnline"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_centerVertical="true"
+	            android:background="@color/daze_blue3"
+	            android:visibility="gone" />
+            <ImageView
+	            android:id="@+id/ivHavePayOnline"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_ring1"
+	            android:scaleType="fitXY"
+	            android:visibility="gone" />
+            <ImageView
+	            android:id="@+id/ivNowPayOnline"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_circle1"
+	            android:scaleType="fitXY"
+	            android:visibility="gone" />
+            <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/tvNowPayOnline"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_toRightOf="@id/ivNowPayOnline"
+	            android:layout_centerVertical="true"
+	            android:background="@color/daze_orangered4"
+	            android:visibility="gone" />
+        </RelativeLayout>  
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvUploadLicence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="上传证件"
+            android:textSize="16dp"
+            android:textColor="@color/daze_darkgrey9" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@id/tvUploadLicence"
+          	android:layout_marginTop="16dp" >
+	        <com.kplus.car.widget.DashLineView
+	            android:id="@+id/willUploadLicence"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_centerVertical="true" />
+            <ImageView
+	            android:id="@+id/ivWillUploadLicence"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_circle2"
+	            android:scaleType="fitXY"
+	            android:visibility="visible" />
+            <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/tvHaveUploadLicence"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_centerVertical="true"
+	            android:background="@color/daze_blue3"
+	            android:visibility="gone" />
+            <ImageView
+	            android:id="@+id/ivHaveUploadLicence"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_ring1"
+	            android:scaleType="fitXY"
+	            android:visibility="gone" />
+            <ImageView
+	            android:id="@+id/ivNowUploadLicence"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_circle1"
+	            android:scaleType="fitXY"
+	            android:visibility="gone" />
+            <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/tvNowUploadLicence"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_toRightOf="@id/ivNowUploadLicence"
+	            android:layout_centerVertical="true"
+	            android:background="@color/daze_orangered4"
+	            android:visibility="gone" />
+        </RelativeLayout> 
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvWaitDispose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="等待处理"
+            android:textSize="16dp"
+            android:textColor="@color/daze_darkgrey9" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@id/tvWaitDispose"
+          	android:layout_marginTop="16dp" >
+	        <com.kplus.car.widget.DashLineView
+	            android:id="@+id/willWaitDispose"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_centerVertical="true"
+	            android:layout_toLeftOf="@+id/ivWillWaitDispose" />
+            <ImageView
+	            android:id="@+id/ivWillWaitDispose"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_circle2"
+	            android:scaleType="fitXY"
+	            android:visibility="visible" />
+            <ImageView
+	            android:id="@+id/ivNowWaitDispose"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/daze_circle1"
+	            android:scaleType="fitXY"
+	            android:visibility="gone" />
+            <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/tvNowWaitDispose"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dp"
+	            android:layout_toLeftOf="@+id/ivNowWaitDispose"
+	            android:layout_centerVertical="true"
+	            android:background="@color/daze_blue3"
+	            android:visibility="gone" />
+        </RelativeLayout> 
+    </RelativeLayout>
+</LinearLayout>

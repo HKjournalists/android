@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianCityMappingMapper">
+	<resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianCityMapping">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="city_code_fanhua" property="cityCodeFanhua"
+			jdbcType="VARCHAR" />
+		<result column="city_name_fanhua" property="cityNameFanhua"
+			jdbcType="VARCHAR" />
+		<result column="city_code_yangguang" property="cityCodeYangguang"
+			jdbcType="VARCHAR" />
+		<result column="city_name_yangguang" property="cityNameYangguang"
+			jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, city_code_fanhua, city_name_fanhua, city_code_yangguang,
+		city_name_yangguang
+	</sql>
+	<select id="queryCity" resultMap="BaseResultMap" parameterType="string">
+		select
+		<include refid="Base_Column_List"></include>
+		from t_baoxian_city_mapping
+		where city_code_fanhua = #{code,jdbcType=INTEGER}
+	</select>
+</mapper>

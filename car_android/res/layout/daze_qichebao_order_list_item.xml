@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@color/daze_white" >
+    <LinearLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/tvFacilitator"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="7"
+	            android:ellipsize="end"
+	            android:singleLine="true"
+	            style="@style/font_body1" />
+            <com.kplus.car.widget.RegularTextView
+		        android:id="@+id/order_listItem_status"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="3"
+		        android:textColor="@color/daze_orangered5"
+		        android:textSize="12dp"
+		        android:gravity="right" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical" >
+            <com.kplus.car.widget.RegularTextView
+         	    android:id="@+id/tvService"
+          	    android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                style="@style/font_body1" />
+            <com.kplus.car.widget.RegularTextView
+		        android:id="@+id/tvTime"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="3"
+		        style="@style/font_body2"
+		        android:gravity="right" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llLoadMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:orientation="vertical">
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/daze_bgcolor"/>
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvLoadmore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center"
+            android:textSize="14dp"/>
+    </LinearLayout>
+</RelativeLayout>

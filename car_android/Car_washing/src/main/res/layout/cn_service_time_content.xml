@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llCellItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/layout_item_bg_selector"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/llServiceItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llCell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvTimetItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@null"
+                android:textColor="@color/cn_font_color"
+                android:textSize="14sp"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvServiceStatuItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@null"
+                android:textColor="@color/cn_font_color"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <View
+            android:id="@+id/view_hor_line"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/cn_timeline_color"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_ver_line"
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:background="@color/cn_timeline_color"/>
+</LinearLayout>

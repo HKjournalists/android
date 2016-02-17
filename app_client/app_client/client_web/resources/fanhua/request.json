@@ -1,0 +1,303 @@
+{
+	"channelId": "zzb.channel.chengniu",
+	"notifyUrl" : "${notifyUrl!}${intentId!}",
+	"providerInfos":[<#list providerInfos as provider>"${(provider)!}"<#if provider_has_next>,</#if></#list>],
+	"remark":"${remark!}",
+	"dealOffer": {
+		<#if syxStartDate??&&(syxStartDate?is_date)>"bizEffectiveDate": "${syxStartDate?string("yyyy-MM-dd")}",</#if>
+		<#if jqxStartDate??&&(jqxStartDate?is_date)>"efcEffectiveDate": "${jqxStartDate?string("yyyy-MM-dd")}",</#if>
+		<#if bizExpireDate??&&(bizExpireDate?is_date)>"bizExpireDate": "${bizExpireDate?string("yyyy-MM-dd")}",</#if>
+		<#if efcExpireDate??&&(efcExpireDate?is_date)>"efcExpireDate": "${efcExpireDate?string("yyyy-MM-dd")}",</#if>
+		"insArea": {
+			"province": "${(cityCode!"0000")?substring(0,2)}0000",
+			"city": "${cityCode!}"
+		},
+		"carInfo": {
+			"plateNum": "${(vehicleNum!)?upper_case}",
+			"useProps": "1",
+			"userType": "1",
+			<#if registerDate??>"firstRegDate": "${registerDate}",</#if>
+			"vin": "${(frameNum!)?upper_case}",
+			"modelId": "${(vehicleModelCode!)?upper_case}",
+			"engineNum": "${(motorNum!)?upper_case}",
+			"carBrandName": "${vehicleModelName!}",
+			"taxPrice": "${((vehicleModelPrice!0))?string("0")}",
+			"isTransferCar": "${(guohu!false)?string("true","false")}",
+			"carModelName": "${vehicleModelName!}",
+			<#if ratedPassengerCapacity??>"ratedPassengerCapacity": "${ratedPassengerCapacity!}",</#if>
+			<#if fullLoad??>"fullLoad":" ${fullLoad!}",</#if>
+			<#if displacement??>"displacement":" ${displacement!}",</#if>
+			"rulePriceProvideType" : 0,
+			"carDrivingArea": 2,
+			"avgMileage": ${avgMileage!0},
+			"isNew": "<#if vehicleNum??>false<#else>true</#if>",
+			"chgOwnerDate": "<#if guohu??&&guohu==true&&guohudate??>${guohudate!}</#if>"
+		},
+		"contactsInfo": {
+			"personName": "${idCardName!}",
+			"mobileNumber": "${mobile!}"
+		},
+		"carOwnerInfo": {
+			"personName": "${idCardName!}",
+			"certificate": {
+				"certKinds": "${idCardType!1}",
+				"certName":"<#if idCardType??&&idCardType==1>身份证<#else>企业机构代码证</#if>",
+				"certNumber": "${idCardNum!}"
+			},
+			"mobileNumber": "${mobile!}",
+			"email": "${mobile!}@chengniu.com"
+		},
+		"insuredPersonList": [{
+			"personName": "${beibaorenCardName!}",
+			"certificate": {
+				"certKinds": "${beibaorenCardType!1}",
+				"certName":"<#if beibaorenCardType??&&beibaorenCardType==1>身份证<#else>企业机构代码证</#if>",
+				"certNumber": "${beibaorenCardNum!}"
+			},
+			"mobileNumber": "${mobile!}",
+			"email": "${mobile!}@chengniu.com"
+		}],
+		"proposerInfo": {
+			"personName": "${toubaorenCardName!}",
+			"certificate": {
+				"certKinds": "${toubaorenCardType!1}",
+				"certName":"<#if toubaorenCardType??&&toubaorenCardType==1>身份证<#else>企业机构代码证</#if>",
+				"certNumber": "${toubaorenCardNum!}"
+			},
+			"mobileNumber": "${mobile!}",
+			"email": "${mobile!}@chengniu.com"
+		},
+		"beneficiaryPersonList": [{
+			"personName": "${idCardName!}",
+			"certificate": {
+				"certKinds":"${idCardType!1}",
+				"certName": "<#if idCardType??&&idCardType==1>身份证<#else>企业机构代码证</#if>",
+				"certNumber": "${idCardNum!}"
+			},
+			"mobileNumber": "${mobile!}",
+			"email": "${mobile!}@chengniu.com"
+		}],
+		"suite": {
+			"items": {
+				"VehicleDemageIns": {
+					"selIdx":<#if csx??&&csx!="0">1<#else>0</#if>,
+					"ecode": "VehicleDemageIns",
+					"amount": ${csx!-1}
+				},
+				"ThirdPartyIns": {
+					"selIdx":${ThirdPartyIns[szx!"-1"]!0},
+					"ecode": "ThirdPartyIns",
+					"amount": ${szx!-1}
+				},
+				"TheftIns": {
+					"selIdx":<#if dqx??&&dqx!="0">1<#else>0</#if>,
+					"ecode": "TheftIns",
+					"amount":<#if dqx??&&dqx!="0">1<#else>0</#if>
+				},
+				"DriverIns": {
+					"selIdx":${DriverIns[sjzrx!"-1"]!0},
+					"ecode": "DriverIns",
+					"amount": ${sjzrx!-1}
+				},
+				"PassengerIns": {
+					"selIdx": ${PassengerIns[ckx!"-1"]!0},
+					"ecode": "PassengerIns",
+					"amount":  ${ckx!-1}
+				},
+				"ScratchIns": {
+					"selIdx": <#if hfx??&&hfx!="0">1<#else>0</#if>,
+					"ecode": "ScratchIns",
+					"amount": ${hfx!-1}
+				},
+				"CombustionIns": {
+					"selIdx":<#if zrx??&&zrx!="0">1<#else>0</#if>,
+					"ecode": "CombustionIns",
+					"amount": <#if zrx??&&zrx!="0">1<#else>0</#if>
+				},
+				"WadingIns": {
+					"selIdx":<#if ssx??&&ssx!="0">1<#else>0</#if>,
+					"ecode": "WadingIns",
+					"amount":${ssx!-1}
+				},
+				"GlassIns": {
+					"selIdx": ${blx!0},
+					"ecode": "GlassIns",
+					"amount": ${blx!-1}
+				},
+				"VehicleCompulsoryIns": {
+					"selIdx": ${(jqx!true)?string("1","0")},
+					"ecode": "VehicleCompulsoryIns",
+					"amount":${(jqx!true)?string("1","-1")}
+				},
+				"NcfThirdPartyIns": {
+					"selIdx":${(szxBjmp!false)?string("1","0")},
+					"ecode": "NcfThirdPartyIns",
+					"amount":  ${(szxBjmp!false)?string("1","-1")}
+				},
+				"NcfTheftIns": {
+					"selIdx": ${(dqxBjmp!false)?string("1","0")},
+					"ecode": "NcfTheftIns",
+					"amount":  ${(dqxBjmp!false)?string("1","-1")}
+				},"VehicleTax": {
+					"selIdx": ${(ccs!false)?string("1","0")},
+					"ecode": "VehicleTax",
+					"amount": ${(ccs!false)?string("1","-1")}
+				},
+				"NcfCombustionIns": {
+					"selIdx": ${(zrxBjmp!false)?string("1","0")},
+					"ecode": "NcfCombustionIns",
+					"amount": ${(zrxBjmp!false)?string("1","-1")}
+				},
+				"NcfVehicleDemageIns": {
+					"selIdx": ${(csxBjmp!false)?string("1","0")},
+					"ecode": "NcfVehicleDemageIns",
+					"amount":${(csxBjmp!false)?string("1","-1")}
+				},
+				"NcfDriverIns": {
+					"selIdx": ${(sjzrxBjmp!false)?string("1","0")},
+					"ecode": "NcfDriverIns",
+					"amount":  ${(sjzrxBjmp!false)?string("1","-1")}
+				},
+				"NcfWadingIns": {
+					"selIdx": ${(ssxBjmp!false)?string("1","0")},
+					"ecode": "NcfWadingIns",
+					"amount":  ${(ssxBjmp!false)?string("1","-1")}
+				},
+				"NcfScratchIns": {
+					"selIdx":${(hfxBjmp!false)?string("1","0")},
+					"ecode": "NcfScratchIns",
+					"amount": ${(hfxBjmp!false)?string("1","-1")}
+				},
+				"NcfPassengerIns": {
+					"selIdx":${(ckxBjmp!false)?string("1","0")},
+					"ecode": "NcfPassengerIns",
+					"amount":  ${(ckxBjmp!false)?string("1","-1")}
+				},
+				"SpecifyingPlantCla": {
+					"selIdx":${(zdzxc!false)?string("1","0")},
+                    "ecode": "SpecifyingPlantCla",
+					"amount":  ${(zdzxc!false)?string("1","-1")}
+				},
+				"CarToCarDamageIns": {
+					"selIdx":${(cpcssx!false)?string("1","0")},
+					"ecode": "CarToCarDamageIns",
+					"amount":  ${(cpcssx!false)?string("1","-1")}
+				},
+				"CombustionExclusionCla": {
+					"selIdx":${(zrmcty!false)?string("1","0")},
+					"ecode": "CombustionExclusionCla",
+					"amount":  ${(zrmcty!false)?string("1","-1")}
+				},
+				"WadingExclusionCla": {
+					"selIdx":${(ssmcty!false)?string("1","0")},
+					"ecode": "WadingExclusionCla",
+					"amount":  ${(ssmcty!false)?string("1","-1")}
+				},
+				"OptionalDeductiblesCla": {
+					"selIdx": <#if kxmpety??&&kxmpety!="0">1<#else>0</#if>,
+					"ecode": "OptionalDeductiblesCla",
+					"amount": ${kxmpety!-1}
+				},
+				"AccidentDeductiblesCla": {
+					"selIdx":${(dcsgmpty!false)?string("1","0")},
+					"ecode": "AccidentDeductiblesCla",
+					"amount":  ${(dcsgmpty!false)?string("1","-1")}
+				},
+				"GoodsOnVehicleIns": {
+					"selIdx":${(cshwzrx!false)?string("1","0")},
+					"ecode": "GoodsOnVehicleIns",
+					"amount":  ${(cshwzrx!false)?string("1","-1")}
+				},
+				"LossOfBaggageIns": {
+					"selIdx":${(scxlwpssx!false)?string("1","0")},
+					"ecode": "LossOfBaggageIns",
+					"amount":  ${(scxlwpssx!false)?string("1","-1")}
+				},
+				"TrainingCarCla": {
+					"selIdx":${(jlcty!false)?string("1","0")},
+					"ecode": "TrainingCarCla",
+					"amount":  ${(jlcty!false)?string("1","-1")}
+				},
+				"VehicleSuspendedIns": {
+					"selIdx":${(jdctsssx!false)?string("1","0")},
+					"ecode": "VehicleSuspendedIns",
+					"amount":  ${(jdctsssx!false)?string("1","-1")}
+				},
+				"SpecialVehicleExtensionIns": {
+					"selIdx":${(tzckzx!false)?string("1","0")},
+					"ecode": "SpecialVehicleExtensionIns",
+					"amount":  ${(tzckzx!false)?string("1","-1")}
+				},
+				"CompensationForMentalDistressIns": {
+					"selIdx":${(jsshfwjzrx!false)?string("1","0")},
+					"ecode": "CompensationForMentalDistressIns",
+					"amount":  ${(jsshfwjzrx!false)?string("1","-1")}
+				},
+				"CompensationDuringRepairIns": {
+					"selIdx":${(xlqjfybcx!false)?string("1","0")},
+					"ecode": "CompensationDuringRepairIns",
+					"amount":  ${(xlqjfybcx!false)?string("1","-1")}
+				},
+				"VehicleDemageMissedThirdPartyCla": {
+					"selIdx":${(jdcssbxwfzddsftyx!false)?string("1","0")},
+					"ecode": "VehicleDemageMissedThirdPartyCla",
+					"amount":  ${(jdcssbxwfzddsftyx!false)?string("1","-1")}
+				},
+				"AccidentFranchiseCla": {
+					"selIdx": <#if sgzrmpltytk??&&sgzrmpltytk!="0">1<#else>0</#if>,
+					"ecode": "AccidentFranchiseCla",
+					"amount": ${sgzrmpltytk!-1}
+				},
+				"MirrorLightIns": {
+					"selIdx": ${dcjcdssx!'0'},
+					"ecode": "MirrorLightIns",
+					"amount": -1
+				},
+				"NcfClause": {
+					"selIdx": ${(bjmpx!false)?string("1","0")},
+					"ecode": "NcfClause",
+					"amount": ${(bjmpx!false)?string("1","-1")}
+				},
+				"NcfNewEquipmentIns": {
+					"selIdx": ${(xzsbssxBjmp!false)?string("1","0")},
+					"ecode": "NcfNewEquipmentIns",
+					"amount": ${(xzsbssxBjmp!false)?string("1","-1")}
+				},
+				"NcfAddtionalClause": {
+					"selIdx": ${(fjxBjmp!false)?string("1","0")},
+					"ecode": "NcfAddtionalClause",
+					"amount": ${(fjxBjmp!false)?string("1","-1")}
+				},
+				"NcfGoodsOnVehicleIns": {
+					"selIdx": ${(cshwzrxBjmp!false)?string("1","0")},
+					"ecode": "NcfGoodsOnVehicleIns",
+					"amount": ${(cshwzrxBjmp!false)?string("1","-1")}
+				},
+				"NcfDriverPassengerIns": {
+					"selIdx": ${(fjcsryzrxBjmp!false)?string("1","0")},
+					"ecode": "NcfDriverPassengerIns",
+					"amount": ${(fjcsryzrxBjmp!false)?string("1","-1")}
+				},
+				"NcfBasicClause": {
+					"selIdx": ${(jbxBjmp!false)?string("1","0")},
+					"ecode": "NcfBasicClause",
+					"amount": ${(jbxBjmp!false)?string("1","-1")}
+				}
+			}
+		},"deliveryInfo": {
+			"personName": "${(peisong.peisongName)!""}",
+			"phoneNumber": "${(peisong.peisongMobile)!""}",
+			"mobileNumber": "${(peisong.peisongMobile)!""}",
+			"province": "${(peisong.peisongProvince)!""}",
+			"city": "${(peisong.peisongCity)!""}",
+			"area": "${(peisong.peisongTown)!""}",
+			"receiveAddress": "${(peisong.peisongAddress)!""}",
+			"code": "Express",
+			"formDelivery": "",
+			"deliveryFreight": "",
+			"deliveryCost": "",
+			"shippingCode": "",
+			"shippingName": ""
+		}
+	}
+}

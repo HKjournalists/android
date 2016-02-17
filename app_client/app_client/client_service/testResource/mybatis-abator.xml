@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="D:\apache-maven-3.2.3\repository\mysql\mysql-connector-java\5.1.33\mysql-connector-java-5.1.33.jar" />
+	<context id="mysqlTable" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.10.3:3306/car" userId="root" password="85850948">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<javaModelGenerator targetPackage="com.chengniu.client.pojo"
+			targetProject="client_service/test">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="mybatis.xml"
+			targetProject="client_service/test">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<table tableName="baoxian_underwriting_report" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableDeleteByPrimaryKey="false" enableSelectByExample="false">
+		</table>
+	</context>
+</generatorConfiguration>

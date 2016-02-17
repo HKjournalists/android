@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_bgcolor" >
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:id="@+id/notBindedView"
+        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvNotBinded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/font_title1" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/bindThirdPart"
+            android:layout_below="@id/tvNotBinded"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/daze_black2"
+            android:background="@drawable/daze_btn_bg" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvInfoForBind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bindThirdPart"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            style="@style/font_caption" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bindedView"
+        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvThirdpartLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/font_body2" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvThirdpartID"
+            android:layout_below="@+id/tvThirdpartLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            style="@style/font_title1" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/unBindThirdpart"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tvThirdpartID"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:background="@drawable/daze_button_background1"
+            android:textColor="@color/daze_textcolor1"
+            android:textSize="15dp"
+            android:visibility="gone" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvCanNotUnbind"
+            android:layout_below="@+id/tvThirdpartID"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="该账号为唯一账号，不可解绑"
+            style="@style/font_caption"
+            android:visibility="gone" />
+    </RelativeLayout>
+	<include layout="@layout/daze_loading"/>
+</RelativeLayout>

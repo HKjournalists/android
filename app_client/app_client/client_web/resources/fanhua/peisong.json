@@ -1,0 +1,23 @@
+{ 
+    "dealOffer": {
+        "deliveryInfo": {
+            "personName": "${(peisong.peisongName)!}",
+			"phoneNumber": "${(peisong.peisongMobile)!}",
+			"mobileNumber": "${(peisong.peisongMobile)!}",
+			"province": "${(peisong.peisongProvince)!}",
+			"city": "${(peisong.peisongCity)!}",
+			"area": "${(peisong.peisongTown)!}",
+			"receiveAddress": "${(peisong.peisongAddress)!}",
+			"remark": "${remark!}",
+			"code": "Express",
+            "postcode": "",
+            "sendDateStart": "",
+            "sendDateEnd": "",
+            "formDelivery": "",
+            "deliveryFreight": "",
+            "deliveryCost": "",
+            "shippingCode": "",
+            "shippingName": ""
+        }
+    }
+}

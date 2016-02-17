@@ -1,0 +1,20 @@
+<Request>
+	<InputsList>
+		<Inputs type="vehicleInfo">
+			<Input name="ownerIdNo">${idCardNum!}</Input>
+			<Input name="ownerName">${idCardName!}</Input>
+			<Input name="vehicleId">${(vehicleId!)?upper_case}</Input>
+			<Input name="vehicleFrameNo">${(frameNum!)?upper_case}</Input>
+			<Input name="engineNo">${(motorNum!)?upper_case}</Input>
+			<Input name="firstRegisterDate">${registerDate!}</Input>
+			<Input name="specialCarFlag">${specialCarFlag!0}</Input>
+			<Input name="seats">${seats!4}</Input>
+			<Input name="vehicleInvoiceDate">${vehicleInvoiceDate!}</Input>
+			<Input name="packageType">luxury</Input>
+			<#if vehicleModelCode??><Input name="vehicleCodeId">${(vehicleModelCode!)?upper_case}</Input></#if>
+			<Input name="vehicleModelName">${vehicleModelName!}</Input>
+			<Input name="vehicleInvoiceNo">${vehicleInvoiceNo!}</Input>
+			<Input name="specialCarDate"><#if guohu??&&guohu==true&&guohudate??>${guohudate!}</#if></Input>
+		</Inputs>
+	</InputsList>
+</Request>

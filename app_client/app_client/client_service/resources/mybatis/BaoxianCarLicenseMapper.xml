@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chengniu.client.dao.BaoxianCarLicenseMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianCarLicense" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="user_type" property="userType" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="driving_licence_url" property="drivingLicenceUrl" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="vehicle_num" property="vehicleNum" jdbcType="VARCHAR" />
+    <result column="motor_num" property="motorNum" jdbcType="VARCHAR" />
+    <result column="frame_num" property="frameNum" jdbcType="VARCHAR" />
+    <result column="vehicle_type" property="vehicleType" jdbcType="VARCHAR" />
+    <result column="owner" property="owner" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="use_property" property="useProperty" jdbcType="VARCHAR" />
+    <result column="brand_model" property="brandModel" jdbcType="VARCHAR" />
+    <result column="register_date" property="registerDate" jdbcType="VARCHAR" />
+    <result column="issue_date" property="issueDate" jdbcType="VARCHAR" />
+    <result column="adjust_date" property="adjustDate" jdbcType="VARCHAR" />
+    <result column="descr" property="descr" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_type, user_id, driving_licence_url, status, vehicle_num, motor_num, frame_num, 
+    vehicle_type, owner, address, use_property, brand_model, register_date, issue_date, 
+    adjust_date, descr, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_car_license
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from baoxian_car_license
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianCarLicense" >
+    insert into baoxian_car_license (id, user_type, user_id, 
+      driving_licence_url, status, vehicle_num, 
+      motor_num, frame_num, vehicle_type, 
+      owner, address, use_property, 
+      brand_model, register_date, issue_date, 
+      adjust_date, descr, create_time, 
+      update_time)
+    values (#{id,jdbcType=VARCHAR}, #{userType,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, 
+      #{drivingLicenceUrl,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{vehicleNum,jdbcType=VARCHAR}, 
+      #{motorNum,jdbcType=VARCHAR}, #{frameNum,jdbcType=VARCHAR}, #{vehicleType,jdbcType=VARCHAR}, 
+      #{owner,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{useProperty,jdbcType=VARCHAR}, 
+      #{brandModel,jdbcType=VARCHAR}, #{registerDate,jdbcType=VARCHAR}, #{issueDate,jdbcType=VARCHAR}, 
+      #{adjustDate,jdbcType=VARCHAR}, #{descr,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.chengniu.client.pojo.BaoxianCarLicense" >
+    insert into baoxian_car_license
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userType != null" >
+        user_type,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="drivingLicenceUrl != null" >
+        driving_licence_url,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="vehicleNum != null" >
+        vehicle_num,
+      </if>
+      <if test="motorNum != null" >
+        motor_num,
+      </if>
+      <if test="frameNum != null" >
+        frame_num,
+      </if>
+      <if test="vehicleType != null" >
+        vehicle_type,
+      </if>
+      <if test="owner != null" >
+        owner,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="useProperty != null" >
+        use_property,
+      </if>
+      <if test="brandModel != null" >
+        brand_model,
+      </if>
+      <if test="registerDate != null" >
+        register_date,
+      </if>
+      <if test="issueDate != null" >
+        issue_date,
+      </if>
+      <if test="adjustDate != null" >
+        adjust_date,
+      </if>
+      <if test="descr != null" >
+        descr,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingLicenceUrl != null" >
+        #{drivingLicenceUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleNum != null" >
+        #{vehicleNum,jdbcType=VARCHAR},
+      </if>
+      <if test="motorNum != null" >
+        #{motorNum,jdbcType=VARCHAR},
+      </if>
+      <if test="frameNum != null" >
+        #{frameNum,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleType != null" >
+        #{vehicleType,jdbcType=VARCHAR},
+      </if>
+      <if test="owner != null" >
+        #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="useProperty != null" >
+        #{useProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="brandModel != null" >
+        #{brandModel,jdbcType=VARCHAR},
+      </if>
+      <if test="registerDate != null" >
+        #{registerDate,jdbcType=VARCHAR},
+      </if>
+      <if test="issueDate != null" >
+        #{issueDate,jdbcType=VARCHAR},
+      </if>
+      <if test="adjustDate != null" >
+        #{adjustDate,jdbcType=VARCHAR},
+      </if>
+      <if test="descr != null" >
+        #{descr,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chengniu.client.pojo.BaoxianCarLicense" >
+    update baoxian_car_license
+    <set >
+      <if test="userType != null" >
+        user_type = #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingLicenceUrl != null" >
+        driving_licence_url = #{drivingLicenceUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleNum != null" >
+        vehicle_num = #{vehicleNum,jdbcType=VARCHAR},
+      </if>
+      <if test="motorNum != null" >
+        motor_num = #{motorNum,jdbcType=VARCHAR},
+      </if>
+      <if test="frameNum != null" >
+        frame_num = #{frameNum,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleType != null" >
+        vehicle_type = #{vehicleType,jdbcType=VARCHAR},
+      </if>
+      <if test="owner != null" >
+        owner = #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="useProperty != null" >
+        use_property = #{useProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="brandModel != null" >
+        brand_model = #{brandModel,jdbcType=VARCHAR},
+      </if>
+      <if test="registerDate != null" >
+        register_date = #{registerDate,jdbcType=VARCHAR},
+      </if>
+      <if test="issueDate != null" >
+        issue_date = #{issueDate,jdbcType=VARCHAR},
+      </if>
+      <if test="adjustDate != null" >
+        adjust_date = #{adjustDate,jdbcType=VARCHAR},
+      </if>
+      <if test="descr != null" >
+        descr = #{descr,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chengniu.client.pojo.BaoxianCarLicense" >
+    update baoxian_car_license
+    set user_type = #{userType,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=VARCHAR},
+      driving_licence_url = #{drivingLicenceUrl,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      vehicle_num = #{vehicleNum,jdbcType=VARCHAR},
+      motor_num = #{motorNum,jdbcType=VARCHAR},
+      frame_num = #{frameNum,jdbcType=VARCHAR},
+      vehicle_type = #{vehicleType,jdbcType=VARCHAR},
+      owner = #{owner,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      use_property = #{useProperty,jdbcType=VARCHAR},
+      brand_model = #{brandModel,jdbcType=VARCHAR},
+      register_date = #{registerDate,jdbcType=VARCHAR},
+      issue_date = #{issueDate,jdbcType=VARCHAR},
+      adjust_date = #{adjustDate,jdbcType=VARCHAR},
+      descr = #{descr,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

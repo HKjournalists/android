@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd http://www.springmodules.org/schema/oscache http://www.springmodules.org/schema/cache/springmodules-oscache.xsd"
+	default-autowire="byName">
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:custom.properties</value>
+			</list>
+		</property>
+	</bean>
+
+    <context:component-scan base-package="com.chengniu.task"/>
+
+    <bean id="baoxianQuoteInfoDAO" class="com.chengniu.client.dao.BaoxianQuoteInfoDAO"/>
+    <bean id="fanhuaApi" class="com.chengniu.client.service.impl.FanhuaApiImpl"/>
+    <bean id="baoxianCityDAO" class="com.chengniu.client.dao.BaoxianCityDAO"/>
+    <bean id="baoxianCompanyDAO" class="com.chengniu.client.dao.BaoxianCompanyDAO"/>
+    <bean id="baoxianCompanyDictDAO" class="com.chengniu.client.dao.BaoxianCompanyDictDAO"/>
+    <bean id="baoxianCompanyService" class="com.chengniu.client.service.impl.BaoxianCompanyServiceImpl"/>
+    <bean id="fanhuaProviderSyncTask" class="com.chengniu.task.FanhuaProviderSyncTask"/>
+
+	<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${dataSource.driver:com.mysql.jdbc.Driver}" />
+		<property name="jdbcUrl" value="${dataSource.url}" />
+		<property name="username" value="${dataSource.username}" />
+		<property name="password" value="${dataSource.password}" />
+		<property name="idleConnectionTestPeriodInMinutes" value="60" />
+		<property name="idleMaxAgeInMinutes" value="240" />
+		<property name="maxConnectionsPerPartition" value="${dataSource.maxActive}" />
+		<property name="minConnectionsPerPartition" value="10" />
+		<property name="partitionCount" value="3" />
+		<property name="acquireIncrement" value="5" />
+		<property name="statementsCacheSize" value="100" />
+		<property name="releaseHelperThreads" value="3" />
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
+	</bean>
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="globalRollbackOnParticipationFailure" value="false" />
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <!-- 配置事务传播特性 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="insert*" propagation="REQUIRED" />
+            <tx:method name="create*" propagation="REQUIRED" />
+            <tx:method name="add*" propagation="REQUIRED" />
+            <tx:method name="save*" propagation="REQUIRED" />
+            <tx:method name="delete*" propagation="REQUIRED" />
+            <tx:method name="update*" propagation="REQUIRED" />
+            <tx:method name="dispose*" propagation="REQUIRED" />
+            <tx:method name="submit*" propagation="REQUIRED" />
+            <tx:method name="resume*" propagation="REQUIRED" />
+            <tx:method name="check*" propagation="REQUIRED" />
+            <tx:method name="initiate*" propagation="REQUIRED" />
+            <tx:method name="validate*" propagation="REQUIRED" />
+            <tx:method name="cancel*" propagation="REQUIRED" />
+            <tx:method name="sync*" propagation="REQUIRED" />
+            <tx:method name="handle*" propagation="REQUIRED" />
+            <tx:method name="*" read-only="true" propagation="REQUIRED" />
+        </tx:attributes>
+    </tx:advice>
+    <!-- 配置哪些类的哪些方法参与事务 -->
+    <aop:config>
+        <aop:advisor pointcut="execution(* com.chengniu.client.service..*.*(..))"
+                     advice-ref="txAdvice" />
+    </aop:config>
+
+
+    <!-- 检测订单状态 -->
+    <!--<bean id="checkStatusTaskJob"-->
+          <!--class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"-->
+          <!--lazy-init="false">-->
+        <!--<property name="targetObject" ref="checkStatusTask" />-->
+        <!--<property name="concurrent" value="false" />-->
+        <!--<property name="targetMethod" value="execute" />-->
+    <!--</bean>-->
+    <!--<bean id="checkStatusTaskTrigger"-->
+          <!--class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+        <!--<property name="jobDetail">-->
+            <!--<ref bean="checkStatusTaskJob" />-->
+        <!--</property>-->
+        <!--<property name="cronExpression">-->
+            <!--<value>3 * * * * ?</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!-- 泛华保险供应商自动同步 -->
+    <bean id="syncProvidersTaskJob"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          lazy-init="false">
+        <property name="targetObject" ref="fanhuaProviderSyncTask" />
+        <property name="concurrent" value="false" />
+        <property name="targetMethod" value="execute" />
+    </bean>
+    <bean id="syncProvidersTaskJobTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="syncProvidersTaskJob" />
+        </property>
+        <property name="cronExpression">
+            <!-- run every morning at ss mm hh day month year week in localtime -->
+            <!--<value>0 0 1 * * ?</value>-->
+            <value>${task.sync.provider.cron}</value>
+        </property>
+    </bean>
+    <bean id="syncProvidersTaskJobTrigger2"
+          class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="syncProvidersTaskJob" />
+        </property>
+        <property name="cronExpression">
+            <!-- run every morning at ss mm hh day month year week in localtime -->
+            <!--<value>0 0 1 * * ?</value>-->
+            <value>${task.sync.provider.cron2}</value>
+        </property>
+    </bean>
+	<bean id="schedulerFactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" autowire="no">
+		<property name="triggers">
+			<list>
+				<!--<ref bean="checkStatusTaskTrigger" />-->
+                <ref bean="syncProvidersTaskJobTrigger" />
+                <ref bean="syncProvidersTaskJobTrigger2" />
+			</list>
+		</property>
+	</bean>
+</beans>

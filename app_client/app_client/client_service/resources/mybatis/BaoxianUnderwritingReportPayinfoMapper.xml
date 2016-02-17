@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianUnderwritingReportPayinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianUnderwritingReportPayinfo" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="trade_num" property="tradeNum" jdbcType="VARCHAR" />
+    <result column="pay_way" property="payWay" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="operator_id" property="operatorId" jdbcType="VARCHAR" />
+    <result column="operator_name" property="operatorName" jdbcType="VARCHAR" />
+    <result column="baoxian_underwriting_report_id" property="baoxianUnderwritingReportId" jdbcType="VARCHAR" />
+    <result column="response_info" property="responseInfo" jdbcType="VARCHAR" />
+    <result column="response_time" property="responseTime" jdbcType="TIMESTAMP" />
+    <result column="request_info" property="requestInfo" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="message" property="message" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, trade_num, pay_way, price, create_time, operator_id, operator_name, baoxian_underwriting_report_id, 
+    response_info, response_time, request_info, status, message
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_report_payinfo
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReportPayinfo" >
+    insert into baoxian_underwriting_report_payinfo (id, trade_num, pay_way, 
+      price, create_time, operator_id, 
+      operator_name, baoxian_underwriting_report_id, 
+      response_info, response_time, request_info, 
+      status, message)
+    values (#{id,jdbcType=VARCHAR}, #{tradeNum,jdbcType=VARCHAR}, #{payWay,jdbcType=VARCHAR}, 
+      #{price,jdbcType=DECIMAL}, #{createTime,jdbcType=TIMESTAMP}, #{operatorId,jdbcType=VARCHAR}, 
+      #{operatorName,jdbcType=VARCHAR}, #{baoxianUnderwritingReportId,jdbcType=VARCHAR}, 
+      #{responseInfo,jdbcType=VARCHAR}, #{responseTime,jdbcType=TIMESTAMP}, #{requestInfo,jdbcType=VARCHAR}, 
+      #{status,jdbcType=INTEGER}, #{message,jdbcType=VARCHAR})
+  </insert>
+    <update id="update" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReportPayinfo" >
+        update baoxian_underwriting_report_payinfo
+        SET
+        baoxian_underwriting_report_id = #{baoxianUnderwritingReportId,jdbcType=VARCHAR},
+        pay_way = #{payWay,jdbcType=VARCHAR},
+        price = #{price,jdbcType=DECIMAL},
+        status = #{status,jdbcType=INTEGER}
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+   <select id="queryByReportId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_report_payinfo
+    where baoxian_underwriting_report_id = #{baoxianUnderwritingReportId,jdbcType=VARCHAR} order by create_time desc limit 0,1
+  </select>
+    <select id="queryByPayedReportId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_report_payinfo
+    where baoxian_underwriting_report_id = #{baoxianUnderwritingReportId,jdbcType=VARCHAR} and status =1  order by create_time desc limit 0,1
+  </select>
+   <update id="updateRequest" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReportPayinfo" >
+    update baoxian_underwriting_report_payinfo set request_info = #{requestInfo,jdbcType=VARCHAR} 
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+ <update id="updateResponse">
+   update baoxian_underwriting_report_payinfo 
+   set response_info = #{responseInfo,jdbcType=VARCHAR} , status = #{status,jdbcType=INTEGER}, response_time = #{responseTime,jdbcType=TIMESTAMP} 
+    where id = #{id,jdbcType=VARCHAR}
+ </update>
+ <update id="updateStatus">
+   update baoxian_underwriting_report_payinfo 
+   set status = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
+ </update>
+  <update id="updateTradeNum" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReportPayinfo" >
+    update baoxian_underwriting_report_payinfo
+    set
+        trade_num = #{tradeNum,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

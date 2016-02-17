@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white_smoke6"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        android:background="@drawable/stroke_corner_orange_2">
+
+        <RadioButton
+            android:id="@+id/radio_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="扣12分"
+            android:textColor="@color/daze_textcolor6"
+            android:textSize="14sp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/selector_left_corner_orange"/>
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="@color/daze_orangered10"/>
+
+        <RadioButton
+            android:id="@+id/radio_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="扣6分"
+            android:textColor="@color/daze_textcolor6"
+            android:textSize="14sp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/selector_rect_orange"/>
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="@color/daze_orangered10"/>
+
+        <RadioButton
+            android:id="@+id/radio_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="扣3分"
+            android:textColor="@color/daze_textcolor6"
+            android:textSize="14sp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/selector_rect_orange"/>
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="@color/daze_orangered10"/>
+
+        <RadioButton
+            android:id="@+id/radio_6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="扣2分"
+            android:textColor="@color/daze_textcolor6"
+            android:textSize="14sp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/selector_rect_orange"/>
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="@color/daze_orangered10"/>
+
+        <RadioButton
+            android:id="@+id/radio_12"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="扣1分"
+            android:textColor="@color/daze_textcolor6"
+            android:textSize="14sp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/selector_right_corner_orange"/>
+
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

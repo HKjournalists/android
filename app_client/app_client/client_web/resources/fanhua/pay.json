@@ -1,0 +1,24 @@
+{
+	"channelId": "payeco",
+	"channelName": "易联",
+	"payType": "voice",
+	"payTypeDesc": "易联语音支付",
+	"bizId": "${quoteId!}",
+	"paySource": "zzb.channel.chengniu",
+	"amount": ${((amount!0)*100)?string("0")},
+	"notifyUrl": "${notifyUrl!}${payinfoid!}",
+	"areaCode": "${areaCode!}",
+	"notifyType": "POST",
+	"channelParam": {
+		"bankCardNo": "${bankCardNo!""}",
+		"bankCardType": "${bankCardType!"01"}",
+		"bankCardAddress": "${cityName!}",
+		"bankCardMobile": "${bankCardMobile!""}",
+		"idCardName": "${idCardName!""}",
+		"idCardNo": "${idCardNo!""}",
+		"idCardType": "${idCardType!"01"}",
+		"idCardAddress": "${idCardAddress!}",
+		"ipAddress": "119.120.23.254"
+	},
+	"nonceStr":"${nonceStr!}"###
+}

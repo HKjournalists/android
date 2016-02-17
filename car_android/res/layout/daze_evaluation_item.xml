@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/daze_white"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp" >
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	    <com.kplus.car.widget.RegularTextView
+	        android:id="@+id/tvName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:text="综合评分:"
+	        style="@style/font_body1"/>
+	    <com.kplus.car.widget.RatingBar
+	        android:id="@+id/rbEvaluation"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_toRightOf="@+id/tvName"
+	        android:layout_marginLeft="4dp" />
+	    <com.kplus.car.widget.RegularTextView
+	        android:id="@+id/tvTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"
+	        style="@style/font_caption"/>
+	</RelativeLayout>
+	<com.kplus.car.widget.RegularTextView
+	    android:id="@+id/tvContent"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="8dp"
+	    style="@style/font_caption" />
+	<LinearLayout
+	    android:id="@+id/llLoadmore"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_marginTop="8dp" >
+	    <com.kplus.car.widget.RegularTextView
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:layout_marginLeft="16dp"
+	        android:layout_marginRight="16dp"
+	        android:background="@color/daze_white_smoke6" />
+	    <com.kplus.car.widget.RegularTextView
+	        android:id="@+id/tvLoadmore"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:padding="24dp"
+	        style="@style/font_caption" />
+	</LinearLayout>
+</LinearLayout>

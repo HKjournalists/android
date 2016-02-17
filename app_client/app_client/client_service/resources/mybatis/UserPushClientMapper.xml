@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.UserPushClientMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.UserPushClient" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="client_id" property="clientId" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="create_datetime" property="createDatetime" jdbcType="TIMESTAMP" />
+    <result column="update_datetime" property="updateDatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, client_id, type, user_id, create_datetime, update_datetime
+  </sql>
+  <select id="selectPushClientByUserIds" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_push_client
+    where
+    type=#{type,jdbcType=INTEGER}
+    and
+    <choose>
+      <when test="userId != null">user_id=#{userId, jdbcType=BIGINT}</when>
+      <otherwise>
+        user_id in <foreach collection="userIdList" item="userId" open="(" close=")" separator=",">#{userId, jdbcType=BIGINT}</foreach>
+      </otherwise>
+    </choose>
+    ORDER BY create_datetime DESC
+    LIMIT #{maxCount, jdbcType=INTEGER}
+  </select>
+
+</mapper>

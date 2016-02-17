@@ -1,0 +1,109 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base"/>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">#ff009688</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">#ff009688</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@color/cn_white_bgcolor</item>
+        <!-- 标题颜色 -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <!-- 箭头 -->
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!-- 菜单按钮 -->
+        <item name="actionOverflowButtonStyle">@style/AppTheme.overflow</item>
+        <!-- SearchView -->
+        <item name="searchViewStyle">@style/MySearchViewStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <!-- 箭头颜色 -->
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <!-- 替换菜单文件 -->
+    <style name="AppTheme.overflow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <!--<item name="android:src">@drawable/android</item>-->
+    </style>
+
+    <!-- popup style -->
+    <style name="ToolBarStyle" parent="AppTheme.Base">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!--
+        Background for the search query section (e.g. EditText)
+        <item name="queryBackground">...</item>
+        Background for the actions section (e.g. voice, submit)
+        <item name="submitBackground">...</item>
+        Close button icon
+        <item name="closeIcon">...</item>
+        Search button icon
+        <item name="searchIcon">...</item>
+        Go/commit button icon
+        <item name="goIcon">...</item>
+        Voice search button icon
+        <item name="voiceIcon">...</item>
+        Commit icon shown in the query suggestion row
+        <item name="commitIcon">...</item>
+        Layout for query suggestion rows
+        <item name="suggestionRowLayout">...</item>
+        -->
+
+    </style>
+
+    <!--选择服务中checkbox的样式-->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cn_checkbox_check_selector</item>
+    </style>
+    <style name="CustomRadioTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cn_radio_check_selector</item>
+    </style>
+
+    <style name="PopupAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/cn_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/cn_push_bottom_out</item>
+    </style>
+
+    <!--设置评价打分的星-->
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <!--指向cn_start_rating_bar_full文件-->
+        <item name="android:progressDrawable">@drawable/cn_start_rating_bar_full</item>
+        <!--<item name="android:minHeight">10dip</item>-->
+        <!--<item name="android:maxHeight">10dip</item>-->
+    </style>
+
+    <style name="CNTheme.MyDialogStyleBottom" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/CNAnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+        <!--<item name="android:windowCloseOnTouchOutside">true</item>-->
+    </style>
+
+    <style name="CNAnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/cn_slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/cn_slide_out_to_bottom</item>
+    </style>
+
+</resources>
