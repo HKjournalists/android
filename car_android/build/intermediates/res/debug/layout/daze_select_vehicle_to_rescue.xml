@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000" >
+    <LinearLayout
+        android:layout_above="@+id/cancelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+	    android:background="@color/daze_bgcolor"
+	    android:paddingLeft="16dp"
+	    android:paddingRight="16dp"
+	    android:paddingTop="15dp" >
+        <com.kplus.car.widget.RegularTextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="请选择需要救援的车辆"
+	        android:textColor="@color/daze_load_normal_end"
+	        android:gravity="center"
+	        android:textSize="13sp"
+	        android:background="@color/daze_bgcolor" />
+        <include layout="@layout/daze_listview" android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/cancelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+	    android:background="@color/daze_bgcolor"
+	    android:paddingLeft="16dp"
+	    android:paddingRight="16dp"
+	    android:paddingBottom="20dp"
+	    android:paddingTop="10dp"
+	    android:layout_alignParentBottom="true" >
+        <Button
+            android:id="@+id/btCancel"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/daze_btn_bg_light_gray_2"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="15sp"
+            android:textColor="@color/daze_black2" />
+    </LinearLayout>
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_select_vehicle_to_rescue.xml -->

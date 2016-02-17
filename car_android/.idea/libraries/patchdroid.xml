@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="patchdroid">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/patchdroid.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

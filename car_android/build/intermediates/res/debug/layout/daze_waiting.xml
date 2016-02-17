@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#99000000" >
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/daze_text_translucence_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true" >
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/vehicle_add_titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/daze_text_horizontal_margin"
+            android:text="设备注册中..."
+            android:textColor="@color/daze_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_waiting.xml -->

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:color="@color/daze_darkgrey4"/>
+    <item android:color="@color/daze_black2"/>
+</selector>
+<!-- From: file:/D:/workspace/car_android/res/color/daze_btn_text_color.xml -->

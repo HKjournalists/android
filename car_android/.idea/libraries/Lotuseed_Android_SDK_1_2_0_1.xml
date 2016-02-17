@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Lotuseed_Android_SDK_1.2.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/Lotuseed_Android_SDK_1.2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

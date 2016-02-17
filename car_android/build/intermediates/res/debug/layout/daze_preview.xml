@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gesture-image="http://schemas.polites.com/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_black2" >    
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center" >
+        <ImageView
+            android:id="@+id/ivDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/photo_bg" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/closePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" >
+        <com.kplus.car.widget.RegularTextView
+	        android:layout_width="28dp"
+	        android:layout_height="28dp"
+	        android:background="@drawable/daze_close_photo" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/savePhoto"
+        android:layout_toLeftOf="@id/closePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp" >
+        <com.kplus.car.widget.RegularTextView
+	        android:layout_width="28dp"
+	        android:layout_height="28dp"
+	        android:background="@drawable/daze_save_photo" />
+    </RelativeLayout>
+    <include layout="@layout/daze_loading"/>
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_preview.xml -->

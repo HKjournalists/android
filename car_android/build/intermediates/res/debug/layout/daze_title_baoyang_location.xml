@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/daze_white_smoke6">
+
+    <LinearLayout
+        android:id="@+id/leftView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/daze_activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp" >
+
+        <ImageView
+            android:id="@+id/ivLeft"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+	    <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/daze_btn_text_color"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <com.kplus.car.widget.RegularEditText
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/daze_black2"
+        android:gravity="center_vertical"
+        android:background="@color/daze_white"
+        android:hint="搜索保养店名"
+        android:textColorHint="@color/daze_white_smoke2"
+        android:paddingLeft="8dp"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/search_btn"
+        android:layout_width="48dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:text="搜索"
+        android:textSize="16sp"
+        android:textColor="@color/daze_white"
+        android:gravity="center"
+        android:background="@drawable/orange_corner_3"/>
+    
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_title_baoyang_location.xml -->

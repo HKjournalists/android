@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="年检"
+            android:textColor="@color/daze_black2"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/daze_darkgrey7"/>
+
+        <RelativeLayout
+            android:id="@+id/add_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:paddingBottom="8dp">
+
+            <View
+                android:id="@+id/icon"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:background="@drawable/tixing"
+                android:layout_centerVertical="true"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年检到期提醒"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/icon"
+                android:textColor="@color/daze_black2"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"/>
+
+            <View
+                android:id="@+id/remind_btn"
+                android:layout_width="40dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_off"
+                android:layout_alignParentRight="true"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="年检新规"
+                android:textColor="@color/daze_orangered5"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_toLeftOf="@id/remind_btn"
+                android:layout_marginRight="15dp"/>
+
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/date_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="365"
+                    android:textColor="@color/daze_black2"
+                    android:textSize="26sp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天年检到期"
+                    android:textColor="@color/daze_black2"
+                    android:textSize="14sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+            <com.kplus.car.widget.HorizontalProgressBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <View
+                android:id="@+id/bottomLine"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/daze_darkgrey7"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+<!-- From: file:/D:/workspace/car_android/res/layout/item_nianjian.xml -->

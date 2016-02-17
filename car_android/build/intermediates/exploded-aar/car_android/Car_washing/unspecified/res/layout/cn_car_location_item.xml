@@ -1,0 +1,28 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cn_white">
+
+    <include
+        layout="@layout/cn_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rlList"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/toolbar"-->
+    <!--android:scrollbars="none"-->
+    <!--android:visibility="visible">-->
+    <!--</android.support.v7.widget.RecyclerView>-->
+    <ListView
+        android:id="@+id/lvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:divider="@color/cn_line_color"
+        android:dividerHeight="0dp"
+        android:listSelector="@color/cn_transparent"/>
+</RelativeLayout><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/layout/cn_car_location_item.xml -->

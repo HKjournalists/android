@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alibaba.mobileim.ui.atmessage.AtMsgListFragment">
+
+    <TextView
+        android:id="@+id/mark_all_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/aliwx_common_text_size"
+        android:textColor="@color/aliwx_common_text_color_blue"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="5dip"
+        android:layout_marginBottom="5dip"/>
+
+    <com.alibaba.mobileim.fundamental.widget.refreshlist.PullToRefreshListView
+        android:id="@+id/at_msg_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mark_all_read">
+    </com.alibaba.mobileim.fundamental.widget.refreshlist.PullToRefreshListView>
+
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/aliwx_fragment_at_msg_list.xml -->

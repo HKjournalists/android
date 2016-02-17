@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/daze_bgcolor"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="15dp" >
+    <Button
+	    android:id="@+id/btSelfDispose"
+	    android:layout_width="match_parent"
+	    android:layout_height="35dp"
+	    android:background="@drawable/daze_btn_bg_white"
+	    android:gravity="center"
+	    android:text="查询处理点"
+	    android:textSize="15sp"
+	    android:textColor="@color/daze_black2"
+	    android:onClick="onClick" />
+	<com.kplus.car.widget.RegularTextView
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="@color/daze_darkgrey7"/>
+	<Button
+	    android:id="@+id/btPayOnline"
+	    android:layout_width="match_parent"
+	    android:layout_height="35dp"
+	    android:background="@drawable/daze_btn_bg_white"
+	    android:gravity="center"
+	    android:text="在线缴费"
+	    android:textSize="15sp"
+	    android:textColor="@color/daze_black2"
+	    android:onClick="onClick" />
+	<com.kplus.car.widget.RegularTextView
+	    android:id="@+id/tvdevider" 
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="@color/daze_darkgrey7"/>
+	<Button
+	    android:id="@+id/btAuthenticate"
+	    android:layout_width="match_parent"
+	    android:layout_height="35dp"
+	    android:background="@drawable/daze_btn_bg_white"
+	    android:gravity="center"
+	    android:text="认证会员免费缴费"
+	    android:textSize="15sp"
+	    android:textColor="@color/daze_black2"
+	    android:onClick="onClick" />
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/daze_btn_bg_light_gray_2"
+        android:gravity="center"
+        android:text="取消"
+        android:textSize="15sp"
+        android:textColor="@color/daze_black2"
+        android:onClick="onClick"
+        android:layout_marginBottom="5dp" />
+
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_dispose.xml -->

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlSelectCard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:visibility="gone"  >
+    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:background="@color/daze_bgcolor"
+		    android:paddingLeft="16dp"
+		    android:paddingRight="16dp"
+		    android:paddingBottom="20dp"
+		    android:paddingTop="15dp"
+		    android:layout_alignParentBottom="true" >
+		    <com.kplus.car.widget.RegularTextView
+		        android:id="@+id/tvCardTitle"
+		        android:layout_width="match_parent"
+		        android:layout_height="40dp"
+		        android:text="收款方式"
+		        android:textColor="@color/daze_load_normal_end"
+		        android:gravity="center"
+		        android:textSize="13sp"
+		        android:background="@color/daze_bgcolor" />
+	        <Button
+	            android:id="@+id/btBankCard"
+	            android:layout_width="match_parent"
+	            android:layout_height="44dp"
+	    		android:layout_marginTop="10dp"
+	            android:background="@drawable/daze_btn_bg_white"
+	            android:gravity="center"
+	            android:text="银行卡"
+	            android:textSize="15sp"
+	            android:textColor="@color/daze_black2"/>
+	        <Button
+	            android:id="@+id/btAlipay"
+	            android:layout_width="match_parent"
+	            android:layout_height="44dp"
+	            android:layout_marginTop="1dp"
+	            android:background="@drawable/daze_btn_bg_white"
+	            android:gravity="center"
+	            android:text="支付宝"
+	            android:textSize="15sp"
+	            android:textColor="@color/daze_black2" />
+	        <Button
+	            android:id="@+id/btCancelCard"
+	            android:layout_marginTop="10dp"
+	            android:layout_width="match_parent"
+	            android:layout_height="44dp"
+	            android:background="@drawable/daze_btn_bg_light_gray_2"
+	            android:gravity="center"
+	            android:text="取消"
+	            android:textSize="15sp"
+	            android:textColor="@color/daze_black2" />
+        </LinearLayout>	
+</RelativeLayout><!-- From: file:/D:/workspace/car_android/res/layout/daze_card_select.xml -->

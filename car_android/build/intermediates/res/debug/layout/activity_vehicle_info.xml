@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/daze_white_smoke6"
+    android:id="@+id/root">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:background="@drawable/bg_vehicel_detail">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/vehicle_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/daze_white"
+            android:textSize="40sp"
+            android:layout_marginLeft="24dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/vehicle_auth"
+            android:layout_width="45dp"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@id/vehicle_num"
+            android:layout_toRightOf="@id/vehicle_num"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/model_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginLeft="24dp"
+            android:text="车型"
+            android:textColor="@color/daze_black2"
+            android:textSize="16sp"
+            android:gravity="center_vertical"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/model"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:textSize="18sp"
+            android:textColor="@color/daze_darkgrey9"
+            android:textColorHint="@color/daze_white_smoke2"
+            android:gravity="right|center_vertical"
+            android:drawableRight="@drawable/go_to"
+            android:drawablePadding="16dp"
+            android:paddingRight="16dp"
+            android:hint="选择车型"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/license_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="行驶证"
+            android:textColor="@color/daze_black2"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="24dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/vehicle_license"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:textColorHint="@color/daze_white_smoke2"
+            android:textSize="18sp"
+            android:textColor="@color/daze_orangered5"
+            android:gravity="right|center_vertical"
+            android:drawableRight="@drawable/go_to"
+            android:drawablePadding="16dp"
+            android:paddingRight="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/remark_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="备注"
+            android:textColor="@color/daze_black2"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="24dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/remark"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:textColorHint="@color/daze_white_smoke2"
+            android:textSize="18sp"
+            android:textColor="@color/daze_darkgrey9"
+            android:gravity="right|center_vertical"
+            android:drawableRight="@drawable/go_to"
+            android:drawablePadding="16dp"
+            android:paddingRight="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/modify_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="修改查询信息"
+            android:textColor="@color/daze_black2"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="24dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/modify"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:textColorHint="@color/daze_white_smoke2"
+            android:textSize="18sp"
+            android:textColor="@color/daze_darkgrey9"
+            android:gravity="right|center_vertical"
+            android:drawableRight="@drawable/go_to"
+            android:drawablePadding="16dp"
+            android:paddingRight="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/activity_vehicle_info.xml -->

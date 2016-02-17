@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <corners
+        android:radius="3dp"/>
+
+    <solid
+        android:color="@color/daze_darkred2"/>
+
+</shape>
+<!-- From: file:/D:/workspace/car_android/res/drawable/red_corner.xml -->

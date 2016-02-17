@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000" >
+    <LinearLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@drawable/daze_shadow2"
+            android:alpha="0.5" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp" >
+                <com.kplus.car.widget.RegularTextView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="24dp"
+				    android:layout_centerVertical="true"
+				    android:text="已选择违章"
+				    style="@style/font_body2" />
+				<com.kplus.car.widget.RegularTextView
+				    android:id="@+id/order_submit_selected_num_text"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginRight="24dp"
+				    android:layout_alignParentRight="true"
+				    android:layout_centerVertical="true"
+				    style="@style/font_body1" />
+            </RelativeLayout>
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e8e8e8"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp" >
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+				    android:layout_centerVertical="true"
+                    android:text="罚款金额"
+                    style="@style/font_body2" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" 
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="24dp">
+                    <com.kplus.car.widget.RegularTextView
+	                    android:id="@+id/order_submit_money_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:textSize="16dp"
+	                    android:textColor="@color/daze_orangered5"
+	                    android:textStyle="bold"/>
+	                <com.kplus.car.widget.RegularTextView
+	                    android:id="@+id/order_submit_reduce_money_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="6dp"
+	                    android:textSize="14dp"
+	                    android:textColor="@color/daze_blue3"
+	                    android:visibility="gone" />
+                </LinearLayout>                
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/fineCashView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/daze_white_up_darkgray_down"
+                android:layout_marginBottom="8dp"
+                android:visibility="visible" >
+                <ProgressBar
+                    android:id="@+id/fineCashUseInfo_loading"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible" />
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/tvFineCashUseInfo"
+                    android:layout_toRightOf="@id/fineCashUseInfo_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/font_body1"
+                    android:layout_marginLeft="24dp"
+                    android:layout_centerVertical="true" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="24dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/daze_arrow_press_up"
+				    android:scaleType="center" />
+            </RelativeLayout>
+            <com.kplus.car.widget.DashLineView
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp" >
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/tvlabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="24dp"
+                    android:text="服务费"
+                    style="@style/font_body2" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" 
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="24dp">
+	                <ProgressBar
+	                    android:id="@+id/order_submit_service_price_loading"
+	                    android:layout_width="16dp"
+	                    android:layout_height="16dp"
+	                    android:layout_marginLeft="8dp"
+	                    android:visibility="visible" />
+                    <com.kplus.car.widget.RegularTextView
+	                    android:id="@+id/order_submit_price_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:textSize="16dp"
+	                    android:textColor="@color/daze_orangered5"
+	                    android:textStyle="bold"/>
+	                <com.kplus.car.widget.RegularTextView
+	                    android:id="@+id/order_submit_reduce_price_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="6dp"
+	                    android:textSize="14dp"
+	                    android:textColor="@color/daze_blue3"
+	                    android:visibility="visible" />
+                </LinearLayout>    
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/serviceChargeCashView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/daze_white_up_darkgray_down"
+                android:visibility="visible" >
+                <ProgressBar
+                    android:id="@+id/serviceChargeCashUseInfo_loading"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible" />
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/tvServiceChargeCashUseInfo"
+                    android:layout_toRightOf="@id/serviceChargeCashUseInfo_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/font_body1"
+                    android:layout_marginLeft="24dp"
+                    android:layout_centerVertical="true" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="24dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/daze_arrow_press_up"
+				    android:scaleType="center" />
+            </RelativeLayout>
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/serviceRule"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:background="#f1f1f1"
+                android:text="1.高速、铁路违章不能处理，部分违章有滞纳金罚单，将由客服通知补交；\n2.已开具处罚书的违章请到罚单缴费里去处理；\n3.缴费不成功100%退款；\n4.异地违章处理下网较慢，如有问题请先联系客服，否则因重复缴费造成的损失将由您自行承担。"
+                style="@style/font_caption" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#f8f8f8" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/tvSubmitCommit"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/daze_white"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" >
+                <com.kplus.car.widget.RegularTextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="订单金额"
+	                style="@style/font_body2"
+	                android:layout_marginLeft="24dp" />
+                <ProgressBar
+                    android:id="@+id/order_submit_total_price_loading"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="visible" />
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/order_submit_total_price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/daze_orangered5"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvSubmitCommit"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/daze_white"
+                android:gravity="center"
+                android:text="提交订单"
+                android:textSize="15dp"
+                android:textColor="@color/daze_textcolor1"
+                android:enabled="false" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mainView" />
+</RelativeLayout>
+
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_order_submit.xml -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/daze_bgcolor"
+    android:padding="16dp" >
+    <ImageView
+        android:id="@+id/againstImage1"
+        android:layout_width="81dp"
+        android:layout_height="36dp"
+        android:scaleType="fitXY" />
+	<ImageView
+        android:id="@+id/againstImage2"
+        android:layout_width="268dp"
+        android:layout_height="36dp"
+        android:scaleType="fitXY" />
+	<ImageView
+        android:id="@+id/againstImage3"
+        android:layout_width="268dp"
+        android:layout_height="36dp"
+        android:scaleType="fitXY" />
+	<ImageView
+        android:id="@+id/againstImage4"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:scaleType="fitXY" />
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_vehicle_detail_item_image.xml -->

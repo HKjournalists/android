@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_bgcolor" >
+    <ScrollView
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/daze_bgcolor"
+        android:scrollbars="vertical" >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+		    android:background="@color/daze_bgcolor"
+		    android:focusable="true"
+		    android:focusableInTouchMode="true"
+	        android:orientation="vertical" >
+	        <com.kplus.car.widget.RegularTextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="48dp"
+	            android:paddingLeft="24dp"
+	            android:paddingBottom="8dp"
+	            android:gravity="bottom"
+	            android:text="已选城市"
+	            style="@style/font_caption"/>
+	        <GridView
+		        android:id="@+id/gvCitySelected"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="16dp"
+		        android:layout_marginRight="16dp"
+		        android:background="@color/daze_bgcolor"
+		        android:scrollbars="none"
+		        android:numColumns="auto_fit"
+		        android:stretchMode="none"
+		        android:horizontalSpacing="0dp"
+		        android:verticalSpacing="0dp"
+		        android:columnWidth="108dp" ></GridView>
+	        <com.kplus.car.widget.RegularTextView
+                android:id="@+id/cur_loc_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="48dp"
+	            android:paddingLeft="24dp"
+	            android:paddingBottom="8dp"
+	            android:gravity="bottom"
+	            android:text="当前定位"
+	            style="@style/font_caption"/>
+	        <RelativeLayout
+                android:id="@+id/cur_loc"
+	            android:layout_width="match_parent"
+	            android:layout_height="48dp" >
+	            <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvLocate"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="center_vertical"
+		            android:paddingLeft="24dp"
+		            android:text="正在定位..."
+		            style="@style/font_body1" />
+	        </RelativeLayout>
+	        <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/hotCityLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="48dp"
+	            android:paddingLeft="24dp"
+	            android:paddingBottom="8dp"
+	            android:gravity="bottom"
+	            android:text="热门城市"
+	            android:textSize="12sp"
+	            style="@style/font_caption"
+	            android:visibility="gone" />
+	        <GridView
+		        android:id="@+id/hotCitySelected"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/daze_bgcolor"
+		        android:scrollbars="none"
+		        android:numColumns="4"
+		        android:gravity="center_horizontal"
+		        android:stretchMode="columnWidth"
+		        android:horizontalSpacing="1dp"
+		        android:verticalSpacing="1dp"
+		        android:listSelector="@null"
+		        android:visibility="gone" ></GridView>
+	        <com.kplus.car.widget.RegularTextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="48dp"
+	            android:paddingLeft="24dp"
+	            android:paddingBottom="8dp"
+	            android:gravity="bottom"
+	            android:text="所有城市"
+	            style="@style/font_caption" />
+	        <ListView
+		        android:id="@+id/lvProvience"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:divider="@color/daze_darkgrey7"
+		        android:dividerHeight="1dp"
+		        android:cacheColorHint="#00000000"
+		        android:scrollbars="none" 
+		        android:visibility="visible"></ListView>
+	    </LinearLayout>
+    </ScrollView>
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvPrefix"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textSize="44dp"
+        android:text="京"
+        android:textColor="@color/daze_darkgrey9"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/daze_city_prefix_background"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="-2dp"
+        android:visibility="gone" />
+    <RelativeLayout
+        android:id="@+id/subCityView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#20000000"
+        android:visibility="gone" >
+        <ListView
+			android:id="@+id/lvCity"
+			android:layout_width="240dp"
+			android:layout_height="match_parent"
+			android:background="@color/daze_bgcolor"
+			android:divider="@color/daze_darkgrey7"
+			android:dividerHeight="1dp"
+			android:cacheColorHint="#00000000"
+			android:scrollbars="none"
+			android:visibility="visible"
+			android:layout_alignParentRight="true"  ></ListView>
+    </RelativeLayout>
+    
+    <include layout="@layout/daze_loading" />
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_set_monitor_city.xml -->

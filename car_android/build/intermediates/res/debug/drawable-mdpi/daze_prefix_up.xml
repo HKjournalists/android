@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item >
+        <shape android:shape="rectangle">
+            <size android:width="44dp" android:height="24dp"/>
+            <corners android:radius="2dp"/>
+            <stroke android:width="1dp" android:color="@color/daze_orangered5"/>
+        </shape>
+    </item>
+	<item android:left="24dp" android:top="4dp" android:right="4dp" android:bottom="4dp">
+	    <bitmap android:src="@drawable/daze_arrow_down"/>
+	</item>
+</layer-list>
+<!-- From: file:/D:/workspace/car_android/res/drawable-mdpi/daze_prefix_up.xml -->

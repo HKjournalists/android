@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_against_empty"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/daze_bgcolor"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+	<ImageView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dp"
+	    android:src="@drawable/daze_pull_down_to_refresh" />
+	<com.kplus.car.widget.RegularTextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="下拉查违章"
+	    android:textColor="#cbcbcb"
+	    android:textSize="12dp"
+	    android:layout_marginTop="8dp" />
+	<ImageView
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	    android:layout_marginTop="72dp"
+	    android:src="@drawable/daze_no_against" />
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="目前没有违章记录"
+        android:textSize="22dp"
+        android:textColor="#4c4c4c" />
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="好的驾驶习惯要保持哦~！"
+        style="@style/font_caption" />
+    <Button
+        android:id="@+id/shareNoAgainst"
+        android:layout_width="134dp"
+        android:layout_height="40dp"
+        android:background="@drawable/daze_round_button"
+        android:text="分享给好友"
+        android:textColor="@color/daze_textcolor1"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="120dp"
+        android:gravity="center" />
+
+</LinearLayout><!-- From: file:/D:/workspace/car_android/res/layout/daze_list_against_empty.xml -->

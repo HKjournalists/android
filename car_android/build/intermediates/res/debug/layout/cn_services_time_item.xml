@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llServiceTimeItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:background="@drawable/cn_popup_item_selector"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp">
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvTimetItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="全天"
+        android:textColor="@color/cn_common_cars_bgcolor"
+        android:textSize="14sp"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvServiceStatuItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="可预约"
+        android:textColor="@color/cn_common_cars_bgcolor"
+        android:textSize="14sp"/>
+</LinearLayout><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/layout/cn_services_time_item.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/layout/cn_services_time_item.xml -->

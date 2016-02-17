@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_pressed="true" android:drawable="@drawable/daze_button_background_down4"></item>
+	<item android:drawable="@drawable/daze_button_background_up4"></item>
+</selector>
+<!-- From: file:/D:/workspace/car_android/res/drawable-mdpi/daze_button_background4.xml -->

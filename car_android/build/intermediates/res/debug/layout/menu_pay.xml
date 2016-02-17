@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/daze_white"
+    android:padding="16dp">
+
+    <View
+        android:layout_width="304dp"
+        android:layout_height="36dp"
+        android:background="@drawable/guanjia_assurance"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/pay_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/daze_black2"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/daze_darkgrey7"
+        android:layout_marginTop="16dp"/>
+
+    <com.kplus.car.widget.RegularEditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/stroke_corner_gray_2"
+        android:hint="请输入与服务商协定的最终服务价格"
+        android:textSize="14sp"
+        android:paddingLeft="8dp"
+        android:textColor="@color/daze_black2"
+        android:singleLine="true"
+        android:inputType="numberDecimal"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:text="立即支付"
+        android:textColor="@color/daze_white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@drawable/orange_corner_3"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="取消"
+        android:textColor="@color/daze_black2"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@drawable/gray_corner"/>
+
+</LinearLayout><!-- From: file:/D:/workspace/car_android/res/layout/menu_pay.xml -->

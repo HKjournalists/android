@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/daze_bgcolor" >
+    
+   <RelativeLayout
+        android:id="@+id/home_header"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:background="@color/daze_bgcolor" >
+        <com.kplus.car.widget.InnerViewPager
+            android:id="@+id/homeViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+        </com.kplus.car.widget.InnerViewPager>
+        
+        
+        <LinearLayout
+            android:id="@+id/indexView"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/ivActivity"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/daze_white"
+        android:layout_below="@+id/home_header"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+    
+    <com.kplus.car.widget.RegularTextView
+        android:layout_below="@id/ivActivity"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="#00000000" />
+    
+    <RelativeLayout
+       android:id="@+id/home_menu"
+       android:layout_below="@id/home_header"
+       android:layout_marginTop="-24dp"
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:layout_alignParentRight="true"
+       android:layout_marginRight="16dp"
+       android:background="@drawable/home_menu_bg_bg"
+       android:visibility="visible" >
+       <ImageView
+			android:id="@+id/home_menu_image"
+			android:layout_width="18dp"
+			android:layout_height="18dp"
+			android:layout_centerInParent="true"
+			android:src="@drawable/add_white" />
+    </RelativeLayout>
+		
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_home_head.xml -->

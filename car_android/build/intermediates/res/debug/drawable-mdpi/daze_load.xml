@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<corners
+		android:radius="10dp"
+		android:topLeftRadius="@dimen/daze_load_radius"
+		android:bottomRightRadius="@dimen/daze_load_radius"
+		android:bottomLeftRadius="@dimen/daze_load_radius"
+		android:topRightRadius="@dimen/daze_load_radius" />
+	<solid
+		android:color="#32cd32" />
+	<gradient
+		android:startColor="@color/daze_load_normal_begin"
+		android:endColor="@color/daze_load_normal_end"
+		android:angle="270" />
+	
+	<stroke
+		android:color="@color/daze_translucence"
+		android:width="1dp" />
+</shape><!-- From: file:/D:/workspace/car_android/res/drawable-mdpi/daze_load.xml -->

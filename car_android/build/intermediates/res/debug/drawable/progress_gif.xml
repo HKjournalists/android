@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+    <item android:drawable="@drawable/progress_anim1" android:duration="150" />
+    <item android:drawable="@drawable/progress_anim2" android:duration="150" />
+    <item android:drawable="@drawable/progress_anim3" android:duration="150" />
+    <item android:drawable="@drawable/progress_anim4" android:duration="150" />
+    <item android:drawable="@drawable/progress_anim5" android:duration="150" />
+    <item android:drawable="@drawable/progress_anim6" android:duration="150" />
+    <item android:drawable="@drawable/progress_anim7" android:duration="150" />
+</animation-list>
+<!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/drawable/progress_gif.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/drawable/progress_gif.xml -->

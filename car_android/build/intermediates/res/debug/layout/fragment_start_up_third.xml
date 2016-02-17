@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp">
+
+        <View
+            android:id="@+id/o1"
+            android:layout_width="205dp"
+            android:layout_height="160dp"
+            android:background="@drawable/s3_o1"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="105dp"/>
+
+        <View
+            android:id="@+id/o2"
+            android:layout_width="72dp"
+            android:layout_height="83dp"
+            android:background="@drawable/s3_o2"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="25dp"/>
+
+        <View
+            android:id="@+id/o3"
+            android:layout_width="63dp"
+            android:layout_height="92dp"
+            android:background="@drawable/s3_o3"
+            android:layout_alignRight="@id/o1"
+            android:layout_marginRight="-10dp"
+            android:layout_marginTop="25dp"/>
+
+        <View
+            android:id="@+id/o4"
+            android:layout_width="56dp"
+            android:layout_height="93dp"
+            android:background="@drawable/s3_o4"
+            android:layout_marginTop="110dp"/>
+
+        <View
+            android:id="@+id/o5"
+            android:layout_width="77dp"
+            android:layout_height="80dp"
+            android:background="@drawable/s3_o5"
+            android:layout_marginLeft="125dp"/>
+
+        <View
+            android:id="@+id/o6"
+            android:layout_width="269dp"
+            android:layout_height="200dp"
+            android:background="@drawable/s3_o6"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"/>
+
+        <View
+            android:id="@+id/o7"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:background="@drawable/s3_o7"
+            android:layout_alignRight="@id/o6"
+            android:layout_marginRight="-30dp"
+            android:layout_marginTop="102dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/title"
+        android:layout_width="239dp"
+        android:layout_height="107dp"
+        android:background="@drawable/s3_title"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/btn"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:background="@drawable/stroke_corner_white"
+        android:text="立即开启"
+        android:textColor="@color/daze_white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"/>
+
+</RelativeLayout><!-- From: file:/D:/workspace/car_android/res/layout/fragment_start_up_third.xml -->

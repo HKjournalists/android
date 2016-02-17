@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_bgcolor" >
+	<ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	    <RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@color/daze_bgcolor"
+		    android:focusable="true"
+		    android:focusableInTouchMode="true" >
+		    <RelativeLayout
+		        android:id="@+id/headPhotoView"
+		        android:layout_width="match_parent"
+		        android:layout_height="56dp"
+		        android:layout_marginTop="16dp"
+		        android:background="@color/daze_white" >
+		        <com.kplus.car.widget.RegularTextView
+		            android:layout_width="100dp"
+		            android:layout_height="wrap_content"
+		            android:text="头像"
+		            style="@style/font_body1"
+		            android:layout_centerVertical="true"
+		            android:paddingLeft="20dp" />
+		        <com.kplus.car.widget.RoundedImageView
+		            android:id="@+id/ivHeadPhoto"
+		            android:layout_width="40dp"
+		            android:layout_height="40dp"
+		            android:scaleType="centerCrop"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/ivToImage"
+		            android:background="@drawable/daze_circle_white_bg3"
+					app:riv_oval="true"/>
+		        <ImageView
+		            android:id="@+id/ivToImage"
+		            android:layout_width="40dp"
+		            android:layout_height="40dp"
+		            android:src="@drawable/daze_arrow_press_up"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:scaleType="center" />
+		    </RelativeLayout>
+		    <RelativeLayout
+		        android:id="@+id/nickNameView"
+		        android:layout_below="@id/headPhotoView"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:layout_marginTop="1dp"
+		        android:background="@color/daze_white" >
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvNicknameLabel"
+		            android:layout_width="100dp"
+		            android:layout_height="wrap_content"
+		            android:text="昵称"
+		            style="@style/font_body1"
+		            android:layout_centerVertical="true"
+		            android:paddingLeft="20dp" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvNickName"
+		            android:layout_toRightOf="@id/tvNicknameLabel"
+		            android:layout_toLeftOf="@+id/ivNickname"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            style="@style/font_body1"
+		            android:gravity="center_vertical|right" />
+		        <ImageView
+		            android:id="@+id/ivNickname"
+		            android:layout_width="40dp"
+		            android:layout_height="40dp"
+		            android:src="@drawable/daze_arrow_press_up"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:scaleType="center" />
+		    </RelativeLayout>
+		    <com.kplus.car.widget.RegularTextView
+		     android:layout_width="match_parent"
+		     android:layout_height="1dp"
+		     android:background="@color/daze_darkgrey7" />
+		    <RelativeLayout
+		        android:id="@+id/sexView"
+		        android:layout_below="@id/nickNameView"
+		        android:layout_marginTop="1dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:background="@color/daze_white" >
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvSexLabel"
+		            android:layout_width="100dp"
+		            android:layout_height="wrap_content"
+		            android:text="性别"
+		            style="@style/font_body1"
+		            android:layout_centerVertical="true"
+		            android:paddingLeft="20dp" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvSex"
+		            android:layout_toRightOf="@id/tvSexLabel"
+		            android:layout_toLeftOf="@+id/ivSex"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            style="@style/font_body1"
+		            android:gravity="center_vertical|right" />
+		        <ImageView
+		            android:id="@+id/ivSex"
+		            android:layout_width="40dp"
+		            android:layout_height="40dp"
+		            android:src="@drawable/daze_arrow_press_up"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:scaleType="center" />
+		    </RelativeLayout>
+		    <com.kplus.car.widget.RegularTextView
+		     android:layout_width="match_parent"
+		     android:layout_height="1dp"
+		     android:background="@color/daze_darkgrey7" />
+		    <RelativeLayout
+		        android:id="@+id/locationView"
+		        android:layout_below="@id/sexView"
+		        android:layout_marginTop="1dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:background="@color/daze_white" >
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvLocationLabel"
+		            android:layout_width="100dp"
+		            android:layout_height="wrap_content"
+		            android:text="所在地"
+		            style="@style/font_body1"
+		            android:layout_centerVertical="true"
+		            android:paddingLeft="20dp" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvLocation"
+		            android:layout_toRightOf="@id/tvLocationLabel"
+		            android:layout_toLeftOf="@+id/ivLocation"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            style="@style/font_body1"
+		            android:gravity="center_vertical|right" />
+		        <ImageView
+		            android:id="@+id/ivLocation"
+		            android:layout_width="40dp"
+		            android:layout_height="40dp"
+		            android:src="@drawable/daze_arrow_press_up"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:scaleType="center" />
+		    </RelativeLayout>
+		    <RelativeLayout
+		        android:id="@+id/infoView"
+		        android:layout_below="@id/locationView"
+		        android:layout_marginTop="1dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:background="@color/daze_white" >
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvinfoLabel"
+		            android:layout_width="100dp"
+		            android:layout_height="wrap_content"
+		            android:text="个性签名"
+		            style="@style/font_body1"
+		            android:layout_centerVertical="true"
+		            android:paddingLeft="20dp" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvInfo"
+		            android:layout_toRightOf="@id/tvinfoLabel"
+		            android:layout_toLeftOf="@+id/ivInfo"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            style="@style/font_body1"
+		            android:gravity="center_vertical|right"
+		            android:singleLine="true"
+		            android:ellipsize="end" />
+		        <ImageView
+		            android:id="@+id/ivInfo"
+		            android:layout_width="40dp"
+		            android:layout_height="40dp"
+		            android:src="@drawable/daze_arrow_press_up"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:scaleType="center" />
+		    </RelativeLayout>
+		    <com.kplus.car.widget.RegularTextView
+		        android:id="@+id/tvAccounts"
+		        android:layout_below="@+id/infoView"
+	            android:layout_width="match_parent"
+	            android:layout_height="48dp"
+	            android:text="我的账户"
+	            style="@style/font_body2"
+	            android:gravity="center_vertical"
+	            android:paddingLeft="20dp" />
+		    <RelativeLayout
+		        android:id="@+id/phoneView"
+		        android:layout_below="@id/tvAccounts"
+		        android:layout_marginTop="1dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:background="@color/daze_white" >
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvPhoneLabel"
+		            android:layout_width="100dp"
+		            android:layout_height="wrap_content"
+		            android:text="手机号"
+		            style="@style/font_body1"
+		            android:layout_centerVertical="true"
+		            android:paddingLeft="20dp" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvPhone"
+		            android:layout_toRightOf="@id/tvPhoneLabel"
+		            android:layout_toLeftOf="@+id/ivPhone"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            style="@style/font_body1"
+		            android:gravity="center_vertical|right"
+		            android:text="未绑定" />
+		        <ImageView
+		            android:id="@+id/ivPhone"
+		            android:layout_width="40dp"
+		            android:layout_height="40dp"
+		            android:src="@drawable/daze_arrow_press_up"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:scaleType="center" />
+		    </RelativeLayout>
+		    <RelativeLayout
+		        android:id="@+id/wechatView"
+		        android:layout_below="@id/phoneView"
+		        android:layout_marginTop="1dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:background="@color/daze_white" >
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvWechatLabel"
+		            android:layout_width="100dp"
+		            android:layout_height="wrap_content"
+		            android:text="微信账号"
+		            style="@style/font_body1"
+		            android:layout_centerVertical="true"
+		            android:paddingLeft="20dp" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvWechat"
+		            android:layout_toRightOf="@id/tvWechatLabel"
+		            android:layout_toLeftOf="@+id/ivWechat"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            style="@style/font_body1"
+		            android:gravity="center_vertical|right"
+		            android:text="未绑定" />
+		        <ImageView
+		            android:id="@+id/ivWechat"
+		            android:layout_width="40dp"
+		            android:layout_height="40dp"
+		            android:src="@drawable/daze_arrow_press_up"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:scaleType="center" />
+		    </RelativeLayout>
+		    <com.kplus.car.widget.RegularTextView
+		        android:id="@+id/tvQuit"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:layout_below="@id/wechatView"
+		        android:layout_marginTop="16dp"
+		        android:background="@color/daze_white"
+		        android:gravity="center"
+		        android:text="退出当前账户"
+		        android:textColor="@color/daze_orangered5"
+		        android:textSize="14dp" />
+	    </RelativeLayout>	      
+	</ScrollView>
+	<RelativeLayout
+        android:id="@+id/sexSelectedView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:background="#99000000"
+	    android:layout_alignParentBottom="true"
+	    android:visibility="gone" >
+	    
+	    <Button
+		    android:id="@+id/btBlank"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:background="#00000000"
+		    android:layout_above="@+id/controlCenter"/>
+	    
+        <LinearLayout
+            android:id="@+id/controlCenter"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:background="@color/daze_bgcolor"
+		    android:paddingLeft="20dp"
+		    android:paddingRight="20dp"
+		    android:paddingBottom="20dp"
+		    android:paddingTop="15dp"
+		    android:layout_alignParentBottom="true" >
+		    <com.kplus.car.widget.RegularTextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="选择性别"
+		        android:textColor="@color/daze_load_normal_end"
+		        android:gravity="center"
+		        android:textSize="13sp"
+		        android:background="@color/daze_bgcolor" />
+			<Button
+			    android:id="@+id/btMale"
+			    android:layout_width="match_parent"
+			    android:layout_height="35dp"
+			    android:layout_marginTop="10dp"
+			    android:background="@drawable/daze_btn_bg_white"
+			    android:gravity="center"
+			    android:text="男"
+			    android:textSize="15sp"
+			    android:textColor="@color/daze_black2"/>
+			<com.kplus.car.widget.RegularTextView
+			    android:layout_width="match_parent"
+			    android:layout_height="1dp"
+			    android:background="@color/daze_darkgrey7" />
+			<Button
+			    android:id="@+id/btFmale"
+			    android:layout_width="match_parent"
+			    android:layout_height="35dp"
+			    android:background="@drawable/daze_btn_bg_white"
+			    android:gravity="center"
+			    android:text="女"
+			    android:textSize="15sp"
+			    android:textColor="@color/daze_black2" />
+        </LinearLayout>	
+	</RelativeLayout>
+	<include layout="@layout/daze_loading"/>
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_user_info.xml -->

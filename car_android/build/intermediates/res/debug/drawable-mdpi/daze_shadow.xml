@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <gradient
+        android:startColor="#80f2f2f2"
+        android:endColor="#80808080"
+        android:angle="90"
+        android:type="linear"
+        android:centerX="0%"
+        android:centerY="50%" />
+
+</shape><!-- From: file:/D:/workspace/car_android/res/drawable-mdpi/daze_shadow.xml -->

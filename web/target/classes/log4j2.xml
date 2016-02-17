@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info">
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%-5level %d %logger{36} - %msg%n" />
+		</Console>
+		<RollingFile name="logfile"
+			filePattern="target/$${date:yyyy-MM}/info-%d{MM-dd-yyyy}-%i.log"
+			fileName="target/info.log">
+			<PatternLayout charset="UTF-8"
+				pattern="%-5level %d %logger{36} - %msg%n" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="100 MB" />
+			</Policies>
+		</RollingFile>
+		<Async name="aylog">
+			<AppenderRef ref="logfile" />
+		</Async>
+	</Appenders>
+	<loggers>
+		<logger name="org.apache.struts2" level="debug" additivity="false">
+			<AppenderRef ref="aylog" />
+		</logger>
+		<logger name="java.sql" level="debug" additivity="false">
+			<AppenderRef ref="aylog" />
+		</logger>
+		<logger name="org.apache.ibatis" level="debug" additivity="false">
+			<AppenderRef ref="aylog" />
+		</logger>
+		<logger name="org.apache.kafka" level="debug" additivity="false">
+			<AppenderRef ref="aylog" />
+		</logger>
+		<root level="debug" includeLocation="true">
+			<AppenderRef ref="aylog" />
+		</root>
+	</loggers>
+</configuration>

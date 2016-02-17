@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp">
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车险"
+                android:textColor="@color/daze_black2"
+                android:textSize="18sp"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/add_shangyexian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/title"
+                android:layout_alignParentRight="true"
+                android:text="添加商业险提醒"
+                android:textSize="14sp"
+                android:textColor="@color/daze_orangered5"
+                android:drawableLeft="@drawable/addins"
+                android:drawablePadding="5dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/daze_darkgrey7"/>
+
+        <RelativeLayout
+            android:id="@+id/add_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <View
+                android:id="@+id/icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/tixing"
+                android:layout_centerVertical="true"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="车险到期提醒"
+                android:textColor="@color/daze_black2"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/icon"/>
+
+            <View
+                android:id="@+id/remind_btn"
+                android:layout_width="40dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_off"
+                android:layout_alignParentRight="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/daze_darkgrey7"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/jiaoqiangxian_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/jiaoqiangxian_date_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/jiaoqiangxian_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="365"
+                    android:textColor="@color/daze_black2"
+                    android:textSize="26sp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/jiaoqiangxian_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天交强险到期"
+                    android:textColor="@color/daze_black2"
+                    android:textSize="14sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+            <com.kplus.car.widget.HorizontalProgressBar
+                android:id="@+id/jiaoqiangxian_progress"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <View
+                android:id="@+id/jiaoqiangxian_bottomLine"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/daze_darkgrey7"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shangyexian_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/shangyexian_date_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/shangyexian_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="365"
+                    android:textColor="@color/daze_black2"
+                    android:textSize="26sp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/shangyexian_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天商业险到期"
+                    android:textColor="@color/daze_black2"
+                    android:textSize="14sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+            <com.kplus.car.widget.HorizontalProgressBar
+                android:id="@+id/shangyexian_progress"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <View
+                android:id="@+id/shangyexian_bottomLine"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/daze_darkgrey7"/>
+
+        </LinearLayout>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/baoxian_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择您的车险公司，突发事故可一键快速报险"
+            android:textSize="14sp"
+            android:textColor="@color/daze_darkgrey9"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/select_insurance"
+            android:layout_width="160dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="立即选择"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="14sp"
+            android:background="@drawable/stroke_corner_orange"/>
+
+        <RelativeLayout
+            android:id="@+id/my_insurance_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:visibility="gone">
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/daze_darkgrey9"
+                android:layout_centerInParent="true"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/baoxian_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修改"
+                android:textColor="@color/daze_orangered5"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+
+        </RelativeLayout>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/baoxian"
+            android:layout_width="160dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="一键报险"
+            android:textColor="@color/daze_white"
+            android:textSize="14sp"
+            android:background="@drawable/orange_corner_2"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+<!-- From: file:/D:/workspace/car_android/res/layout/item_chexian.xml -->

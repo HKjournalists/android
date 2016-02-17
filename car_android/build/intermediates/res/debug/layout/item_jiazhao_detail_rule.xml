@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kplus.car.widget.RegularTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    android:textSize="16sp"
+    android:textColor="@color/daze_darkgrey9"/><!-- From: file:/D:/workspace/car_android/res/layout/item_jiazhao_detail_rule.xml -->

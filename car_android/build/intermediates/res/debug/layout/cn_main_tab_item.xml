@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cn_tab_bottom_bg">
+    <LinearLayout
+        android:id="@+id/llTabView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/ivTabIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="5dp"
+            android:src="@null"/>
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvTabTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:singleLine="true"
+            android:text="@null"
+            android:textColor="@color/cn_font_color"
+            android:textSize="12dp"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivTabIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/llTabView"
+        android:layout_toRightOf="@+id/llTabView"
+        android:padding="5dp"
+        android:src="@drawable/cn_image_shape_circle_red"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/layout/cn_main_tab_item.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/layout/cn_main_tab_item.xml -->

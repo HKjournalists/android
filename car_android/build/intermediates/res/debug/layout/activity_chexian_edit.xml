@@ -1,0 +1,443 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white_smoke6"
+    android:id="@+id/root">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:text="交强险"
+            android:textColor="@color/daze_black2"
+            android:textSize="18sp"
+            android:background="@color/daze_white"
+            android:layout_marginTop="24dp"
+            android:paddingTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="办理时间"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.MyTextView
+                android:id="@+id/jiaoqiangxian_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:hint="设置"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:drawableRight="@drawable/go_to"
+                android:paddingRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="提醒时间"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.MyTextView
+                android:id="@+id/jiaoqiangxian_remind_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:hint="设置"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:drawableRight="@drawable/go_to"
+                android:paddingRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="交强险保单号"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.RegularEditText
+                android:id="@+id/jiaoqiangxian_baodanhao"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:hint="添加"
+                android:background="@null"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:id="@+id/jiaoqiangxian_takepic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/takepic"
+                android:scaleType="center"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/jiaoqiangxian_pic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/daze_white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/jiaoqiangxian_pic"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:scaleType="centerCrop"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/jiaoqiangxian_retake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="重拍"
+                    android:textColor="@color/daze_blue3"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"/>
+
+            </LinearLayout>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/jiaoqiangxian_delete_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="删除"
+                android:textColor="@color/daze_darkred"
+                android:textSize="16sp"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"/>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/daze_white"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="事故发生时，可快速查看保单号报案"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="24dp"
+            android:textColor="@color/daze_darkgrey9"
+            android:textSize="14sp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:text="商业车险"
+            android:textColor="@color/daze_black2"
+            android:textSize="18sp"
+            android:background="@color/daze_white"
+            android:layout_marginTop="16dp"
+            android:paddingTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="办理时间"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.MyTextView
+                android:id="@+id/shangyexian_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:hint="必填"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:drawableRight="@drawable/go_to"
+                android:paddingRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginLeft="24dp"/>
+
+            <CheckBox
+                android:id="@+id/check_box"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="与交强险一致"
+                android:textSize="16sp"
+                android:textColor="@color/daze_darkgrey4"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="提醒时间"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.MyTextView
+                android:id="@+id/shangyexian_remind_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:hint="必填"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/go_to"
+                android:paddingRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="商业险公司"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.MyTextView
+                android:id="@+id/company"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:hint="选填"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:singleLine="true"
+                android:drawableRight="@drawable/go_to"
+                android:paddingRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="保费（元）"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.RegularEditText
+                android:id="@+id/baofei"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:hint="选填"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:inputType="number"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="保单号"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.RegularEditText
+                android:id="@+id/shangyexian_baodanhao"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:hint="选填"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:background="@null"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:id="@+id/shangyexian_takepic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/takepic"
+                android:scaleType="center"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/shangyexian_pic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/daze_white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/shangyexian_pic"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/shangyexian_retake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="重拍"
+                    android:textColor="@color/daze_blue3"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"/>
+
+            </LinearLayout>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/shangyexian_delete_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="删除"
+                android:textColor="@color/daze_darkred"
+                android:textSize="16sp"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"/>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/daze_white"/>
+
+    </LinearLayout>
+
+</ScrollView><!-- From: file:/D:/workspace/car_android/res/layout/activity_chexian_edit.xml -->

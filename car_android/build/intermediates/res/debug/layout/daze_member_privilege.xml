@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/daze_bgcolor" >
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="88dp"
+		android:background="@color/daze_black2"
+		android:paddingLeft="16dp"
+		android:paddingRight="16dp" >
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_centerVertical="true" >
+			<com.kplus.car.widget.RegularTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="认证车主享豪礼"
+				android:textSize="20dp"
+				android:textColor="#ffea3a" />
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="4dp" >
+				<com.kplus.car.widget.RegularTextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="目前有"
+					android:textColor="@color/daze_white"
+					android:textSize="13dp" />
+				<com.kplus.car.widget.RegularTextView
+					android:id="@+id/tvMemberCount"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="    "
+					android:textColor="@color/daze_orangered5"
+					android:textSize="16dp" />
+				<com.kplus.car.widget.RegularTextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="位车主已认证"
+					android:textColor="@color/daze_white"
+					android:textSize="14dp" />
+			</LinearLayout>
+		</LinearLayout>
+		<Button
+			android:id="@+id/btAuthenticate"
+			android:layout_width="88dp"
+			android:layout_height="36dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:gravity="center"
+			android:text="立即认证"
+			android:textColor="@color/daze_white"
+			android:textSize="14dp"
+			android:background="@drawable/daze_btn_bg_deep_color" />
+	</RelativeLayout>
+	<WebView
+		android:id="@+id/webview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_member_privilege.xml -->

@@ -1,0 +1,241 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_detailpage"
+        android:orientation="vertical">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/set_baoyang"
+            android:layout_width="236dp"
+            android:layout_height="236dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/gray_ring"
+            android:gravity="center"
+            android:text="设置保养提醒"
+            android:textColor="@color/daze_black2"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_marginTop="27dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="236dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="false"
+                android:max="365"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:indeterminate="false"
+                android:max="365"
+                android:progressDrawable="@drawable/stroke_oval"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/date_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/daze_black2"
+                        android:textSize="90sp"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/tian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="8dp"
+                        android:text="天"
+                        android:textColor="@color/daze_black2"
+                        android:textSize="26sp"/>
+                </LinearLayout>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距下次保养"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下次保养时间"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@null"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@color/daze_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llLicheng"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="27dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保养里程"
+                    android:textColor="@color/daze_black2"
+                    android:textSize="16sp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/licheng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@null"
+                    android:textColor="@color/daze_black2"
+                    android:textSize="35sp"/>
+            </LinearLayout>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvSetLicheng"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="27dp"
+                android:gravity="center"
+                android:text="下次多少公里去保养？"
+                android:textColor="@color/daze_blue3"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/jiange_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="9dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/set_jiange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="设置每多少公里保养"
+                    android:textColor="@color/daze_blue3"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/jiange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@null"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/baoyang_record_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/daze_darkgrey7"
+                android:visibility="visible"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/vehicle_auth"
+                android:layout_width="135dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/stroke_corner"
+                android:gravity="center"
+                android:text="车辆认证"
+                android:textColor="@color/daze_black2"
+                android:textSize="16sp"
+                android:visibility="visible"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="36dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="认证送千元礼包"
+                android:textColor="@color/daze_orangered5"
+                android:textSize="14sp"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+<!-- From: file:/D:/workspace/car_android/res/layout/activity_baoyang.xml -->

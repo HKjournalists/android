@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white_smoke6"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/llWeatherTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2"
+                android:background="@drawable/weather_bg_suitable_washing"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/tvDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/w_a_day_marginTop"
+                    android:gravity="center_horizontal"
+                    android:text="@null"
+                    android:textColor="@color/daze_white"
+                    android:textSize="@dimen/w_a_day_textsize"/>
+
+                <ImageView
+                    android:id="@+id/ivWeatherIcon"
+                    android:layout_width="@dimen/w_a_icon_wh"
+                    android:layout_height="@dimen/w_a_icon_wh"
+                    android:layout_below="@+id/tvDay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@null"/>
+
+                <LinearLayout
+                    android:id="@+id/llTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivWeatherIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="@dimen/w_a_weather_marginTop"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/tvTemperature"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="@null"
+                        android:textColor="@color/daze_white"
+                        android:textSize="@dimen/w_a_weather_textsize"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/tvWashDescr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text="@null"
+                        android:textColor="@color/daze_white"
+                        android:textSize="@dimen/w_a_weather_textsize"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/llTemperature"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/w_a_washing_marginBottom"
+                    android:layout_marginTop="@dimen/w_a_washing_marginTop"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/tvWashing"
+                        android:layout_width="202dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/stroke_corner_fill_white"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/w_a_washing_tv_padding"
+                        android:paddingTop="@dimen/w_a_washing_tv_padding"
+                        android:text="预约洗车"
+                        android:textColor="@color/daze_orangered4"
+                        android:textSize="@dimen/w_a_washing_tv_textsize"
+                        android:visibility="invisible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llWashingTips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <com.kplus.car.widget.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="未来的某一天"
+                            android:textColor="@color/daze_white"
+                            android:textSize="@dimen/w_a_washing_tips_tv_textsize"/>
+
+                        <com.kplus.car.widget.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="橙牛上门洗车也将来到你的城市"
+                            android:textColor="@color/daze_white"
+                            android:textSize="@dimen/w_a_washing_tips_tv_textsize"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.kplus.car.widget.WeatherView
+                android:id="@+id/llWeather"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+            </com.kplus.car.widget.WeatherView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout><!-- From: file:/D:/workspace/car_android/res/layout/activity_weather_layout.xml -->

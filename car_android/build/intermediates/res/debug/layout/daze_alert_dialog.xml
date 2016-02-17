@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="288dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/daze_alert_dialog_background"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp"
+        android:paddingBottom="8dp" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/alertTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加您的车型"
+            style="@style/font_title1"
+            android:layout_centerHorizontal="true"/>
+        <!-- <ImageView
+            android:id="@+id/closeAlert"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/close"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp" /> -->
+    </RelativeLayout>
+    <LinearLayout
+	    android:id="@+id/vehicle_mode_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/daze_white"
+	    android:orientation="vertical"
+	    android:padding="24dp"
+	    android:visibility="gone" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:text="品牌"
+                style="@style/font_body2" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvVehicleBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/font_body1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp" >
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:text="车型"
+                style="@style/font_body2" />
+            <com.kplus.car.widget.RegularEditText
+	            android:id="@+id/etVehicleMode"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@null"
+	            android:gravity="center_vertical"
+	            android:hint="请输入车型名"
+	            style="@style/font_body1"
+	            android:textColorHint="@color/daze_white_smoke2"
+	            android:maxLength="8" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+	    android:id="@+id/verify_code_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/daze_white"
+	    android:orientation="horizontal"
+	    android:padding="24dp"
+	    android:visibility="gone" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvVerifyCode"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="验证码"
+            style="@style/font_body2" />
+        <com.kplus.car.widget.RegularEditText
+	        android:id="@+id/etVerifyCode"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@null"
+	        android:gravity="center_vertical"
+	        android:hint="请输入验证码"
+	        style="@style/font_body1"
+	        android:textColorHint="@color/daze_white_smoke2"/>
+    </LinearLayout>
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/messageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/font_caption"
+        android:gravity="center_horizontal"
+        android:background="@color/daze_white"
+        android:visibility="gone"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvBlank"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@color/daze_white"
+        android:visibility="gone" />  
+    <com.kplus.car.widget.antistatic.spinnerwheel.WheelVerticalView
+	    android:id="@+id/remindCshView"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="16dp"
+	    android:background="@color/daze_white"
+	    android:layout_marginLeft="24dp"
+	    android:layout_marginRight="24dp"
+	    android:visibility="gone"/>  
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ececec" />  
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@drawable/daze_alert_bottom_background" >
+        <Button
+            android:id="@+id/alertConfirmButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/daze_alert_confirm_button"
+            android:textSize="15sp"
+            android:textColor="@color/daze_textcolor2"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/alertLeftButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/daze_alert_left_button"
+            android:textSize="15sp"
+            android:textColor="@color/daze_textcolor2"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/alertRightButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/daze_alert_right_button"
+            android:layout_marginLeft="1dp"
+            android:textSize="15sp"
+            android:textColor="@color/daze_textcolor1"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_alert_dialog.xml -->

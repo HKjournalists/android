@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cn_white"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/cn_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.kplus.car.carwash.widget.CNProviceView
+        android:id="@+id/llProviceView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+</LinearLayout><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/layout/cn_car_licence_layout.xml -->

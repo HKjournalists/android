@@ -1,0 +1,658 @@
+-injars 'D:\workspace\car_android\build\intermediates\multi-dex\debug\allclasses.jar'
+-outjars 'D:\workspace\car_android\build\intermediates\multi-dex\debug\componentClasses.jar'
+
+-libraryjars 'D:\Android\sdk\build-tools\22.0.1\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontpreverify
+-dontwarn
+-printconfiguration 'D:\workspace\car_android\build\intermediates\multi-dex\debug\components.flags'
+
+
+-keep class com.kplus.car.KplusApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.kplus.car.activity.LogoActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.StartUpActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.VehicleDetailActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.CitySelectActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ModelSelectActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.AgencyAgainstListActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.OrderInfoAddActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.RefundActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ImageActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.OrderListActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.PhoneRegistActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.WebViewActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.EmergencyLicenseActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.EmergencyDetailActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.Remind {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.AboutActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.MainUIActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.MoreFunctionActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ShootActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.UseServiceRecord {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.Share {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ShareInService {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.WaitingRegit {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ShareResult {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.OrderActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.PreeViewActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.IndividualCenter {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.UserInfoActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.EditTextActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.PictureObtainTypeActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.MemberPrivilegeActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.VehicleServiceActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.BindPhoneActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ThirdpartAccountActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.AllVehiclesActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.VehicleRescueActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.InsuranceremindsActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.MonitorCitiesActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.CertificateActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.SelectBindOrLoginActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.RescueVehicleSelectActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.AlertDialogActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ActivityCenterActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.MessageBoxActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.PushTimeSetActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.UploadLicenceActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.InformationConfirmedActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.SelfServiceListActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.MapRoutePlanActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.PrivilegeActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ShareMessage {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.UploadProgressActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.PopAdvertActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.receiver.RemindReceiver {
+    <init>();
+}
+
+-keep class com.kplus.car.receiver.VehicleAddRemindReceiver {
+    <init>();
+}
+
+-keep class com.kplus.car.service.InitService {
+    <init>();
+}
+
+-keep class com.kplus.car.service.SynchronizationVehicle {
+    <init>();
+}
+
+-keep class com.kplus.car.service.RemindService {
+    <init>();
+}
+
+-keep class com.kplus.car.service.GetPromotionActivityInfoService {
+    <init>();
+}
+
+-keep class com.kplus.car.service.UpdateAgainstRecords {
+    <init>();
+}
+
+-keep class com.kplus.car.container.InstallContainerService {
+    <init>();
+}
+
+-keep class com.kplus.car.service.UpgradeDataService {
+    <init>();
+}
+
+-keep class com.kplus.car.service.NotificationService {
+    <init>();
+}
+
+-keep class com.kplus.car.service.UpdateUserVehicleService {
+    <init>();
+}
+
+-keep class com.kplus.car.service.AsyncTaskService {
+    <init>();
+}
+
+-keep class com.kplus.car.service.GetUserOpenImService {
+    <init>();
+}
+
+-keep class com.kplus.car.service.JiazhaoQueryScoreService {
+    <init>();
+}
+
+-keep class com.kplus.car.wxapi.WXEntryActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.wxapi.WXPayEntryActivity {
+    <init>();
+}
+
+-keep class com.baidu.location.f {
+    <init>();
+}
+
+-keep class com.umeng.fb.ConversationActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.GexinSdkMsgReceiver {
+    <init>();
+}
+
+-keep class com.igexin.sdk.PushService {
+    <init>();
+}
+
+-keep class com.igexin.sdk.PushReceiver {
+    <init>();
+}
+
+-keep class com.igexin.sdk.PushManagerReceiver {
+    <init>();
+}
+
+-keep class com.igexin.sdk.PushActivity {
+    <init>();
+}
+
+-keep class com.igexin.getuiext.activity.GetuiExtActivity {
+    <init>();
+}
+
+-keep class com.igexin.getuiext.service.PayloadReceiver {
+    <init>();
+}
+
+-keep class com.igexin.getuiext.service.GetuiExtService {
+    <init>();
+}
+
+-keep class com.igexin.download.DownloadService {
+    <init>();
+}
+
+-keep class com.igexin.download.DownloadReceiver {
+    <init>();
+}
+
+-keep class com.igexin.download.DownloadProvider {
+    <init>();
+}
+
+-keep class com.alibaba.mobileim.ui.WxChattingActvity {
+    <init>();
+}
+
+-keep class com.alibaba.mobileim.ui.WxConversationActivity {
+    <init>();
+}
+
+-keep class com.alibaba.mobileim.ui.chat.MultiImageActivity {
+    <init>();
+}
+
+-keep class com.alibaba.mobileim.kit.imageviewer.ShowImageActivity {
+    <init>();
+}
+
+-keep class com.alibaba.mobileim.ui.multi.lightservice.MultiPickGalleryActivity {
+    <init>();
+}
+
+-keep class com.alibaba.mobileim.kit.CloudPwdSettingHintActivity {
+    <init>();
+}
+
+-keep class com.alibaba.mobileim.login.WaitProgresssActivity {
+    <init>();
+}
+
+-keep class com.alibaba.mobileim.kit.chat.SelectTribeMemberActivity {
+    <init>();
+}
+
+-keep class com.alibaba.mobileim.appmonitor.tiptool.TooltipService {
+    <init>();
+}
+
+-keep class com.alibaba.tcms.service.TCMSService {
+    <init>();
+}
+
+-keep class com.alibaba.tcms.service.ListenerService {
+    <init>();
+}
+
+-keep class com.alipay.sdk.app.H5PayActivity {
+    <init>();
+}
+
+-keep class com.alipay.sdk.auth.AuthActivity {
+    <init>();
+}
+
+-keep class com.alibaba.sdk.android.webview.BaseWebViewActivity {
+    <init>();
+}
+
+-keep class com.alibaba.sdk.android.hotpatch.HotPatchBroadcastReceiver {
+    <init>();
+}
+
+-keep class com.yintong.secure.activity.BaseActivity {
+    <init>();
+}
+
+-keep class com.yintong.secure.service.PayService {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.HomeNewActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.AddRemindActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.CustomRemindActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.AddCustomRemindActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.JiazhaoListActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.JiazhaoEditActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.JiazhaoDetailRuleActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ChexianActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ChexianEditActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.NianjianActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.NianjianEditActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.BaoyangActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.BaoyangRecordActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.BaoyangLocationActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.BrandListActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.BaoyangItemActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.BaoyangEditActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ChedaiActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.ChedaiEditActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.VehicleEditActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.VehicleInfoActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.MarkLocationActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.AddBaoyangRecordActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.VehicleAddNewActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.VehicleAddOptionalActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.InsuranceListActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.SelectInsuranceActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.RestrictEditActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.GuanjiaHomeActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.GuanjiaSubmitSuccessActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.GuanjiaHistoryActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.GuanjiaDetailActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.PromoCodeActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.CouponActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.EvaluationActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.WeatherActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.CarServicesActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.NoNetworkActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.activity.CarMoreServiceActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.receiver.RemindManager {
+    <init>();
+}
+
+-keep class com.lotuseed.android.PackageReceiver {
+    <init>();
+}
+
+-keep class com.baidu.autoupdatesdk.ConfirmDialoigActivity {
+    <init>();
+}
+
+-keep class com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNCarWashingActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNServicesDisplayActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNServicesActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNCarInfoActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNServiceDetailsActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNEvaluateServiceActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNOrderDetailsActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNOrderListActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNCarLocationActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNPayFinishActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNViewPicActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNShareActivity {
+    <init>();
+}
+
+-keep class com.kplus.car.carwash.module.activites.CNDialogActivity {
+    <init>();
+}
+
+-keep class com.sina.weibo.sdk.component.WeiboSdkBrowser {
+    <init>();
+}
+
+-keep class com.sina.weibo.sdk.net.DownloadService {
+    <init>();
+}
+
+-keep class android.support.v7.widget.TestActivity {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}

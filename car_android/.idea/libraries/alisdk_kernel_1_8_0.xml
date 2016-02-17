@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="alisdk-kernel-1.8.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/alisdk-kernel-1.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

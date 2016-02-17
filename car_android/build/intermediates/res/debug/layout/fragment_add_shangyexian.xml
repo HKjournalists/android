@@ -1,0 +1,19 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="236dp"
+    tools:context="com.kplus.car.fragment.ShangyexianFragment">
+
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="236dp"
+        android:layout_height="236dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/gray_ring"
+        android:gravity="center"
+        android:text="开启商业险到期提醒"
+        android:textColor="@color/daze_black2"
+        android:textSize="20sp"/>
+
+</FrameLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/fragment_add_shangyexian.xml -->

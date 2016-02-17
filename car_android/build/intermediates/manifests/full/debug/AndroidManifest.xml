@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kplus.car"
+    android:versionCode="4200"
+    android:versionName="4.2.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="21" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 个推SDK配置开始 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 可选权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 个推SDK配置结束 -->
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <!-- for camera -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="getui.permission.GetuiService.com.kplus.car" />
+
+    <permission
+        android:name="getui.permission.GetuiService.com.kplus.car"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <!-- 阿里旺旺 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 连连支付 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:name="com.kplus.car.KplusApplication"
+        android:allowBackup="true"
+        android:description="@string/daze_app_description"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon_beta"
+        android:label="@string/daze_app_name"
+        android:theme="@style/AppThemeBase" >
+        <activity
+            android:name="com.kplus.car.activity.LogoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_Theme.Translucent" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.StartUpActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.VehicleDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.CitySelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ModelSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.AgencyAgainstListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.OrderInfoAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.RefundActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.OrderListActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.PhoneRegistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title1"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo1" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.EmergencyLicenseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.EmergencyDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.Remind"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.MyDialogStyleBottom" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.MainUIActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="chengniu.com"
+                    android:pathPrefix="/open"
+                    android:scheme="dzcwz" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.huawei.vassistant"
+                    android:pathPrefix="/vehicle"
+                    android:scheme="huaweiVoice" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.huawei.vassistant"
+                    android:pathPrefix="/vehicle"
+                    android:scheme="huaweivoice" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.MoreFunctionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ShootActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/daze_Theme.Foo" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.UseServiceRecord"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.Share"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.MyDialogStyleBottom" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ShareInService"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.MyDialogStyleBottom" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.WaitingRegit"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo2" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ShareResult"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.MyDialogStyleBottom" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.OrderActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.PreeViewActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.IndividualCenter"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.UserInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.EditTextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateVisible|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.PictureObtainTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.MyDialogStyleBottom"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.MemberPrivilegeActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.VehicleServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo1"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.BindPhoneActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ThirdpartAccountActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.AllVehiclesActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.VehicleRescueActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.InsuranceremindsActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.MonitorCitiesActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.CertificateActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.SelectBindOrLoginActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.RescueVehicleSelectActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo2" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.AlertDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.MyDialogStyle"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ActivityCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.MessageBoxActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.PushTimeSetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.UploadLicenceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.InformationConfirmedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.SelfServiceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.MapRoutePlanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.PrivilegeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ShareMessage"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.MyDialogStyle"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.UploadProgressActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.MyDialogStyle"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.PopAdvertActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.MyDialogStyle"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+
+        <receiver
+            android:name="com.kplus.car.receiver.RemindReceiver"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.kplus.car.receiver.VehicleAddRemindReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <service
+            android:name="com.kplus.car.service.InitService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.SynchronizationVehicle"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.RemindService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.GetPromotionActivityInfoService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.UpdateAgainstRecords"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.container.InstallContainerService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.UpgradeDataService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.NotificationService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.UpdateUserVehicleService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.AsyncTaskService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.GetUserOpenImService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.kplus.car.service.JiazhaoQueryScoreService"
+            android:exported="false" >
+        </service>
+
+        <!-- weixin -->
+        <activity
+            android:name="com.kplus.car.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kplus.car.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 注意这里，似乎对程序有影响，要加上 -->
+                <data android:scheme="wx60ff70d6a7378cd2" />
+            </intent-filter>
+        </activity>
+
+        <!-- 百度地图 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <!-- 原来的key，测试时不能用 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Vi966H8myjmiBXB8okFa6nW6" />
+
+        <!-- 新申请的测试key -->
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="b6TyH80CH0Bhqds7X4LY5LH7"/> -->
+
+
+        <!-- 友盟 -->
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="530b0b7f56240b47fc00d34e" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="android_hiapk" />
+
+        <!-- 个推 -->
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="1gyLhXQ85Q7uFj75mWTai3" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="Cl5wAjzjev74n6LEMROQW" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="pNe3TT1yu27Zu38SaH8X84" />
+        <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" />
+
+        <receiver
+            android:name="com.kplus.car.GexinSdkMsgReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.1gyLhXQ85Q7uFj75mWTai3" />
+                <!-- com.igexin.sdk.action.第三方的appId -->
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="false"
+            android:label="NotificationCenter"
+            android:process=":pushservice" >
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask" >
+        </activity>
+        <activity
+            android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="android.task.myServicetask" />
+
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4 -->
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                <!-- android:name="com.igexin.sdk.action.appId" -->
+                <action android:name="com.igexin.sdk.action.1gyLhXQ85Q7uFj75mWTai3" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" />
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.com.kplus.car"
+            android:process=":pushservice" />
+        <!-- 个推SDK配置结束 -->
+        <!-- 淘宝 -->
+<!--  聊天窗口 -->
+        <activity
+            android:name="com.alibaba.mobileim.ui.WxChattingActvity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ChattingDetailStyle_default"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        - 
+<!--  最近会话列表 -->
+        <activity
+            android:name="com.alibaba.mobileim.ui.WxConversationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+        - 
+<!--  多图查看窗口 -->
+        <activity
+            android:name="com.alibaba.mobileim.ui.chat.MultiImageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensor"
+            android:theme="@style/Aliwx_ContentOverlay_default"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.alibaba.mobileim.kit.imageviewer.ShowImageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensor"
+            android:theme="@style/Aliwx_ContentOverlay_default"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.alibaba.mobileim.ui.multi.lightservice.MultiPickGalleryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+        - 
+<!--  漫游密码输入，三方用户不需要这个Activity -->
+        <activity
+            android:name="com.alibaba.mobileim.kit.CloudPwdSettingHintActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+        - 
+<!--  交易组件跳转窗口，即点击旺旺水滴跳OpenIM窗口 -->
+        <activity android:name="com.alibaba.mobileim.login.WaitProgresssActivity" />
+        <activity
+            android:name="com.alibaba.mobileim.kit.chat.SelectTribeMemberActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        - 
+<!--  故障诊断 -->
+        <service
+            android:name="com.alibaba.mobileim.appmonitor.tiptool.TooltipService"
+            android:exported="false" />
+        - 
+<!--  数据通道 -->
+        <service
+            android:name="com.alibaba.tcms.service.TCMSService"
+            android:exported="true"
+            android:process=":TcmsService" />
+        - 
+<!--   用于接收从TCMSService发送的命令 -->
+        <service
+            android:name="com.alibaba.tcms.service.ListenerService"
+            android:exported="true" />
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity android:name="com.alibaba.sdk.android.webview.BaseWebViewActivity" />
+        - 
+        <receiver
+            android:name="com.alibaba.sdk.android.hotpatch.HotPatchBroadcastReceiver"
+            android:exported="false"
+            android:process=":hotpatch" >
+        - 
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.hotpatch.action.HOT_PATCH" />
+            </intent-filter>
+        </receiver>
+        <!-- 淘宝 -->
+
+
+        <!-- LLYT SDK START -->
+        <activity
+            android:name="com.yintong.secure.activity.BaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <service android:name="com.yintong.secure.service.PayService" >
+        </service>
+        <!-- LLYT SDK END -->
+
+        <activity
+            android:name="com.kplus.car.activity.HomeNewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.AddRemindActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.CustomRemindActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.AddCustomRemindActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.JiazhaoListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.JiazhaoEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.JiazhaoDetailRuleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ChexianActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ChexianEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.NianjianActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.NianjianEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.BaoyangActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.BaoyangRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.BaoyangLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.BrandListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.BaoyangItemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.BaoyangEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ChedaiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.ChedaiEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.VehicleEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.VehicleInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.MarkLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.AddBaoyangRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.VehicleAddNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.VehicleAddOptionalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/daze_Theme.Foo"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.InsuranceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.SelectInsuranceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.RestrictEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.GuanjiaHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.GuanjiaSubmitSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.GuanjiaHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.GuanjiaDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.PromoCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.CouponActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title" >
+        </activity>
+        <activity
+            android:name="com.kplus.car.activity.EvaluationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 天气、洗车指数界面 -->
+        <activity
+            android:name="com.kplus.car.activity.WeatherActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <!-- 汽车服务界面 -->
+        <activity
+            android:name="com.kplus.car.activity.CarServicesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <!-- 无网络连接提示界面 -->
+        <activity
+            android:name="com.kplus.car.activity.NoNetworkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <!-- 汽车服务分组显示界面 -->
+        <activity
+            android:name="com.kplus.car.activity.CarMoreServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/title"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <receiver
+            android:name="com.kplus.car.receiver.RemindManager"
+            android:enabled="true"
+            android:exported="true" >
+        </receiver>
+
+        <!-- 莲子统计 -->
+        <receiver android:name="com.lotuseed.android.PackageReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="LOTUSEED_APPKEY"
+            android:value="h0UJ7K5lY8mncU2m1ql4" />
+        <meta-data
+            android:name="LOTUSEED_CHANNEL"
+            android:value="android_default" />
+        <!-- 莲子统计 END -->
+
+
+        <!-- 百度自动更新Begin -->
+        <meta-data
+            android:name="BDAPPID"
+            android:value="5699307" />
+        <meta-data
+            android:name="BDAPPKEY"
+            android:value="g4PwGvhVlok6f4MfjoeAcd1KfX0F8hmk" />
+
+        <activity
+            android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity"
+            android:exported="false"
+            android:screenOrientation="sensor"
+            android:theme="@style/bdp_update_dialog_style_fullscreen" />
+
+        <receiver
+            android:name="com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_UPDATE" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_DOWNLOAD_COMPLETE" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_AS" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        <!-- 百度自动更新End -->
+        <!-- 上门洗车 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNCarWashingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 服务展示选择服务 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNServicesDisplayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 选择服务 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNServicesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 填写洗车信息 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNCarInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 订单详情 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNServiceDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 评价服务 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNEvaluateServiceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 订单详情 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNOrderDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 我的订单 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNOrderListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 车辆位置 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNCarLocationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 支付完成 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNPayFinishActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 查看大图 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNViewPicActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 分享 -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNShareActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CNTheme.MyDialogStyleBottom"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- DialogActivity -->
+        <activity
+            android:name="com.kplus.car.carwash.module.activites.CNDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/cn_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CNTheme.MyDialogStyleBottom"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ <!-- 必须注册在微博授权，分享微博时候用到 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name="android.support.v7.widget.TestActivity"
+            android:label="RecyclerViewTestActivity" />
+    </application>
+
+</manifest>

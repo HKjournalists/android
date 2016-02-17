@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval" >
+    <size android:width="6dp" android:height="6dp"/>
+	<solid android:color="#ff5621"/>
+	<corners android:radius="3dp"/>
+</shape>
+<!-- From: file:/D:/workspace/car_android/res/drawable-mdpi/daze_red_point.xml -->

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp">
+
+        <View
+            android:id="@+id/o1"
+            android:layout_width="236dp"
+            android:layout_height="252dp"
+            android:background="@drawable/s2_o1"
+            android:layout_marginLeft="10dp"/>
+
+        <View
+            android:id="@+id/o2"
+            android:layout_width="269dp"
+            android:layout_height="215dp"
+            android:background="@drawable/s2_o2"
+            android:layout_marginTop="15dp"/>
+
+        <View
+            android:id="@+id/o3"
+            android:layout_width="96dp"
+            android:layout_height="39dp"
+            android:background="@drawable/s2_o3"
+            android:layout_marginLeft="102dp"
+            android:layout_marginTop="165dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/title"
+        android:layout_width="239dp"
+        android:layout_height="107dp"
+        android:background="@drawable/s2_title"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"/>
+
+</RelativeLayout><!-- From: file:/D:/workspace/car_android/res/layout/fragment_start_up_second.xml -->

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white_smoke6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/daze_black2"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="已开启智能提醒，可在提醒设置中关闭"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/restrict_region"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/daze_white"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/daze_darkgrey9"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:paddingTop="8dp">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="提醒时间"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp" />
+
+            <com.kplus.car.widget.MyTextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:drawableRight="@drawable/go_to"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="必填"
+                android:paddingRight="16dp"
+                android:textColor="@color/daze_black2"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="短信提醒"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:layout_marginLeft="24dp"
+                android:layout_centerVertical="true"/>
+
+            <View
+                android:id="@+id/btn_on_off"
+                android:layout_width="40dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/btn_on_off" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="提醒号码"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp" />
+
+            <com.kplus.car.widget.RegularEditText
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="提醒号码"
+                android:singleLine="true"
+                android:textColor="@color/daze_black2"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/daze_white"/>
+
+    </LinearLayout>
+</ScrollView><!-- From: file:/D:/workspace/car_android/res/layout/activity_restrict_edit.xml -->

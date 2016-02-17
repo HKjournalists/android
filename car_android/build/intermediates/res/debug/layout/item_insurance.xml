@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="63dp">
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="27dp"
+        android:textSize="16sp"
+        android:textColor="@color/daze_black2"/>
+
+    <ImageView
+        android:id="@+id/dial"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/dail"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/daze_black2"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/dial"
+        android:layout_marginRight="9dp"/>
+
+    
+</RelativeLayout><!-- From: file:/D:/workspace/car_android/res/layout/item_insurance.xml -->

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/daze_bgcolor" 
+    android:visibility="gone">
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/daze_darkgrey7" />
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="我的特权"
+        android:paddingLeft="24dp"
+        android:gravity="center_vertical"
+        style="@style/font_subhead2" />
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/daze_darkgrey7" />
+    <RelativeLayout
+        android:id="@+id/rlRoadrescue"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/daze_white_up_darkgray_down" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_centerVertical="true"
+            android:text="道路救援"
+            style="@style/font_body1" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvRoadrescueLabel"
+            android:layout_toLeftOf="@+id/tvRoadrescueNum"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="剩余"
+            style="@style/font_caption" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvRoadrescueNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_centerVertical="true"
+            style="@style/font_body1" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/daze_arrow_press_up"
+            android:scaleType="center" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlInsurance"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/daze_white_up_darkgray_down" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_centerVertical="true"
+            android:text="保险提醒"
+            style="@style/font_body1" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvDayLeft"
+            android:layout_toLeftOf="@+id/tvInsuranceVehicleNumber"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/font_caption" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvInsuranceVehicleNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_centerVertical="true"
+            style="@style/font_body1" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/daze_arrow_press_up"
+            android:scaleType="center" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlMonitor"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/daze_white_up_darkgray_down" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_centerVertical="true"
+            android:text="违章监控"
+            style="@style/font_body1" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvMonitorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvMonitor"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            style="@style/font_caption" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvMonitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_centerVertical="true"
+            style="@style/font_body1" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/daze_arrow_press_up"
+            android:scaleType="center" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlService"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/daze_white_up_darkgray_down" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_centerVertical="true"
+            android:text="贴心美女秘书"
+            style="@style/font_body1" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_centerVertical="true"
+            android:textSize="14dp"
+            android:textColor="@color/daze_orangered5" />
+    </RelativeLayout>
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_user_privilege.xml -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/cn_white"/>
+
+            <corners android:radius="0dp"/>
+        </shape>
+
+    </item>
+    <item android:state_pressed="false">
+        <shape>
+            <solid android:color="@color/cn_washing_service_bgcolor"/>
+
+            <corners android:radius="0dp"/>
+        </shape>
+
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/cn_washing_service_bgcolor"/>
+
+            <corners android:radius="0dp"/>
+        </shape>
+
+    </item>
+
+</selector><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/drawable/layout_list_item_selector.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/drawable/layout_list_item_selector.xml -->

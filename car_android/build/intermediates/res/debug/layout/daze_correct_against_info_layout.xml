@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/correctAganistInfoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#90000000"
+    android:visibility="gone" >
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/errorTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:background="@color/daze_bgcolor"
+        android:text="修正违章信息"
+        style="@style/font_title1" />
+	<com.kplus.car.widget.RegularTextView
+        android:id="@+id/errorInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp"
+        android:background="@color/daze_bgcolor"
+        android:text="由于官网未提供相关数据，需要您自行补充完整"
+        style="@style/font_caption" />
+	<com.kplus.car.widget.RegularTextView
+	    android:layout_width="match_parent"
+	    android:layout_height="16dp"
+	    android:background="@color/daze_bgcolor" />
+	<RelativeLayout
+        android:id="@+id/money_correct_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="112dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="罚款金额"
+            style="@style/font_body2" />
+        <com.kplus.car.widget.RegularEditText
+            android:id="@+id/money_correct_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="112dp"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:textColorHint="@color/daze_white_smoke2"
+            style="@style/font_body2"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:inputType="number"
+            android:maxLength="6"
+            android:hint="请输入罚款金额" />
+    </RelativeLayout>
+    <com.kplus.car.widget.RegularTextView
+	    android:layout_width="match_parent"
+	    android:layout_height="16dp"
+	    android:background="@color/daze_bgcolor" />
+    <RelativeLayout
+        android:id="@+id/score_correct_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:paddingRight="24dp" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="112dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="扣分"
+            style="@style/font_body2" />
+        <LinearLayout
+            android:id="@+id/score_correct_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="112dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:padding="1dp"
+            android:background="@drawable/daze_correct_against_info_layout_bg">
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/score0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/daze_textcolor1"
+                android:textSize="14dp"
+                android:background="@color/daze_white" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/score1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/daze_textcolor1"
+                android:textSize="14dp"
+                android:background="@color/daze_white" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/score2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/daze_textcolor1"
+                android:textSize="14dp"
+                android:background="@color/daze_white" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/score3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/daze_textcolor1"
+                android:textSize="14dp"
+                android:background="@color/daze_white" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/score6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@color/daze_textcolor1"
+                android:textSize="14dp"
+                android:background="@color/daze_white" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/score12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="@color/daze_textcolor1"
+                android:textSize="14dp"
+                android:background="@color/daze_white" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/daze_bgcolor" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/daze_bgcolor"
+        android:orientation="horizontal" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvCorrectAgainstNextTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/daze_white"
+            android:text="取消"
+            android:textColor="@color/daze_textcolor2"
+            android:textSize="14dp" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvSaveCorrectAgainstInfoNow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="1dp"
+            android:gravity="center"
+            android:background="@color/daze_white"
+            android:text="保存"
+            android:textColor="@color/daze_textcolor1"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvCorrectAgainstBlank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000" />
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_correct_against_info_layout.xml -->

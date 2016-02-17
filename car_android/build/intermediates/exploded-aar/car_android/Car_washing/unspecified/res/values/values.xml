@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="cn_area_line">#4344fa</color>
+    <color name="cn_black">#000000</color>
+    <color name="cn_carloc_tranblack">#dd242b2d</color>
+    <color name="cn_common_cars_bgcolor">#4c4c4c</color>
+    <color name="cn_coupon_price">#02ce6f</color>
+    <color name="cn_font_color">#989898</color>
+    <color name="cn_line_color">#e7e7e7</color>
+    <color name="cn_load_normal_end">#808080</color>
+    <color name="cn_oranger_color">#fd7e2d</color>
+    <color name="cn_oranger_color1">#ffb718</color>
+    <color name="cn_orangered5">#ff7e2e</color>
+    <color name="cn_orderlist_bgcolor">#f2f2f2</color>
+    <color name="cn_pay_color">#fff576</color>
+    <color name="cn_press_color">#aaaaaa</color>
+    <color name="cn_red">#ff0000</color>
+    <color name="cn_service_broadcast_bgcolor">#fff39f</color>
+    <color name="cn_service_tranblack">#88000000</color>
+    <color name="cn_space_color">#f1f1f1</color>
+    <color name="cn_timeline_color">#e8e8e8</color>
+    <color name="cn_transparent">#00000000</color>
+    <color name="cn_transparent_black">#55000000</color>
+    <color name="cn_washing_service_bgcolor">#f1f1f1</color>
+    <color name="cn_white">#ffffff</color>
+    <color name="cn_white_bgcolor">#ffffff</color>
+    <color name="cn_white_smoke2">#cccccc</color>
+    <color name="dark_yellow">#dfba00</color>
+    <color name="yellow">#ffd500</color>
+    <declare-styleable name="cn_customTabarMenu"><attr format="integer" name="tabarCount"/><attr format="dimension" name="tabarHeight"/></declare-styleable>
+    <!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="bladeview_fontsize">16dp</dimen>
+    <dimen name="bladeview_popup_fontsize">16dp</dimen>
+    <dimen name="bladeview_popup_height">16dp</dimen>
+    <dimen name="cn_margin_left">10dp</dimen>
+    <dimen name="cn_orderlog_pic_wh">70dp</dimen>
+    <dimen name="cn_orderlog_star_padding">5dp</dimen>
+    <dimen name="cn_service_arearsMarginleft">10dp</dimen>
+    <dimen name="cn_service_arearsPadding">10dp</dimen>
+    <dimen name="cn_service_arearsPaddingLeft">15dp</dimen>
+    <dimen name="cn_service_pic_margin">5dp</dimen>
+    <dimen name="cn_service_time_item_margintop">10dp</dimen>
+    <dimen name="cn_service_time_item_padding">10dp</dimen>
+    <dimen name="cn_service_time_padding">20dp</dimen>
+    <dimen name="cn_starWH">28dp</dimen>
+    <!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="after_tomorrow">后天</string>
+    <string name="before_yesterday">前天</string>
+    <string name="cn_Please_make_sure_the_location">请先确定车辆位置</string>
+    <string name="cn_SinaWeibo">新浪微博</string>
+    <string name="cn_WeChatFriend">微信好友</string>
+    <string name="cn_WeChatMoment">朋友圈</string>
+    <string name="cn_affirm">确认</string>
+    <string name="cn_alipay_desc">推荐支付宝客户端用户</string>
+    <string name="cn_alipay_type">支付宝客户端支付(推荐)</string>
+    <string name="cn_app_name">橙牛洗车</string>
+    <string name="cn_balance">账户余额</string>
+    <string name="cn_bank_card_type">银行卡支付</string>
+    <string name="cn_call">拨打电话</string>
+    <string name="cn_cancel">取消</string>
+    <string name="cn_car_info">车辆信息</string>
+    <string name="cn_car_location">选择位置</string>
+    <string name="cn_car_washing">上门洗车</string>
+    <string name="cn_carbrand_isnotservice">该车型暂时不能服务</string>
+    <string name="cn_chakan">查看</string>
+    <string name="cn_common_cars">常用车辆</string>
+    <string name="cn_confirm">确定</string>
+    <string name="cn_cost_price">实付金额</string>
+    <string name="cn_coupon_price">服务价格%1$s元，优惠%2$s元</string>
+    <string name="cn_enter_car_color">请选择车辆颜色</string>
+    <string name="cn_enter_car_licence">请输入车牌号</string>
+    <string name="cn_enter_car_location_hint">请确认车辆位置</string>
+    <string name="cn_enter_car_model">请选择品牌</string>
+    <string name="cn_enter_carinfo_hint">请输入车辆信息</string>
+    <string name="cn_enter_carinfo_msg">请输入完整车辆信息</string>
+    <string name="cn_enter_mobile_hint">请输入手机号</string>
+    <string name="cn_enter_name_hint">请输入姓名</string>
+    <string name="cn_enter_province">请选择省份</string>
+    <string name="cn_enter_right_mobile">请输入正确的手机号</string>
+    <string name="cn_enter_service_time">请选择服务时间</string>
+    <string name="cn_enter_worker_phone">请输入技师手机号</string>
+    <string name="cn_evaluate_success">评价成功</string>
+    <string name="cn_evalute">评价</string>
+    <string name="cn_evalute_hint">评价就送20元服务费红包!</string>
+    <string name="cn_expire">%1$s到期</string>
+    <string name="cn_get_gps_failed">GPS定位失败</string>
+    <string name="cn_get_location_failed">获取位置失败</string>
+    <string name="cn_is_enter_worker_phone">是否指定技师服务？</string>
+    <string name="cn_is_first_letter">车牌号必须以字母开头</string>
+    <string name="cn_lianlian_type">连连支付</string>
+    <string name="cn_licence_error">请确认你的车牌号！</string>
+    <string name="cn_licence_is_not_empty">车牌号不能包含空格</string>
+    <string name="cn_licence_length_err">车牌号码必须为6位！</string>
+    <string name="cn_licence_type_err">车牌号只能输入字母和数字</string>
+    <string name="cn_loading">加载中...</string>
+    <string name="cn_loading_now">正在玩命加载中...</string>
+    <string name="cn_loading_share_content">正在获取分享内容...</string>
+    <string name="cn_marker_in_scope">拖动地图标记车辆位置</string>
+    <string name="cn_marker_out_scope">该位置未开通服务</string>
+    <string name="cn_more_location">更多城市服务准备开通中</string>
+    <string name="cn_my_city">定位当前城市</string>
+    <string name="cn_my_location">定位当前位置</string>
+    <string name="cn_my_orders">我的订单</string>
+    <string name="cn_next">下一步</string>
+    <string name="cn_no_entry_carinfo">未选择车辆信息，确定返回？</string>
+    <string name="cn_no_net">无法连接到网络，请检查您的网络设置</string>
+    <string name="cn_no_poi_data">该位置暂不支持服务，请拖动地图重新标记车辆位置！</string>
+    <string name="cn_no_selected_location">未选择位置，确定返回？</string>
+    <string name="cn_no_selected_service">未选择服务，确定返回？</string>
+    <string name="cn_no_serving_time">该区域服务时间段暂时无法获取，请稍后再试</string>
+    <string name="cn_no_voucher">暂无代金券</string>
+    <string name="cn_not_support">当前车型无法享受该服务，请您重新选择！</string>
+    <string name="cn_not_support_car_model">当前车型无法享受该服务，请您切换车型！</string>
+    <string name="cn_not_use_voucher">不使用代金券支付</string>
+    <string name="cn_order_cancel">取消订单</string>
+    <string name="cn_order_cancel_confirm">你确定要取消此订单吗？</string>
+    <string name="cn_order_cancel_success">此订单已成功取消</string>
+    <string name="cn_order_details">订单详情</string>
+    <string name="cn_order_history">订单历史</string>
+    <string name="cn_order_num">订单号</string>
+    <string name="cn_order_paidan">已派单</string>
+    <string name="cn_order_price">￥%1$s</string>
+    <string name="cn_orderlist_is_empty">你还没有洗车订单哦</string>
+    <string name="cn_orderlogs_assign">已分配以下师傅为您服务：</string>
+    <string name="cn_orderlogs_finish">师傅 %1$s %2$s 服务完成并拍照</string>
+    <string name="cn_orderlogs_order">买家 %1$s 下单</string>
+    <string name="cn_orderlogs_paid">并付款</string>
+    <string name="cn_orderlogs_reassign">已重新分以下配师傅为您服务：</string>
+    <string name="cn_orderlogs_service_finish">确认服务完成</string>
+    <string name="cn_orderlogs_start">师傅 %1$s %2$s 开始服务并拍照</string>
+    <string name="cn_orders">立即下单</string>
+    <string name="cn_org_order_price">原价%1$s元</string>
+    <string name="cn_pay">立即支付</string>
+    <string name="cn_pay_failed">订单支付失败，确定重新支付？</string>
+    <string name="cn_pay_finish">支付完成</string>
+    <string name="cn_pay_price">在线支付</string>
+    <string name="cn_pay_type_desc">支持储蓄卡信用卡，无需开通网银</string>
+    <string name="cn_paying">正在支付中...</string>
+    <string name="cn_please_entry_content">请填写评价内容</string>
+    <string name="cn_please_selected_payment">请选择支付方式</string>
+    <string name="cn_please_selected_rating">请选择评分等级</string>
+    <string name="cn_realPay">实付：</string>
+    <string name="cn_repeat_submitorder">请不要重复下单哦！</string>
+    <string name="cn_search_addres">正在搜索地址...</string>
+    <string name="cn_search_hint">搜索车辆停放位置</string>
+    <string name="cn_select_service">选择服务</string>
+    <string name="cn_selected_car_color_title">选择车辆颜色</string>
+    <string name="cn_selected_car_licence_title">选择车牌</string>
+    <string name="cn_selected_car_model_title">选择品牌</string>
+    <string name="cn_selected_city">选择服务城市</string>
+    <string name="cn_selected_location">选择车辆位置</string>
+    <string name="cn_selected_pay_type">选择支付方式</string>
+    <string name="cn_selected_service">请选择服务</string>
+    <string name="cn_selected_services">已选择%1$s项服务</string>
+    <string name="cn_selected_voucher">选择代金券</string>
+    <string name="cn_service_area">服务范围</string>
+    <string name="cn_service_details_title">橙牛精致洗车</string>
+    <string name="cn_service_detils">服务介绍</string>
+    <string name="cn_service_error">服务器异常</string>
+    <string name="cn_service_evalute">给洗车服务评价吧</string>
+    <string name="cn_service_evalute_title">评价服务</string>
+    <string name="cn_service_is_exp">服务已不能使用</string>
+    <string name="cn_service_selectedMore_tips">服务项目可多选</string>
+    <string name="cn_sevicers_tips1">未来的某一天</string>
+    <string name="cn_sevicers_tips2">橙牛上门洗车也将来到你的城市</string>
+    <string name="cn_sevicers_tips3">该城市暂无服务项目，请切换城市</string>
+    <string name="cn_share_tips">好服务，当然要大家一起分享</string>
+    <string name="cn_share_title">分享晒单</string>
+    <string name="cn_submit_evalute">提交评价</string>
+    <string name="cn_today">今天</string>
+    <string name="cn_total_price">合计：￥%1$s</string>
+    <string name="cn_unpaid_cancel">系统已自动关闭未支付订单</string>
+    <string name="cn_view_myorders">查看我的订单</string>
+    <string name="cn_voucher">代金劵</string>
+    <string name="cn_voucher_is_empty">你还没有代金券哦！</string>
+    <string name="cn_wechat_desc">推荐微信客户端用户</string>
+    <string name="cn_wechat_type">微信客户端支付</string>
+    <string name="cn_worker_phone_is_error">技师手机号格式不正确！</string>
+    <string name="cn_yuan_unit">￥</string>
+    <string name="hostlocation">定位当前位置</string>
+    <string name="tomorrow">明天</string>
+    <string name="two_day_after">两天后</string>
+    <string name="two_day_before">两天前</string>
+    <string name="yesterday">昨天</string>
+    <!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppTheme" parent="AppTheme.Base"/>
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">#ff009688</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">#ff009688</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@color/cn_white_bgcolor</item>
+        <!-- 标题颜色 -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <!-- 箭头 -->
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!-- 菜单按钮 -->
+        <item name="actionOverflowButtonStyle">@style/AppTheme.overflow</item>
+        <!-- SearchView -->
+        <item name="searchViewStyle">@style/MySearchViewStyle</item>
+    </style>
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+    <style name="AppTheme.overflow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <!--<item name="android:src">@drawable/android</item>-->
+    </style>
+    <style name="CNAnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/cn_slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/cn_slide_out_to_bottom</item>
+    </style>
+    <style name="CNTheme.MyDialogStyleBottom" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/CNAnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+        <!--<item name="android:windowCloseOnTouchOutside">true</item>-->
+    </style>
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cn_checkbox_check_selector</item>
+    </style>
+    <style name="CustomRadioTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cn_radio_check_selector</item>
+    </style>
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!--
+        Background for the search query section (e.g. EditText)
+        <item name="queryBackground">...</item>
+        Background for the actions section (e.g. voice, submit)
+        <item name="submitBackground">...</item>
+        Close button icon
+        <item name="closeIcon">...</item>
+        Search button icon
+        <item name="searchIcon">...</item>
+        Go/commit button icon
+        <item name="goIcon">...</item>
+        Voice search button icon
+        <item name="voiceIcon">...</item>
+        Commit icon shown in the query suggestion row
+        <item name="commitIcon">...</item>
+        Layout for query suggestion rows
+        <item name="suggestionRowLayout">...</item>
+        -->
+
+    </style>
+    <style name="PopupAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/cn_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/cn_push_bottom_out</item>
+    </style>
+    <style name="ToolBarStyle" parent="AppTheme.Base">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <!--指向cn_start_rating_bar_full文件-->
+        <item name="android:progressDrawable">@drawable/cn_start_rating_bar_full</item>
+        <!--<item name="android:minHeight">10dip</item>-->
+        <!--<item name="android:maxHeight">10dip</item>-->
+    </style>
+</resources>

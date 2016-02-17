@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="27dp"
+    android:layout_marginRight="27dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="12dp"
+        android:background="@color/daze_darkgrey7"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/daze_black2"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/daze_black2"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/score"
+            android:layout_marginLeft="27dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/daze_orangered5"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/daze_darkgrey9"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/status"
+            android:layout_marginRight="9dp"/>
+
+    </RelativeLayout>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/daze_black2"
+        android:gravity="center_vertical"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/daze_darkgrey9"
+        android:gravity="center_vertical"
+        android:layout_marginTop="9dp"/>
+
+</LinearLayout><!-- From: file:/D:/workspace/car_android/res/layout/item_against_record.xml -->

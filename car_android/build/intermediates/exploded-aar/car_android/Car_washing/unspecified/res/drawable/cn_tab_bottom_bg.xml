@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="-1px" android:left="-1px" android:right="-1px">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/cn_white"/>
+
+            <stroke android:width="1px" android:color="@color/cn_white_smoke2"/>
+        </shape>
+    </item>
+</layer-list><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/drawable/cn_tab_bottom_bg.xml -->

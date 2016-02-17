@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/daze_emergency_help_call_service_active" android:state_pressed="true"/>
+    <item android:drawable="@drawable/daze_emergency_help_call_service" android:state_pressed="false"/>
+
+</selector><!-- From: file:/D:/workspace/car_android/res/drawable-mdpi/daze_emergency_service_call.xml -->

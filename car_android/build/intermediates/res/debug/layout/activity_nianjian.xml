@@ -1,0 +1,157 @@
+<LinearLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white"
+    android:orientation="vertical"
+    tools:context="com.kplus.car.activity.NianjianActivity">
+
+    <!--<android.support.v7.widget.Space-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="6"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_detailpage"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_marginTop="27dp">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="236dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="false"
+                android:max="365"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:indeterminate="false"
+                android:max="365"
+                android:progressDrawable="@drawable/stroke_oval"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/date_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/daze_black2"
+                        android:textSize="90sp"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/tian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="8dp"
+                        android:text="天"
+                        android:textColor="@color/daze_black2"
+                        android:textSize="26sp"/>
+
+                </LinearLayout>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距下次年检"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下次年检时间"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@null"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="27dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="机动车年检新规定"
+            android:textColor="@color/daze_blue3"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:background="@color/daze_white"
+        android:orientation="vertical">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/vehicle_auth"
+            android:layout_width="135dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/stroke_corner"
+            android:gravity="center"
+            android:text="车辆认证"
+            android:textColor="@color/daze_black2"
+            android:textSize="16sp"
+            android:visibility="visible"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="认证送千元礼包"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="14sp"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/activity_nianjian.xml -->

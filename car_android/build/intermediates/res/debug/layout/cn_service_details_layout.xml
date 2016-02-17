@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/cn_white"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cn_transparent">
+
+        <LinearLayout
+            android:id="@+id/llOrderPriceDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/cn_timeline_color"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvOrderPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@null"
+                android:textColor="@color/cn_oranger_color"
+                android:textSize="20sp"/>
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvOrgOrderPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="@null"
+                android:textColor="@color/cn_common_cars_bgcolor"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/cn_transparent"/>
+
+        <Button
+            android:id="@+id/btnOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/btn_details_order_selector"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="@string/cn_orders"
+            android:textColor="@color/cn_pay_color"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewTop"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/cn_line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/viewTop"
+        android:orientation="vertical">
+        <com.kplus.car.carwash.widget.CNWebview
+            android:id="@+id/wvWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layerType="hardware"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/svScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/viewTop"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cn_white"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.kplus.car.carwash.widget.CNSerivePicView
+                    android:id="@+id/serivePicView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+                <LinearLayout
+                    android:id="@+id/llTextDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/tvServiceTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/cn_timeline_color"
+                        android:gravity="center_vertical"
+                        android:padding="15dp"
+                        android:text="@null"
+                        android:textColor="@color/cn_common_cars_bgcolor"
+                        android:textSize="18sp"/>
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/tvServiceContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="25dp"
+                        android:background="@color/cn_transparent"
+                        android:gravity="center_vertical"
+                        android:text="@null"
+                        android:textColor="@color/cn_common_cars_bgcolor"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/cn_transparent"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/layout/cn_service_details_layout.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/layout/cn_service_details_layout.xml -->

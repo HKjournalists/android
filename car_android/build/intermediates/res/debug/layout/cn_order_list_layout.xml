@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rlMyOrders"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cn_white">
+
+    <com.kplus.car.carwash.widget.pulltorefresh.PullToRefreshListView
+        android:id="@+id/plvOrderList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cn_orderlist_bgcolor"
+        android:cacheColorHint="@color/cn_transparent"
+        android:divider="@color/cn_timeline_color"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="@color/cn_transparent"
+        android:scrollbars="none"
+        android:visibility="visible"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/cn_orderlist_is_empty"
+        android:textColor="@color/cn_font_color"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/layout/cn_order_list_layout.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/layout/cn_order_list_layout.xml -->

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/single_on"/>
+    <item android:state_selected="false" android:drawable="@drawable/single_off"/>
+</selector>
+<!-- From: file:/D:/workspace/car_android/res/drawable/single_on_off.xml -->

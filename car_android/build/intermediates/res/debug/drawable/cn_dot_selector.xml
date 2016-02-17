@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/cn_icon_disable" android:state_enabled="true"/>
+    <item android:drawable="@drawable/cn_icon_enable" android:state_enabled="false"/>
+
+</selector><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/drawable/cn_dot_selector.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/drawable/cn_dot_selector.xml -->

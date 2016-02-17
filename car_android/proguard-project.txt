@@ -1,0 +1,125 @@
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-verbose
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+-keepattributes *Annotation*
+-keepattributes Signature
+
+-libraryjars libs/android-support-v4.jar
+-keep class android.support.v4.** { *; }
+-keep public class * extends android.support.v4
+-keep public class * extends android.app.Fragment
+-dontwarn android.support.v4.**
+
+-libraryjars libs/baidumapapi_v2_3_0.jar
+-libraryjars libs/locSDK_3.3.jar
+-libraryjars libs/armeabi/libBaiduMapSDK_v2_3_0.so 
+-libraryjars libs/armeabi/liblocSDK3.so 
+-keep class com.baidu.**{*;}
+-keep class vi.com.gdi.bgl.**{*;}
+
+-libraryjars libs/alipay.jar
+-keep class com.alipay.android.app.lib.** { *; }
+
+-libraryjars libs/GexinSdk.jar
+-libraryjars libs/IncrementSdk.jar
+-libraryjars libs/armeabi/libincrement.so 
+-keep class com.igexin.** { *; }
+-keep class sdk.** { *; }
+-dontwarn com.igexin.**
+-dontwarn sdk.**
+
+-libraryjars libs/mta-sdk-1.6.2.jar
+-keep class com.tencent.** { *; }
+-dontwarn com.tencent.**
+
+-libraryjars libs/ShareSDK-Core-2.3.7.jar
+-libraryjars libs/ShareSDK-SinaWeibo-2.3.7.jar
+-libraryjars libs/ShareSDK-Wechat-2.3.7.jar
+-libraryjars libs/ShareSDK-Wechat-Core-2.3.7.jar
+-libraryjars libs/ShareSDK-Wechat-Moments-2.3.6.jar
+-keep class cn.sharesdk.**{*;}
+-keep class com.sina.**{*;}
+-keep class m.framework.**{*;}
+
+-libraryjars libs/umeng_sdk.jar
+-keep class com.umeng.** { *; }
+-keep public class * extends com.umeng.**
+-dontwarn com.umeng.**
+-keepclassmembers class * {
+  	public <init>(org.json.JSONObject);
+}
+-keep public class com.kplus.car.R$*{
+	public static final int *;
+}
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+-keep public class com.umeng.fb.ui.ThreadView {
+}
+
+-libraryjars libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar
+
+-libraryjars libs/UPPayAssistEx.jar
+-libraryjars libs/UPPayPluginEx.jar
+-keep class com.unionpay.** { *; }
+-keep class com.UCMobile.** { *; }
+
+
+-keep class com.android.vending.licensing.ILicensingService
+-keep class org.apache.commons.net.** { *; }
+-dontwarn org.apache.commons.net.**
+
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);  
+}
+
+-keepclassmembers class * extends android.app.Activity {
+	public void *(android.view.View);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {
+	public static final android.os.Parcelable$Creator *;
+}
+
+-keep class com.kplus.car.mode.** {*;}
+-keepclassmembers class com.kplus.car.mode.** {*;}
+
+-keepclassmembers class * implements java.io.Serializable {
+	static final long serialVersionUID;
+	private static final java.io.ObjectStreamField[] serialPersistentFields;
+	private void writeObject(java.io.ObjectOutputStream);
+	private void readObject(java.io.ObjectInputStream);
+	java.lang.Object writeReplace();
+	java.lang.Object readResolve();
+}
+
+-keep class android.support.v7.widget.RoundRectDrawable { *; }
+
+# ProGuard configurations for NetworkBench Lens
+-keep class com.networkbench.** { *; }
+-dontwarn com.networkbench.**
+-keepattributes Exceptions, Signature, InnerClasses
+# End NetworkBench Lens

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_bgcolor" >
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_above="@+id/operateView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+            
+            <include layout="@layout/daze_order_title"/>
+    
+		    <RelativeLayout
+		        android:id="@+id/failReasonView"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:background="#fdf7e1"
+		        android:paddingLeft="16dp"
+		        android:paddingTop="16dp"
+		        android:paddingRight="16dp"
+		        android:paddingBottom="12dp"
+		        android:visibility="gone" >
+		        <ImageView
+		            android:id="@+id/ivWarn"
+		            android:layout_width="16dp"
+		            android:layout_height="16dp"
+		            android:src="@drawable/daze_warn"
+		            android:scaleType="fitXY" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/tvfailReason"
+		            android:layout_toRightOf="@+id/ivWarn"
+		            android:layout_marginLeft="8dp"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="证件审核失败："
+		            style="@style/font_body2"
+		            android:singleLine="false" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:layout_toRightOf="@+id/ivWarn"
+		            android:layout_marginLeft="8dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="证件审核失败："
+		            android:textSize="14dp"
+		            android:textColor="@color/daze_orangered5" />
+		    </RelativeLayout>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="1dp"
+		        android:orientation="vertical" >
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:paddingTop="16dp"
+		            android:paddingBottom="16dp"
+		            android:paddingLeft="24dp"
+		            android:paddingRight="24dp"
+		            android:orientation="vertical"
+		            android:gravity="center_vertical"
+		            android:background="@color/daze_white" >
+		            <RelativeLayout
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderFeeLabel"
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="left"
+		                    android:text="订单金额 "
+		                    style="@style/font_body1"
+		                    android:layout_centerVertical="true" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderFee"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="left"
+		                    android:textColor="@color/daze_orangered6"
+		                    android:textSize="20dp"
+		                    android:textStyle="bold"
+		                    android:layout_toRightOf="@+id/tvOrderFeeLabel"
+		                    android:layout_centerVertical="true" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderState"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:textColor="@color/daze_orangered6"
+		                    android:textSize="14dp"
+		                    android:layout_centerVertical="true"
+		                    android:layout_alignParentRight="true" />
+		            </RelativeLayout>
+		            <com.kplus.car.widget.DashLineView
+		                android:layout_width="match_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginTop="8dp"
+		                android:layout_marginLeft="96dp" />
+		            <LinearLayout
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="16dp"
+		                android:orientation="horizontal"
+		                android:gravity="center_vertical" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:text="罚款金额"
+		                    style="@style/font_body2" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/orderFine"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:gravity="left"
+		                    style="@style/font_body1" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/orderFineDeduction"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:textSize="14dp"
+		                    android:textColor="@color/daze_blue3"
+		                    android:layout_marginLeft="6dp" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/orderFineDeductionLabel"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:text="(罚款代金券)"
+		                    style="@style/font_caption"
+		                    android:visibility="gone" />
+		            </LinearLayout>
+		            <LinearLayout
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="1dp"
+		                android:orientation="horizontal" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:text="服务费"
+		                    style="@style/font_body2" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/orderServiceCharge"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:gravity="left"
+		                    style="@style/font_body1" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/orderServiceChargeDeduction"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:textSize="14dp"
+		                    android:textColor="@color/daze_blue3"
+		                    android:layout_marginLeft="6dp" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/orderServiceChargeDeductionLabel"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:text="(服务费代金券)"
+		                    style="@style/font_caption"
+		                    android:visibility="gone" />
+		            </LinearLayout>
+		            <com.kplus.car.widget.RegularTextView
+		                android:layout_width="match_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginTop="8dp"
+		                android:background="@color/daze_bgcolor" />
+		            <com.kplus.car.widget.RegularTextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="订单信息"
+		                android:layout_marginTop="16dp"
+		                style="@style/font_body1" />
+		            <LinearLayout
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal"
+		                android:layout_marginTop="8dp" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderNumberLabel"
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:text="订单号 "
+		                    style="@style/font_body2" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderNumber"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_body1" />
+		            </LinearLayout>
+		            <LinearLayout
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal"
+		                android:layout_marginTop="8dp" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="left"
+		                    android:text="提交时间 "
+		                    style="@style/font_body2" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderDate"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_body1" />
+		            </LinearLayout>
+		            <LinearLayout
+		                android:id="@+id/orderPayDateView"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal"
+		                android:layout_marginTop="8dp" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="left"
+		                    android:text="支付时间 "
+		                    style="@style/font_body2" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderPayDate"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_body1" />
+		            </LinearLayout>
+		            <RelativeLayout
+		                android:id="@+id/paymentMethodView"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="8dp"
+		                android:visibility="gone" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvpaymentMethodLabel"
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="left"
+		                    android:text="支付方式 "
+		                    style="@style/font_body2" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvpaymentMethod1"
+		                    android:layout_toRightOf="@+id/tvpaymentMethodLabel"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_body1" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvpayMoneyMethod1"
+		                    android:layout_toRightOf="@+id/tvpaymentMethod1"
+		                    android:layout_alignBottom="@+id/tvpaymentMethod1"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_caption" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvpaymentMethod2"
+		                    android:layout_toRightOf="@+id/tvpaymentMethodLabel"
+		                    android:layout_below="@+id/tvpaymentMethod1"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_body1"
+		                    android:layout_marginTop="1dp" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvpayMoneyMethod2"
+		                    android:layout_toRightOf="@+id/tvpaymentMethod2"
+		                    android:layout_alignBottom="@+id/tvpaymentMethod2"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_caption" />
+		            </RelativeLayout>
+		            <LinearLayout
+		                android:id="@+id/orderCompleteDateView"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal"
+		                android:layout_marginTop="8dp" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="left"
+		                    android:text="完成时间"
+		                    style="@style/font_body2" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderCompleteDate"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_body1" />
+		            </LinearLayout>		            
+		            <LinearLayout
+		                android:id="@+id/orderRefundDateView"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal"
+		                android:layout_marginTop="8dp" 
+		                android:visibility="gone">
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderRefundTime"
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="left"
+		                    android:text="退款时间"
+		                    style="@style/font_body2" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderRefundDate"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_body1" />
+		            </LinearLayout>
+		            <LinearLayout
+		                android:id="@+id/orderRefundInfoView"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal"
+		                android:layout_marginTop="8dp"
+		                android:visibility="gone" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderRefundInfo"
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="left"
+		                    android:text="退款信息"
+		                    style="@style/font_body2" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderRefundMessage"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_body1" />
+		            </LinearLayout>		
+		            <LinearLayout
+		                android:id="@+id/orderRefundInfoView1"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal"
+		                android:layout_marginTop="8dp"
+		                android:visibility="gone" >
+		                <com.kplus.car.widget.RegularTextView
+		                    android:layout_width="96dp"
+		                    android:layout_height="wrap_content"
+		                    android:layout_gravity="left" />
+		                <com.kplus.car.widget.RegularTextView
+		                    android:id="@+id/tvOrderRefundMessage1"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    style="@style/font_body2" />
+		            </LinearLayout>	            
+		        </LinearLayout>
+		    </LinearLayout>   
+		    
+		    <com.kplus.car.widget.RegularTextView
+		        android:id="@+id/tvListInfo"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:background="@color/daze_bgcolor"
+		        android:gravity="center_vertical"
+		        android:paddingLeft="24dp"
+		        style="@style/font_subhead2" />
+	        <ListView
+	            android:id="@+id/lvVehicleAgainst"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="16dp"
+	            android:layout_marginRight="16dp"
+	            android:background="#f8f8f8"
+	            android:cacheColorHint="#000000"
+	            android:divider="@null"
+	            android:dividerHeight="0dp" ></ListView>
+		    
+		    <com.kplus.car.widget.RegularTextView
+		        android:layout_width="match_parent"
+		        android:layout_height="10dp"
+		        android:background="@color/daze_bgcolor" />
+        </LinearLayout>
+    </ScrollView> 
+    <LinearLayout
+        android:id="@+id/operateView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@drawable/daze_shadow2"
+            android:alpha="0.5" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#f8f8f8" >
+            <RelativeLayout
+		        android:id="@+id/use_balance_check_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:visibility="visible" >
+		        <CheckBox
+	                android:id="@+id/use_balance_check"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_vertical"
+	                android:text="使用账户余额"
+	                style="@style/font_body1"
+	                android:button="@drawable/daze_check_tick"
+	                android:enabled="false"
+	                android:layout_centerVertical="true" />
+		        <ProgressBar
+		            android:id="@+id/use_balance_pb"
+		            android:layout_width="20dp"
+		            android:layout_height="20dp"
+		            android:layout_marginLeft="8dp"
+		            android:visibility="visible"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@+id/use_balance_check" />
+		        <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/use_balance_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/font_caption"
+                    android:visibility="visible"
+                    android:layout_centerVertical="true"
+		            android:layout_toRightOf="@+id/use_balance_check" />
+		        <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/pay_balance_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/daze_orangered5"
+                    android:textSize="16dp"
+                    android:visibility="visible" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/pay_balance_label_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/pay_balance_text"
+                    android:layout_marginRight="8dp"
+                    style="@style/font_body2"
+                    android:text="支付"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            
+		    <RelativeLayout
+		        android:id="@+id/payOnlineCheckView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+		        <CheckBox
+	                android:id="@+id/use_online_pay_check"
+	                android:layout_centerVertical="true"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:enabled="true"
+	                android:checked="true"
+	                android:gravity="center_vertical"
+	                android:text="使用在线支付"
+	                style="@style/font_body1"
+	                android:button="@drawable/daze_check_tick" />
+		        <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/pay_money_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/daze_orangered5"
+                    android:textSize="16dp"
+                    android:visibility="visible" />
+		        <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/pay_money_label_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/pay_money_text"
+                    android:layout_marginRight="8dp"
+                    style="@style/font_body2"
+                    android:text="支付"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal" >
+                <Button
+	                android:id="@+id/closeorderButton"
+	                android:layout_width="0dp"
+	                android:layout_height="35dp"
+	                android:background="@drawable/daze_closeorder_button_background"
+	                android:gravity="center"
+	                android:text="关闭订单"
+	                android:textColor="@color/daze_black2"
+	                android:textSize="13sp"
+	                android:layout_weight="2"
+	                android:layout_marginRight="16dp"
+	                android:visibility="visible" />
+                <Button
+	                android:id="@+id/orderButton"
+	                android:layout_width="0dp"
+	                android:layout_height="35dp"
+	                android:background="@drawable/daze_btn_bg"
+	                android:gravity="center"
+	                android:textColor="@color/daze_textcolor2"
+	                android:textSize="13sp"
+	                android:layout_weight="3" />
+            </LinearLayout>
+            
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/timeRemindView"
+		        android:layout_marginBottom="16dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:text="违章处理周期为2-7个工作日"
+		        android:gravity="right"
+		        android:layout_marginRight="24dp"
+		        style="@style/font_caption"/>
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/payTimeRemind"
+		        android:layout_marginBottom="16dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:text="请在48小时内完成支付,逾期系统将自动取消该订单"
+		        android:gravity="right"
+		        android:layout_marginRight="24dp"
+		        style="@style/font_caption"/>
+        </LinearLayout>
+        
+    </LinearLayout>       
+    <include layout="@layout/daze_select_pay_fill"/>
+    <include layout="@layout/daze_select_pay_type"/>
+    <include layout="@layout/daze_loading"/>
+
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_order.xml -->

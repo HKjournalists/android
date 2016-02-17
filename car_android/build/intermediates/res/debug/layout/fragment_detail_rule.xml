@@ -1,0 +1,11 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="27dp"
+    android:paddingRight="27dp"
+    android:dividerHeight="2px"
+    android:divider="@color/daze_darkgrey7"
+    android:listSelector="@android:color/transparent">
+
+</ListView>
+<!-- From: file:/D:/workspace/car_android/res/layout/fragment_detail_rule.xml -->

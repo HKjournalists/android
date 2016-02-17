@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<clip xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipOrientation="vertical"
+    android:gravity="bottom" >
+
+    <shape android:shape="oval" >
+        <solid android:color="@color/daze_orangered4"/>
+    </shape>
+
+</clip><!-- From: file:/D:/workspace/car_android/res/drawable/clip_circle.xml -->

@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.kplus.car.fragment.UserVehicleFragment">
+
+    <com.kplus.car.widget.PullRefreshRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/daze_blue4"
+        android:alpha="0"
+        android:clickable="true"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/vehicle_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/daze_white"
+        android:textSize="40sp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="65dp"/>
+
+    <ImageView
+        android:id="@+id/vehicle_xianxing"
+        android:layout_width="54dp"
+        android:layout_height="18dp"
+        android:layout_toRightOf="@id/vehicle_num"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="60dp"/>
+
+    <ImageView
+        android:id="@+id/vehicle_auth"
+        android:layout_width="54dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/vehicle_xianxing"
+        android:layout_alignLeft="@id/vehicle_xianxing"
+        android:layout_marginTop="3dp"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/vehicle_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vehicle_num"
+        android:layout_alignLeft="@id/vehicle_num"
+        android:textColor="@color/daze_white"
+        android:textSize="14sp"/>
+
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/fragment_user_vehicle.xml -->

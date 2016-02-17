@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white_smoke6">
+
+    <LinearLayout
+        android:id="@+id/yixuan_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已选："
+            android:textSize="16sp"
+            android:textColor="@color/daze_darkgrey9"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/yixuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/daze_orangered5"/>
+
+    </LinearLayout>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/add_custom_insurance"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_below="@id/yixuan_layout"
+        android:background="@color/daze_white"
+        android:text="找不到你的保险公司？"
+        android:textColor="@color/daze_blue3"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:id="@+id/my_insurance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_below="@id/yixuan_layout"
+        android:background="@color/daze_white"
+        android:visibility="gone">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/my_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/daze_black2"
+            android:textSize="16sp"
+            android:layout_marginLeft="27dp"
+            android:layout_centerVertical="true"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/my_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/daze_darkgrey9"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/my_company"
+            android:layout_marginLeft="9dp"
+            android:layout_centerVertical="true"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="9dp"
+            android:text="修改"
+            android:textSize="16sp"
+            android:textColor="@color/daze_orangered5"
+            android:layout_toRightOf="@id/my_phone"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/selected"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:src="@drawable/selected"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="27dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="129dp"
+        android:background="@color/daze_white"/>
+
+</RelativeLayout><!-- From: file:/D:/workspace/car_android/res/layout/activity_select_insurance.xml -->

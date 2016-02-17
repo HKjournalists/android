@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@android:integer/config_longAnimTime"
+    android:fromXDelta="0"
+    android:toXDelta="100%p" /><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/anim/cn_slide_out_to_right.xml -->

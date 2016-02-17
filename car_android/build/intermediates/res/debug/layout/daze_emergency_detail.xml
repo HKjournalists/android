@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/daze_bgcolor"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/emergency_detail_mapView"
+                android:layout_width="fill_parent"
+                android:layout_height="160dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#cccccc"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/daze_emergency_detail_address_icon" />
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/emergency_detail_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:textColor="@color/daze_darkgrey1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/emergency_detail_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/daze_emergency_detail_service"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/emergency_detail_service_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emergency_detail_service"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-60dp"
+                    android:src="@drawable/daze_emergency_service_call" />
+            </RelativeLayout>
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="使用免费救援需现场核对会员行驶证"
+                android:textColor="@color/daze_darkgrey1"
+                android:textSize="12sp" />
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:gravity="center_horizontal"
+                android:text="现场救援时，将根据您的车型参数准确实施救援"
+                android:textColor="@color/daze_darkgrey1"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout><!-- From: file:/D:/workspace/car_android/res/layout/daze_emergency_detail.xml -->

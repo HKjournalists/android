@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_pressed="true" android:drawable="@drawable/daze_btn_down"></item>
+	<item android:drawable="@drawable/daze_btn_up_deep_color"></item>
+</selector>
+<!-- From: file:/D:/workspace/car_android/res/drawable-mdpi/daze_btn_bg_deep_color.xml -->

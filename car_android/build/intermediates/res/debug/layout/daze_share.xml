@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/daze_bgcolor" >
+    <RelativeLayout
+    	android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/daze_orangered5" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvShareTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="分享得10元代金券"
+            android:textColor="@color/daze_white"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp" />
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_alignParentRight="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="16dp"
+            android:src="@drawable/closemenu" />
+    </RelativeLayout>
+	<com.kplus.car.widget.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.需要绑定手机号才能收取代\n2.代金券每人限领一次，以领取成功为准\n3.分享成功后，代金券会在2小时内发放到您的代金券账户\n4.代金券只能用于查违章栏在线办违章的手续费抵扣"
+        style="@style/font_body2"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp" />
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:background="@color/daze_darkgrey7"/>
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="分享到"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            style="@style/font_caption" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center" >
+        <LinearLayout
+            android:id="@+id/toSinaWeibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone" >
+            <ImageView
+                android:id="@+id/ivSianWeibo"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/share_sina_weibo"
+                android:alpha="1"
+                android:scaleType="fitXY" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvSinaWeibo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微博"
+                android:textColor="@color/daze_black2"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:alpha="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/toWechatmoment"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal" >
+            <ImageView
+                android:id="@+id/ivWechatmoment"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/share_wechatmoment"
+                android:alpha="1"
+                android:scaleType="fitXY" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvWechatmoment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="朋友圈"
+                android:textColor="@color/daze_black2"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:alpha="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/toWechatFriend"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal" >
+            <ImageView
+                android:id="@+id/ivWechatFriend"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/share_wechatfriend"
+                android:alpha="1"
+                android:scaleType="fitXY" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvWechatFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信"
+                android:textColor="@color/daze_black2"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:alpha="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/toSms"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone" >
+            <ImageView
+                android:id="@+id/ivSms"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/share_sms"
+                android:alpha="1"
+                android:scaleType="fitXY" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="短信"
+                android:textColor="@color/daze_black2"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:alpha="1" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_share.xml -->

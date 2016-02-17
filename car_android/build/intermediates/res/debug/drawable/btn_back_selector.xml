@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 箭头返回 -->
+
+    <item android:drawable="@drawable/cn_icon_left_arrow_press" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/cn_icon_left_arrow_nor" android:state_pressed="false"></item>
+
+</selector><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/drawable/btn_back_selector.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/drawable/btn_back_selector.xml -->

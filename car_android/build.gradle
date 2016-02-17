@@ -1,0 +1,541 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.android.support:support-v4:22.2.0'
+    compile 'com.android.support:cardview-v7:22.1.1'
+    compile 'com.android.support:gridlayout-v7:22.1.1'
+    compile project(':Car_washing')
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:multidex:1.0.1'
+}
+
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+    return formattedDate
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+
+    defaultConfig {
+        applicationId 'com.kplus.car'
+        minSdkVersion 7
+        targetSdkVersion 21
+        versionCode 4200
+        versionName "4.2.0.0"
+        multiDexEnabled true
+        signingConfig signingConfigs.debug
+    }
+
+    dexOptions {
+        preDexLibraries false
+        javaMaxHeapSize "2g"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('microbox')
+            storePassword "7758520"
+            keyAlias "microbox"
+            keyPassword "7758520"
+        }
+        debug {
+            storeFile file('microbox')
+            storePassword "7758520"
+            keyAlias "microbox"
+            keyPassword "7758520"
+        }
+        adhoc {
+            storeFile file('microbox')
+            storePassword "7758520"
+            keyAlias "microbox"
+            keyPassword "7758520"
+        }
+    }
+
+    buildTypes {
+        release {
+            // 主客户端正式环境的api地址
+            buildConfigField 'String', 'API_URL_MAIN_APP', '"http://app.qichekb.com"'
+            // 不打印日志
+            buildConfigField 'boolean', 'IS_LOG', 'false'
+            // 洗车正式环境的api地址
+            buildConfigField 'String', 'API_URL_CAR_WASHING', '"http://washing.chengniu.com"'
+//            minifyEnabled true
+//            shrinkResources true
+//            zipAlignEnabled true
+//            proguardFiles 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+                            && 'release'.equals(variant.buildType.name)) {
+//                        def apkFile = new File(output.outputFile.getParent(),
+//                                "car_android_${variant.flavorName}_v${variant.versionName}_${buildTime()}.apk")
+                        def fileName = "car_android_${variant.flavorName}_v${variant.versionName}.apk"
+                        def apkFile = new File(output.outputFile.getParent(), fileName)
+                        output.outputFile = apkFile
+                    }
+                }
+            }
+            debuggable false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            // 主客户端测试环境的api地址
+            buildConfigField 'String', 'API_URL_MAIN_APP', '"http://183.136.220.27:9880"'
+            // 打印日志
+            buildConfigField 'boolean', 'IS_LOG', 'true'
+            // 洗车测试环境的api地址
+            buildConfigField 'String', 'API_URL_CAR_WASHING', '"http://183.136.220.27:9090"'
+            debuggable true
+            signingConfig signingConfigs.debug
+        }
+        // 测试时打这个类型的包
+        adhoc {
+            // 主客户端测试环境的api地址
+            buildConfigField 'String', 'API_URL_MAIN_APP', '"http://183.136.220.27:9880"'
+            // 打印日志
+            buildConfigField 'boolean', 'IS_LOG', 'false'
+            // 洗车测试环境的api地址
+            buildConfigField 'String', 'API_URL_CAR_WASHING', '"http://183.136.220.27:9090"'
+            debuggable true
+            signingConfig signingConfigs.adhoc
+        }
+    }
+
+//    productFlavors {
+//        // 1官网
+//        android_default {
+//            buildConfigField 'String', 'APP_KEY', '"10000"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 2灰度老用户
+//        Grayscale_existing {
+//            buildConfigField 'String', 'APP_KEY', '"fb43a6a9d9"'
+//            buildConfigField 'String', 'APP_SECRET', '"0043476e190ed99d"'
+//        }
+//        // 3灰度新用户
+//        Grayscale_new {
+//            buildConfigField 'String', 'APP_KEY', '"c34776900c"'
+//            buildConfigField 'String', 'APP_SECRET', '"a710af6fed27bcf8"'
+//        }
+//        // 4小米
+//        android_xiaomi {
+//            buildConfigField 'String', 'APP_KEY', '"30002"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 5 360
+//        android_360 {
+//            buildConfigField 'String', 'APP_KEY', '"30003"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 6 91
+//        android_91 {
+//            buildConfigField 'String', 'APP_KEY', '"30004"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 7应用宝
+//        android_yyb {
+//            buildConfigField 'String', 'APP_KEY', '"30005"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 8百度
+//        android_baidu {
+//            buildConfigField 'String', 'APP_KEY', '"30006"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 9联想
+//        android_lenovo {
+//            buildConfigField 'String', 'APP_KEY', '"30007"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 10华为
+//        android_huawei {
+//            buildConfigField 'String', 'APP_KEY', '"30008"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 11 木蚂蚁
+//        android_mumayi {
+//            buildConfigField 'String', 'APP_KEY', '"30009"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 12应用汇
+//        android_yyh {
+//            buildConfigField 'String', 'APP_KEY', '"30010"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 13机锋
+//        android_jifeng {
+//            buildConfigField 'String', 'APP_KEY', '"30011"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 14安卓市场
+//        android_hiapk {
+//            buildConfigField 'String', 'APP_KEY', '"30012"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 15 uc
+//        android_uc {
+//            buildConfigField 'String', 'APP_KEY', '"30014"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 16 baidutg
+//        android_baidutg {
+//            buildConfigField 'String', 'APP_KEY', '"30017"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 17豌豆荚
+//        android_wandoujia {
+//            buildConfigField 'String', 'APP_KEY', '"30001"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 18 oppo
+//        android_keke {
+//            buildConfigField 'String', 'APP_KEY', '"30030"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 19淘宝助手
+//        android_taobao {
+//            buildConfigField 'String', 'APP_KEY', '"30033"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 20 金立商店
+//        android_jinli {
+//            buildConfigField 'String', 'APP_KEY', '"30037"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 21通用包
+//        android_common {
+//            buildConfigField 'String', 'APP_KEY', '"30099"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 22百度市场推广
+//        android_baiducpd {
+//            buildConfigField 'String', 'APP_KEY', '"30039"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 23 360推广
+//        android_360tg {
+//            buildConfigField 'String', 'APP_KEY', '"30040"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 24应用宝换量
+//        android_yybsdk {
+//            buildConfigField 'String', 'APP_KEY', '"30041"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 25应用宝推广
+//        android_yybtg {
+//            buildConfigField 'String', 'APP_KEY', '"30042"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 26粉丝通
+//        android_fensi {
+//            buildConfigField 'String', 'APP_KEY', '"30043"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 27魅族
+//        android_meizu {
+//            buildConfigField 'String', 'APP_KEY', '"30044"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 28百度市场CPT
+//        android_baiducpt {
+//            buildConfigField 'String', 'APP_KEY', '"30045"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 29 360市场CPD
+//        android_360cpd {
+//            buildConfigField 'String', 'APP_KEY', '"30046"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 30 360市场CPT
+//        android_360cpt {
+//            buildConfigField 'String', 'APP_KEY', '"30047"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 31 应用宝现金流
+//        android_yybxjl {
+//            buildConfigField 'String', 'APP_KEY', '"30048"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 32百度移动网盟
+//        android_baiduwm {
+//            buildConfigField 'String', 'APP_KEY', '"30049"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 33百度搜索推广01
+//        android_baidutg01 {
+//            buildConfigField 'String', 'APP_KEY', '"30050"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 34百度搜索推广02
+//        android_baidutg02 {
+//            buildConfigField 'String', 'APP_KEY', '"30051"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 35百度搜索推广03
+//        android_baidutg03 {
+//            buildConfigField 'String', 'APP_KEY', '"30052"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 36百度搜索推广04
+//        android_baidutg04 {
+//            buildConfigField 'String', 'APP_KEY', '"30053"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 37百度搜索推广05
+//        android_baidutg05 {
+//            buildConfigField 'String', 'APP_KEY', '"30054"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 38金山猎豹
+//        android_jinshanliebao {
+//            buildConfigField 'String', 'APP_KEY', '"30055"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 39 cpa广告01
+//        android_ggcpa01 {
+//            buildConfigField 'String', 'APP_KEY', '"30057"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 40 cpa广告02
+//        android_ggcpa02 {
+//            buildConfigField 'String', 'APP_KEY', '"30058"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 41 cpc广告01
+//        android_ggcpc01 {
+//            buildConfigField 'String', 'APP_KEY', '"30059"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 42 cpc广告02
+//        android_ggcpc02 {
+//            buildConfigField 'String', 'APP_KEY', '"30060"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 43 cpt广告01
+//        android_ggcpt01 {
+//            buildConfigField 'String', 'APP_KEY', '"30061"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 44 cpt广告02
+//        android_ggcpt02 {
+//            buildConfigField 'String', 'APP_KEY', '"30062"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 45 广点通微信
+//        android_weixin_gdt {
+//            buildConfigField 'String', 'APP_KEY', '"30063"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 46 百度贴吧
+//        android_baidutb {
+//            buildConfigField 'String', 'APP_KEY', '"30064"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 47 神马搜索
+//        android_shenmass {
+//            buildConfigField 'String', 'APP_KEY', '"30065"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 48新浪新闻
+//        android_xinlangxw {
+//            buildConfigField 'String', 'APP_KEY', '"30066"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 49今日头条
+//        android_jinritt {
+//            buildConfigField 'String', 'APP_KEY', '"30067"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 50搜狗搜索
+//        android_sougouss {
+//            buildConfigField 'String', 'APP_KEY', '"30068"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 51乐商店
+//        android_lenovocpd {
+//            buildConfigField 'String', 'APP_KEY', '"30069"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 52 91桌面
+//        android_91zhuomian {
+//            buildConfigField 'String', 'APP_KEY', '"30070"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 53扎客zaker
+//        android_zaker {
+//            buildConfigField 'String', 'APP_KEY', '"30073"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 54搜狐
+//        android_sohu {
+//            buildConfigField 'String', 'APP_KEY', '"30074"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 55 QQ浏览器
+//        android_qqbrowser {
+//            buildConfigField 'String', 'APP_KEY', '"30075"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 56微信公众号广告
+//        android_weixingg {
+//            buildConfigField 'String', 'APP_KEY', '"30076"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 57微信官网
+//        android_weixingw {
+//            buildConfigField 'String', 'APP_KEY', '"30077"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 58官方分享
+//        android_appfenxiang {
+//            buildConfigField 'String', 'APP_KEY', '"30078"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 59 91市场CPD
+//        android_91cpd {
+//            buildConfigField 'String', 'APP_KEY', '"30079"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 60安卓市场CPD
+//        android_hiapkcpd {
+//            buildConfigField 'String', 'APP_KEY', '"30080"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 61陌陌
+//        android_momo {
+//            buildConfigField 'String', 'APP_KEY', '"30081"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 62今日头条大图
+//        android_jinrittdt {
+//            buildConfigField 'String', 'APP_KEY', '"30082"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 63广点通测试
+//        android_guangdaintong {
+//            buildConfigField 'String', 'APP_KEY', '"30018"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 64视频广告
+//        android_shipin {
+//            buildConfigField 'String', 'APP_KEY', '"30083"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 65凤凰网
+//        android_fenghuang {
+//            buildConfigField 'String', 'APP_KEY', '"30084"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 66微信广告主
+//        android_weixinggz {
+//            buildConfigField 'String', 'APP_KEY', '"30085"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 67 cpa广告03
+//        android_ggcpa03 {
+//            buildConfigField 'String', 'APP_KEY', '"30086"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 68 cpa广告04
+//        android_ggcpa04 {
+//            buildConfigField 'String', 'APP_KEY', '"30087"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 69 cpa广告05
+//        android_ggcpa05 {
+//            buildConfigField 'String', 'APP_KEY', '"30088"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 70中国气象频道
+//        android_qixiang {
+//            buildConfigField 'String', 'APP_KEY', '"30089"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 71支付宝服务窗
+//        android_alipay {
+//            buildConfigField 'String', 'APP_KEY', '"30090"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 72 豌豆荚推广
+//        android_wandoujia_t {
+//            buildConfigField 'String', 'APP_KEY', '"30029"'
+//            buildConfigField 'String', 'APP_SECRET', '"LWLPg7pU4cwrcyy8PwDeGuaY0BHUoX"'
+//        }
+//        // 73 一点资讯
+//        android_yidianzixun {
+//            buildConfigField 'String', 'APP_KEY', '"bbdd86e48b"'
+//            buildConfigField 'String', 'APP_SECRET', '"3d6df40a1ea7d43f"'
+//        }
+//        // 74 酷派
+//        android_kupai {
+//            buildConfigField 'String', 'APP_KEY', '"2ec0e025a6"'
+//            buildConfigField 'String', 'APP_SECRET', '"3eed86877b8f374b"'
+//        }
+//        // 75 电信合作
+//        android_dianxin01 {
+//            buildConfigField 'String', 'APP_KEY', '"67b07619bb"'
+//            buildConfigField 'String', 'APP_SECRET', '"898bb980834d087a"'
+//        }
+//        // 76 电信合作
+//        android_dianxin02 {
+//            buildConfigField 'String', 'APP_KEY', '"d8308021b1"'
+//            buildConfigField 'String', 'APP_SECRET', '"738dd0e2fafe90cf"'
+//        }
+//        // 77 电信合作
+//        android_dianxin03 {
+//            buildConfigField 'String', 'APP_KEY', '"ab45733d0d"'
+//            buildConfigField 'String', 'APP_SECRET', '"bc9d5078961a23cb"'
+//        }
+//        // 78 360特权
+//        android_tequan {
+//            buildConfigField 'String', 'APP_KEY', '"d9b8e9007f"'
+//            buildConfigField 'String', 'APP_SECRET', '"dfbda0c4879accb1"'
+//        }
+//    }
+//
+//    productFlavors.all { flavor ->
+//        buildConfigField 'String', 'APP_CHANNEL', '"' + name + '"'
+//        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//    }
+
+}

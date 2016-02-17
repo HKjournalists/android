@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item >
+        <shape android:shape="rectangle">
+            <size android:width="120dp" android:height="40dp"/>
+            <corners android:radius="20dp"/>
+            <solid android:color="@color/daze_orangered4"/>
+        </shape>
+    </item>
+	<item >
+	    <shape android:shape="rectangle">
+	        <size android:width="120dp" android:height="120dp"/>
+	        <corners android:radius="20dp"/>
+	        <solid android:color="#99000000"/>
+	    </shape>
+	</item>
+</layer-list>
+<!-- From: file:/D:/workspace/car_android/res/drawable-mdpi/daze_upload_licence_orange_down.xml -->

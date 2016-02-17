@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp" >
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/text_cityName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/daze_white_up_darkgray_down"
+        android:gravity="center_vertical"
+        android:paddingLeft="24dp"
+        style="@style/font_body1" />
+	<ImageView
+	    android:id="@+id/ivTonext"
+	    android:layout_width="24dp"
+	    android:layout_height="24dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginRight="16dp"
+	    android:layout_centerVertical="true"
+	    android:src="@drawable/daze_gonext_24"
+	    android:visibility="gone" />
+	<ImageView
+	    android:id="@+id/ivIsSelected"
+	    android:layout_width="24dp"
+	    android:layout_height="24dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginRight="16dp"
+	    android:layout_centerVertical="true"
+	    android:src="@drawable/daze_selected_24"
+	    android:visibility="gone" />
+</RelativeLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_city_select_item.xml -->

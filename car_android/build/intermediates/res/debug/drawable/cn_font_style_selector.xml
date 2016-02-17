@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 默认是橙色，按下时变成灰字 -->
+    <item android:color="@color/cn_press_color" android:state_pressed="true"/>
+    <item android:color="@color/cn_press_color" android:state_focused="true"/>
+    <item android:color="@color/cn_press_color" android:state_enabled="false"/>
+    <item android:color="@color/cn_oranger_color"/>
+
+</selector><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/drawable/cn_font_style_selector.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/drawable/cn_font_style_selector.xml -->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape
+            android:shape="ring"
+            android:thickness="14dp"
+            android:innerRadiusRatio="2.5"
+            android:useLevel="false">
+            <solid
+                android:color="@color/daze_orangered12"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="-90">
+            <shape
+                android:shape="ring"
+                android:thickness="14dp"
+                android:innerRadiusRatio="2.5"
+                android:useLevel="true">
+                <solid
+                    android:color="@color/daze_orangered5" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list><!-- From: file:/D:/workspace/car_android/res/drawable/circular_progress_bar3_orangered5.xml -->

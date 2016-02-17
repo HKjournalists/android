@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/com.kplus.car.carwash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cn_black">
+
+    <com.kplus.car.carwash.module.photoview.HackyViewPager
+        android:id="@+id/hvpPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/llPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="25dp"
+        android:background="@color/cn_transparent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@null"
+            android:textColor="@color/cn_white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="25dp"
+        android:background="@color/cn_transparent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/ivDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/cn_dot_selector"/>
+    </LinearLayout>
+
+</FrameLayout><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/layout/cn_view_image_layout.xml -->

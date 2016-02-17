@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid
+                android:color="@color/daze_light_red2"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip >
+            <shape android:shape="rectangle">
+                <solid android:color="@color/daze_darkred2"></solid>
+            </shape>
+        </clip>
+    </item>
+</layer-list><!-- From: file:/D:/workspace/car_android/res/drawable/horizontal_progress_bar_red.xml -->

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300"
+    android:fromYDelta="0"
+    android:toYDelta="100%p"/>
+<!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/anim/cn_slide_out_to_bottom.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/anim/cn_slide_out_to_bottom.xml -->

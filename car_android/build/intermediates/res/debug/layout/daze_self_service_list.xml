@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/daze_bgcolor" >
+
+    <RelativeLayout
+        android:id="@+id/self_service_list_column"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@color/daze_white"
+        android:visibility="gone">
+        <LinearLayout
+            android:id="@+id/llToLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true" >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_left" />
+        </LinearLayout>
+        <Gallery
+            android:id="@+id/gallery"
+            android:layout_toRightOf="@id/llToLeft"
+	        android:layout_toLeftOf="@+id/llToRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/daze_white"
+            android:layout_centerVertical="true"
+            android:spacing="20dp">            
+        </Gallery>
+	    <LinearLayout
+            android:id="@+id/llToRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/self_service_list_context"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/self_service_list_column"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/daze_bgcolor"
+        android:cacheColorHint="#00000000"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
+    <include
+        android:id="@+id/list_empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/self_service_list_column"
+        layout="@layout/daze_list_empty"
+        android:visibility="gone" />
+
+</RelativeLayout><!-- From: file:/D:/workspace/car_android/res/layout/daze_self_service_list.xml -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/daze_white_smoke9">
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/add_custom_remind"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="添加自定义提醒"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/daze_orangered5"
+        android:background="@drawable/stroke_corner"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:text="如去事故定损，预约4S保养，洗车，出行等"
+        android:textSize="14sp"
+        android:textColor="@color/daze_light_grey1"
+        android:layout_marginBottom="40dp"/>
+
+</LinearLayout><!-- From: file:/D:/workspace/car_android/res/layout/add_remind_footer.xml -->

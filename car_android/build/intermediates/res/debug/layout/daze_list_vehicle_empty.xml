@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/daze_bgcolor"
+    android:gravity="center_horizontal" >
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_add_vehicle"
+        android:layout_marginTop="40dp" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvAddVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/daze_btn_bg"
+        android:layout_marginLeft="@dimen/header_footer_left_right_padding"
+        android:layout_marginRight="@dimen/header_footer_left_right_padding"
+        android:layout_marginTop="-10dp"
+        android:text="添加车辆"
+        style="@style/font_title1"
+        android:gravity="center"
+        android:padding="10dp" />
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一秒查违章，请先添加您的车辆"
+        android:textColor="@color/daze_darkgrey4"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
+<!-- From: file:/D:/workspace/car_android/res/layout/daze_list_vehicle_empty.xml -->

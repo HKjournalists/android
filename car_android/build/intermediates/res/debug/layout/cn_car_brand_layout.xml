@@ -1,0 +1,33 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cn_white">
+
+    <include
+        layout="@layout/cn_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--显示品牌的listview-->
+    <com.kplus.car.carwash.widget.indexscroller.IndexableListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:divider="@color/cn_line_color"
+        android:dividerHeight="2px"
+        android:listSelector="@color/cn_transparent"
+        android:visibility="visible"/>
+
+    <!--显示车型的listview-->
+    <ListView
+        android:id="@+id/lvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:divider="@color/cn_line_color"
+        android:dividerHeight="0dp"
+        android:listSelector="@color/cn_transparent"
+        android:visibility="gone"/>
+</RelativeLayout><!-- From: file:/D:/workspace/car_android/Car_washing/src/main/res/layout/cn_car_brand_layout.xml --><!-- From: file:/D:/workspace/car_android/build/intermediates/exploded-aar/car_android/Car_washing/unspecified/res/layout/cn_car_brand_layout.xml -->
