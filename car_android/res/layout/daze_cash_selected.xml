@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cashSelectedView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:visibility="gone" >
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/cashBlankView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/cashBottom" />
+    <LinearLayout
+        android:id="@+id/cashBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f1f1f1"
+        android:orientation="vertical" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/cashTitle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="选择代金券"
+            style="@style/font_subhead2"
+            android:background="#f1f1f1" />
+        <com.kplus.car.widget.antistatic.spinnerwheel.WheelVerticalView
+	        android:id="@+id/cashView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="16dp"
+	        android:background="#f1f1f1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:background="#f8f8f8"
+            android:orientation="horizontal" >
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvUnuseCash"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="4dp"
+                android:background="@color/daze_white"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="15dp"
+                android:textColor="@color/daze_textcolor2" />
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvUseCash"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:background="@color/daze_white"
+                android:gravity="center"
+                android:text="确定"
+                android:textSize="15dp"
+                android:textColor="@color/daze_textcolor1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

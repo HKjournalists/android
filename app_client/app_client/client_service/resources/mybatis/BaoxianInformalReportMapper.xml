@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianInformalReportMapper">
+    <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianInformalReport">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="baoxian_intent_id" property="baoxianIntentId" jdbcType="VARCHAR"/>
+        <result column="baoxian_underwriting_request_id" property="baoxianUnderwritingRequestId" jdbcType="VARCHAR"/>
+        <result column="channel" property="channel" jdbcType="VARCHAR"/>
+        <result column="baoxian_company_code" property="baoxianCompanyCode" jdbcType="VARCHAR"/>
+        <result column="baoxian_company_name" property="baoxianCompanyName" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="manual" property="manual" jdbcType="BIT"/>
+        <result column="expire_time" property="expireTime" jdbcType="TIMESTAMP"/>
+        <result column="message" property="message" jdbcType="VARCHAR"/>
+        <result column="user_type" property="userType" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
+        <result column="city_code" property="cityCode" jdbcType="VARCHAR"/>
+        <result column="city_name" property="cityName" jdbcType="VARCHAR"/>
+        <result column="main_quote_id" property="mainQuoteId" jdbcType="VARCHAR"/>
+        <result column="quote_id" property="quoteId" jdbcType="VARCHAR"/>
+        <result column="market_price" property="marketPrice" jdbcType="DECIMAL"/>
+        <result column="total_price" property="totalPrice" jdbcType="DECIMAL"/>
+        <result column="vehicle_model_code" property="vehicleModelCode" jdbcType="VARCHAR"/>
+        <result column="vehicle_model_name" property="vehicleModelName" jdbcType="VARCHAR"/>
+        <result column="vehicle_model_price" property="vehicleModelPrice" jdbcType="INTEGER"/>
+        <result column="jqx_start_date" property="jqxStartDate" jdbcType="DATE"/>
+        <result column="syx_start_date" property="syxStartDate" jdbcType="DATE"/>
+        <result column="jqx_price" property="jqxPrice" jdbcType="DECIMAL"/>
+        <result column="syx_price" property="syxPrice" jdbcType="DECIMAL"/>
+        <result column="ccs_price" property="ccsPrice" jdbcType="DECIMAL"/>
+        <result column="szx_price" property="szxPrice" jdbcType="DECIMAL"/>
+        <result column="csx_price" property="csxPrice" jdbcType="DECIMAL"/>
+        <result column="ckx_price" property="ckxPrice" jdbcType="DECIMAL"/>
+        <result column="dqx_price" property="dqxPrice" jdbcType="DECIMAL"/>
+        <result column="sjzrx_price" property="sjzrxPrice" jdbcType="DECIMAL"/>
+        <result column="ssx_price" property="ssxPrice" jdbcType="DECIMAL"/>
+        <result column="blx_price" property="blxPrice" jdbcType="DECIMAL"/>
+        <result column="hfx_price" property="hfxPrice" jdbcType="DECIMAL"/>
+        <result column="zrx_price" property="zrxPrice" jdbcType="DECIMAL"/>
+        <result column="szx_bjmp_price" property="szxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="csx_bjmp_price" property="csxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="ckx_bjmp_price" property="ckxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="dqx_bjmp_price" property="dqxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="sjzrx_bjmp_price" property="sjzrxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="blx_bjmp_price" property="blxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="hfx_bjmp_price" property="hfxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="ssx_bjmp_price" property="ssxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="zrx_bjmp_price" property="zrxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="tyx_price" property="tyxPrice" jdbcType="DECIMAL"/>
+        <result column="zdzxc_price" property="zdzxcPrice" jdbcType="DECIMAL"/>
+        <result column="syx_bjmp_price" property="syxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="cpcssx_price" property="cpcssxPrice" jdbcType="DECIMAL"/>
+        <result column="zrmcty_price" property="zrmctyPrice" jdbcType="DECIMAL"/>
+        <result column="ssmcty_price" property="ssmctyPrice" jdbcType="DECIMAL"/>
+        <result column="kxmpty_price" property="kxmptyPrice" jdbcType="DECIMAL"/>
+        <result column="dcsgmpty_price" property="dcsgmptyPrice" jdbcType="DECIMAL"/>
+        <result column="xzsbssx_price" property="xzsbssxPrice" jdbcType="DECIMAL"/>
+        <result column="xzsbssx_bjmp_price" property="xzsbssxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="cshwzrx_price" property="cshwzrxPrice" jdbcType="DECIMAL"/>
+        <result column="cshwzrx_bjmp_price" property="cshwzrxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="ssxlwpssx_price" property="ssxlwpssxPrice" jdbcType="DECIMAL"/>
+        <result column="fjcsryzrx_bjmp_price" property="fjcsryzrxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="jdctsssx_price" property="jdctsssxPrice" jdbcType="DECIMAL"/>
+        <result column="jbx_bjmp_price" property="jbxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="fjx_bjmp_price" property="fjxBjmpPrice" jdbcType="DECIMAL"/>
+        <result column="dcjcdshx_price" property="dcjcdshxPrice" jdbcType="DECIMAL"/>
+        <result column="jlcty_price" property="jlctyPrice" jdbcType="DECIMAL"/>
+        <result column="sgzrmplty_price" property="sgzrmpltyPrice" jdbcType="DECIMAL"/>
+        <result column="tzckzx_price" property="tzckzxPrice" jdbcType="DECIMAL"/>
+        <result column="jdcssbxwfzddsftyx_price" property="jdcssbxwfzddsftyxPrice" jdbcType="DECIMAL"/>
+        <result column="xlqjfybcx_price" property="xlqjfybcxPrice" jdbcType="DECIMAL"/>
+        <result column="jsshfwjzrx_pirce" property="jsshfwjzrxPirce" jdbcType="DECIMAL"/>
+        <result column="other_price" property="otherPrice" jdbcType="DECIMAL"/>
+        <result column="bjmpx_price" property="bjmpxPrice" jdbcType="DECIMAL"/>
+        <result column="un" property="un" jdbcType="DOUBLE"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="deleted" property="deleted" jdbcType="CHAR"/>
+        <result column="batch" property="batch" jdbcType="VARCHAR"/>
+        <result column="baoxian_company_pic" property="baoxianCompanyPic" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, baoxian_intent_id, baoxian_underwriting_request_id, channel, baoxian_company_code, 
+    baoxian_company_name, status, manual, expire_time, message, user_type, user_id, mobile, city_code,
+    city_name, main_quote_id, quote_id, market_price, total_price, vehicle_model_code, 
+    vehicle_model_name, vehicle_model_price, jqx_start_date, syx_start_date, jqx_price, 
+    syx_price, ccs_price, szx_price, csx_price, ckx_price, dqx_price, sjzrx_price, ssx_price, 
+    blx_price, hfx_price, zrx_price, szx_bjmp_price, csx_bjmp_price, ckx_bjmp_price, 
+    dqx_bjmp_price, sjzrx_bjmp_price, blx_bjmp_price, hfx_bjmp_price, ssx_bjmp_price, 
+    zrx_bjmp_price, tyx_price, zdzxc_price, syx_bjmp_price, cpcssx_price, zrmcty_price, 
+    ssmcty_price, kxmpty_price, dcsgmpty_price, xzsbssx_price, xzsbssx_bjmp_price, cshwzrx_price, 
+    cshwzrx_bjmp_price, ssxlwpssx_price, fjcsryzrx_bjmp_price, jdctsssx_price, jbx_bjmp_price, 
+    fjx_bjmp_price, dcjcdshx_price, jlcty_price, sgzrmplty_price, tzckzx_price, jdcssbxwfzddsftyx_price, 
+    xlqjfybcx_price, jsshfwjzrx_pirce, other_price, bjmpx_price, un, create_time, update_time, 
+    deleted, batch, baoxian_company_pic
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from baoxian_informal_report
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianInformalReport">
+    insert into baoxian_informal_report (id, baoxian_intent_id, baoxian_underwriting_request_id, 
+      channel, baoxian_company_code, baoxian_company_name, 
+      status, manual, expire_time, message,
+      user_type, user_id, mobile, 
+      city_code, city_name, main_quote_id, 
+      quote_id, market_price, total_price, 
+      vehicle_model_code, vehicle_model_name, vehicle_model_price, 
+      jqx_start_date, syx_start_date, jqx_price, 
+      syx_price, ccs_price, szx_price, 
+      csx_price, ckx_price, dqx_price, 
+      sjzrx_price, ssx_price, blx_price, 
+      hfx_price, zrx_price, szx_bjmp_price, 
+      csx_bjmp_price, ckx_bjmp_price, dqx_bjmp_price, 
+      sjzrx_bjmp_price, blx_bjmp_price, hfx_bjmp_price, 
+      ssx_bjmp_price, zrx_bjmp_price, tyx_price, 
+      zdzxc_price, syx_bjmp_price, cpcssx_price, 
+      zrmcty_price, ssmcty_price, kxmpty_price, 
+      dcsgmpty_price, xzsbssx_price, xzsbssx_bjmp_price, 
+      cshwzrx_price, cshwzrx_bjmp_price, ssxlwpssx_price, 
+      fjcsryzrx_bjmp_price, jdctsssx_price, jbx_bjmp_price, 
+      fjx_bjmp_price, dcjcdshx_price, jlcty_price, 
+      sgzrmplty_price, tzckzx_price, jdcssbxwfzddsftyx_price, 
+      xlqjfybcx_price, jsshfwjzrx_pirce, other_price, 
+      bjmpx_price, un, create_time, 
+      update_time, deleted, batch, 
+      baoxian_company_pic)
+    values (#{id,jdbcType=VARCHAR}, #{baoxianIntentId,jdbcType=VARCHAR}, #{baoxianUnderwritingRequestId,jdbcType=VARCHAR}, 
+      #{channel,jdbcType=VARCHAR}, #{baoxianCompanyCode,jdbcType=VARCHAR}, #{baoxianCompanyName,jdbcType=VARCHAR}, 
+      #{status,jdbcType=INTEGER}, #{manual,jdbcType=BIT}, #{expireTime,jdbcType=TIMESTAMP}, #{message,jdbcType=VARCHAR},
+      #{userType,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, 
+      #{cityCode,jdbcType=VARCHAR}, #{cityName,jdbcType=VARCHAR}, #{mainQuoteId,jdbcType=VARCHAR}, 
+      #{quoteId,jdbcType=VARCHAR}, #{marketPrice,jdbcType=DECIMAL}, #{totalPrice,jdbcType=DECIMAL}, 
+      #{vehicleModelCode,jdbcType=VARCHAR}, #{vehicleModelName,jdbcType=VARCHAR}, #{vehicleModelPrice,jdbcType=INTEGER}, 
+      #{jqxStartDate,jdbcType=DATE}, #{syxStartDate,jdbcType=DATE}, #{jqxPrice,jdbcType=DECIMAL}, 
+      #{syxPrice,jdbcType=DECIMAL}, #{ccsPrice,jdbcType=DECIMAL}, #{szxPrice,jdbcType=DECIMAL}, 
+      #{csxPrice,jdbcType=DECIMAL}, #{ckxPrice,jdbcType=DECIMAL}, #{dqxPrice,jdbcType=DECIMAL}, 
+      #{sjzrxPrice,jdbcType=DECIMAL}, #{ssxPrice,jdbcType=DECIMAL}, #{blxPrice,jdbcType=DECIMAL}, 
+      #{hfxPrice,jdbcType=DECIMAL}, #{zrxPrice,jdbcType=DECIMAL}, #{szxBjmpPrice,jdbcType=DECIMAL}, 
+      #{csxBjmpPrice,jdbcType=DECIMAL}, #{ckxBjmpPrice,jdbcType=DECIMAL}, #{dqxBjmpPrice,jdbcType=DECIMAL}, 
+      #{sjzrxBjmpPrice,jdbcType=DECIMAL}, #{blxBjmpPrice,jdbcType=DECIMAL}, #{hfxBjmpPrice,jdbcType=DECIMAL}, 
+      #{ssxBjmpPrice,jdbcType=DECIMAL}, #{zrxBjmpPrice,jdbcType=DECIMAL}, #{tyxPrice,jdbcType=DECIMAL}, 
+      #{zdzxcPrice,jdbcType=DECIMAL}, #{syxBjmpPrice,jdbcType=DECIMAL}, #{cpcssxPrice,jdbcType=DECIMAL}, 
+      #{zrmctyPrice,jdbcType=DECIMAL}, #{ssmctyPrice,jdbcType=DECIMAL}, #{kxmptyPrice,jdbcType=DECIMAL}, 
+      #{dcsgmptyPrice,jdbcType=DECIMAL}, #{xzsbssxPrice,jdbcType=DECIMAL}, #{xzsbssxBjmpPrice,jdbcType=DECIMAL}, 
+      #{cshwzrxPrice,jdbcType=DECIMAL}, #{cshwzrxBjmpPrice,jdbcType=DECIMAL}, #{ssxlwpssxPrice,jdbcType=DECIMAL}, 
+      #{fjcsryzrxBjmpPrice,jdbcType=DECIMAL}, #{jdctsssxPrice,jdbcType=DECIMAL}, #{jbxBjmpPrice,jdbcType=DECIMAL}, 
+      #{fjxBjmpPrice,jdbcType=DECIMAL}, #{dcjcdshxPrice,jdbcType=DECIMAL}, #{jlctyPrice,jdbcType=DECIMAL}, 
+      #{sgzrmpltyPrice,jdbcType=DECIMAL}, #{tzckzxPrice,jdbcType=DECIMAL}, #{jdcssbxwfzddsftyxPrice,jdbcType=DECIMAL}, 
+      #{xlqjfybcxPrice,jdbcType=DECIMAL}, #{jsshfwjzrxPirce,jdbcType=DECIMAL}, #{otherPrice,jdbcType=DECIMAL}, 
+      #{bjmpxPrice,jdbcType=DECIMAL}, #{un,jdbcType=DOUBLE}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=CHAR}, #{batch,jdbcType=VARCHAR}, 
+      #{baoxianCompanyPic,jdbcType=VARCHAR})
+  </insert>
+    <delete id="deleteById" parameterType="java.lang.String">
+    update baoxian_informal_report set deleted = 'Y'
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+    <insert id="insertSelective" parameterType="com.chengniu.client.pojo.BaoxianInformalReport">
+        insert into baoxian_informal_report
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="baoxianIntentId != null">
+                baoxian_intent_id,
+            </if>
+            <if test="baoxianUnderwritingRequestId != null">
+                baoxian_underwriting_request_id,
+            </if>
+            <if test="channel != null">
+                channel,
+            </if>
+            <if test="baoxianCompanyCode != null">
+                baoxian_company_code,
+            </if>
+            <if test="baoxianCompanyName != null">
+                baoxian_company_name,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="manual != null">
+                manual,
+            </if>
+            <if test="expireTime != null">
+                expire_time,
+            </if>
+            <if test="message != null">
+                message,
+            </if>
+            <if test="userType != null">
+                user_type,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="mobile != null">
+                mobile,
+            </if>
+            <if test="cityCode != null">
+                city_code,
+            </if>
+            <if test="cityName != null">
+                city_name,
+            </if>
+            <if test="mainQuoteId != null">
+                main_quote_id,
+            </if>
+            <if test="quoteId != null">
+                quote_id,
+            </if>
+            <if test="marketPrice != null">
+                market_price,
+            </if>
+            <if test="totalPrice != null">
+                total_price,
+            </if>
+            <if test="vehicleModelCode != null">
+                vehicle_model_code,
+            </if>
+            <if test="vehicleModelName != null">
+                vehicle_model_name,
+            </if>
+            <if test="vehicleModelPrice != null">
+                vehicle_model_price,
+            </if>
+            <if test="jqxStartDate != null">
+                jqx_start_date,
+            </if>
+            <if test="syxStartDate != null">
+                syx_start_date,
+            </if>
+            <if test="jqxPrice != null">
+                jqx_price,
+            </if>
+            <if test="syxPrice != null">
+                syx_price,
+            </if>
+            <if test="ccsPrice != null">
+                ccs_price,
+            </if>
+            <if test="szxPrice != null">
+                szx_price,
+            </if>
+            <if test="csxPrice != null">
+                csx_price,
+            </if>
+            <if test="ckxPrice != null">
+                ckx_price,
+            </if>
+            <if test="dqxPrice != null">
+                dqx_price,
+            </if>
+            <if test="sjzrxPrice != null">
+                sjzrx_price,
+            </if>
+            <if test="ssxPrice != null">
+                ssx_price,
+            </if>
+            <if test="blxPrice != null">
+                blx_price,
+            </if>
+            <if test="hfxPrice != null">
+                hfx_price,
+            </if>
+            <if test="zrxPrice != null">
+                zrx_price,
+            </if>
+            <if test="szxBjmpPrice != null">
+                szx_bjmp_price,
+            </if>
+            <if test="csxBjmpPrice != null">
+                csx_bjmp_price,
+            </if>
+            <if test="ckxBjmpPrice != null">
+                ckx_bjmp_price,
+            </if>
+            <if test="dqxBjmpPrice != null">
+                dqx_bjmp_price,
+            </if>
+            <if test="sjzrxBjmpPrice != null">
+                sjzrx_bjmp_price,
+            </if>
+            <if test="blxBjmpPrice != null">
+                blx_bjmp_price,
+            </if>
+            <if test="hfxBjmpPrice != null">
+                hfx_bjmp_price,
+            </if>
+            <if test="ssxBjmpPrice != null">
+                ssx_bjmp_price,
+            </if>
+            <if test="zrxBjmpPrice != null">
+                zrx_bjmp_price,
+            </if>
+            <if test="tyxPrice != null">
+                tyx_price,
+            </if>
+            <if test="zdzxcPrice != null">
+                zdzxc_price,
+            </if>
+            <if test="syxBjmpPrice != null">
+                syx_bjmp_price,
+            </if>
+            <if test="cpcssxPrice != null">
+                cpcssx_price,
+            </if>
+            <if test="zrmctyPrice != null">
+                zrmcty_price,
+            </if>
+            <if test="ssmctyPrice != null">
+                ssmcty_price,
+            </if>
+            <if test="kxmptyPrice != null">
+                kxmpty_price,
+            </if>
+            <if test="dcsgmptyPrice != null">
+                dcsgmpty_price,
+            </if>
+            <if test="xzsbssxPrice != null">
+                xzsbssx_price,
+            </if>
+            <if test="xzsbssxBjmpPrice != null">
+                xzsbssx_bjmp_price,
+            </if>
+            <if test="cshwzrxPrice != null">
+                cshwzrx_price,
+            </if>
+            <if test="cshwzrxBjmpPrice != null">
+                cshwzrx_bjmp_price,
+            </if>
+            <if test="ssxlwpssxPrice != null">
+                ssxlwpssx_price,
+            </if>
+            <if test="fjcsryzrxBjmpPrice != null">
+                fjcsryzrx_bjmp_price,
+            </if>
+            <if test="jdctsssxPrice != null">
+                jdctsssx_price,
+            </if>
+            <if test="jbxBjmpPrice != null">
+                jbx_bjmp_price,
+            </if>
+            <if test="fjxBjmpPrice != null">
+                fjx_bjmp_price,
+            </if>
+            <if test="dcjcdshxPrice != null">
+                dcjcdshx_price,
+            </if>
+            <if test="jlctyPrice != null">
+                jlcty_price,
+            </if>
+            <if test="sgzrmpltyPrice != null">
+                sgzrmplty_price,
+            </if>
+            <if test="tzckzxPrice != null">
+                tzckzx_price,
+            </if>
+            <if test="jdcssbxwfzddsftyxPrice != null">
+                jdcssbxwfzddsftyx_price,
+            </if>
+            <if test="xlqjfybcxPrice != null">
+                xlqjfybcx_price,
+            </if>
+            <if test="jsshfwjzrxPirce != null">
+                jsshfwjzrx_pirce,
+            </if>
+            <if test="otherPrice != null">
+                other_price,
+            </if>
+            <if test="bjmpxPrice != null">
+                bjmpx_price,
+            </if>
+            <if test="un != null">
+                un,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="baoxianIntentId != null">
+                #{baoxianIntentId,jdbcType=VARCHAR},
+            </if>
+            <if test="baoxianUnderwritingRequestId != null">
+                #{baoxianUnderwritingRequestId,jdbcType=VARCHAR},
+            </if>
+            <if test="channel != null">
+                #{channel,jdbcType=VARCHAR},
+            </if>
+            <if test="baoxianCompanyCode != null">
+                #{baoxianCompanyCode,jdbcType=VARCHAR},
+            </if>
+            <if test="baoxianCompanyName != null">
+                #{baoxianCompanyName,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="manual != null">
+                #{manual,jdbcType=BIT},
+            </if>
+            <if test="expireTime != null">
+                #{expireTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="message != null">
+                #{message,jdbcType=VARCHAR},
+            </if>
+            <if test="userType != null">
+                #{userType,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="mobile != null">
+                #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="cityCode != null">
+                #{cityCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cityName != null">
+                #{cityName,jdbcType=VARCHAR},
+            </if>
+            <if test="mainQuoteId != null">
+                #{mainQuoteId,jdbcType=VARCHAR},
+            </if>
+            <if test="quoteId != null">
+                #{quoteId,jdbcType=VARCHAR},
+            </if>
+            <if test="marketPrice != null">
+                #{marketPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="totalPrice != null">
+                #{totalPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="vehicleModelCode != null">
+                #{vehicleModelCode,jdbcType=VARCHAR},
+            </if>
+            <if test="vehicleModelName != null">
+                #{vehicleModelName,jdbcType=VARCHAR},
+            </if>
+            <if test="vehicleModelPrice != null">
+                #{vehicleModelPrice,jdbcType=INTEGER},
+            </if>
+            <if test="jqxStartDate != null">
+                #{jqxStartDate,jdbcType=DATE},
+            </if>
+            <if test="syxStartDate != null">
+                #{syxStartDate,jdbcType=DATE},
+            </if>
+            <if test="jqxPrice != null">
+                #{jqxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="syxPrice != null">
+                #{syxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ccsPrice != null">
+                #{ccsPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="szxPrice != null">
+                #{szxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="csxPrice != null">
+                #{csxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ckxPrice != null">
+                #{ckxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="dqxPrice != null">
+                #{dqxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="sjzrxPrice != null">
+                #{sjzrxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ssxPrice != null">
+                #{ssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="blxPrice != null">
+                #{blxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="hfxPrice != null">
+                #{hfxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zrxPrice != null">
+                #{zrxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="szxBjmpPrice != null">
+                #{szxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="csxBjmpPrice != null">
+                #{csxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ckxBjmpPrice != null">
+                #{ckxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="dqxBjmpPrice != null">
+                #{dqxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="sjzrxBjmpPrice != null">
+                #{sjzrxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="blxBjmpPrice != null">
+                #{blxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="hfxBjmpPrice != null">
+                #{hfxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ssxBjmpPrice != null">
+                #{ssxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zrxBjmpPrice != null">
+                #{zrxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="tyxPrice != null">
+                #{tyxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zdzxcPrice != null">
+                #{zdzxcPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="syxBjmpPrice != null">
+                #{syxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="cpcssxPrice != null">
+                #{cpcssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zrmctyPrice != null">
+                #{zrmctyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ssmctyPrice != null">
+                #{ssmctyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="kxmptyPrice != null">
+                #{kxmptyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="dcsgmptyPrice != null">
+                #{dcsgmptyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="xzsbssxPrice != null">
+                #{xzsbssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="xzsbssxBjmpPrice != null">
+                #{xzsbssxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="cshwzrxPrice != null">
+                #{cshwzrxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="cshwzrxBjmpPrice != null">
+                #{cshwzrxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ssxlwpssxPrice != null">
+                #{ssxlwpssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="fjcsryzrxBjmpPrice != null">
+                #{fjcsryzrxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jdctsssxPrice != null">
+                #{jdctsssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jbxBjmpPrice != null">
+                #{jbxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="fjxBjmpPrice != null">
+                #{fjxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="dcjcdshxPrice != null">
+                #{dcjcdshxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jlctyPrice != null">
+                #{jlctyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="sgzrmpltyPrice != null">
+                #{sgzrmpltyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="tzckzxPrice != null">
+                #{tzckzxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jdcssbxwfzddsftyxPrice != null">
+                #{jdcssbxwfzddsftyxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="xlqjfybcxPrice != null">
+                #{xlqjfybcxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jsshfwjzrxPirce != null">
+                #{jsshfwjzrxPirce,jdbcType=DECIMAL},
+            </if>
+            <if test="otherPrice != null">
+                #{otherPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="bjmpxPrice != null">
+                #{bjmpxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="un != null">
+                #{un,jdbcType=DOUBLE},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.chengniu.client.pojo.BaoxianInformalReport">
+        update baoxian_informal_report
+        <set>
+            <if test="baoxianIntentId != null">
+                baoxian_intent_id = #{baoxianIntentId,jdbcType=VARCHAR},
+            </if>
+            <if test="baoxianUnderwritingRequestId != null">
+                baoxian_underwriting_request_id = #{baoxianUnderwritingRequestId,jdbcType=VARCHAR},
+            </if>
+            <if test="channel != null">
+                channel = #{channel,jdbcType=VARCHAR},
+            </if>
+            <if test="baoxianCompanyCode != null">
+                baoxian_company_code = #{baoxianCompanyCode,jdbcType=VARCHAR},
+            </if>
+            <if test="baoxianCompanyName != null">
+                baoxian_company_name = #{baoxianCompanyName,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="manual != null">
+                manual = #{manual,jdbcType=BIT},
+            </if>
+            <if test="expireTime != null">
+                expire_time = #{expireTime, jdbcType=TIMESTAMP},
+            </if>
+            <if test="message != null">
+                message = #{message,jdbcType=VARCHAR},
+            </if>
+            <if test="userType != null">
+                user_type = #{userType,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="mobile != null">
+                mobile = #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="cityCode != null">
+                city_code = #{cityCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cityName != null">
+                city_name = #{cityName,jdbcType=VARCHAR},
+            </if>
+            <if test="mainQuoteId != null">
+                main_quote_id = #{mainQuoteId,jdbcType=VARCHAR},
+            </if>
+            <if test="quoteId != null">
+                quote_id = #{quoteId,jdbcType=VARCHAR},
+            </if>
+            <if test="marketPrice != null">
+                market_price = #{marketPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="totalPrice != null">
+                total_price = #{totalPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="vehicleModelCode != null">
+                vehicle_model_code = #{vehicleModelCode,jdbcType=VARCHAR},
+            </if>
+            <if test="vehicleModelName != null">
+                vehicle_model_name = #{vehicleModelName,jdbcType=VARCHAR},
+            </if>
+            <if test="vehicleModelPrice != null">
+                vehicle_model_price = #{vehicleModelPrice,jdbcType=INTEGER},
+            </if>
+            <if test="jqxStartDate != null">
+                jqx_start_date = #{jqxStartDate,jdbcType=DATE},
+            </if>
+            <if test="syxStartDate != null">
+                syx_start_date = #{syxStartDate,jdbcType=DATE},
+            </if>
+            <if test="jqxPrice != null">
+                jqx_price = #{jqxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="syxPrice != null">
+                syx_price = #{syxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ccsPrice != null">
+                ccs_price = #{ccsPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="szxPrice != null">
+                szx_price = #{szxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="csxPrice != null">
+                csx_price = #{csxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ckxPrice != null">
+                ckx_price = #{ckxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="dqxPrice != null">
+                dqx_price = #{dqxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="sjzrxPrice != null">
+                sjzrx_price = #{sjzrxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ssxPrice != null">
+                ssx_price = #{ssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="blxPrice != null">
+                blx_price = #{blxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="hfxPrice != null">
+                hfx_price = #{hfxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zrxPrice != null">
+                zrx_price = #{zrxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="szxBjmpPrice != null">
+                szx_bjmp_price = #{szxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="csxBjmpPrice != null">
+                csx_bjmp_price = #{csxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ckxBjmpPrice != null">
+                ckx_bjmp_price = #{ckxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="dqxBjmpPrice != null">
+                dqx_bjmp_price = #{dqxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="sjzrxBjmpPrice != null">
+                sjzrx_bjmp_price = #{sjzrxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="blxBjmpPrice != null">
+                blx_bjmp_price = #{blxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="hfxBjmpPrice != null">
+                hfx_bjmp_price = #{hfxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ssxBjmpPrice != null">
+                ssx_bjmp_price = #{ssxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zrxBjmpPrice != null">
+                zrx_bjmp_price = #{zrxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="tyxPrice != null">
+                tyx_price = #{tyxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zdzxcPrice != null">
+                zdzxc_price = #{zdzxcPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="syxBjmpPrice != null">
+                syx_bjmp_price = #{syxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="cpcssxPrice != null">
+                cpcssx_price = #{cpcssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="zrmctyPrice != null">
+                zrmcty_price = #{zrmctyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ssmctyPrice != null">
+                ssmcty_price = #{ssmctyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="kxmptyPrice != null">
+                kxmpty_price = #{kxmptyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="dcsgmptyPrice != null">
+                dcsgmpty_price = #{dcsgmptyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="xzsbssxPrice != null">
+                xzsbssx_price = #{xzsbssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="xzsbssxBjmpPrice != null">
+                xzsbssx_bjmp_price = #{xzsbssxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="cshwzrxPrice != null">
+                cshwzrx_price = #{cshwzrxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="cshwzrxBjmpPrice != null">
+                cshwzrx_bjmp_price = #{cshwzrxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="ssxlwpssxPrice != null">
+                ssxlwpssx_price = #{ssxlwpssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="fjcsryzrxBjmpPrice != null">
+                fjcsryzrx_bjmp_price = #{fjcsryzrxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jdctsssxPrice != null">
+                jdctsssx_price = #{jdctsssxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jbxBjmpPrice != null">
+                jbx_bjmp_price = #{jbxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="fjxBjmpPrice != null">
+                fjx_bjmp_price = #{fjxBjmpPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="dcjcdshxPrice != null">
+                dcjcdshx_price = #{dcjcdshxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jlctyPrice != null">
+                jlcty_price = #{jlctyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="sgzrmpltyPrice != null">
+                sgzrmplty_price = #{sgzrmpltyPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="tzckzxPrice != null">
+                tzckzx_price = #{tzckzxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jdcssbxwfzddsftyxPrice != null">
+                jdcssbxwfzddsftyx_price = #{jdcssbxwfzddsftyxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="xlqjfybcxPrice != null">
+                xlqjfybcx_price = #{xlqjfybcxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="jsshfwjzrxPirce != null">
+                jsshfwjzrx_pirce = #{jsshfwjzrxPirce,jdbcType=DECIMAL},
+            </if>
+            <if test="otherPrice != null">
+                other_price = #{otherPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="bjmpxPrice != null">
+                bjmpx_price = #{bjmpxPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="un != null">
+                un = #{un,jdbcType=DOUBLE},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="update" parameterType="com.chengniu.client.pojo.BaoxianInformalReport">
+    update baoxian_informal_report
+    set baoxian_intent_id = #{baoxianIntentId,jdbcType=VARCHAR},
+      baoxian_underwriting_request_id = #{baoxianUnderwritingRequestId,jdbcType=VARCHAR},
+      channel = #{channel,jdbcType=VARCHAR},
+      baoxian_company_code = #{baoxianCompanyCode,jdbcType=VARCHAR},
+      baoxian_company_name = #{baoxianCompanyName,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      manual = #{manual,jdbcType=BIT},
+      expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      message = #{message,jdbcType=VARCHAR},
+      user_type = #{userType,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      city_code = #{cityCode,jdbcType=VARCHAR},
+      city_name = #{cityName,jdbcType=VARCHAR},
+      main_quote_id = #{mainQuoteId,jdbcType=VARCHAR},
+      quote_id = #{quoteId,jdbcType=VARCHAR},
+      market_price = #{marketPrice,jdbcType=DECIMAL},
+      total_price = #{totalPrice,jdbcType=DECIMAL},
+      vehicle_model_code = #{vehicleModelCode,jdbcType=VARCHAR},
+      vehicle_model_name = #{vehicleModelName,jdbcType=VARCHAR},
+      vehicle_model_price = #{vehicleModelPrice,jdbcType=INTEGER},
+      jqx_start_date = #{jqxStartDate,jdbcType=DATE},
+      syx_start_date = #{syxStartDate,jdbcType=DATE},
+      jqx_price = #{jqxPrice,jdbcType=DECIMAL},
+      syx_price = #{syxPrice,jdbcType=DECIMAL},
+      ccs_price = #{ccsPrice,jdbcType=DECIMAL},
+      szx_price = #{szxPrice,jdbcType=DECIMAL},
+      csx_price = #{csxPrice,jdbcType=DECIMAL},
+      ckx_price = #{ckxPrice,jdbcType=DECIMAL},
+      dqx_price = #{dqxPrice,jdbcType=DECIMAL},
+      sjzrx_price = #{sjzrxPrice,jdbcType=DECIMAL},
+      ssx_price = #{ssxPrice,jdbcType=DECIMAL},
+      blx_price = #{blxPrice,jdbcType=DECIMAL},
+      hfx_price = #{hfxPrice,jdbcType=DECIMAL},
+      zrx_price = #{zrxPrice,jdbcType=DECIMAL},
+      szx_bjmp_price = #{szxBjmpPrice,jdbcType=DECIMAL},
+      csx_bjmp_price = #{csxBjmpPrice,jdbcType=DECIMAL},
+      ckx_bjmp_price = #{ckxBjmpPrice,jdbcType=DECIMAL},
+      dqx_bjmp_price = #{dqxBjmpPrice,jdbcType=DECIMAL},
+      sjzrx_bjmp_price = #{sjzrxBjmpPrice,jdbcType=DECIMAL},
+      blx_bjmp_price = #{blxBjmpPrice,jdbcType=DECIMAL},
+      hfx_bjmp_price = #{hfxBjmpPrice,jdbcType=DECIMAL},
+      ssx_bjmp_price = #{ssxBjmpPrice,jdbcType=DECIMAL},
+      zrx_bjmp_price = #{zrxBjmpPrice,jdbcType=DECIMAL},
+      tyx_price = #{tyxPrice,jdbcType=DECIMAL},
+      zdzxc_price = #{zdzxcPrice,jdbcType=DECIMAL},
+      syx_bjmp_price = #{syxBjmpPrice,jdbcType=DECIMAL},
+      cpcssx_price = #{cpcssxPrice,jdbcType=DECIMAL},
+      zrmcty_price = #{zrmctyPrice,jdbcType=DECIMAL},
+      ssmcty_price = #{ssmctyPrice,jdbcType=DECIMAL},
+      kxmpty_price = #{kxmptyPrice,jdbcType=DECIMAL},
+      dcsgmpty_price = #{dcsgmptyPrice,jdbcType=DECIMAL},
+      xzsbssx_price = #{xzsbssxPrice,jdbcType=DECIMAL},
+      xzsbssx_bjmp_price = #{xzsbssxBjmpPrice,jdbcType=DECIMAL},
+      cshwzrx_price = #{cshwzrxPrice,jdbcType=DECIMAL},
+      cshwzrx_bjmp_price = #{cshwzrxBjmpPrice,jdbcType=DECIMAL},
+      ssxlwpssx_price = #{ssxlwpssxPrice,jdbcType=DECIMAL},
+      fjcsryzrx_bjmp_price = #{fjcsryzrxBjmpPrice,jdbcType=DECIMAL},
+      jdctsssx_price = #{jdctsssxPrice,jdbcType=DECIMAL},
+      jbx_bjmp_price = #{jbxBjmpPrice,jdbcType=DECIMAL},
+      fjx_bjmp_price = #{fjxBjmpPrice,jdbcType=DECIMAL},
+      dcjcdshx_price = #{dcjcdshxPrice,jdbcType=DECIMAL},
+      jlcty_price = #{jlctyPrice,jdbcType=DECIMAL},
+      sgzrmplty_price = #{sgzrmpltyPrice,jdbcType=DECIMAL},
+      tzckzx_price = #{tzckzxPrice,jdbcType=DECIMAL},
+      jdcssbxwfzddsftyx_price = #{jdcssbxwfzddsftyxPrice,jdbcType=DECIMAL},
+      xlqjfybcx_price = #{xlqjfybcxPrice,jdbcType=DECIMAL},
+      jsshfwjzrx_pirce = #{jsshfwjzrxPirce,jdbcType=DECIMAL},
+      other_price = #{otherPrice,jdbcType=DECIMAL},
+      bjmpx_price = #{bjmpxPrice,jdbcType=DECIMAL},
+      un = #{un,jdbcType=DOUBLE},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+    <update id="updateDelete" parameterType="com.chengniu.client.pojo.BaoxianInformalReport">
+    update baoxian_informal_report set  deleted = 'Y'
+    where  baoxian_underwriting_request_id = #{baoxianUnderwritingRequestId,jdbcType=VARCHAR} and status!=1
+  </update>
+    <select id="querySid" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from baoxian_informal_report
+        where quote_id = #{quoteId,jdbcType=VARCHAR} AND deleted != 'Y' order by create_time desc limit 0,1
+    </select>
+    <!-- 查询 -->
+    <select id="queryCountByRequestId" resultType="int" parameterType="java.lang.String">
+    select count(*)
+    from baoxian_informal_report
+    where baoxian_underwriting_request_id = #{id,jdbcType=VARCHAR} and status=0 AND deleted = 'N'
+  </select>
+    <select id="queryByRequestId" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from baoxian_informal_report
+        where baoxian_underwriting_request_id = #{id,jdbcType=VARCHAR} AND deleted = 'N'
+    </select>
+    <select id="queryByRequestIdAndCompanyCode" resultMap="BaseResultMap"
+            parameterType="com.chengniu.client.pojo.BaoxianInformalReport">
+        select
+        <include refid="Base_Column_List"/>
+        from baoxian_informal_report
+        where
+        baoxian_underwriting_request_id = #{baoxianUnderwritingRequestId,jdbcType=VARCHAR}
+        and baoxian_company_code = #{baoxianCompanyCode,jdbcType=VARCHAR} and deleted = 'N'
+    </select>
+
+</mapper>

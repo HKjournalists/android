@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/daze_bgcolor">
+    <GridView
+        android:id="@+id/gvOrderType"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:cacheColorHint="#000000"
+        android:choiceMode="singleChoice"
+        android:listSelector="@null"
+        android:numColumns="2"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gvOrderType"/>
+    <include layout="@layout/daze_loading"/>
+</RelativeLayout>

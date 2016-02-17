@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="108dp"
+    android:layout_height="48dp"
+    android:paddingRight="8dp"
+    android:background="@color/daze_bgcolor"
+    android:orientation="vertical"
+    android:gravity="center_vertical" >
+    <RelativeLayout
+        android:id="@+id/citySelectLayout"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:background="@drawable/daze_city_select_item_background"
+        android:paddingRight="8dp" >
+        <com.kplus.car.widget.RegularTextView
+	        android:id="@+id/tvCitySelected"
+	        android:layout_width="52dp"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="16dp"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:textColor="@color/daze_orangered5"
+	        android:textSize="14dp" />
+		<ImageView
+		    android:layout_width="24dp"
+		    android:layout_height="24dp"
+		    android:layout_centerVertical="true"
+		    android:layout_alignParentRight="true"
+		    android:src="@drawable/daze_deselect_24" />
+    </RelativeLayout>
+</LinearLayout>

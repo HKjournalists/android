@@ -1,0 +1,13 @@
+{
+	"channelId": "99bill",
+	"channelName": "快钱",
+	"payType": "mobile",
+	"payTypeDesc": "移动支付",
+	"bizId": "${bizId!}",
+	"paySource": "zzb.channel.chengniu",
+	"amount": ${((amount!0)*100)?string("0")},
+		"notifyUrl": "${notifyUrl!}${payinfoid!}",
+	"areaCode": "${areaCode!}",
+	"notifyType": "POST",
+	"nonceStr":"${nonceStr!}"###
+}

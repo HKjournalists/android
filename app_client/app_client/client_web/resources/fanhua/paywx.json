@@ -1,0 +1,13 @@
+{
+	"channelId": "wxpay",
+	"channelName": "微信支付",
+	"payType": "qrcode",
+	"payTypeDesc": "扫码支付",
+	"bizId": "${quoteId!}",
+	"paySource": "zzb.channel.chengniu",
+	"amount": ${((amount!0)*100)?string("0")},
+	"notifyUrl": "${notifyUrl!}${payinfoid!}",
+	"areaCode": "${areaCode!}",
+	"notifyType": "POST",
+	"nonceStr":"${nonceStr!}"###
+}

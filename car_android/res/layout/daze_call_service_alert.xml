@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/callPhoneAlert"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:visibility="gone" >
+    
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:background="@color/daze_white"
+        android:layout_centerInParent="true" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否拨打电话"
+            android:textSize="13sp"
+            android:textColor="@color/daze_load_normal_end" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvPhone"
+            android:layout_below="@+id/tvMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/daze_black2" />
+        <LinearLayout
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:background="#e8e8e8"
+            android:paddingTop="1dp" >
+            <Button
+                android:id="@+id/btNotCall"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:text="取消"
+                android:textColor="@color/daze_textcolor2"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:background="@color/daze_white"
+                android:gravity="center" />
+            <Button
+                android:id="@+id/btCall"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="1dp"
+                android:text="呼叫"
+                android:textColor="@color/daze_textcolor1"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:background="@color/daze_white"
+                android:gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

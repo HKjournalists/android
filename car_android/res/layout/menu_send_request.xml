@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/daze_white">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/close"
+        android:layout_gravity="right|center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已选"
+            android:textColor="@color/daze_black2"
+            android:textSize="16sp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/selected_service_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <com.kplus.car.widget.RegularEditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/stroke_corner_gray_2"
+        android:hint="（选填）一句话车况说明，便于管家精确报价"
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:textColor="@color/daze_black2"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/actual_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="14sp"
+            android:textColor="@color/daze_orangered5"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/120"
+            android:textSize="14sp"
+            android:textColor="@color/daze_darkgrey9"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/text_length_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="说明在120个字以内"
+            android:textColor="@color/daze_darkred2"
+            android:textSize="14sp"
+            android:layout_marginLeft="16dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/request"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="呼叫管家"
+        android:textColor="@color/daze_white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@drawable/orange_corner_2_selector"/>
+
+</LinearLayout>

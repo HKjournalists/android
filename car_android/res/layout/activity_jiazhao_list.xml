@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_detailpage">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/jiazhao_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="9dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@color/daze_translucence2">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/detail_rule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="27dp"
+            android:text="驾驶证扣分细则"
+            android:textColor="@color/daze_white"
+            android:textSize="14sp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/rule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:paddingRight="27dp"
+            android:text="驾照分更新规则"
+            android:textColor="@color/daze_white"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

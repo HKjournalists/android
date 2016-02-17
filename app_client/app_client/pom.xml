@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.chengniu.client</groupId>
+	<artifactId>app_client</artifactId>
+	<version>2.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>app_client</name>
+	<modules>
+		<module>client_service</module>
+		<module>client_web</module>
+        <module>client_service_api</module>
+        <!--<module>client_task</module>-->
+	</modules>
+	<properties>
+		<log4j.versin>2.0.2</log4j.versin>
+		<spring.version>4.2.0.RELEASE</spring.version>
+		<freemarker.version>2.3.20</freemarker.version>
+		<struts.version>2.3.16.3</struts.version>
+		<system.encode>UTF-8</system.encode>
+	</properties>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Proxy Central Repository</name>
+			<url>http://192.168.10.3:8000/nexus/content/repositories/central/</url>
+		</repository>
+		<repository>
+			<id>snapshot</id>
+			<name>local repository</name>
+			<url>http://192.168.10.3:8000/nexus/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>oschina</id>
+			<name>oschina repository</name>
+			<url>http://maven.oschina.net/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>oschina-thirdparty</id>
+			<name>oschina thirdparty repository</name>
+			<url>http://maven.oschina.net/content/repositories/thirdparty/</url>
+		</repository>
+		<repository>
+			<id>org.springframework.maven.milestone</id>
+			<name>Spring Framework Maven Milestone Repository</name>
+			<url>http://maven.springframework.org/milestone</url>
+		</repository>
+	</repositories>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>${system.encode}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

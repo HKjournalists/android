@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/daze_bgcolor"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="15dp" >
+    <com.kplus.car.widget.RegularTextView
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/daze_bgcolor"
+	    android:gravity="center"
+	    android:text="行驶证不在身边，提醒我稍后进行认证？"
+	    android:textColor="@color/daze_load_normal_end"
+	    android:textSize="13sp"/>
+    <Button
+	    android:id="@+id/btFifteenMinutes"
+	    android:layout_width="match_parent"
+	    android:layout_height="35dp"
+	    android:layout_marginTop="10dp"
+	    android:background="@drawable/daze_btn_bg_white"
+	    android:gravity="center"
+	    android:text="15分钟以后提醒"
+	    android:textSize="15sp"
+	    android:textColor="@color/daze_black2"
+	    android:onClick="onClick" />
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/daze_darkgrey7"/>
+    <Button
+        android:id="@+id/btThirtyMinutes"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/daze_btn_bg_white"
+        android:gravity="center"
+        android:text="30分钟以后提醒"
+        android:textSize="15sp"
+        android:textColor="@color/daze_black2"
+        android:onClick="onClick" />
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/daze_darkgrey7"/>
+    <Button
+	     android:id="@+id/btOneHour"
+	     android:layout_width="match_parent"
+	     android:layout_height="35dp"
+	     android:background="@drawable/daze_btn_bg_white"
+	     android:gravity="center"
+	     android:text="1小时以后提醒"
+	     android:textSize="15sp"
+	     android:textColor="@color/daze_black2"
+	     android:onClick="onClick" />
+	 <com.kplus.car.widget.RegularTextView
+	     android:layout_width="match_parent"
+	     android:layout_height="1dp"
+	     android:background="@color/daze_darkgrey7"/>
+	 <Button
+	     android:id="@+id/btThreeHour"
+	     android:layout_width="match_parent"
+	     android:layout_height="35dp"
+	     android:background="@drawable/daze_btn_bg_white"
+	     android:gravity="center"
+	     android:text="3小时以后提醒"
+	     android:textSize="15sp"
+	     android:textColor="@color/daze_black2"
+	     android:onClick="onClick" />
+	 <com.kplus.car.widget.RegularTextView
+	     android:layout_width="match_parent"
+	     android:layout_height="1dp"
+	     android:background="@color/daze_darkgrey7"/>
+	 <Button
+	     android:id="@+id/btSixHour"
+	     android:layout_width="match_parent"
+	     android:layout_height="35dp"
+	     android:background="@drawable/daze_btn_bg_white"
+	     android:gravity="center"
+	     android:text="6小时以后提醒"
+	     android:textSize="15sp"
+	     android:textColor="@color/daze_black2"
+	     android:onClick="onClick" />
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/daze_btn_bg_light_gray_2"
+        android:gravity="center"
+        android:text="不要提醒"
+        android:textSize="15sp"
+        android:textColor="@color/daze_black2"
+        android:onClick="onClick" />
+
+</LinearLayout>

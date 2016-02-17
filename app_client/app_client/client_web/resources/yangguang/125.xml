@@ -1,0 +1,13 @@
+<Request>
+	<Order>
+		<TBOrderId>${id!}</TBOrderId>
+		<SubOrderList>
+			<SubOrder type='force'>
+				<TBOrderId>${id!}</TBOrderId>
+			</SubOrder>
+			<SubOrder type='biz'>
+				<TBOrderId>${id!}</TBOrderId>
+			</SubOrder>
+		</SubOrderList>
+	</Order>
+</Request>

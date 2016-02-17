@@ -1,0 +1,166 @@
+<resources>
+    <string name="cn_app_name">橙牛洗车</string>
+
+    <string name="cn_car_washing">上门洗车</string>
+    <string name="cn_enter_name_hint">请输入姓名</string>
+    <string name="cn_enter_mobile_hint">请输入手机号</string>
+    <string name="cn_enter_right_mobile">请输入正确的手机号</string>
+    <string name="cn_worker_phone_is_error">技师手机号格式不正确！</string>
+    <string name="cn_enter_carinfo_hint">请输入车辆信息</string>
+    <string name="cn_enter_car_location_hint">请确认车辆位置</string>
+    <string name="cn_Please_make_sure_the_location">请先确定车辆位置</string>
+    <string name="cn_enter_service_time">请选择服务时间</string>
+    <string name="cn_enter_worker_phone">请输入技师手机号</string>
+    <string name="cn_is_enter_worker_phone">是否指定技师服务？</string>
+    <string name="cn_no_serving_time">该区域服务时间段暂时无法获取，请稍后再试</string>
+    <string name="cn_selected_service">请选择服务</string>
+    <string name="cn_enter_carinfo_msg">请输入完整车辆信息</string>
+    <string name="cn_licence_error">请确认你的车牌号！</string>
+    <string name="cn_voucher">代金劵</string>
+    <string name="cn_pay">立即支付</string>
+    <string name="cn_total_price">合计：￥%1$s</string>
+    <string name="cn_coupon_price">服务价格%1$s元，优惠%2$s元</string>
+    <string name="cn_selected_voucher">选择代金券</string>
+    <string name="cn_voucher_is_empty">你还没有代金券哦！</string>
+    <string name="cn_no_voucher">暂无代金券</string>
+    <string name="cn_not_use_voucher">不使用代金券支付</string>
+    <string name="cn_expire">%1$s到期</string>
+    <string name="cn_selected_city">选择服务城市</string>
+    <string name="cn_more_location">更多城市服务准备开通中</string>
+    <string name="cn_selected_pay_type">选择支付方式</string>
+    <string name="cn_please_selected_payment">请选择支付方式</string>
+    <string name="cn_pay_price">在线支付</string>
+    <string name="cn_balance">账户余额</string>
+    <string name="cn_bank_card_type">银行卡支付</string>
+    <string name="cn_alipay_type">支付宝客户端支付(推荐)</string>
+    <string name="cn_lianlian_type">连连支付</string>
+    <string name="cn_wechat_type">微信客户端支付</string>
+    <string name="cn_pay_type_desc">支持储蓄卡信用卡，无需开通网银</string>
+    <string name="cn_alipay_desc">推荐支付宝客户端用户</string>
+    <string name="cn_wechat_desc">推荐微信客户端用户</string>
+
+    <string name="hostlocation">定位当前位置</string>
+
+    <string name="cn_select_service">选择服务</string>
+    <string name="cn_service_selectedMore_tips">服务项目可多选</string>
+    <string name="cn_chakan">查看</string>
+    <string name="cn_service_detils">服务介绍</string>
+    <string name="cn_service_details_title">橙牛精致洗车</string>
+    <string name="cn_orders">立即下单</string>
+    <string name="cn_yuan_unit">￥</string>
+    <string name="cn_order_price">￥%1$s</string>
+    <string name="cn_org_order_price">原价%1$s元</string>
+
+    <string name="cn_service_is_exp">服务已不能使用</string>
+    <string name="cn_no_selected_service">未选择服务，确定返回？</string>
+    <string name="cn_no_selected_location">未选择位置，确定返回？</string>
+    <string name="cn_no_entry_carinfo">未选择车辆信息，确定返回？</string>
+
+    <string name="cn_repeat_submitorder">请不要重复下单哦！</string>
+
+    <string name="cn_pay_failed">订单支付失败，确定重新支付？</string>
+    <string name="cn_view_myorders">查看我的订单</string>
+
+    <string name="cn_orderlist_is_empty">你还没有洗车订单哦</string>
+
+    <string name="cn_car_info">车辆信息</string>
+    <string name="cn_enter_province">请选择省份</string>
+    <string name="cn_enter_car_licence">请输入车牌号</string>
+    <string name="cn_enter_car_model">请选择品牌</string>
+    <string name="cn_enter_car_color">请选择车辆颜色</string>
+    <string name="cn_common_cars">常用车辆</string>
+    <string name="cn_selected_car_licence_title">选择车牌</string>
+    <string name="cn_selected_car_model_title">选择品牌</string>
+    <string name="cn_selected_car_color_title">选择车辆颜色</string>
+    <string name="cn_cancel">取消</string>
+
+    <string name="cn_licence_length_err">车牌号码必须为6位！</string>
+    <string name="cn_licence_type_err">车牌号只能输入字母和数字</string>
+    <string name="cn_licence_is_not_empty">车牌号不能包含空格</string>
+    <string name="cn_is_first_letter">车牌号必须以字母开头</string>
+    <string name="cn_carbrand_isnotservice">该车型暂时不能服务</string>
+
+    <string name="cn_service_evalute_title">评价服务</string>
+    <string name="cn_service_evalute">给洗车服务评价吧</string>
+    <string name="cn_evalute_hint">评价就送20元服务费红包!</string>
+    <string name="cn_submit_evalute">提交评价</string>
+    <string name="cn_evaluate_success">评价成功</string>
+    <string name="cn_please_selected_rating">请选择评分等级</string>
+    <string name="cn_please_entry_content">请填写评价内容</string>
+
+    <string name="cn_realPay">实付：</string>
+    <string name="cn_order_details">订单详情</string>
+    <string name="cn_order_num">订单号</string>
+    <string name="cn_order_paidan">已派单</string>
+    <string name="cn_evalute">评价</string>
+    <string name="cn_order_cancel">取消订单</string>
+    <string name="cn_cost_price">实付金额</string>
+    <string name="cn_order_history">订单历史</string>
+    <string name="cn_my_orders">我的订单</string>
+
+    <string name="cn_order_cancel_confirm">你确定要取消此订单吗？</string>
+    <string name="cn_order_cancel_success">此订单已成功取消</string>
+
+    <string name="cn_my_city">定位当前城市</string>
+    <string name="cn_my_location">定位当前位置</string>
+
+    <string name="cn_car_location">选择位置</string>
+    <string name="cn_search_hint">搜索车辆停放位置</string>
+    <string name="cn_marker_in_scope">拖动地图标记车辆位置</string>
+    <string name="cn_marker_out_scope">该位置未开通服务</string>
+    <string name="cn_selected_location">选择车辆位置</string>
+    <string name="cn_service_area">服务范围</string>
+
+    <string name="cn_no_poi_data">该位置暂不支持服务，请拖动地图重新标记车辆位置！</string>
+
+    <!--并付款-->
+    <string name="cn_orderlogs_order">买家 %1$s 下单</string>
+    <string name="cn_orderlogs_paid">并付款</string>
+    <string name="cn_unpaid_cancel">系统已自动关闭未支付订单</string>
+    <string name="cn_orderlogs_assign">已分配以下师傅为您服务：</string>
+    <string name="cn_orderlogs_reassign">已重新分以下配师傅为您服务：</string>
+    <string name="cn_orderlogs_start">师傅 %1$s %2$s 开始服务并拍照</string>
+    <string name="cn_orderlogs_finish">师傅 %1$s %2$s 服务完成并拍照</string>
+    <string name="cn_orderlogs_service_finish">确认服务完成</string>
+
+    <string name="cn_get_gps_failed">GPS定位失败</string>
+    <string name="cn_get_location_failed">获取位置失败</string>
+
+    <string name="cn_pay_finish">支付完成</string>
+
+    <string name="cn_service_error">服务器异常</string>
+
+    <string name="cn_loading_now">正在玩命加载中...</string>
+    <string name="cn_search_addres">正在搜索地址...</string>
+    <string name="cn_loading">加载中...</string>
+    <string name="cn_loading_share_content">正在获取分享内容...</string>
+    <string name="cn_paying">正在支付中...</string>
+
+    <string name="cn_confirm">确定</string>
+    <string name="cn_affirm">确认</string>
+    <string name="cn_no_net">无法连接到网络，请检查您的网络设置</string>
+    <string name="cn_call">拨打电话</string>
+
+    <string name="cn_share_title">分享晒单</string>
+    <string name="cn_share_tips">好服务，当然要大家一起分享</string>
+    <string name="cn_WeChatMoment">朋友圈</string>
+    <string name="cn_WeChatFriend">微信好友</string>
+    <string name="cn_SinaWeibo">新浪微博</string>
+
+    <string name="two_day_before">两天前</string>
+    <string name="before_yesterday">前天</string>
+    <string name="yesterday">昨天</string>
+    <string name="cn_today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="after_tomorrow">后天</string>
+    <string name="two_day_after">两天后</string>
+
+    <string name="cn_next">下一步</string>
+    <string name="cn_selected_services">已选择%1$s项服务</string>
+    <string name="cn_sevicers_tips1">未来的某一天</string>
+    <string name="cn_sevicers_tips2">橙牛上门洗车也将来到你的城市</string>
+    <string name="cn_sevicers_tips3">该城市暂无服务项目，请切换城市</string>
+
+    <string name="cn_not_support_car_model">当前车型无法享受该服务，请您切换车型！</string>
+    <string name="cn_not_support">当前车型无法享受该服务，请您重新选择！</string>
+</resources>

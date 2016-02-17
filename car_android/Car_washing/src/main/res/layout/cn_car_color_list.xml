@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cn_white"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/cn_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/lvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/cn_line_color"
+            android:dividerHeight="0dp"
+            android:listSelector="@color/cn_transparent"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/cn_voucher_is_empty"
+            android:textColor="@color/cn_font_color"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

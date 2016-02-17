@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <SurfaceView
+     android:id="@+id/surfaceView"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent" />    
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/cutView"
+        android:background="#cc000000" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cutView"
+        android:background="#cc000000" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/leftView"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topView"
+        android:layout_above="@+id/bottomView"
+        android:layout_alignParentLeft="true"
+        android:background="#cc000000" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/rightView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topView"
+        android:layout_above="@+id/bottomView"
+        android:layout_toRightOf="@+id/cutView"
+        android:background="#cc000000" />
+    <RelativeLayout
+        android:id="@+id/cutView"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_toRightOf="@+id/leftView"
+        android:layout_centerVertical="true" >
+        <com.kplus.car.widget.RegularTextView
+			android:layout_width="24dp"
+			android:layout_height="3dp"
+			android:background="#ff7e2e"
+			android:layout_alignParentLeft="true" />
+        <com.kplus.car.widget.RegularTextView
+			android:layout_width="24dp"
+			android:layout_height="3dp"
+			android:background="#ff7e2e"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentBottom="true" />
+        <com.kplus.car.widget.RegularTextView
+			android:layout_width="3dp"
+			android:layout_height="24dp"
+			android:background="#ff7e2e"
+			android:layout_alignParentLeft="true" />
+        <com.kplus.car.widget.RegularTextView
+			android:layout_width="3dp"
+			android:layout_height="24dp"
+			android:background="#ff7e2e"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentBottom="true" />
+        <com.kplus.car.widget.RegularTextView
+			android:layout_width="24dp"
+			android:layout_height="3dp"
+			android:background="#ff7e2e"
+			android:layout_alignParentRight="true" />
+        <com.kplus.car.widget.RegularTextView
+			android:layout_width="24dp"
+			android:layout_height="3dp"
+			android:background="#ff7e2e"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentBottom="true" />
+        <com.kplus.car.widget.RegularTextView
+			android:layout_width="3dp"
+			android:layout_height="24dp"
+			android:background="#ff7e2e"
+			android:layout_alignParentRight="true" />
+        <com.kplus.car.widget.RegularTextView
+			android:layout_width="3dp"
+			android:layout_height="24dp"
+			android:background="#ff7e2e"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentBottom="true" />
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="请将行驶证正面置于此区域\n尝试对齐边缘线"
+            android:textSize="14dp"
+            android:textColor="@color/daze_white" />
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/viewExample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="查看示范"
+            android:textSize="14dp"
+            android:textColor="@color/daze_blue3"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/ivTakePhoto"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/daze_verify_takephoto_background" />
+    <ImageView
+        android:id="@+id/ivFlashSwitch"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:layout_above="@+id/ivTakePhoto"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/daze_light_off" />
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:src="@drawable/daze_back_light" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="24dp"
+        android:paddingRight="29dp"
+        android:text="相册"
+        android:textColor="@color/daze_white"
+        android:textSize="16dp" />
+</RelativeLayout>

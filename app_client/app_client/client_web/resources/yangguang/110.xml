@@ -1,0 +1,42 @@
+<Request>
+	<InputsList>
+		<Inputs>
+			<input name='cov_732'>${cov_732!"0"}</input>
+			<input name='cov_310'>${zrx!"0.00"}</input>
+			<input name='cov_731'>${cov_731!"0"}</input>
+			<input name='cov_734'>${cov_734!"0"}</input>
+			<input name='packageType'>optional</input>
+			<input name='cov_733'>${cov_733!"0"}</input>
+			<input name='cov_291'>${ssx!"0"}</input>
+			<input name='forceFlag'>${(jqx!true)?string("1","0")}</input>
+			<input name='cov_500'>${dqx!"0.00"}</input>
+			<input name='cov_200'>${csx!"0.00"}</input>
+			<input name='cov_600'>${szx!"0.00"}</input>
+			<input name='bizBeginDate'>${syxStartDate?string("yyyy-MM-dd")}</input>
+			<input name='cov_640'>${cov_640!"0.00"}</input>
+			<input name='cov_321'>${zdxc!"0"}</input>
+			<input name='cov_702'>${ckx!"0.00"}</input>
+			<input name='forceBeginDate'>${jqxStartDate?string("yyyy-MM-dd")}</input>
+			<input name='cov_701'>${sjzrx!"0.00"}</input>
+			<input name='cov_928'>${(sjzrxBjmp!false)?string("1","0")}</input>
+			<input name='cov_929'>${(ckxBjmp!false)?string("1","0")}</input>
+			<input name='cov_231'>${blx!"0"}</input>
+			<input name='cov_210'>${hfx!"0.00"}</input>
+			<input name='cov_921'>${(dqxBjmp!false)?string("1","0")}</input>
+			<input name='cov_912'>${(szxBjmp!false)?string("1","0")}</input>
+			<input name='cov_922'>${(hfxBjmp!false)?string("1","0")}</input>
+			<input name='cov_911'>${(csxBjmp!false)?string("1","0")}</input>
+			<input name='cov_390'>0</input>
+		</Inputs>
+		<Inputs type='immevalid'>
+			<input name='immeValidHoursStart'>${immeValidHoursStart!24}</input>
+			<input name='isImmevalid'>${isImmevalid!0}</input>
+		</Inputs>
+		<Inputs type='runAreaType'>
+			<input name='runArea'>04</input>
+		</Inputs>
+		<Inputs type='driverInfoFlag'>
+			<input name='agreedDriver'>0</input>
+		</Inputs>
+	</InputsList>
+</Request>

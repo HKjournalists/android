@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianIntentDAO" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianIntent" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="baoxian_base_info_id" property="baoxianBaseInfoId" jdbcType="VARCHAR" />
+    <result column="user_type" property="userType" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="data_status" property="dataStatus" jdbcType="INTEGER" />
+    <result column="deleted" property="deleted" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="follow_status" property="followStatus" jdbcType="INTEGER" />
+    <result column="follow_count" property="followCount" jdbcType="INTEGER" />
+    <result column="follow_time" property="followTime" jdbcType="TIMESTAMP" />
+    <result column="operator_id" property="operatorId" jdbcType="VARCHAR" />
+    <result column="operator_name" property="operatorName" jdbcType="VARCHAR" />
+    <result column="migrate" property="migrate" jdbcType="CHAR" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+  </resultMap> 
+  <resultMap id="statisticsMap" type="com.chengniu.client.pojo.StatisticsMap" >
+  	 	<result column="date" property="date" jdbcType="VARCHAR" />
+   		<result column="total" property="total" jdbcType="INTEGER" />
+   </resultMap>
+  <sql id="Base_Column_List" >
+   id, baoxian_base_info_id, user_type, user_id, status, data_status, deleted, create_time, 
+    update_time, follow_status, follow_count, follow_time, operator_id, operator_name, 
+    migrate, city_code
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_intent
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteById" parameterType="java.lang.String" >
+    update baoxian_intent set deleted = 'Y'
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+   <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianIntent" >
+    insert into baoxian_intent (id, baoxian_base_info_id, user_type, 
+      user_id, status, data_status, 
+      deleted, create_time, update_time, 
+      follow_status, follow_count, follow_time, 
+      operator_id, operator_name, migrate, 
+      city_code)
+    values (#{id,jdbcType=VARCHAR}, #{baoxianBaseInfoId,jdbcType=VARCHAR}, #{userType,jdbcType=INTEGER}, 
+      #{userId,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{dataStatus,jdbcType=INTEGER}, 
+      #{deleted,jdbcType=CHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{followStatus,jdbcType=INTEGER}, #{followCount,jdbcType=INTEGER}, #{followTime,jdbcType=TIMESTAMP}, 
+      #{operatorId,jdbcType=VARCHAR}, #{operatorName,jdbcType=VARCHAR}, #{migrate,jdbcType=CHAR}, 
+      #{cityCode,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.chengniu.client.pojo.BaoxianIntent" >
+    insert into baoxian_intent
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="baoxianBaseInfoId != null" >
+        baoxian_base_info_id,
+      </if>
+      <if test="userType != null" >
+        user_type,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="dataStatus != null" >
+        data_status,
+      </if>
+      <if test="deleted != null" >
+        deleted,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="followStatus != null" >
+        follow_status,
+      </if>
+      <if test="followCount != null" >
+        follow_count,
+      </if>
+      <if test="followTime != null" >
+        follow_time,
+      </if>
+      <if test="operatorId != null" >
+        operator_id,
+      </if>
+      <if test="operatorName != null" >
+        operator_name,
+      </if>
+      <if test="migrate != null" >
+        migrate,
+      </if>
+      <if test="cityCode != null" >
+        city_code,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianBaseInfoId != null" >
+        #{baoxianBaseInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="dataStatus != null" >
+        #{dataStatus,jdbcType=INTEGER},
+      </if>
+      <if test="deleted != null" >
+        #{deleted,jdbcType=CHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="followStatus != null" >
+        #{followStatus,jdbcType=INTEGER},
+      </if>
+      <if test="followCount != null" >
+        #{followCount,jdbcType=INTEGER},
+      </if>
+      <if test="followTime != null" >
+        #{followTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operatorId != null" >
+        #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorName != null" >
+        #{operatorName,jdbcType=VARCHAR},
+      </if>
+      <if test="migrate != null" >
+        #{migrate,jdbcType=CHAR},
+      </if>
+      <if test="cityCode != null" >
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chengniu.client.pojo.BaoxianIntent" >
+    update baoxian_intent
+    <set >
+      <if test="baoxianBaseInfoId != null" >
+        baoxian_base_info_id = #{baoxianBaseInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        user_type = #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="deleted != null" >
+        deleted = #{deleted,jdbcType=CHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="followStatus != null" >
+        follow_status = #{followStatus,jdbcType=INTEGER},
+      </if>
+      <if test="followCount != null" >
+        follow_count = #{followCount,jdbcType=INTEGER},
+      </if>
+      <if test="operatorId != null" >
+        operator_id = #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorName != null" >
+        operator_name = #{operatorName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="statistics" resultMap="statisticsMap" parameterType="com.kplus.orders.rpc.dto.PageSearchVO">
+      <if test="statisticsType != null and statisticsType == 1" >
+         SELECT t.date, count(*) total  from
+		 (SELECT DATE_FORMAT(create_time, '%Y%m%d') date, user_id, user_type from  baoxian_intent
+      </if>
+      <if test="statisticsType == null or statisticsType !=1" >
+          SELECT DATE_FORMAT(t.create_time, '%Y%m%d') date, count(*) total from baoxian_intent t
+      </if>
+	  where
+      <if test="userType != null" >
+        user_type = #{userType,jdbcType=INTEGER} and
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=INTEGER} and
+      </if>
+      create_time> #{startDate,jdbcType=TIMESTAMP} and #{endDate,jdbcType=TIMESTAMP}>create_time
+      <if test="statisticsType != null and statisticsType == 1" >
+      GROUP BY date, user_id,user_type ) t
+      </if>
+      GROUP BY date
+	</select>
+  <update id="update" parameterType="com.chengniu.client.pojo.BaoxianIntent" >
+    update baoxian_intent
+    set baoxian_base_info_id = #{baoxianBaseInfoId,jdbcType=VARCHAR},
+      user_type = #{userType,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      deleted = #{deleted,jdbcType=CHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+	<select id="pageCount" resultType="int"
+		parameterType="com.kplus.orders.rpc.dto.PageSearchVO">
+		select count(*) from baoxian_intent
+		WHERE deleted='N'
+		<if test="userType != null">AND user_type=#{userType, jdbcType=INTEGER}</if>
+		<if test="userId != null">AND user_id=#{userId, jdbcType=VARCHAR}</if>
+		<if test="status != null">AND status =#{status, jdbcType=VARCHAR}
+		</if>
+		<if test="listStatus != null">
+			AND status in
+			<foreach collection="listStatus" index="index" item="tag"
+				open="(" separator="," close=")">
+				#{tag}
+			</foreach>
+		</if>
+		AND status > 0
+	</select>
+
+	<select id="page" resultMap="BaseResultMap"
+		parameterType="com.kplus.orders.rpc.dto.PageSearchVO">
+		select
+		<include refid="Base_Column_List" />
+		from baoxian_intent
+		WHERE deleted='N'
+		<if test="userType != null">AND user_type=#{userType, jdbcType=INTEGER}</if>
+		<if test="userId != null">AND user_id=#{userId, jdbcType=VARCHAR}</if>
+		<if test="status != null">AND status =#{status, jdbcType=VARCHAR}
+		</if>
+		<if test="listStatus != null">
+			AND status in
+			<foreach collection="listStatus" index="index" item="tag"
+				open="(" separator="," close=")">
+				#{tag}
+			</foreach>
+		</if>
+		AND status > 0
+		order by create_time desc
+		<include refid="common.page" />
+	</select>
+
+  <select id="queryByVehicleAndStatus" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select intent.*  from baoxian_intent intent
+    JOIN baoxian_base_info info ON info.id = intent.baoxian_base_info_id
+    WHERE intent.deleted='N'
+    <if test="userType != null">AND intent.user_type=#{userType, jdbcType=INTEGER}</if>
+    <if test="userId != null">AND intent.user_id=#{userId, jdbcType=VARCHAR}</if>
+    <if test="status != null" >AND intent.status in (#{status, jdbcType=VARCHAR})</if>
+    <if test="vehicleNum != null">AND info.vehicle_num = #{vehicleNum, jdbcType=VARCHAR}</if>
+    order by create_time desc
+  </select>
+
+  <update id="updateStatus" parameterType="com.chengniu.client.pojo.BaoxianIntent" >
+    update baoxian_intent
+    set
+      status = #{status,jdbcType=INTEGER},
+      <if test="followStatus != null">
+        follow_status = #{followStatus, jdbcType=INTEGER},
+      </if>
+      update_time = CURRENT_TIMESTAMP()
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+</mapper>

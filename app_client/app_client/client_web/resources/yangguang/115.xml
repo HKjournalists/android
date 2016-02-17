@@ -1,0 +1,7 @@
+<Request>
+	<InputsList>
+		<Inputs>
+			<input name='packageType'>luxury</input>
+		</Inputs>
+	</InputsList>
+</Request>

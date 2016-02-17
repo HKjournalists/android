@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kplus.car.widget.ScrollLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/daze_white">
+
+        <RelativeLayout
+            android:id="@+id/indicatorView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <com.kplus.car.widget.RegularTextView
+                style="@style/font_body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text=" " />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/daze_red_point" />
+        </RelativeLayout>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvMessageInfo"
+            style="@style/font_body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp" />
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvMessageDate"
+            style="@style/font_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMessageInfo"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/viewMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvMessageInfo"
+            android:layout_marginRight="27dp"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="查看更多"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/delete_icon"
+        android:layout_width="@dimen/delete_action_len"
+        android:layout_height="match_parent"
+        android:background="@color/daze_darkred2"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/daze_white"
+        android:textSize="16sp" />
+
+</com.kplus.car.widget.ScrollLinearLayout>

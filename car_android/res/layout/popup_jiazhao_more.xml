@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:background="@color/daze_white"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/daze_white">
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/showIndex"
+        android:layout_width="140dp"
+        android:layout_height="54dp"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@color/daze_orangered5"
+        android:text="显示在首页"
+        android:paddingLeft="18dp"
+        android:background="@drawable/bg_press"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/edit"
+        android:layout_width="140dp"
+        android:layout_height="54dp"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@color/daze_black2"
+        android:text="编辑"
+        android:paddingLeft="18dp"
+        android:background="@drawable/bg_press"
+        android:layout_marginTop="54dp"/>
+
+</android.support.v7.widget.CardView>

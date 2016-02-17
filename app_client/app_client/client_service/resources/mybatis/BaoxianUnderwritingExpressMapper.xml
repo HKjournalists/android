@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianUnderwritingExpressMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianUnderwritingExpress" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="company" property="company" jdbcType="VARCHAR" />
+    <result column="order_num" property="orderNum" jdbcType="VARCHAR" />
+    <result column="express_time" property="expressTime" jdbcType="TIMESTAMP" />
+    <result column="operator_id" property="operatorId" jdbcType="VARCHAR" />
+    <result column="operator_name" property="operatorName" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="baoxian_underwriting_report_id" property="baoxianUnderwritingReportId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, company, order_num, express_time, operator_id, operator_name, create_time, baoxian_underwriting_report_id
+  </sql>
+   <select id="queryByBaoxianUnderwritingReportId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_express
+    where baoxian_underwriting_report_id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_express
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingExpress" >
+    insert into baoxian_underwriting_express (id, company, order_num, 
+      express_time, operator_id, operator_name, 
+      create_time, baoxian_underwriting_report_id
+      )
+    values (#{id,jdbcType=VARCHAR}, #{company,jdbcType=VARCHAR}, #{orderNum,jdbcType=VARCHAR}, 
+      #{expressTime,jdbcType=TIMESTAMP}, #{operatorId,jdbcType=VARCHAR}, #{operatorName,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{baoxianUnderwritingReportId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingExpress" >
+    insert into baoxian_underwriting_express
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="company != null" >
+        company,
+      </if>
+      <if test="orderNum != null" >
+        order_num,
+      </if>
+      <if test="expressTime != null" >
+        express_time,
+      </if>
+      <if test="operatorId != null" >
+        operator_id,
+      </if>
+      <if test="operatorName != null" >
+        operator_name,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="baoxianUnderwritingReportId != null" >
+        baoxian_underwriting_report_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNum != null" >
+        #{orderNum,jdbcType=VARCHAR},
+      </if>
+      <if test="expressTime != null" >
+        #{expressTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operatorId != null" >
+        #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorName != null" >
+        #{operatorName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="baoxianUnderwritingReportId != null" >
+        #{baoxianUnderwritingReportId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingExpress" >
+    update baoxian_underwriting_express
+    <set >
+      <if test="company != null" >
+        company = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNum != null" >
+        order_num = #{orderNum,jdbcType=VARCHAR},
+      </if>
+      <if test="expressTime != null" >
+        express_time = #{expressTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operatorId != null" >
+        operator_id = #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorName != null" >
+        operator_name = #{operatorName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="baoxianUnderwritingReportId != null" >
+        baoxian_underwriting_report_id = #{baoxianUnderwritingReportId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingExpress" >
+    update baoxian_underwriting_express
+    set company = #{company,jdbcType=VARCHAR},
+      order_num = #{orderNum,jdbcType=VARCHAR},
+      express_time = #{expressTime,jdbcType=TIMESTAMP},
+      operator_id = #{operatorId,jdbcType=VARCHAR},
+      operator_name = #{operatorName,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      baoxian_underwriting_report_id = #{baoxianUnderwritingReportId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

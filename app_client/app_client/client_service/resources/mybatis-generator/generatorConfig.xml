@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <classPathEntry location="/Users/haiyang/m2/repository/mysql/mysql-connector-java/5.1.33/mysql-connector-java-5.1.33.jar" />
+    <context id="mycontext" targetRuntime="MyBatis3">
+        <commentGenerator >  
+            <property name="suppressAllComments" value="true"/><!-- 是否取消注释 -->  
+            <property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳-->  
+        </commentGenerator>  
+        
+        <jdbcConnection 
+            driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://192.168.10.3:3306/car?useUnicode=true&amp;characterEncoding=UTF-8"
+            userId="root" password="85850948" />
+        <javaModelGenerator targetPackage="com.chengniu.client.pojo" targetProject="/Users/haiyang/Desktop/cw-projects/app_client_v2/client_service/code" >
+        	<property name="enableSubPackages" value="true" />
+      		<property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="mybatis" targetProject="/Users/haiyang/Desktop/cw-projects/app_client_v2/client_service/resources">
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+        <javaClientGenerator targetPackage="com.chengniu.client.dao" targetProject="/Users/haiyang/Desktop/cw-projects/app_client_v2/client_service/code" type="XMLMAPPER">
+        	<property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        <table schema="car" tableName="baoxian_underwriting_report_operation_record" domainObjectName="BaoxianUnderwritingReportOperationRecord"
+            enableCountByExample="false"  enableDeleteByExample="false" 
+            enableSelectByExample="false"  enableUpdateByExample="false"/>
+        <!--<table schema="car" tableName="baoxian_informal_report" domainObjectName="BaoxianInformalReport"-->
+               <!--enableCountByExample="false"  enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"  enableUpdateByExample="false"/>-->
+        <!--<table schema="car" tableName="baoxian_car_license" domainObjectName="BaoxianCarLicense"-->
+               <!--enableCountByExample="false"  enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"  enableUpdateByExample="false"/>-->
+    </context>
+</generatorConfiguration>

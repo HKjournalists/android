@@ -1,0 +1,9 @@
+<Request>
+	<InputsList>
+		<Inputs>
+			<Input name='licenseNo'>${(vehicleNum!)?upper_case}</Input>
+			<Input name='cityCode'>${cityCode!}</Input>
+			<Input name='noLicenseNo'>${noLicenseFlag!0}</Input>
+		</Inputs>
+	</InputsList>
+</Request>

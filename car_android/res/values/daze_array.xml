@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="remind_date">
+        <item>当天</item>
+        <item>提前一天</item>
+        <item>提前两天</item>
+        <item>提前三天</item>
+        <item>提前四天</item>
+        <item>提前五天</item>
+        <item>提前六天</item>
+        <item>提前七天</item>
+        <item>提前15天</item>
+        <item>提前30天</item>
+        <item>提前60天</item>
+    </string-array>
+    <string-array name="remind_date_2">
+        <item>当天</item>
+        <item>提前一天</item>
+        <item>提前两天</item>
+        <item>提前三天</item>
+        <item>提前四天</item>
+        <item>提前五天</item>
+        <item>提前六天</item>
+        <item>提前七天</item>
+    </string-array>
+    <string-array name="repeat_type">
+        <item>从不</item>
+        <item>每天</item>
+        <item>每周</item>
+        <item>每月</item>
+        <item>每两月</item>
+        <item>每三月</item>
+        <item>每四月</item>
+        <item>每五月</item>
+        <item>每六月</item>
+        <item>每七月</item>
+        <item>每八月</item>
+        <item>每九月</item>
+        <item>每十月</item>
+        <item>每十一月</item>
+        <item>每年</item>
+    </string-array>
+    <string-array name="remind_restrict">
+        <item>当天</item>
+        <item>提前一天</item>
+    </string-array>
+    <string-array name="week">
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+        <item>周日</item>
+    </string-array>
+</resources>

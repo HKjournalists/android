@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianInsureInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianInsureInfo" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="baoxian_underwriting_report_id" property="baoxianUnderwritingReportId" jdbcType="VARCHAR" />
+    <result column="vehicle_model_code" property="vehicleModelCode" jdbcType="VARCHAR" />
+    <result column="vehicle_model_name" property="vehicleModelName" jdbcType="VARCHAR" />
+    <result column="driving_id" property="drivingId" jdbcType="BIGINT" />
+    <result column="driving_name" property="drivingName" jdbcType="VARCHAR" />
+    <result column="driving_num" property="drivingNum" jdbcType="VARCHAR" />
+    <result column="id_card_num" property="idCardNum" jdbcType="VARCHAR" />
+    <result column="id_card_name" property="idCardName" jdbcType="VARCHAR" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="id_card_address" property="idCardAddress" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="guohu" property="guohu" jdbcType="BIT" />
+    <result column="driving_date" property="drivingDate" jdbcType="TIMESTAMP" />
+    <result column="syx_begin_date" property="syxBeginDate" jdbcType="VARCHAR" />
+    <result column="jqx_begin_date" property="jqxBeginDate" jdbcType="VARCHAR" />
+    <result column="peisong_province" property="peisongProvince" jdbcType="VARCHAR" />
+    <result column="peisong_city" property="peisongCity" jdbcType="VARCHAR" />
+    <result column="peisong_mobile" property="peisongMobile" jdbcType="VARCHAR" />
+    <result column="peisong_name" property="peisongName" jdbcType="VARCHAR" />
+    <result column="peisong_address" property="peisongAddress" jdbcType="VARCHAR" />
+    <result column="peisong_town" property="peisongTown" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="user_type" property="userType" jdbcType="INTEGER" />
+    <result column="baoxian_peisong_id" property="baoxianPeisongId" jdbcType="VARCHAR" />
+    <result column="baoxian_underwriting_id" property="baoxianUnderwritingId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, baoxian_underwriting_report_id, vehicle_model_code, vehicle_model_name, driving_id, 
+    driving_name, driving_num, id_card_num, id_card_name, city_code, id_card_address, 
+    create_time, update_time, city_name, mobile, guohu, driving_date, syx_begin_date, 
+    jqx_begin_date, peisong_province, peisong_city, peisong_mobile, peisong_name, peisong_address, 
+    peisong_town, user_id, user_type, baoxian_peisong_id, baoxian_underwriting_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_insure_info
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianInsureInfo" >
+    insert into baoxian_insure_info (id, baoxian_underwriting_report_id, 
+      vehicle_model_code, vehicle_model_name, driving_id, 
+      driving_name, driving_num, id_card_num, 
+      id_card_name, city_code, id_card_address, 
+      create_time, update_time, city_name, 
+      mobile, guohu, driving_date, 
+      syx_begin_date, jqx_begin_date, peisong_province, 
+      peisong_city, peisong_mobile, peisong_name, 
+      peisong_address, peisong_town, user_id, 
+      user_type, baoxian_peisong_id, baoxian_underwriting_id
+      )
+    values (#{id,jdbcType=VARCHAR}, #{baoxianUnderwritingReportId,jdbcType=VARCHAR}, 
+      #{vehicleModelCode,jdbcType=VARCHAR}, #{vehicleModelName,jdbcType=VARCHAR}, #{drivingId,jdbcType=BIGINT}, 
+      #{drivingName,jdbcType=VARCHAR}, #{drivingNum,jdbcType=VARCHAR}, #{idCardNum,jdbcType=VARCHAR}, 
+      #{idCardName,jdbcType=VARCHAR}, #{cityCode,jdbcType=VARCHAR}, #{idCardAddress,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{cityName,jdbcType=VARCHAR}, 
+      #{mobile,jdbcType=VARCHAR}, #{guohu,jdbcType=BIT}, #{drivingDate,jdbcType=TIMESTAMP}, 
+      #{syxBeginDate,jdbcType=VARCHAR}, #{jqxBeginDate,jdbcType=VARCHAR}, #{peisongProvince,jdbcType=VARCHAR}, 
+      #{peisongCity,jdbcType=VARCHAR}, #{peisongMobile,jdbcType=VARCHAR}, #{peisongName,jdbcType=VARCHAR}, 
+      #{peisongAddress,jdbcType=VARCHAR}, #{peisongTown,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, 
+      #{userType,jdbcType=INTEGER}, #{baoxianPeisongId,jdbcType=VARCHAR}, #{baoxianUnderwritingId,jdbcType=VARCHAR}
+      )
+  </insert>
+   <select id="queryByUnderwritingId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_insure_info
+    where baoxian_underwriting_id = #{baoxianUnderwritingId,jdbcType=VARCHAR}
+  </select>
+   <update id="update" parameterType="com.chengniu.client.pojo.BaoxianInsureInfo" >
+    update baoxian_insure_info
+    <set >
+      <if test="baoxianUnderwritingReportId != null" >
+        baoxian_underwriting_report_id = #{baoxianUnderwritingReportId,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelCode != null" >
+        vehicle_model_code = #{vehicleModelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelName != null" >
+        vehicle_model_name = #{vehicleModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingId != null" >
+        driving_id = #{drivingId,jdbcType=BIGINT},
+      </if>
+      <if test="drivingName != null" >
+        driving_name = #{drivingName,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingNum != null" >
+        driving_num = #{drivingNum,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardNum != null" >
+        id_card_num = #{idCardNum,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardName != null" >
+        id_card_name = #{idCardName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardAddress != null" >
+        id_card_address = #{idCardAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cityName != null" >
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="guohu != null" >
+        guohu = #{guohu,jdbcType=BIT},
+      </if>
+      <if test="drivingDate != null" >
+        driving_date = #{drivingDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="syxBeginDate != null" >
+        syx_begin_date = #{syxBeginDate,jdbcType=VARCHAR},
+      </if>
+      <if test="jqxBeginDate != null" >
+        jqx_begin_date = #{jqxBeginDate,jdbcType=VARCHAR},
+      </if>
+      <if test="peisongProvince != null" >
+        peisong_province = #{peisongProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="peisongCity != null" >
+        peisong_city = #{peisongCity,jdbcType=VARCHAR},
+      </if>
+      <if test="peisongMobile != null" >
+        peisong_mobile = #{peisongMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="peisongName != null" >
+        peisong_name = #{peisongName,jdbcType=VARCHAR},
+      </if>
+      <if test="peisongAddress != null" >
+        peisong_address = #{peisongAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="peisongTown != null" >
+        peisong_town = #{peisongTown,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        user_type = #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="baoxianPeisongId != null" >
+        baoxian_peisong_id = #{baoxianPeisongId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chengniu.client.pojo.BaoxianInsureInfo" >
+    update baoxian_insure_info
+    set baoxian_underwriting_report_id = #{baoxianUnderwritingReportId,jdbcType=VARCHAR},
+      vehicle_model_code = #{vehicleModelCode,jdbcType=VARCHAR},
+      vehicle_model_name = #{vehicleModelName,jdbcType=VARCHAR},
+      driving_id = #{drivingId,jdbcType=BIGINT},
+      driving_name = #{drivingName,jdbcType=VARCHAR},
+      driving_num = #{drivingNum,jdbcType=VARCHAR},
+      id_card_num = #{idCardNum,jdbcType=VARCHAR},
+      id_card_name = #{idCardName,jdbcType=VARCHAR},
+      city_code = #{cityCode,jdbcType=VARCHAR},
+      id_card_address = #{idCardAddress,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      city_name = #{cityName,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      guohu = #{guohu,jdbcType=BIT},
+      driving_date = #{drivingDate,jdbcType=TIMESTAMP},
+      syx_begin_date = #{syxBeginDate,jdbcType=VARCHAR},
+      jqx_begin_date = #{jqxBeginDate,jdbcType=VARCHAR},
+      peisong_province = #{peisongProvince,jdbcType=VARCHAR},
+      peisong_city = #{peisongCity,jdbcType=VARCHAR},
+      peisong_mobile = #{peisongMobile,jdbcType=VARCHAR},
+      peisong_name = #{peisongName,jdbcType=VARCHAR},
+      peisong_address = #{peisongAddress,jdbcType=VARCHAR},
+      peisong_town = #{peisongTown,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=VARCHAR},
+      user_type = #{userType,jdbcType=INTEGER},
+      baoxian_peisong_id = #{baoxianPeisongId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianBaseInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianBaseInfo" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="vehicle_model_price" property="vehicleModelPrice" jdbcType="VARCHAR" />
+    <result column="vehicle_model_code" property="vehicleModelCode" jdbcType="VARCHAR" />
+    <result column="vehicle_model_name" property="vehicleModelName" jdbcType="VARCHAR" />
+    <result column="driving_id" property="drivingId" jdbcType="BIGINT" />
+    <result column="driving_url" property="drivingUrl" jdbcType="VARCHAR" />
+    <result column="driving_checked" property="drivingChecked" jdbcType="INTEGER" />
+    <result column="id_card_num" property="idCardNum" jdbcType="VARCHAR" />
+    <result column="birthday" property="birthday" jdbcType="DATE" />
+    <result column="sex" property="sex" jdbcType="INTEGER" />
+    <result column="id_card_name" property="idCardName" jdbcType="VARCHAR" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="id_card_url" property="idCardUrl" jdbcType="VARCHAR" />
+    <result column="id_card_checked" property="idCardChecked" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="vehicle_num" property="vehicleNum" jdbcType="VARCHAR" />
+    <result column="guohu" property="guohu" jdbcType="BIT" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="user_type" property="userType" jdbcType="INTEGER" />
+    <result column="toubaoren_card_num" property="toubaorenCardNum" jdbcType="VARCHAR" />
+    <result column="toubaoren_card_name" property="toubaorenCardName" jdbcType="VARCHAR" />
+    <result column="beibaoren_card_num" property="beibaorenCardNum" jdbcType="VARCHAR" />
+    <result column="beibaoren_card_name" property="beibaorenCardName" jdbcType="VARCHAR" />
+    <result column="frame_num" property="frameNum" jdbcType="VARCHAR" />
+    <result column="motor_num" property="motorNum" jdbcType="VARCHAR" />
+    <result column="register_date" property="registerDate" jdbcType="DATE" />
+    <result column="toubaoren" property="toubaoren" jdbcType="BIT" />
+    <result column="beibaoren" property="beibaoren" jdbcType="BIT" />
+    <result column="deleted" property="deleted" jdbcType="BIT" />
+    <result column="operator_id" property="operatorId" jdbcType="VARCHAR" />
+    <result column="operator_name" property="operatorName" jdbcType="VARCHAR" />
+    <result column="guohu_date" property="guohuDate" jdbcType="VARCHAR" />
+    <result column="id_card_type" property="idCardType" jdbcType="INTEGER" />
+    <result column="toubaoren_card_type" property="toubaorenCardType" jdbcType="INTEGER" />
+    <result column="beibaoren_card_type" property="beibaorenCardType" jdbcType="INTEGER" />
+    <result column="owner" property="owner" jdbcType="VARCHAR" />
+    <result column="owner_type" property="ownerType" jdbcType="VARCHAR" />
+    <result column="use_property" property="useProperty" jdbcType="VARCHAR" />
+    <result column="issue_date" property="issueDate" jdbcType="VARCHAR" />
+    <result column="brand_model" property="brandModel" jdbcType="VARCHAR" />
+    <result column="car_type" property="carType" jdbcType="VARCHAR" />
+    <result column="displacement" property="displacement" jdbcType="VARCHAR" />
+    <result column="full_load" property="fullLoad" jdbcType="VARCHAR" />
+       <result column="avg_mileage" jdbcType="REAL" property="avgMileage" />
+    <result column="rated_passenger_capacity" property="ratedPassengerCapacity" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, vehicle_model_price, vehicle_model_code, vehicle_model_name, driving_id, driving_url, 
+    driving_checked, id_card_num, birthday, sex, id_card_name, city_code, id_card_url, 
+    id_card_checked, create_time, update_time, city_name, mobile, vehicle_num, guohu, 
+    user_id, user_type, toubaoren_card_num, toubaoren_card_name, beibaoren_card_num, 
+    beibaoren_card_name, frame_num, motor_num, register_date, toubaoren, beibaoren, deleted, 
+    operator_id, operator_name, guohu_date, id_card_type, toubaoren_card_type, beibaoren_card_type, 
+    owner, owner_type, use_property, issue_date, brand_model, car_type, displacement, 
+    full_load,avg_mileage, rated_passenger_capacity
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_base_info
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianBaseInfo" >
+    insert into baoxian_base_info (id, vehicle_model_price, vehicle_model_code, 
+      vehicle_model_name, driving_id, driving_url, 
+      driving_checked, id_card_num, id_card_name, 
+      city_code, id_card_url, id_card_checked, 
+      create_time, update_time, city_name, 
+      mobile, vehicle_num, guohu, 
+      user_id, user_type, toubaoren_card_num, 
+      toubaoren_card_name, beibaoren_card_num, beibaoren_card_name, 
+      frame_num, motor_num, register_date, 
+      toubaoren, beibaoren, deleted, 
+      operator_id, operator_name, guohu_date, 
+      id_card_type, toubaoren_card_type, beibaoren_card_type
+      )
+    values (#{id,jdbcType=VARCHAR}, #{vehicleModelPrice,jdbcType=VARCHAR}, #{vehicleModelCode,jdbcType=VARCHAR}, 
+      #{vehicleModelName,jdbcType=VARCHAR}, #{drivingId,jdbcType=BIGINT}, #{drivingUrl,jdbcType=VARCHAR}, 
+      #{drivingChecked,jdbcType=INTEGER}, #{idCardNum,jdbcType=VARCHAR}, #{idCardName,jdbcType=VARCHAR}, 
+      #{cityCode,jdbcType=VARCHAR}, #{idCardUrl,jdbcType=VARCHAR}, #{idCardChecked,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{cityName,jdbcType=VARCHAR}, 
+      #{mobile,jdbcType=VARCHAR}, #{vehicleNum,jdbcType=VARCHAR}, #{guohu,jdbcType=BIT}, 
+      #{userId,jdbcType=VARCHAR}, #{userType,jdbcType=INTEGER}, #{toubaorenCardNum,jdbcType=VARCHAR}, 
+      #{toubaorenCardName,jdbcType=VARCHAR}, #{beibaorenCardNum,jdbcType=VARCHAR}, #{beibaorenCardName,jdbcType=VARCHAR}, 
+      #{frameNum,jdbcType=VARCHAR}, #{motorNum,jdbcType=VARCHAR}, #{registerDate,jdbcType=DATE}, 
+      #{toubaoren,jdbcType=BIT}, #{beibaoren,jdbcType=BIT}, #{deleted,jdbcType=BIT}, 
+      #{operatorId,jdbcType=VARCHAR}, #{operatorName,jdbcType=VARCHAR}, #{guohuDate,jdbcType=VARCHAR}, 
+      #{idCardType,jdbcType=INTEGER}, #{toubaorenCardType,jdbcType=INTEGER}, #{beibaorenCardType,jdbcType=INTEGER}
+      )
+  </insert>
+  <select id="queryByVehicleNum" resultMap="BaseResultMap" parameterType="com.chengniu.client.pojo.BaoxianBaseInfo" >
+    select
+    <include refid="Base_Column_List" />
+    from baoxian_base_info
+    where  user_id = #{userId,jdbcType=VARCHAR}
+    and user_type = #{userType,jdbcType=INTEGER}
+    and vehicle_num = #{vehicleNum,jdbcType=VARCHAR}
+    and deleted=0 order by update_time desc limit 0,1
+  </select>
+  <select id="queryLastInfo" resultMap="BaseResultMap" parameterType="com.chengniu.client.pojo.BaoxianBaseInfo" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_base_info
+    where  user_id = #{userId,jdbcType=VARCHAR} and user_type = #{userType,jdbcType=INTEGER} and deleted=0 order by update_time desc limit 0,1
+  </select>
+   <update id="update" parameterType="com.chengniu.client.pojo.BaoxianBaseInfo" >
+    update baoxian_base_info
+    <set >
+      <if test="vehicleModelPrice != null" >
+        vehicle_model_price = #{vehicleModelPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelCode != null" >
+        vehicle_model_code = #{vehicleModelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelName != null" >
+        vehicle_model_name = #{vehicleModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingId != null" >
+        driving_id = #{drivingId,jdbcType=BIGINT},
+      </if>
+      <if test="drivingUrl != null" >
+        driving_url = #{drivingUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingChecked != null" >
+        driving_checked = #{drivingChecked,jdbcType=INTEGER},
+      </if>
+      <if test="idCardNum != null" >
+        id_card_num = #{idCardNum,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardName != null" >
+        id_card_name = #{idCardName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardUrl != null" >
+        id_card_url = #{idCardUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardChecked != null" >
+        id_card_checked = #{idCardChecked,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cityName != null" >
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleNum != null" >
+        vehicle_num = #{vehicleNum,jdbcType=VARCHAR},
+      </if>
+      <if test="guohu != null" >
+        guohu = #{guohu,jdbcType=BIT},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        user_type = #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="toubaorenCardNum != null" >
+        toubaoren_card_num = #{toubaorenCardNum,jdbcType=VARCHAR},
+      </if>
+      <if test="toubaorenCardName != null" >
+        toubaoren_card_name = #{toubaorenCardName,jdbcType=VARCHAR},
+      </if>
+      <if test="beibaorenCardNum != null" >
+        beibaoren_card_num = #{beibaorenCardNum,jdbcType=VARCHAR},
+      </if>
+      <if test="beibaorenCardName != null" >
+        beibaoren_card_name = #{beibaorenCardName,jdbcType=VARCHAR},
+      </if>
+      <if test="frameNum != null" >
+        frame_num = #{frameNum,jdbcType=VARCHAR},
+      </if>
+      <if test="motorNum != null" >
+        motor_num = #{motorNum,jdbcType=VARCHAR},
+      </if>
+      <if test="registerDate != null" >
+        register_date = #{registerDate,jdbcType=DATE},
+      </if>
+      <if test="toubaoren != null" >
+        toubaoren = #{toubaoren,jdbcType=BIT},
+      </if>
+       <if test="idCardType != null" >
+        id_card_type = #{idCardType,jdbcType=INTEGER},
+      </if>
+      <if test="toubaorenCardType != null" >
+        toubaoren_card_type = #{toubaorenCardType,jdbcType=INTEGER},
+      </if>
+      <if test="beibaorenCardType != null" >
+        beibaoren_card_type = #{beibaorenCardType,jdbcType=INTEGER},
+      </if>
+       <if test="guohuDate != null" >
+        guohu_date = #{guohuDate,jdbcType=VARCHAR},
+      </if>
+      <if test="beibaoren != null" >
+        beibaoren = #{beibaoren,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateUserIDUrl" parameterType="com.chengniu.client.pojo.BaoxianBaseInfo" >
+    update baoxian_base_info
+    <set >
+        id_card_num = #{idCardNum,jdbcType=VARCHAR},
+        id_card_name = #{idCardName,jdbcType=VARCHAR},
+        id_card_url = #{idCardUrl,jdbcType=VARCHAR},
+        id_card_checked = #{idCardChecked,jdbcType=INTEGER},
+        toubaoren_card_num = #{toubaorenCardNum,jdbcType=VARCHAR},
+        toubaoren_card_name = #{toubaorenCardName,jdbcType=VARCHAR},
+        beibaoren_card_num = #{beibaorenCardNum,jdbcType=VARCHAR},
+        beibaoren_card_name = #{beibaorenCardName,jdbcType=VARCHAR},
+        id_card_type = #{idCardType,jdbcType=INTEGER},
+        toubaoren_card_type = #{toubaorenCardType,jdbcType=INTEGER},
+        beibaoren_card_type = #{beibaorenCardType,jdbcType=INTEGER},
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateDrivingLicenseUrl" parameterType="com.chengniu.client.pojo.BaoxianBaseInfo" >
+    update baoxian_base_info
+    <set >
+      driving_id = #{drivingId,jdbcType=BIGINT},
+      driving_url = #{drivingUrl,jdbcType=VARCHAR},
+      driving_checked = #{drivingChecked,jdbcType=INTEGER},
+      frame_num = #{frameNum,jdbcType=VARCHAR},
+      motor_num = #{motorNum,jdbcType=VARCHAR},
+      register_date = #{registerDate,jdbcType=DATE},
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+ <update id="fixedInfo" parameterType="com.chengniu.client.pojo.BaoxianBaseInfo" >
+    update baoxian_base_info
+    <set >
+      <if test="vehicleModelPrice != null" >
+        vehicle_model_price = #{vehicleModelPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelCode != null" >
+        vehicle_model_code = #{vehicleModelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelName != null" >
+        vehicle_model_name = #{vehicleModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingId != null" >
+        driving_id = #{drivingId,jdbcType=BIGINT},
+      </if>
+      <if test="drivingUrl != null" >
+        driving_url = #{drivingUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingChecked != null" >
+        driving_checked = #{drivingChecked,jdbcType=INTEGER},
+      </if>
+      <if test="idCardNum != null" >
+        id_card_num = #{idCardNum,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardName != null" >
+        id_card_name = #{idCardName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardUrl != null" >
+        id_card_url = #{idCardUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardChecked != null" >
+        id_card_checked = #{idCardChecked,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cityName != null" >
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleNum != null" >
+        vehicle_num = #{vehicleNum,jdbcType=VARCHAR},
+      </if>
+      <if test="guohu != null" >
+        guohu = #{guohu,jdbcType=BIT},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        user_type = #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="toubaorenCardNum != null" >
+        toubaoren_card_num = #{toubaorenCardNum,jdbcType=VARCHAR},
+      </if>
+      <if test="toubaorenCardName != null" >
+        toubaoren_card_name = #{toubaorenCardName,jdbcType=VARCHAR},
+      </if>
+      <if test="beibaorenCardNum != null" >
+        beibaoren_card_num = #{beibaorenCardNum,jdbcType=VARCHAR},
+      </if>
+      <if test="beibaorenCardName != null" >
+        beibaoren_card_name = #{beibaorenCardName,jdbcType=VARCHAR},
+      </if>
+      <if test="frameNum != null" >
+        frame_num = #{frameNum,jdbcType=VARCHAR},
+      </if>
+      <if test="motorNum != null" >
+        motor_num = #{motorNum,jdbcType=VARCHAR},
+      </if>
+      <if test="registerDate != null" >
+        register_date = #{registerDate,jdbcType=DATE},
+      </if>
+      <if test="toubaoren != null" >
+        toubaoren = #{toubaoren,jdbcType=BIT},
+      </if>
+       <if test="guohuDate != null" >
+        guohu_date = #{guohuDate,jdbcType=VARCHAR},
+      </if>
+      <if test="beibaoren != null" >
+        beibaoren = #{beibaoren,jdbcType=BIT},
+      </if>
+        <if test="idCardType != null" >
+        id_card_type = #{idCardType,jdbcType=INTEGER},
+      </if>
+      <if test="toubaorenCardType != null" >
+        toubaoren_card_type = #{toubaorenCardType,jdbcType=INTEGER},
+      </if>
+      <if test="beibaorenCardType != null" >
+        beibaoren_card_type = #{beibaorenCardType,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+   <update id="deleteInfo" parameterType="com.chengniu.client.pojo.BaoxianBaseInfo" >
+    update baoxian_base_info
+    set deleted = true, update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR} and  user_id = #{userId,jdbcType=VARCHAR} and user_type = #{userType,jdbcType=INTEGER} 
+  </update>
+  <select id="page" resultMap="BaseResultMap" parameterType="com.kplus.orders.rpc.dto.PageSearchVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_base_info
+    where
+    user_id = #{userId,jdbcType=VARCHAR}
+    and user_type = #{userType,jdbcType=INTEGER} and deleted=0
+    ORDER BY create_time DESC
+    <include refid="common.page"></include>
+  </select>
+   <select id="pageCount" resultType="int" parameterType="com.kplus.orders.rpc.dto.PageSearchVO" >
+    select 
+   count(*)
+    from baoxian_base_info
+    where user_id = #{userId,jdbcType=VARCHAR} and user_type = #{userType,jdbcType=INTEGER}  and deleted=0
+  </select>
+</mapper>

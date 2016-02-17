@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info">
+	<appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%-5level %d %logger{36} - %msg%n" />
+		</Console>
+		<RollingFile name="logfile"
+			filePattern="target/$${date:yyyy-MM}/info-%d{MM-dd-yyyy}-%i.log"
+			fileName="target/client_task.log">
+			<PatternLayout charset="UTF-8"
+				pattern="%-5level %d %logger{36} - %msg%n" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="250 MB" />
+			</Policies>
+		</RollingFile>
+	</appenders>
+	<loggers>
+		<logger name="org.apache.struts2" level="debug" additivity="false">
+			<appender-ref ref="STDOUT" />
+		</logger>
+		<logger name="java.sql" level="debug" additivity="false">
+			<appender-ref ref="STDOUT" />
+		</logger>
+		<logger name="org.apache.ibatis" level="debug" additivity="false">
+			<appender-ref ref="STDOUT" />
+		</logger>
+		<root level="debug">
+			<appender-ref ref="STDOUT" />
+		</root>
+	</loggers>
+</configuration>

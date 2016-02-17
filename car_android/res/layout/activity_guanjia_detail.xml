@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white_smoke6">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/daze_darkgrey7"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/daze_white">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/daze_black2"
+                android:textSize="14sp"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="14sp"
+                android:layout_marginTop="3dp"/>
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="14sp"
+                android:layout_marginTop="3dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="14sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/cancel_request"
+            android:layout_width="80dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="取消需求"
+            android:textSize="16sp"
+            android:textColor="@color/daze_black2"
+            android:background="@drawable/stroke_corner_2"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:background="@color/daze_white">
+
+        <RelativeLayout
+            android:id="@+id/provider_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="橙牛管家"
+                android:textColor="@color/daze_black2"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/daze_darkgrey7"
+                android:layout_below="@id/title"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/guanjia_head"
+                android:layout_below="@id/separator"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/name_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@id/icon"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@id/separator"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical">
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/daze_black2"/>
+
+                <View
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/guanjia_shield"
+                    android:layout_marginLeft="2dp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="19dp"
+                    android:textColor="@color/daze_orangered5"
+                    android:layout_marginLeft="24dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rating_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@id/icon"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@id/name_layout"
+                android:gravity="center_vertical">
+
+                <com.kplus.car.widget.RatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="评价("
+                    android:textColor="@color/daze_black2"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="5dp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/comment_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/daze_orangered5"
+                    android:textSize="14sp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=")"
+                    android:textColor="@color/daze_black2"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/go_to"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@id/icon"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@id/rating_layout">
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:singleLine="true"
+                    android:ellipsize="end"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:layout_marginLeft="24dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_below="@id/icon"
+                android:layout_marginTop="16dp"
+                android:background="@color/daze_darkgrey7"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/daze_white_smoke6"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/guanjia_official"
+                    android:layout_marginTop="8dp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="官方认证"
+                    android:textColor="@color/daze_orangered5"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/guanjia_safe"
+                    android:layout_marginTop="8dp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="担保交易"
+                    android:textColor="@color/daze_orangered5"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/guanjia_quick"
+                    android:layout_marginTop="8dp"/>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="安全高效"
+                    android:textColor="@color/daze_orangered5"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

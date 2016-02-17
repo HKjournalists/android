@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="false" />
+	</settings>
+	<mappers>
+		<mapper resource="mybatis/common.xml" />
+		<mapper resource="mybatis/BaoxianBaseInfoMapper.xml" />
+		<mapper resource="mybatis/BaoxianBaseInfoMediaMapper.xml" />
+		<mapper resource="mybatis/BaoxianCompanyMapper.xml" />
+		<mapper resource="mybatis/BaoxianUnderwritingRequestMapper.xml" />
+		<mapper resource="mybatis/BaoxianUnderwritingOperationRecordMapper.xml" />
+		<mapper resource="mybatis/BaoxianInsureInfoMapper.xml" />
+		<mapper resource="mybatis/BaoxianUnderwritingReportMapper.xml" />
+		<mapper resource="mybatis/BaoxianVehicleModelMapper.xml" />
+		<mapper resource="mybatis/PlatUserMapper.xml" />
+		<mapper resource="mybatis/BaoxianPeisongMapper.xml" />
+		<mapper resource="mybatis/BaoxianUnderwritingExpressMapper.xml" />
+		<mapper resource="mybatis/BaoxianUnderwritingMapper.xml" />
+		<mapper resource="mybatis/BaoxianPolicyPayinfoMapper.xml" />
+		<mapper resource="mybatis/BaoxianCityFanhuaMapper.xml" />
+		<mapper resource="mybatis/BaoxianUnderwritingReportPayinfoMapper.xml" />
+		<mapper resource="mybatis/BaoxianReportPriceMapper.xml" />
+		<mapper resource="mybatis/BaoxianQuoteInfoMapper.xml" />
+		<mapper resource="mybatis/BaoxianUnderwritingDateExceptionMapper.xml" />
+		<mapper resource="mybatis/ProviderAppMapper.xml" />
+		<mapper resource="mybatis/BaoxianCompanyMapper.xml" />
+		<mapper resource="mybatis/UserPushClientMapper.xml" />
+		<mapper resource="mybatis/BaoxianCityMappingMapper.xml" />
+		<mapper resource="mybatis/BaoxianCarLicenseMapper.xml" />
+		<mapper resource="mybatis/BaoxianIntentMapper.xml" />
+		<mapper resource="mybatis/BaoxianInformalReportMapper.xml" />
+        <mapper resource="mybatis/BaoxianUnderwritingRequestOperationRecordMapper.xml" />
+        <mapper resource="mybatis/BaoxianUnderwritingChangeLogMapper.xml" />
+        <mapper resource="mybatis/BaoxianCompanyDictMapper.xml" />
+        <mapper resource="mybatis/BaoxianUnderwritingReportOperationRecordMapper.xml"/>
+	</mappers>
+</configuration>

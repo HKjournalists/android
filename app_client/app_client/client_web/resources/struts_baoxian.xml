@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="baoxian" extends="struts-bx" namespace="/baoxian">
+		<default-interceptor-ref name="appStack" />
+
+		<action name="company"
+			class="com.chengniu.client.action.baoxian.BaoxianConfigurationAction"
+			method="getLocalCompanyList" />
+
+		<action name="vehicleModel"
+			class="com.chengniu.client.action.baoxian.BaoxianConfigurationAction"
+			method="fetchPagniateSupportVehicles" />
+		<action name="queryUserInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="queryUserInfo" />
+		<action name="userBaseInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="queryBaseInfo" />
+
+		<!-- 泛华 -->
+		<action name="fastReport"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="fastReport" />
+
+		<action name="fixUserInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="fixUserInfo" />
+
+		<action name="report"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="report" />
+
+		<action name="peisong"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="peisong" />
+
+		<action name="submit"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="submit" />
+
+		<action name="saveOrders"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="saveOrder" />
+
+		<action name="queryPayStatus"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="queryPayStatus" />
+
+		<action name="pay"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="pay" />
+
+		<!-- 阳光 -->
+		<action name="commitBaseInfo"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="commitBaseInfo" />
+
+		<action name="preReport"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="preReport" />
+
+		<action name="yangguangreport"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="report" />
+
+		<action name="submitUnderwriting"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="submitUnderwriting" />
+
+		<action name="yangguangpeisong"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="peisong" />
+
+		<!-- others -->
+		<action name="listReport"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="listReport" />
+
+		<action name="queryReport"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="queryReport" />
+
+		<action name="fixMediaInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="fixMediaInfo" />
+
+		<action name="fixMediaInfoAndResume"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="fixMediaInfoAndResume" />
+
+		<!-- 新流程 -->
+		<action name="submitUserInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="submitUserInfo" />
+
+		<action name="fixUserInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="fixUserInfo" />
+
+		<action name="fixQuoteMediaInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="fixQuoteMediaInfo" />
+
+		<action name="commitQuoteRequest"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="commitQuoteRequest" />
+
+		<action name="fetchValidIntents"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="fetchValidIntents" />
+
+		<action name="fetchIntentDetail"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="fetchIntentDetail" />
+
+		<action name="submitDeliveryAddress"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="submitDeliveryAddress" />
+
+		<action name="createOrder"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="createOrder" />
+
+		<action name="checkPayStatus"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="checkPayStatus" />
+
+		<action name="initiatePayment"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="initiatePayment" />
+		<!-- 报价查询 -->
+		<action name="fetchHistoryIntent"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="fetchHistoryIntent" />
+		<action name="fetchIntentQuotes"
+			class="com.chengniu.client.action.baoxian.BaoxianQuoteAction" method="fetchIntentQuotes" />
+		<action name="queryStaticInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="queryStaticInfo" />
+
+		<action name="fetchQuoteDetail"
+			class="com.chengniu.client.action.baoxian.BaoxianQuoteAction" method="fetchQuoteDetail" />
+
+	</package>
+
+	<package name="provider" extends="struts-bx" namespace="/provider/baoxian">
+		<default-interceptor-ref name="providerStack" />
+		<action name="company"
+			class="com.chengniu.client.action.baoxian.BaoxianConfigurationAction"
+			method="getLocalCompanyList" />
+
+		<action name="listUserInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="listUserInfo" />
+
+		<action name="queryUserInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="queryUserInfo" />
+
+		<action name="userBaseInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="queryUserInfo" />
+
+		<action name="deleteUserInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="deleteUserInfo" />
+
+		<action name="listPeisong"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="listPeisong" />
+
+		<action name="queryPeisong"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="queryPeisong" />
+
+		<action name="deletePeisong"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="deletePeisong" />
+
+		<!-- 泛华 -->
+		<action name="fastReport"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="fastReport" />
+
+		<action name="saveUserInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="saveUserInfo" />
+
+		<action name="fixUserInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianBaseInfoAction"
+			method="fixUserInfo" />
+
+		<action name="report"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="report" />
+
+		<action name="fixMediaInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="fixMediaInfo" />
+
+		<action name="fixMediaInfoAndResume"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="fixMediaInfoAndResume" />
+
+		<action name="peisong"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="peisong" />
+
+		<action name="submit"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="submit" />
+
+		<action name="saveOrders"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="saveOrder" />
+
+		<action name="queryPayStatus"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="queryPayStatus" />
+
+		<action name="pay"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="pay" />
+
+
+		<!-- 阳光 -->
+		<action name="commitBaseInfo"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="commitBaseInfo" />
+
+		<action name="preReport"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="preReport" />
+
+		<action name="yangguangreport"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="report" />
+
+		<action name="submitUnderwriting"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="submitUnderwriting" />
+
+		<action name="yangguangpeisong"
+			class="com.chengniu.client.action.baoxian.YangguangBaoxianOrdersAction"
+			method="peisong" />
+
+		<action name="officialPay"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="officialPay" />
+		<!-- others -->
+		<action name="listReport"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="listReport" />
+		<action name="closeReport"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="closeReport" />
+		<action name="queryStaticInfo"
+			class="com.chengniu.client.action.baoxian.BaoxianWorkflowAction"
+			method="queryStaticInfo" />
+		<action name="queryReport"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="queryReport" />
+
+		<action name="closeOrders"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="closeOrders" />
+
+	</package>
+
+	<package name="common" extends="struts-bx" namespace="/common">
+		<default-interceptor-ref name="commonStack" />
+		<action name="queryCity"
+			class="com.chengniu.client.action.baoxian.BaoxianConfigurationAction"
+			method="queryCity" />
+
+		<action name="queryCityByName"
+			class="com.chengniu.client.action.baoxian.BaoxianConfigurationAction"
+			method="queryCityByName" />
+
+		<action name="company"
+			class="com.chengniu.client.action.baoxian.BaoxianConfigurationAction"
+			method="getLocalCompanyList" />
+
+		<action name="vehicleModel"
+			class="com.chengniu.client.action.baoxian.BaoxianConfigurationAction"
+			method="fetchPagniateSupportVehicles" />
+
+		<action name="pay"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="payback" />
+
+		<action name="officialPayback"
+			class="com.chengniu.client.action.baoxian.BaoxianOrdersAction"
+			method="offficialPayback" />
+
+	</package>
+
+	<package name="serviceApi" extends="struts-bx" namespace="/service-api">
+		<default-interceptor-ref name="commonStack" />
+
+		<action name="anySuccessUnderwritingOfUserInPeriod"
+			class="com.chengniu.client.action.baoxian.OpenServiceApiAction"
+			method="anySuccessUnderwritingOfUserInPeriod" />
+
+		<action name="anyUnderwritingOfUserInPeriod"
+			class="com.chengniu.client.action.baoxian.OpenServiceApiAction"
+			method="anyUnderwritingOfUserInPeriod" />
+
+	</package>
+</struts>

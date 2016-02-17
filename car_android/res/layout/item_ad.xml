@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlAD"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpAD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v4.view.ViewPager>
+    <com.kplus.car.widget.CirclePageIndicator
+        android:id="@+id/cpiAD"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        app:radius="4dp"
+        app:pageColor="@color/daze_translucence4"
+        app:strokeWidth="0dp"/>
+    <ImageView
+        android:id="@+id/ivCloseAd"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/daze_closebanner_18"
+        android:padding="3dp"
+        android:background="@drawable/daze_white_round_bg_24dp"/>
+</RelativeLayout>

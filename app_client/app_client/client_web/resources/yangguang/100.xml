@@ -1,0 +1,13 @@
+<Request>
+	<InputsList>
+		<Inputs type="vehicleInfo">
+			<Input name="licenseNo">${(vehicleNum!)?upper_case}</Input>
+			<Input name="cityCode">${cityCode!}</Input>
+			<Input name="noLicenseFlag"><#if vehicleNum??>0<#else>1</#if></Input>
+			<Input name="ownerMobile">${mobile!"18888888888"}</Input>
+			<Input name="agentCode">W02400658</Input>
+			<Input name="accountNo">JD1675494</Input>
+			<Input name="ownerName">${idCardName!}</Input>
+		</Inputs>
+	</InputsList>
+</Request>

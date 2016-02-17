@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@color/daze_white_smoke6"
+    android:orientation="vertical">
+
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:textSize="18sp"
+        android:textColor="@color/daze_black2"
+        android:text="添加我的保险公司"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="保险公司名称"
+            android:textColor="@color/daze_darkgrey9"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="27dp"/>
+
+        <com.kplus.car.widget.RegularEditText
+            android:id="@+id/company_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:textSize="18sp"
+            android:textColor="@color/daze_black2"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:hint="必填"
+            android:textColorHint="@color/daze_white_smoke2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal"
+        android:layout_marginTop="18dp">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="联系电话"
+            android:textColor="@color/daze_darkgrey9"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="27dp"/>
+
+        <com.kplus.car.widget.RegularEditText
+            android:id="@+id/phone_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:textSize="18sp"
+            android:textColor="@color/daze_black2"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:hint="必填"
+            android:textColorHint="@color/daze_white_smoke2"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal"
+        android:layout_marginTop="18dp">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="取消"
+            android:textColor="@color/daze_darkgrey9"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="保存"
+            android:textColor="@color/daze_orangered5"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

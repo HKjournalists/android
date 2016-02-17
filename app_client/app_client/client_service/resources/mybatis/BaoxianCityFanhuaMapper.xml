@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianCityFanhuaMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianCityFanhua" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="cityCode" property="cityCode" jdbcType="VARCHAR" />
+    <result column="cityName" property="cityName" jdbcType="VARCHAR" />
+    <result column="rank" property="rank" jdbcType="INTEGER" />
+    <result column="spelling" property="spelling" jdbcType="VARCHAR" />
+    <result column="spellingAcronym" property="spellingacronym" jdbcType="VARCHAR" />
+    <result column="cityPlate" property="cityplate" jdbcType="VARCHAR" />
+    <result column="proPlate" property="proplate" jdbcType="VARCHAR" />
+    <result column="Kind" property="kind" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    cityCode, cityName, rank, spelling, spellingAcronym, cityPlate, proPlate, Kind
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_baoxian_city_fanhua
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianCityFanhua" >
+    insert into t_baoxian_city_fanhua (id, cityCode, cityName, 
+      rank, spelling, spellingAcronym, 
+      cityPlate, proPlate, Kind
+      )
+    values (#{id,jdbcType=INTEGER}, #{cityCode,jdbcType=VARCHAR}, #{cityName,jdbcType=VARCHAR}, 
+      #{rank,jdbcType=INTEGER}, #{spelling,jdbcType=VARCHAR}, #{spellingacronym,jdbcType=VARCHAR}, 
+      #{cityplate,jdbcType=VARCHAR}, #{proplate,jdbcType=VARCHAR}, #{kind,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.chengniu.client.pojo.BaoxianCityFanhua" >
+    insert into t_baoxian_city_fanhua
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="cityCode != null" >
+        cityCode,
+      </if>
+      <if test="cityName != null" >
+        cityName,
+      </if>
+      <if test="rank != null" >
+        rank,
+      </if>
+      <if test="spelling != null" >
+        spelling,
+      </if>
+      <if test="spellingacronym != null" >
+        spellingAcronym,
+      </if>
+      <if test="cityplate != null" >
+        cityPlate,
+      </if>
+      <if test="proplate != null" >
+        proPlate,
+      </if>
+      <if test="kind != null" >
+        Kind,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="cityCode != null" >
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null" >
+        #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="rank != null" >
+        #{rank,jdbcType=INTEGER},
+      </if>
+      <if test="spelling != null" >
+        #{spelling,jdbcType=VARCHAR},
+      </if>
+      <if test="spellingacronym != null" >
+        #{spellingacronym,jdbcType=VARCHAR},
+      </if>
+      <if test="cityplate != null" >
+        #{cityplate,jdbcType=VARCHAR},
+      </if>
+      <if test="proplate != null" >
+        #{proplate,jdbcType=VARCHAR},
+      </if>
+      <if test="kind != null" >
+        #{kind,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chengniu.client.pojo.BaoxianCityFanhua" >
+    update t_baoxian_city_fanhua
+    <set >
+      <if test="cityCode != null" >
+        cityCode = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null" >
+        cityName = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="rank != null" >
+        rank = #{rank,jdbcType=INTEGER},
+      </if>
+      <if test="spelling != null" >
+        spelling = #{spelling,jdbcType=VARCHAR},
+      </if>
+      <if test="spellingacronym != null" >
+        spellingAcronym = #{spellingacronym,jdbcType=VARCHAR},
+      </if>
+      <if test="cityplate != null" >
+        cityPlate = #{cityplate,jdbcType=VARCHAR},
+      </if>
+      <if test="proplate != null" >
+        proPlate = #{proplate,jdbcType=VARCHAR},
+      </if>
+      <if test="kind != null" >
+        Kind = #{kind,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chengniu.client.pojo.BaoxianCityFanhua" >
+    update t_baoxian_city_fanhua
+    set cityCode = #{cityCode,jdbcType=VARCHAR},
+      cityName = #{cityName,jdbcType=VARCHAR},
+      rank = #{rank,jdbcType=INTEGER},
+      spelling = #{spelling,jdbcType=VARCHAR},
+      spellingAcronym = #{spellingacronym,jdbcType=VARCHAR},
+      cityPlate = #{cityplate,jdbcType=VARCHAR},
+      proPlate = #{proplate,jdbcType=VARCHAR},
+      Kind = #{kind,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="queryByCityName" resultMap="BaseResultMap" parameterType="com.chengniu.client.pojo.BaoxianCityFanhua" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_baoxian_city_fanhua
+    where Kind = 1 and cityName like CONCAT('%',#{cityName,jdbcType=VARCHAR},'%') limit 0,1
+  </select>
+   <select id="queryCityInfo" resultMap="BaseResultMap" parameterType="com.chengniu.client.pojo.BaoxianCityFanhua" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_baoxian_city_fanhua
+    where kind = #{kind,jdbcType=INTEGER} and cityCode = #{cityCode,jdbcType=VARCHAR} limit 0,1
+  </select>
+  <select id="queryCity" resultMap="BaseResultMap" parameterType="com.chengniu.client.pojo.BaoxianCityFanhua" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_baoxian_city_fanhua
+    where Kind = #{kind,jdbcType=INTEGER} 
+     <if test="cityCode != null" >
+        and cityCode like CONCAT(#{cityCode,jdbcType=VARCHAR},'%') 
+      </if>
+      <if test="cityName != null" >
+         and cityName = #{cityName,jdbcType=VARCHAR}
+      </if>
+  </select>
+  <select id="findAllOrderByKindAsc" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_baoxian_city_fanhua order by kind
+  </select>
+    <select id="findCitiesOrderByCodeAsc" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_baoxian_city_fanhua
+        WHERE kind=1 ORDER by cityCode ASC
+    </select>
+</mapper>

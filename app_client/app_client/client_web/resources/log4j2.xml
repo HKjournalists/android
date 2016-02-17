@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info">
+	<appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%-5level %d %logger{36} - %msg%n" />
+		</Console>
+		<RollingFile name="logfile"
+			filePattern="target/$${date:yyyy-MM}/info-%d{MM-dd-yyyy}-%i.log"
+			fileName="target/info.log">
+			<PatternLayout charset="UTF-8"
+				pattern="%-5level %d %logger{36} - %msg%n" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="100 MB" />
+			</Policies>
+		</RollingFile>
+	</appenders>
+	<loggers>
+		<logger name="RocketmqClient" level="off" additivity="false" />
+		<logger name="RocketmqRemoting" level="off" additivity="false" />
+		<logger name="RocketmqCommon" level="off" additivity="false" />
+		<logger name="com.alibaba" level="off" additivity="false" />
+		<logger name="com.aliyun" level="off" additivity="false" />
+		<logger name="org.apache.struts2" level="error" additivity="false">
+			<appender-ref ref="STDOUT" />
+		</logger>
+		<logger name="java.sql" level="debug" additivity="false">
+			<appender-ref ref="logfile" />
+		</logger>
+		<logger name="org.apache.ibatis" level="debug" additivity="false">
+			<appender-ref ref="logfile" />
+		</logger>
+		<root level="debug">
+			<appender-ref ref="logfile" />
+		</root>
+	</loggers>
+</configuration>

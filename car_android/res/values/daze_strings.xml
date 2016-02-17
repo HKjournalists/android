@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="daze_app_name">橙牛汽车管家</string>
+    <string name="daze_app_description">橙牛违章管家-违章查询</string>
+    <string name="daze_freerescue">免费救援</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label">1/4正在直连交管局...</string>
+    <string name="pull_to_refresh_end_label">4/4查询成功返回</string>
+    <string name="daze_declare">行驶证仅作为用户认证及享受免费救助服务时的凭证，我们将严格保密，请放心使用</string>
+    <string name="daze_verify_fail_reason">证件模糊不清，文字无法辨识，请拍摄清晰版并上传，系统收到后将重新启动认证流程</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+    <string name="daze_check_violation_required">查违章必填项</string>
+    <string name="daze_optional">选填</string>
+    <string name="daze_vehicle_type">车辆类型</string>
+    <string name="daze_landaulet">小型车</string>
+    <string name="daze_license_plate">车牌号码</string>
+    <string name="daze_please_enter_the_license_plate_number">请输入车牌号码</string>
+    <string name="daze_query_city">查询城市</string>
+    <string name="daze_select_query_city">选择查询城市</string>
+    <string name="daze_please_select_query_city">请选择查询城市</string>
+    <string name="daze_frame_number">车架号</string>
+    <string name="daze_please_enter_the_frame_number">请输入车架号</string>
+    <string name="daze_engine_number">发动机号</string>
+    <string name="daze_please_enter_the_engine_number">请输入发动机号</string>
+    <string name="daze_tianjin_violation_query_need_website_account_information">违章查询需要官网账户信息</string>
+    <string name="daze_register_account">注册账号</string>
+    <string name="daze_website_account">官网账号</string>
+    <string name="daze_please_enter_the_website_account">请输入官网账号</string>
+    <string name="daze_website_password">官网密码</string>
+    <string name="daze_please_enter_the_website_password">请输入官网密码</string>
+    <string name="daze_vehicle_brand_module">车型</string>
+    <string name="daze_select_vehicle_brand_module">选择车型</string>
+    <string name="daze_annual_reminder">年检提醒</string>
+    <string name="daze_license_renewal_reminder">驾照分更新提醒</string>
+    <string name="daze_add_vehicle_declaring">所填写信息为当地交管局查询所需信息，我们将对您的信息严格保密，请放心填写</string>
+    <string name="daze_save">保存</string>
+    <string name="daze_remark">备注</string>
+    <string name="daze_add_vehicle">添加车辆 </string>
+    <string name="daze_edit_vehicle_info">编辑查询信息 </string>
+    <string name="daze_get_city_vehicle_fail">获取城市信息失败，请稍后重试 </string>
+    <string name="daze_no_vehicle_number">缺少车牌号 </string>
+    <string name="daze_vehicle_number_constitute_error">车牌号只能输入字母和数字</string>
+    <string name="daze_please_select_license_plate_number_prefix">请选择车牌号码前缀！</string>
+    <string name="daze_license_plate_number_length_error">车牌号码必须为6位！</string>
+    <string name="daze_license_plate_number_authened">该车辆您已认证，已自动添加车辆信息</string>
+    <string name="daze_info_errored">信息有误</string>
+    <string name="daze_register_date">注册时间</string>
+    <string name="daze_please_select_error_item">请选择信息有误的项(可多选)，然后提交</string>
+    <string name="daze_frame_number_error">车架号错误</string>
+    <string name="daze_motor_number_error">发动机号错误</string>
+    <string name="daze_register_date_error">注册时间错误</string>
+    <string name="daze_cancel">取消</string>
+    <string name="daze_submit">提交</string>
+    <string name="daze_set_remind_time">设置提醒时间</string>
+    <string name="daze_untreated">未处理</string>
+    <string name="daze_forfeit">罚款</string>
+    <string name="daze_deduct_points">扣分</string>
+    <string name="daze_free_emergency">免费救援</string>
+    <string name="daze_can_use_ticket_payment">以下违章可使用罚单代缴在线处理</string>
+
+    <!-- sharesdk -->
+    <string name="weibo_oauth_regiseter">应用授权</string>
+    <string name="website">http://www.shareSDK.cn</string>
+    <string name="weibo_upload_content">分享图片</string>
+    <string name="wechat_client_inavailable">目前您的微信版本过低或未安装微信，需要安装微信才能使用</string>
+    <string name="google_plus_client_inavailable">Google+ 版本过低或者没有安装，需要升级或安装Google+才能使用！</string>
+    <string name="qq_client_inavailable">QQ 版本过低或者没有安装，需要升级或安装QQ才能使用！</string>
+    <string name="pinterest_client_inavailable">Pinterest版本过低或者没有安装，需要升级或安装Pinterest才能使用！</string>
+    <string name="instagram_client_inavailable">Instagram版本过低或者没有安装，需要升级或安装Instagram才能使用！</string>
+    <string name="yixin_client_inavailable">目前您的易信版本过低或未安装易信，需要安装易信才能使用</string>
+
+	<string name="sinaweibo">新浪微博</string>
+	<string name="tencentweibo">腾讯微博</string>
+	<string name="qzone">QQ空间</string>
+	<string name="wechat">微信好友</string>
+	<string name="wechatmoments">微信朋友圈</string>
+	<string name="wechatfavorite">微信收藏</string>
+	<string name="facebook">Facebook</string>
+	<string name="twitter">Twitter</string>
+	<string name="renren">人人网</string>
+	<string name="kaixin">开心网</string>
+	<string name="email">邮件</string>
+	<string name="shortmessage">信息</string>
+	<string name="sohumicroblog">搜狐微博</string>
+	<string name="sohusuishenkan">搜狐随身看</string>
+	<string name="neteasemicroblog">网易微博</string>
+	<string name="douban">豆瓣</string>
+	<string name="youdao">有道云笔记</string>
+	<string name="evernote">印象笔记</string>
+	<string name="linkedin">Linked In</string>
+	<string name="googleplus">Google+</string>
+	<string name="foursquare">FourSquare</string>
+	<string name="qq">QQ</string>
+	<string name="pinterest">Pinterest</string>
+	<string name="flickr">Flickr</string>
+	<string name="tumblr">Tumblr</string>
+	<string name="dropbox">Dropbox</string>
+	<string name="vkontakte">VK</string>
+	<string name="instagram">Instagram</string>
+	<string name="yixin">易信</string>
+	<string name="yixinmoments">易信朋友圈</string>
+
+	<string name="share_to_qzone">分享到QQ空间</string>
+	<string name="incentive_title">分享有奖</string>
+	<string name="failed_to_start_incentive_page">无法打开“分享有奖页面”</string>
+	<string name="download_faield">下载失败</string>
+	<string name="app_downloading">应用正在后台下载</string>
+
+	<string name="vehicle_restriction_today">今日限行</string>
+	<string name="add_vehicle">添加车辆</string>
+	<string name="my_order">我的订单</string>
+	<string name="now_has_no_new_against_record">暂无新的违章记录</string>
+	<string name="view_all">查看全部</string>
+	<string name="immediate_processing">快速处理</string>
+	<string name="pay_online">在线缴费</string>
+	<string name="qichebao">汽车服务</string>
+    <string name="daze_car_washing">上门洗车</string>
+
+	<!-- getui -->
+	<string name="hello">个推开放平台Sdk演示程序</string>
+    <string name="app_name">个推演示</string>
+    <string name="up">绑定sdk</string>
+    <string name="down">解绑sdk</string>
+    <string name="no_clientid">(none)</string>
+    <string name="start">启动</string>
+    <string name="stop">停止</string>
+    <string name="clear">清除日志</string>
+    <string name="enablelog">开启debug日志</string>
+    <string name="bindcell">绑定手机号</string>
+    <string name="pmsg">透传测试</string>
+    <string name="psmsg">通知栏测试</string>
+    <string name="begin">开始(h)</string>
+    <string name="end">结束</string>
+    <string name="duration">持续时间(h)</string>
+    <string name="set_heartbeat">心跳间隔(s)</string>
+    <string name="send_msg">发送消息</string>
+    <string name="bind_alias">绑定别名</string>
+    <string name="unbind_alias">解除别名绑定</string>
+
+    <string name="format_year">%d年</string>
+    <string name="format_month">%d月</string>
+    <string name="format_day">%d日</string>
+    <string name="date_unit">日</string>
+    <string name="month_unit">月</string>
+    <string name="today">今天</string>
+    <string name="to">到</string>
+
+    <string name="jiazhao_rule">驾照分根据记分周期进行更新，一个记分周期为1年，以初次领证日期为界限。假如您是今年1月1日领证，则驾照更新就是在次年的1月1日。\n\n
+        1.如果记分周期扣分不满12分，所处违反交规的罚款已经缴纳的，下一个周期将清除扣分。记分虽未达到12分，但尚有罚款未缴纳的，记分转入下一个记分周期。\n\n
+        2.记满12分的驾驶员需重新参加培训并通过科目一考试。\n\n
+        3.记分达到24分或以上的驾驶员必须重考科目一和科目三。\n\n
+        4.新手上路必须按规定贴实习标，新领驾照的驾驶员在实习期内(一年)被记6分以上，实习期限将延长一年，实习期内被记满12分的，则会被注销驾驶资格。</string>
+
+    <string name="nianjian_rule">2014年9月1日起，机动车年检执行新规：\n\n新上牌的小型私家客车六年内免上线，但仍需按时（六年内两年一次）申领年检及环保标志。\n
+        若你的车是2011年10月上牌的7座以下（含7座）的非营运小型私家客车。那么根据新规，2015年 10月 无需上线年检，但车主仍需提供交通事故强制责任保险凭证、车船税纳税或者免征证明后，处理完交通违法、交通事故后，可直接向公安交管部门申请领取检验标志。2013年 10月 及2017年 10月 仍需上线年检。\n
+        • 货车、面包车、公司注册车辆，均不在新规范围内。\n
+        • 非营运小型客车，前6年每两年年检一次，第7年至第15年每年年检一次。\n
+        • 非营运中、大型客车及货车，前10年每年年检一次，第11年起每半年年检一次。\n
+        • 营运车辆，前5年每年年检一次，第6年起每半年年检一次。\n
+        • 摩托车，前4年每两年年检一次，第5年起每年年检一次。</string>
+
+    <string name="detail_rule_1_1">1、未携带行驶证、驾驶证；</string>
+    <string name="detail_rule_1_2">2、车辆未张贴年检；</string>
+    <string name="detail_rule_1_3">3、车辆未张贴交强险标志；</string>
+    <string name="detail_rule_1_4">4、违反规定使用灯光和双闪。</string>
+
+    <string name="detail_rule_2_1">1、不系安全带：驾驶员行车过程中不系安全带，会被扣2分。这个处罚条款的设置本身就是一个讽刺。安全带的作用是保护驾驶员生命安全，本来所有人都应该主动自觉系上。但是我们居然需要立法来强制、强迫大家去执行。所以再次强调，上车请系安全带，无论你是开车的还是坐车的。关键时候不是罚不罚2分的事，而是你还有没有机会活下去。</string>
+    <string name="detail_rule_2_2">2、不按规定车道等待练红绿灯：这个行为一般多见于出租车、公交车上。例如明明它们是直行，却偏偏占着右转车道。私家车一般也就外地司机，不熟悉路况时会犯这错误。</string>
+    <string name="detail_rule_2_3" formatted="false">3、超载小于20%：如果车辆限定载人数是5人，却硬塞进了6个人，也就是超载了1。相对于限载人就刚好是20%，这种情况就要面临扣2分的处罚。</string>
+    <string name="detail_rule_2_4">4、开车打电话：如果开车不系安全带是赌命，那么开车打电话、发短信、刷微博就完全是不要命的行为了。《驾照新规》对接、拔电话作出了扣2分的处罚规定，其实小编觉得应该改成开车使用手机者扣2分。因为小编就亲眼见过一穿着低胸超短裙的美女，一边开着奔驰SLK一边刷微博。当时小编心里就忍不住骂，谁包养的二奶又出来糟蹋好车兼危害他人生命健康。</string>
+    <string name="detail_rule_2_5">5、堵车时乱插队、强占对向车道：堵车大家都讨厌吧？堵车时乱插队的车大家都讨厌吧？特别是那些从对向车道超车上来，然后强力插入的的车子。你恨不得自己就是交警，上去就给它甩张罚单。</string>
+
+    <string name="detail_rule_3_1">1、经人行道未减速、停车、避让行人：我国的交规中是优先保护行人的，所以当你驶经人行横道、斑马线时，一定要减速避让行人，必要时刻也可以停下车等待行人通过。</string>
+    <string name="detail_rule_3_2">2、高速公路匝道超车：匝道本身就比较狭窄，强行超车极容易产生刮蹭事故。而且大部分匝道都伴随着大幅度过弯，加速超车时容易因为离心力而失控翻车。所以请各位谨记匝道不要超车，扣分事小，车祸事大啊。</string>
+    <string name="detail_rule_3_3">3、未按照禁止标线指示行驶：禁止标线包括有黄色单、双实线；禁止转弯、直行、调头等，如果违反规定驾驶将面临扣3分的处罚。</string>
+    <string name="detail_rule_3_4">4、转弯车未让直行车或行人先行：国内的道路设计当中，右转车辆不受信号灯影响。如果刚好又有人行横道的话，就会看到行人与右转车互相抢道的混乱场面。为了避免事故纠纷，明令规定转弯车辆必须让行人先行。</string>
+    <string name="detail_rule_3_5">5、相对方向行驶的右转车未让左转车先行：因为国内驾驶室是设置在左边，左转车辆的右边会形成视角盲区。如果有右转车辆不避让的话，就会发生碰撞事故。</string>
+    <string name="detail_rule_3_6">6、不按规定道路行驶：在高速或者城市快速路上，不按规定道路行驶，给予扣3分处罚。例如在快速车道慢速行驶。</string>
+    <string name="detail_rule_3_7" formatted="false">7、超速驾驶但未超过限速50%：不同程度的超速驾驶有不同程度的处罚，如果未超过限速的50%，只会扣3分。</string>
+    <string name="detail_rule_3_8">8、未给特殊车辆让行：在国外，当救护车、救火车的信号声响起时，道路上的车辆都会马上靠边停车让行。这是社会群众整体素质高的表现，因为他们都知道这些车是去救命、救灾的。说不定就是去救的自家人灭自家的火。所以无论是否扣分处罚，大家在遇见救护车、救火车这些特殊车辆时，请及时避让。</string>
+    <string name="detail_rule_3_9">9、不按规定超车、逆向行驶：超车时需要把车速提到较快，所以相对于正常驾驶危险度会更高。如果不按照规则而乱超车就极容易发生碰撞事故，而且因为车速较快，这类事故都很严重。</string>
+
+    <string name="detail_rule_6_1">1、驾驶证被暂扣后继续驾驶：驾驶证被暂扣后，一定不能再次驾驶。否则会再次扣6分，整个处罚就是重上加重了。</string>
+    <string name="detail_rule_6_2">2、在堵车时占用应急车道行驶：应急车道又叫生命通道，是当道路有事故发生，让救护车、清障车快速前往处理时预留的专用车道。</string>
+    <string name="detail_rule_6_3">3、未按规定避让校车的（新增）：这次的《驾照新规》增加了一条规定，校车拥有道路使用优先权，也就是说私家车要避让校车先行，否则扣6分。校车先行的规定，在国外早已经出现并执行多年，现在国内也同样开始重视，这是举国共庆的好事。</string>
+    <string name="detail_rule_6_4">4、闯红灯（修改）：闯红灯的处罚也更加严厉了，由以往的扣3分改为扣6分。关于闯红灯的危险，已经讲过千次万次了这里就不再重提。</string>
+
+    <string name="detail_rule_12_1">1、高速公路倒车、逆行、穿越中央隔离带调头：在高速公路倒车、逆行这简直就是祸国殃民、害人害己、破坏社会稳定、破坏人民关系和睦最恶劣行径。</string>
+    <string name="detail_rule_12_2" formatted="false">2、超速驾驶高于限速50%（修改）：超速驾驶高于限速50%，由原来扣6分改为扣12分。10次车祸9次快，我国绝大部分的车祸都因为车速过快造成的。所以对超速驾驶的处罚加重，是举脚赞同的好主意。</string>
+    <string name="detail_rule_12_3">3、酒驾醉驾：酒驾除了扣分外，还并处扣证6个月，罚款2000元以下。醉驾则并处吊销驾驶证、追究刑事责任且5年内不得重新考驾照。</string>
+    <string name="detail_rule_12_4">4、事故后逃逸但未构成犯罪：这里重点解释一下什么是事故后逃逸，但未构成犯罪：事故逃逸后，未造成人员重伤也未造成30万元以上的财产损失就不构成犯罪，反之，造成一人以上重伤或造成的财产损失达到30万以上就构成了犯罪。</string>
+    <string name="detail_rule_12_5">5、未悬挂、伪造、变造、不按规定安装号牌、故意遮挡污损号牌（修改）：这里需要特别提醒一下，安装车牌号现在也有明确而且详细的标准。如果车牌安装不符合规范，也会处扣12分处罚。</string>
+
+    <!--汽车服务-->
+    <string name="car_services_title">汽车服务</string>
+
+    <string name="error_location_failed_btn">设置当前城市</string>
+    <string name="error_request_failed_btn">重新加载</string>
+    <string name="error_no_support_city_btn">切换城市</string>
+    <string name="error_no_network_btn">刷新重试</string>
+    <string name="error_positioning_btn">手动设置当前城市</string>
+
+    <string name="error_location_failed_tips">无法确定你当前所在的城市，请手动设置</string>
+    <string name="error_request_failed_tips">网络请求失败\r\n请检查您的网络设置</string>
+    <string name="error_no_support_city_tips">橙牛暂不支持当前城市，谢谢您的支持</string>
+    <string name="error_no_network_tips">网络不给力\r\n请稍后刷新</string>
+    <string name="error_positioning_tips">正在自动定位当前城市</string>
+
+    <string name="check_network">检查网络设置</string>
+
+    <string name="no_networkd_tips1">1、打开设备的“系统设置”>“无线和网络”>“移动网络”。</string>
+    <string name="no_networkd_tips2">2、打开设备的“系统设置”>“WLAN”，“启动WLAN”后从中选择一个可用的热点连接。</string>
+    <string name="no_networkd_tips3">请确认你所接入的Wi-Fi网络已经连入互联网，或者确认你的设备是否被允许访问该热点。</string>
+
+</resources>

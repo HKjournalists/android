@@ -1,0 +1,35 @@
+package com.kplus.car.carwash.module.photoview;
+
+import android.content.Context;
+import android.support.v4.view.ViewPager;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+
+/**
+ * 用于实现查看图片时切换
+ * Created by Fu on 2015/6/1.
+ */
+public class HackyViewPager extends ViewPager {
+    public HackyViewPager(Context context) {
+        super(context);
+    }
+
+    public HackyViewPager(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        try {
+            return super.onInterceptTouchEvent(ev);
+        } catch (IllegalArgumentException e) {
+            // 不理会
+            e.printStackTrace();
+            return false;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // 不理会
+            e.printStackTrace();
+            return false;
+        }
+    }
+}

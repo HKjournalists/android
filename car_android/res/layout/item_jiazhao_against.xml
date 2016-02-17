@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kplus.car.widget.RegularTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/daze_darkred3"
+    android:gravity="center_vertical"
+    android:textSize="14sp"
+    android:paddingLeft="18dp"
+    android:textColor="@color/daze_white"
+    android:drawableRight="@drawable/goto_white"
+    android:paddingRight="18dp"
+    android:drawablePadding="15dp"/>

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vehicle_add_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <View
+        android:id="@+id/bg1"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:background="@drawable/background_01"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bg1"
+        android:background="@drawable/background_02"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/leftView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:textColor="@color/daze_white"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginLeft="3dp"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textColor="@color/daze_white"
+        android:textStyle="bold"
+        android:text="添加车辆"
+        android:layout_marginTop="12dp"/>
+
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/rightView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加"
+        android:textColor="@color/daze_white"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="3dp"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:layout_below="@id/leftView">
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:padding="8dp">
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:background="@color/daze_white"
+		        android:visibility="visible" >
+			    <View
+			        android:layout_width="match_parent"
+			        android:layout_height="8dp"
+			        android:background="@color/daze_white" />
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="56dp"
+			        android:orientation="horizontal"
+			        android:background="@color/daze_white" >
+			        <com.kplus.car.widget.RegularTextView
+			            android:layout_width="112dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="18dp"
+			            android:text="@string/daze_vehicle_type"
+			            style="@style/font_body2" />
+			        <com.kplus.car.widget.RegularTextView
+			            android:id="@+id/vehicle_type_view"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:background="@null"
+			            android:hint="请选择车辆类型"
+			            style="@style/font_body1"
+			            android:textColorHint="@color/daze_white_smoke2" />
+			    </LinearLayout>
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="56dp"
+			        android:orientation="horizontal"
+			        android:background="@color/daze_white"
+			        android:gravity="center_vertical" >
+			        <com.kplus.car.widget.RegularTextView
+			            android:layout_width="112dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="16dp"
+			            android:text="@string/daze_license_plate"
+			            style="@style/font_body2" />
+			        <com.kplus.car.widget.RegularTextView
+			            android:id="@+id/tvPrefix"
+			            android:layout_width="44dp"
+			            android:layout_height="24dp"
+			            android:background="@drawable/daze_prefix_background"
+			            android:gravity="center_vertical"
+			            android:text="浙"
+			            android:textColor="@color/daze_orangered5"
+			            android:textSize="14dp"
+			            android:paddingLeft="7dp" />
+			        <com.kplus.car.widget.RegularEditText
+			            android:id="@+id/license_plate_view"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:layout_marginLeft="8dp"
+			            android:gravity="center_vertical"
+			            android:background="@null"
+			            style="@style/font_body1"
+			            android:inputType="textUri"
+	                    android:singleLine="true"
+	                    android:maxLength="6"
+	                    android:hint="@string/daze_please_enter_the_license_plate_number"
+	                    android:textColorHint="@color/daze_white_smoke2" />
+			    </LinearLayout>
+			    <RelativeLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="56dp"
+			        android:background="@color/daze_white" >
+			        <com.kplus.car.widget.RegularTextView
+			            android:layout_width="112dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="16dp"
+			            android:text="@string/daze_query_city"
+			            style="@style/font_body2" />
+			        <com.kplus.car.widget.RegularTextView
+			            android:id="@+id/select_query_city_view"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:layout_marginLeft="112dp"
+			            android:layout_marginRight="40dp"
+			            android:gravity="center_vertical"
+			            android:background="@null"
+			            android:hint="@string/daze_select_query_city"
+			            android:textColorHint="@color/daze_white_smoke2"
+			            style="@style/font_body2"
+			            android:singleLine="true"
+			            android:ellipsize="end" />
+			        <ImageView
+	                    android:layout_width="40dp"
+	                    android:layout_height="56dp"
+	                    android:layout_alignParentRight="true"
+	                    android:src="@drawable/daze_gonext_24"
+	                    android:scaleType="centerInside"/>
+			    </RelativeLayout>
+			    <LinearLayout
+			        android:id="@+id/tianjinView"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical"
+			        android:visibility="gone" >
+			        <RelativeLayout
+			            android:layout_width="match_parent"
+			            android:layout_height="32dp"
+			            android:background="@color/daze_red50" >
+			            <com.kplus.car.widget.RegularTextView
+			                android:id="@+id/tianjinLabel"
+			                android:layout_width="wrap_content"
+			                android:layout_height="match_parent"
+			                android:gravity="center_vertical"
+			                android:paddingLeft="16dp"
+			                android:text="@string/daze_tianjin_violation_query_need_website_account_information"
+			                android:textColor="@color/daze_red500"
+			                android:textSize="12dp" />
+			            <com.kplus.car.widget.RegularTextView
+			                android:id="@+id/register_account_view"
+			                android:layout_width="wrap_content"
+			                android:layout_height="match_parent"
+			                android:paddingLeft="16dp"
+			                android:layout_toRightOf="@+id/tianjinLabel"
+			                android:text="@string/daze_register_account"
+			                android:textColor="@color/daze_blue3"
+			                android:textSize="12dp"
+			                android:gravity="center_vertical" />
+			            <ImageView
+			                android:id="@+id/register_account_guide"
+		                    android:layout_width="40dp"
+		                    android:layout_height="56dp"
+		                    android:layout_alignParentRight="true"
+		                    android:src="@drawable/daze_question_mark"
+		                    android:scaleType="centerInside"/>
+			        </RelativeLayout>
+			        <LinearLayout
+				        android:id="@+id/website_account_layout"
+				        android:layout_width="match_parent"
+				        android:layout_height="56dp"
+				        android:background="@color/daze_white"
+				        android:orientation="horizontal" >
+				        <com.kplus.car.widget.RegularTextView
+				            android:layout_width="112dp"
+				            android:layout_height="match_parent"
+				            android:gravity="center_vertical"
+				            android:paddingLeft="16dp"
+				            android:text="@string/daze_website_account"
+				            style="@style/font_body2" />
+				        <com.kplus.car.widget.RegularEditText
+				            android:id="@+id/website_account_view"
+				            android:layout_width="match_parent"
+				            android:layout_height="match_parent"
+				            android:gravity="center_vertical"
+				            android:background="@null"
+				            android:textColorHint="@color/daze_white_smoke2"
+				            style="@style/font_body2"
+				            android:singleLine="true"
+				            android:ellipsize="end"
+				            android:inputType="textUri"
+				            android:hint="@string/daze_please_enter_the_website_account" />
+				    </LinearLayout>
+				    <LinearLayout
+				        android:id="@+id/website_password_layout"
+				        android:layout_width="match_parent"
+				        android:layout_height="56dp"
+				        android:background="@color/daze_white"
+				        android:orientation="horizontal" >
+				        <com.kplus.car.widget.RegularTextView
+				            android:layout_width="112dp"
+				            android:layout_height="match_parent"
+				            android:gravity="center_vertical"
+				            android:paddingLeft="16dp"
+				            android:text="@string/daze_website_password"
+				            style="@style/font_body2" />
+				        <com.kplus.car.widget.RegularEditText
+				            android:id="@+id/website_password_view"
+				            android:layout_width="match_parent"
+				            android:layout_height="match_parent"
+				            android:gravity="center_vertical"
+				            android:background="@null"
+				            android:textColorHint="@color/daze_white_smoke2"
+				            style="@style/font_body2"
+				            android:singleLine="true"
+				            android:ellipsize="end"
+				            android:inputType="textPassword"
+				            android:hint="@string/daze_please_enter_the_website_password" />
+				    </LinearLayout>
+			    </LinearLayout>
+			    <RelativeLayout
+			        android:id="@+id/error_correction_layout"
+			        android:layout_width="match_parent"
+			        android:layout_height="32dp"
+			        android:background="@color/daze_red50"
+			        android:visibility="gone" >
+			        <com.kplus.car.widget.RegularTextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="16dp"
+			            android:text="@string/daze_license_plate_number_authened"
+			            android:textColor="@color/daze_red500"
+			            android:textSize="12dp" />
+			        <com.kplus.car.widget.RegularTextView
+			            android:id="@+id/error_correction_View"
+			            android:layout_width="wrap_content"
+			            android:layout_height="match_parent"
+			            android:layout_alignParentRight="true"
+			            android:layout_marginRight="16dp"
+			            android:text="@string/daze_info_errored"
+			            android:textColor="@color/daze_blue3"
+			            android:textSize="12dp"
+			            android:gravity="center_vertical" />
+			    </RelativeLayout>
+			    <com.kplus.car.widget.RegularTextView
+			        android:id="@+id/frame_number_notice"
+			        android:layout_width="match_parent"
+			        android:layout_height="32dp"
+			        android:gravity="center_vertical"
+			        android:paddingLeft="112dp"
+			        android:background="@color/daze_red50"
+			        android:textColor="@color/daze_red500"
+			        android:textSize="12dp"
+			        android:visibility="gone" />
+			    <RelativeLayout
+			        android:id="@+id/frame_number_layout"
+			        android:layout_width="match_parent"
+			        android:layout_height="56dp"
+			        android:background="@color/daze_white"
+			        android:orientation="horizontal"
+			        android:visibility="gone" >
+			        <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/frame_number_guide"
+			            android:layout_width="112dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="16dp"
+			            android:text="@string/daze_frame_number"
+			            style="@style/font_body2"
+                        android:drawableRight="@drawable/info"
+                        android:paddingRight="10dp"
+                        android:drawablePadding="5dp"/>
+			        <com.kplus.car.widget.RegularEditText
+			            android:id="@+id/frame_number_view"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:layout_marginLeft="112dp"
+			            android:gravity="center_vertical"
+			            android:background="@null"
+			            android:textColorHint="@color/daze_white_smoke2"
+			            style="@style/font_body2"
+			            android:singleLine="true"
+			            android:ellipsize="end"
+			            android:inputType="textUri"
+			            android:hint="@string/daze_please_enter_the_frame_number" />
+			    </RelativeLayout>
+			    <com.kplus.car.widget.RegularTextView
+			        android:id="@+id/motor_number_notice"
+			        android:layout_width="match_parent"
+			        android:layout_height="32dp"
+			        android:gravity="center_vertical"
+			        android:paddingLeft="112dp"
+			        android:background="@color/daze_red50"
+			        android:textColor="@color/daze_red500"
+			        android:textSize="12dp"
+			        android:visibility="gone" />
+			    <RelativeLayout
+			        android:id="@+id/motor_number_layout"
+			        android:layout_width="match_parent"
+			        android:layout_height="56dp"
+			        android:background="@color/daze_white"
+			        android:orientation="horizontal"
+			        android:visibility="gone" >
+			        <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/motor_number_guide"
+			            android:layout_width="112dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="16dp"
+			            android:text="@string/daze_engine_number"
+			            style="@style/font_body2"
+                        android:drawableRight="@drawable/info"
+                        android:paddingRight="10dp"
+                        android:drawablePadding="5dp"/>
+			        <com.kplus.car.widget.RegularEditText
+			            android:id="@+id/motor_number_view"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:layout_marginLeft="112dp"
+			            android:gravity="center_vertical"
+			            android:background="@null"
+			            android:textColorHint="@color/daze_white_smoke2"
+			            style="@style/font_body2"
+			            android:singleLine="true"
+			            android:ellipsize="end"
+			            android:inputType="textUri"
+			            android:hint="@string/daze_please_enter_the_engine_number" />
+			    </RelativeLayout>
+			    <LinearLayout
+			        android:id="@+id/owner_layout"
+			        android:layout_width="match_parent"
+			        android:layout_height="56dp"
+			        android:background="@color/daze_white"
+			        android:orientation="horizontal"
+			        android:visibility="gone" >
+			        <com.kplus.car.widget.RegularTextView
+			            android:layout_width="112dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="16dp"
+			            android:text="机动车所有人"
+			            style="@style/font_body2" />
+			        <com.kplus.car.widget.RegularEditText
+			            android:id="@+id/owner_view"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:background="@null"
+			            android:textColorHint="@color/daze_white_smoke2"
+			            style="@style/font_body2"
+			            android:singleLine="true"
+			            android:ellipsize="end"
+			            android:hint="请输入机动车所有人" />
+			    </LinearLayout>
+				<com.kplus.car.widget.RegularTextView
+					android:id="@+id/owner_id_notice"
+					android:layout_width="match_parent"
+					android:layout_height="32dp"
+					android:gravity="center_vertical"
+					android:paddingLeft="112dp"
+					android:background="@color/daze_red50"
+					android:textColor="@color/daze_red500"
+					android:textSize="12dp"
+					android:visibility="gone" />
+				<RelativeLayout
+					android:id="@+id/owner_id_layout"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:background="@color/daze_white"
+					android:orientation="horizontal"
+					android:visibility="gone" >
+					<com.kplus.car.widget.RegularTextView
+						android:id="@+id/owner_id_guide"
+						android:layout_width="112dp"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingLeft="16dp"
+						android:text="车主身份证号"
+						style="@style/font_body2"/>
+					<com.kplus.car.widget.RegularEditText
+						android:id="@+id/owner_id_view"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="112dp"
+						android:gravity="center_vertical"
+						android:background="@null"
+						android:textColorHint="@color/daze_white_smoke2"
+						style="@style/font_body2"
+						android:singleLine="true"
+						android:ellipsize="end"
+						android:inputType="textUri" />
+				</RelativeLayout>
+				<LinearLayout
+					android:id="@+id/driver_name_layout"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:background="@color/daze_white"
+					android:orientation="horizontal"
+					android:visibility="gone" >
+					<com.kplus.car.widget.RegularTextView
+						android:layout_width="112dp"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingLeft="16dp"
+						android:text="驾驶证姓名"
+						style="@style/font_body2" />
+					<com.kplus.car.widget.RegularEditText
+						android:id="@+id/driver_name_view"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:background="@null"
+						android:textColorHint="@color/daze_white_smoke2"
+						style="@style/font_body2"
+						android:singleLine="true"
+						android:ellipsize="end"
+						android:hint="请输入驾驶证姓名" />
+				</LinearLayout>
+				<com.kplus.car.widget.RegularTextView
+					android:id="@+id/driver_id_notice"
+					android:layout_width="match_parent"
+					android:layout_height="32dp"
+					android:gravity="center_vertical"
+					android:paddingLeft="112dp"
+					android:background="@color/daze_red50"
+					android:textColor="@color/daze_red500"
+					android:textSize="12dp"
+					android:visibility="gone" />
+				<RelativeLayout
+					android:id="@+id/driver_id_layout"
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:background="@color/daze_white"
+					android:orientation="horizontal"
+					android:visibility="gone" >
+					<com.kplus.car.widget.RegularTextView
+						android:id="@+id/driver_id_guide"
+						android:layout_width="112dp"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingLeft="16dp"
+						android:text="驾驶证号"
+						style="@style/font_body2"
+						android:drawableRight="@drawable/info"
+						android:paddingRight="10dp"
+						android:drawablePadding="5dp"/>
+					<com.kplus.car.widget.RegularEditText
+						android:id="@+id/driver_id_view"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="112dp"
+						android:gravity="center_vertical"
+						android:background="@null"
+						android:textColorHint="@color/daze_white_smoke2"
+						style="@style/font_body2"
+						android:singleLine="true"
+						android:ellipsize="end"
+						android:inputType="textUri" />
+				</RelativeLayout>
+			    <LinearLayout
+			        android:id="@+id/vehicleRegCerNo_layout"
+			        android:layout_width="match_parent"
+			        android:layout_height="56dp"
+			        android:background="@color/daze_white"
+			        android:orientation="horizontal"
+			        android:visibility="gone" >
+			        <com.kplus.car.widget.RegularTextView
+			            android:layout_width="112dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="16dp"
+			            android:text="机动车登记证书编号"
+			            style="@style/font_body2" />
+			        <com.kplus.car.widget.RegularEditText
+			            android:id="@+id/vehicleRegCerNo_view"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center_vertical"
+			            android:background="@null"
+			            android:textColorHint="@color/daze_white_smoke2"
+			            style="@style/font_body2"
+			            android:singleLine="true"
+			            android:ellipsize="end"
+			            android:hint="请输入机动车登记证书编号" />
+			    </LinearLayout>
+			    <View
+			        android:layout_width="match_parent"
+			        android:layout_height="8dp"
+			        android:background="@color/daze_white" />
+		    </LinearLayout>
+		</LinearLayout> 
+    </ScrollView>
+	<RelativeLayout
+	    android:id="@+id/submit_error_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:visibility="gone" >
+		<com.kplus.car.widget.RegularTextView
+		    android:id="@+id/submit_error_blank_view"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_above="@+id/submit_error_bottom_layout"
+		    android:background="#00000000" />
+	    <LinearLayout
+	        android:id="@+id/submit_error_bottom_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:background="@color/daze_bgcolor"
+	        android:layout_alignParentBottom="true" >
+	        <com.kplus.car.widget.RegularTextView
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            android:background="@drawable/daze_shadow2"
+	            android:alpha="0.5" />
+	        <com.kplus.car.widget.RegularTextView
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="24dp"
+	            android:gravity="center_horizontal"
+	            android:text="@string/daze_please_select_error_item"
+	            style="@style/font_caption" />
+	        <ListView
+		        android:id="@+id/errorListview"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="16dp"
+		        android:layout_marginLeft="16dp"
+		        android:layout_marginRight="16dp"
+		        android:cacheColorHint="#00000000"
+		        android:divider="@color/daze_bgcolor"
+		        android:dividerHeight="1dp"
+		        android:scrollbars="none" ></ListView>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="40dp"
+	            android:orientation="horizontal"
+	            android:layout_marginTop="16dp" >
+	            <com.kplus.car.widget.RegularTextView
+	                android:id="@+id/tvCancelSubmitError"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_weight="1"
+	                android:background="@color/daze_white"
+	                android:gravity="center"
+	                android:text="@string/daze_cancel"
+	                android:textSize="15dp"
+	                android:textColor="@color/daze_textcolor2" />
+	            <com.kplus.car.widget.RegularTextView
+	                android:id="@+id/tvSubmitError"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_weight="1"
+	                android:layout_marginLeft="1dp"
+	                android:background="@color/daze_white"
+	                android:gravity="center"
+	                android:text="@string/daze_submit"
+	                android:textSize="15dp"
+	                android:textColor="@color/daze_textcolor1"
+	                android:enabled="false" />
+	        </LinearLayout>
+	    </LinearLayout>
+	</RelativeLayout>
+	<include layout="@layout/daze_cash_selected"/>
+    <include layout="@layout/daze_loading" />
+
+</RelativeLayout>

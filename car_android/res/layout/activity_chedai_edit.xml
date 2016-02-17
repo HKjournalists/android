@@ -1,0 +1,242 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white_smoke6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:paddingTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radio_month"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="24dp"
+                android:text="按月还"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radio_year"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="按年还"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="还款时间"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.MyTextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:hint="必填"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:drawableRight="@drawable/go_to"
+                android:paddingRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="提醒时间"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.MyTextView
+                android:id="@+id/remind_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:hint="必填"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/go_to"
+                android:paddingRight="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/money_label"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="月还款金额"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.RegularEditText
+                android:id="@+id/money"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:inputType="number"
+                android:hint="选填"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/total_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="贷款总额"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.RegularEditText
+                android:id="@+id/total_money"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:hint="选填，本金+利息"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:inputType="number"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fenshu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="已还份数"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.RegularEditText
+                android:id="@+id/yihuan_fenshu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:hint="选填，已还款多少月"
+                android:textColorHint="@color/daze_white_smoke2"
+                android:inputType="number"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <com.kplus.car.widget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="备注"
+                android:textColor="@color/daze_darkgrey9"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="24dp"/>
+
+            <com.kplus.car.widget.RegularEditText
+                android:id="@+id/remark"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:textColor="@color/daze_black2"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:hint="选填，如还款银行、卡号等"
+                android:textColorHint="@color/daze_white_smoke2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

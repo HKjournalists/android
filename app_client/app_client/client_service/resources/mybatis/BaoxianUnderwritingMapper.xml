@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianUnderwritingMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="baoxian_intent_id" property="baoxianIntentId" jdbcType="VARCHAR" />
+    <result column="baoxian_base_info_id" property="baoxianBaseInfoId" jdbcType="VARCHAR" />
+    <result column="baoxian_informal_report_id" property="baoxianInformalReportId" jdbcType="VARCHAR"/>
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="baoxian_company_name" property="baoxianCompanyName" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="baoxian_company_code" property="baoxianCompanyCode" jdbcType="VARCHAR" />
+    <result column="jqx" property="jqx" jdbcType="BIT" />
+    <result column="syx" property="syx" jdbcType="BIT" />
+    <result column="ccs" property="ccs" jdbcType="BIT" />
+    <result column="szx" property="szx" jdbcType="VARCHAR" />
+    <result column="csx" property="csx" jdbcType="VARCHAR" />
+    <result column="ckx" property="ckx" jdbcType="VARCHAR" />
+    <result column="dqx" property="dqx" jdbcType="VARCHAR" />
+    <result column="blx" property="blx" jdbcType="VARCHAR" />
+    <result column="hfx" property="hfx" jdbcType="VARCHAR" />
+    <result column="zrx" property="zrx" jdbcType="VARCHAR" />
+    <result column="xzsbssx" property="xzsbssx" jdbcType="BIT" />
+    <result column="zdzxc" property="zdzxc" jdbcType="BIT" />
+    <result column="cpcssx" property="cpcssx" jdbcType="BIT" />
+    <result column="zrmcty" property="zrmcty" jdbcType="BIT" />
+    <result column="ssmcty" property="ssmcty" jdbcType="BIT" />
+    <result column="kxmpety" property="kxmpety" jdbcType="VARCHAR" />
+    <result column="dcsgmpty" property="dcsgmpty" jdbcType="BIT" />
+    <result column="cshwzrx" property="cshwzrx" jdbcType="BIT" />
+    <result column="scxlwpssx" property="scxlwpssx" jdbcType="BIT" />
+    <result column="jlcty" property="jlcty" jdbcType="BIT" />
+    <result column="jdctsssx" property="jdctsssx" jdbcType="BIT" />
+    <result column="tzckzx" property="tzckzx" jdbcType="BIT" />
+    <result column="jsshfwjzrx" property="jsshfwjzrx" jdbcType="BIT" />
+    <result column="xlqjfybcx" property="xlqjfybcx" jdbcType="BIT" />
+    <result column="jdcssbxwfzddsftyx" property="jdcssbxwfzddsftyx" jdbcType="BIT" />
+    <result column="sgzrmpltytk" property="sgzrmpltytk" jdbcType="VARCHAR" />
+    <result column="dcjcdssx" property="dcjcdssx" jdbcType="VARCHAR" />
+    <result column="bjmpx" property="bjmpx" jdbcType="BIT" />
+    <result column="xzsbssx_bjmp" property="xzsbssxBjmp" jdbcType="BIT" />
+    <result column="fjx_bjmp" property="fjxBjmp" jdbcType="BIT" />
+    <result column="jbx_bjmp" property="jbxBjmp" jdbcType="BIT" />
+    <result column="cshwzrx_bjmp" property="cshwzrxBjmp" jdbcType="BIT" />
+    <result column="fjcsryzrx_bjmp" property="fjcsryzrxBjmp" jdbcType="BIT" />
+    <result column="szx_bjmp" property="szxBjmp" jdbcType="BIT" />
+    <result column="csx_bjmp" property="csxBjmp" jdbcType="BIT" />
+    <result column="ckx_bjmp" property="ckxBjmp" jdbcType="BIT" />
+    <result column="ssx_bjmp" property="ssxBjmp" jdbcType="BIT" />
+    <result column="dqx_bjmp" property="dqxBjmp" jdbcType="BIT" />
+    <result column="blx_bjmp" property="blxBjmp" jdbcType="BIT" />
+    <result column="hfx_bjmp" property="hfxBjmp" jdbcType="BIT" />
+    <result column="zrx_bjmp" property="zrxBjmp" jdbcType="BIT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="operator_id" property="operatorId" jdbcType="VARCHAR" />
+    <result column="operator_name" property="operatorName" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="report_time" property="reportTime" jdbcType="TIMESTAMP" />
+    <result column="message" property="message" jdbcType="VARCHAR" />
+    <result column="fail_type" property="failType" jdbcType="INTEGER" />
+    <result column="operation_status" property="operationStatus" jdbcType="INTEGER" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+    <result column="model_price" property="modelPrice" jdbcType="VARCHAR" />
+    <result column="vehicle_model_price" property="vehicleModelPrice" jdbcType="INTEGER" />
+    <result column="vehicle_model_code" property="vehicleModelCode" jdbcType="VARCHAR" />
+    <result column="jqx_start_date" property="jqxStartDate" jdbcType="DATE" />
+    <result column="vehicle_model_name" property="vehicleModelName" jdbcType="VARCHAR" />
+    <result column="ssx" property="ssx" jdbcType="VARCHAR" />
+    <result column="syx_start_date" property="syxStartDate" jdbcType="DATE" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="user_type" property="userType" jdbcType="INTEGER" />
+    <result column="sjzrx_bjmp" property="sjzrxBjmp" jdbcType="BIT" />
+    <result column="sjzrx" property="sjzrx" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="tyx" property="tyx" jdbcType="BIT" />
+    <result column="deleted" property="deleted" jdbcType="BIT" />
+    <result column="xubao" property="xubao" jdbcType="BIT" />
+    <result column="automatic_status" property="automaticStatus" jdbcType="INTEGER" />
+    <result column="automatic_message" property="automaticMessage" jdbcType="VARCHAR" />
+    <result column="baoxian_insure_info_id" property="baoxianInsureInfoId" jdbcType="VARCHAR" />
+    <result column="track_status" property="trackStatus" jdbcType="INTEGER" />
+    <result column="last_automatic_time" property="lastAutomaticTime" jdbcType="TIMESTAMP" />
+    <result column="automatic_count" property="automaticCount" jdbcType="INTEGER" />
+    <result column="media_status" property="mediaStatus" jdbcType="INTEGER" />
+    <result column="support_automatic" property="supportAutomatic" jdbcType="BIT" />
+    <result column="channel" property="channel" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, baoxian_intent_id, baoxian_base_info_id, baoxian_informal_report_id, status, baoxian_company_name, mobile, baoxian_company_code,
+    jqx, syx, ccs, szx, csx, ckx, dqx, blx, hfx, zrx, xzsbssx, zdzxc, cpcssx, zrmcty, 
+    ssmcty, kxmpety, dcsgmpty, cshwzrx, scxlwpssx, jlcty, jdctsssx, tzckzx, jsshfwjzrx, 
+    xlqjfybcx, jdcssbxwfzddsftyx, sgzrmpltytk, dcjcdssx, bjmpx, xzsbssx_bjmp, fjx_bjmp, 
+    jbx_bjmp, cshwzrx_bjmp, fjcsryzrx_bjmp, szx_bjmp, csx_bjmp, ckx_bjmp, ssx_bjmp, dqx_bjmp, 
+    blx_bjmp, hfx_bjmp, zrx_bjmp, create_time, operator_id, operator_name, update_time, 
+    report_time, message, fail_type, operation_status, city_code, city_name, model_price, 
+    vehicle_model_price, vehicle_model_code, jqx_start_date, vehicle_model_name, ssx, 
+    syx_start_date, user_id, user_type, sjzrx_bjmp, sjzrx, remark, tyx, deleted, xubao, 
+    automatic_status, automatic_message, baoxian_insure_info_id, track_status, last_automatic_time, 
+    automatic_count, media_status, support_automatic, channel
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="queryByIntentId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting
+    where baoxian_intent_id = #{id,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    insert into baoxian_underwriting (id, baoxian_intent_id, baoxian_base_info_id, baoxian_informal_report_id,
+      status,
+      baoxian_company_name, mobile, baoxian_company_code, 
+      jqx, syx, ccs, szx, 
+      csx, ckx, dqx, blx, 
+      hfx, zrx, xzsbssx, zdzxc, 
+      cpcssx, zrmcty, ssmcty, kxmpety, 
+      dcsgmpty, cshwzrx, scxlwpssx, jlcty, 
+      jdctsssx, tzckzx, jsshfwjzrx, xlqjfybcx, 
+      jdcssbxwfzddsftyx, sgzrmpltytk, dcjcdssx, 
+      bjmpx, xzsbssx_bjmp, fjx_bjmp, jbx_bjmp, 
+      cshwzrx_bjmp, fjcsryzrx_bjmp, szx_bjmp, 
+      csx_bjmp, ckx_bjmp, ssx_bjmp, dqx_bjmp, 
+      blx_bjmp, hfx_bjmp, zrx_bjmp, create_time, 
+      operator_id, operator_name, update_time, 
+      report_time, message, fail_type, 
+      operation_status, city_code, city_name, 
+      model_price, vehicle_model_price, vehicle_model_code, 
+      jqx_start_date, vehicle_model_name, ssx, 
+      syx_start_date, user_id, user_type, 
+      sjzrx_bjmp, sjzrx, remark, 
+      tyx, deleted, xubao, automatic_status, 
+      automatic_message, baoxian_insure_info_id, 
+      track_status, last_automatic_time, automatic_count, 
+      media_status, support_automatic, channel
+      )
+    values (#{id,jdbcType=VARCHAR}, #{baoxianIntentId,jdbcType=VARCHAR}, #{baoxianBaseInfoId,jdbcType=VARCHAR},
+      #{baoxianInformalReportId,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER},
+      #{baoxianCompanyName,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, #{baoxianCompanyCode,jdbcType=VARCHAR}, 
+      #{jqx,jdbcType=BIT}, #{syx,jdbcType=BIT}, #{ccs,jdbcType=BIT}, #{szx,jdbcType=VARCHAR}, 
+      #{csx,jdbcType=VARCHAR}, #{ckx,jdbcType=VARCHAR}, #{dqx,jdbcType=VARCHAR}, #{blx,jdbcType=VARCHAR}, 
+      #{hfx,jdbcType=VARCHAR}, #{zrx,jdbcType=VARCHAR}, #{xzsbssx,jdbcType=BIT}, #{zdzxc,jdbcType=BIT}, 
+      #{cpcssx,jdbcType=BIT}, #{zrmcty,jdbcType=BIT}, #{ssmcty,jdbcType=BIT}, #{kxmpety,jdbcType=VARCHAR}, 
+      #{dcsgmpty,jdbcType=BIT}, #{cshwzrx,jdbcType=BIT}, #{scxlwpssx,jdbcType=BIT}, #{jlcty,jdbcType=BIT}, 
+      #{jdctsssx,jdbcType=BIT}, #{tzckzx,jdbcType=BIT}, #{jsshfwjzrx,jdbcType=BIT}, #{xlqjfybcx,jdbcType=BIT}, 
+      #{jdcssbxwfzddsftyx,jdbcType=BIT}, #{sgzrmpltytk,jdbcType=VARCHAR}, #{dcjcdssx,jdbcType=VARCHAR}, 
+      #{bjmpx,jdbcType=BIT}, #{xzsbssxBjmp,jdbcType=BIT}, #{fjxBjmp,jdbcType=BIT}, #{jbxBjmp,jdbcType=BIT}, 
+      #{cshwzrxBjmp,jdbcType=BIT}, #{fjcsryzrxBjmp,jdbcType=BIT}, #{szxBjmp,jdbcType=BIT}, 
+      #{csxBjmp,jdbcType=BIT}, #{ckxBjmp,jdbcType=BIT}, #{ssxBjmp,jdbcType=BIT}, #{dqxBjmp,jdbcType=BIT}, 
+      #{blxBjmp,jdbcType=BIT}, #{hfxBjmp,jdbcType=BIT}, #{zrxBjmp,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{operatorId,jdbcType=VARCHAR}, #{operatorName,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{reportTime,jdbcType=TIMESTAMP}, #{message,jdbcType=VARCHAR}, #{failType,jdbcType=INTEGER}, 
+      #{operationStatus,jdbcType=INTEGER}, #{cityCode,jdbcType=VARCHAR}, #{cityName,jdbcType=VARCHAR}, 
+      #{modelPrice,jdbcType=VARCHAR}, #{vehicleModelPrice,jdbcType=INTEGER}, #{vehicleModelCode,jdbcType=VARCHAR}, 
+      #{jqxStartDate,jdbcType=DATE}, #{vehicleModelName,jdbcType=VARCHAR}, #{ssx,jdbcType=VARCHAR}, 
+      #{syxStartDate,jdbcType=DATE}, #{userId,jdbcType=VARCHAR}, #{userType,jdbcType=INTEGER}, 
+      #{sjzrxBjmp,jdbcType=BIT}, #{sjzrx,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{tyx,jdbcType=BIT}, #{deleted,jdbcType=BIT}, #{xubao,jdbcType=BIT}, #{automaticStatus,jdbcType=INTEGER}, 
+      #{automaticMessage,jdbcType=VARCHAR}, #{baoxianInsureInfoId,jdbcType=VARCHAR}, 
+      #{trackStatus,jdbcType=INTEGER}, #{lastAutomaticTime,jdbcType=TIMESTAMP}, #{automaticCount,jdbcType=INTEGER}, 
+      #{mediaStatus,jdbcType=INTEGER}, #{supportAutomatic,jdbcType=BIT}, #{channel,jdbcType=VARCHAR}
+      )
+  </insert>
+   <select id="queryCount" resultType="int" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    select 
+    count(*)
+    from baoxian_underwriting
+    where  user_id = #{userId,jdbcType=VARCHAR} and  user_type = #{userType,jdbcType=INTEGER} 
+    <if test="status != null" >
+       and status = #{status,jdbcType=INTEGER}
+      </if>
+  </select>
+  <select id="queryReportCountInPeriod" resultType="int" parameterType="java.util.Map" >
+    select
+    count(*)
+    from baoxian_underwriting
+    where  user_id = #{userId,jdbcType=VARCHAR} and  user_type = #{userType,jdbcType=INTEGER}
+      <if test="status != null" >
+      and status = #{status,jdbcType=INTEGER}
+      </if>
+      <choose>
+        <when test="support_automatic == 1">
+          <choose>
+            <when test="beginCreateDate == null and endCreateDate != null">
+              AND last_automatic_time &lt;= #{endCreateDate, jdbcType=TIMESTAMP}
+            </when>
+            <when test="beginCreateDate != null and endCreateDate == null">
+              AND last_automatic_time >= #{beginCreateDate, jdbcType=TIMESTAMP}
+            </when>
+            <when test="beginCreateDate != null and endCreateDate != null">
+              AND last_automatic_time BETWEEN #{beginCreateDate, jdbcType=TIMESTAMP} AND #{endCreateDate, jdbcType=TIMESTAMP}
+            </when>
+          </choose>
+        </when>
+        <otherwise>
+          <choose>
+            <when test="beginCreateDate == null and endCreateDate != null">
+              AND  create_time &lt;= #{endCreateDate, jdbcType=TIMESTAMP}
+            </when>
+            <when test="beginCreateDate != null and endCreateDate == null">
+              AND create_time >= #{beginCreateDate, jdbcType=TIMESTAMP}
+            </when>
+            <when test="beginCreateDate != null and endCreateDate != null">
+              AND create_time BETWEEN #{beginCreateDate, jdbcType=TIMESTAMP} AND #{endCreateDate, jdbcType=TIMESTAMP}
+            </when>
+          </choose>
+        </otherwise>
+      </choose>
+  </select>
+  <select id="queryRequestCountInPeriod" resultType="int" parameterType="java.util.Map" >
+    select
+    count(*)
+    from baoxian_underwriting
+    where  user_id = #{userId,jdbcType=VARCHAR} and  user_type = #{userType,jdbcType=INTEGER}
+    <if test="status != null" >
+      and status = #{status,jdbcType=INTEGER}
+    </if>
+    <choose>
+      <when test="beginCreateDate == null and endCreateDate != null">
+        AND  create_time &lt;= #{endCreateDate, jdbcType=TIMESTAMP}
+      </when>
+      <when test="beginCreateDate != null and endCreateDate == null">
+        AND create_time >= #{beginCreateDate, jdbcType=TIMESTAMP}
+      </when>
+      <when test="beginCreateDate != null and endCreateDate != null">
+        AND create_time BETWEEN #{beginCreateDate, jdbcType=TIMESTAMP} AND #{endCreateDate, jdbcType=TIMESTAMP}
+      </when>
+    </choose>
+  </select>
+   <resultMap id="BaseResultMapExt" extends="BaseResultMap" type="com.chengniu.client.pojo.BaoxianUnderwritingDTO" >
+    <result column="baoxianCompanyRemark" property="baoxianCompanyRemark" jdbcType="VARCHAR" />
+       <result column="total_price" property="totalPrice" jdbcType="VARCHAR" />
+		<result column="pay_status" property="payStatus" jdbcType="INTEGER" />
+		  <result column="policy_status" property="policyStatus" jdbcType="INTEGER" />
+		  <result column="express_status" property="expressStatus" jdbcType="INTEGER" />
+		     <result column="expire_time" property="expireTime" jdbcType="TIMESTAMP" />
+		  <result column="jqxStartDate" property="jqxStartDate" jdbcType="DATE" />
+   		<result column="syxStartDate" property="syxStartDate" jdbcType="DATE" />
+   		    <result column="quote_id" property="quoteId" jdbcType="VARCHAR" />
+   		      <result column="underwriting_status" property="underwritingStatus" jdbcType="INTEGER" />
+		<result column="orders_num" property="ordersNum" jdbcType="VARCHAR" />
+		<result column="baoxianUnderwritingReportId" property="baoxianUnderwritingReportId" jdbcType="VARCHAR" />
+    <result column="orderStatus" property="orderStatus" jdbcType="INTEGER" />
+    <result column="baoxianCompanyPic" property="baoxianCompanyPic" jdbcType="VARCHAR" />
+  </resultMap>
+   <resultMap id="statisticsMap" type="com.chengniu.client.pojo.StatisticsMap" >
+  	 	<result column="date" property="date" jdbcType="VARCHAR" />
+   		<result column="total" property="total" jdbcType="INTEGER" />
+   </resultMap>
+  <update id="updateSupportAutomatic" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    update baoxian_underwriting support_automatic =#{supportAutomatic,jdbcType=BIT} 
+	where id = #{id,jdbcType=VARCHAR} and status !=1
+   </update>
+   <select id="statistics" resultMap="statisticsMap" parameterType="com.kplus.orders.rpc.dto.PageSearchVO">
+    	SELECT a.date,count(*) total from
+			(select  DATE_FORMAT(t.create_time,"%Y%m%d") date,t.id  from 
+		   baoxian_underwriting r LEFT JOIN  baoxian_intent t on r.baoxian_intent_id=t.id 
+		where t.create_time> #{startDate,jdbcType=TIMESTAMP} and #{endDate,jdbcType=TIMESTAMP}> t.create_time  
+		 <if test="status != null and status == 1" >
+			and r.status = #{status,jdbcType=VARCHAR}  
+ 		 </if>
+		<if test="statisticsType != null and statisticsType == 1" >
+			 GROUP BY date,t.user_id,t.user_type 
+ 		 </if>
+ 		 <if test="statisticsType == null or statisticsType != 1" >
+			 GROUP BY t.id 
+ 		 </if>
+ 		 ) a
+ 		   GROUP BY date
+	</select>
+  <update id="update" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    update baoxian_underwriting
+    <set >
+      <if test="baoxianBaseInfoId != null" >
+        baoxian_base_info_id = #{baoxianBaseInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="baoxianCompanyName != null" >
+        baoxian_company_name = #{baoxianCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianCompanyCode != null" >
+        baoxian_company_code = #{baoxianCompanyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="jqx != null" >
+        jqx = #{jqx,jdbcType=BIT},
+      </if>
+      <if test="syx != null" >
+        syx = #{syx,jdbcType=BIT},
+      </if>
+      <if test="ccs != null" >
+        ccs = #{ccs,jdbcType=BIT},
+      </if>
+      <if test="szx != null" >
+        szx = #{szx,jdbcType=VARCHAR},
+      </if>
+      <if test="csx != null" >
+        csx = #{csx,jdbcType=VARCHAR},
+      </if>
+      <if test="ckx != null" >
+        ckx = #{ckx,jdbcType=VARCHAR},
+      </if>
+      <if test="dqx != null" >
+        dqx = #{dqx,jdbcType=VARCHAR},
+      </if>
+      <if test="blx != null" >
+        blx = #{blx,jdbcType=VARCHAR},
+      </if>
+      <if test="hfx != null" >
+        hfx = #{hfx,jdbcType=VARCHAR},
+      </if>
+      <if test="zrx != null" >
+        zrx = #{zrx,jdbcType=VARCHAR},
+      </if>
+      <if test="xzsbssx != null" >
+        xzsbssx = #{xzsbssx,jdbcType=BIT},
+      </if>
+      <if test="zdzxc != null" >
+        zdzxc = #{zdzxc,jdbcType=BIT},
+      </if>
+      <if test="cpcssx != null" >
+        cpcssx = #{cpcssx,jdbcType=BIT},
+      </if>
+      <if test="zrmcty != null" >
+        zrmcty = #{zrmcty,jdbcType=BIT},
+      </if>
+      <if test="ssmcty != null" >
+        ssmcty = #{ssmcty,jdbcType=BIT},
+      </if>
+      <if test="kxmpety != null" >
+        kxmpety = #{kxmpety,jdbcType=VARCHAR},
+      </if>
+      <if test="dcsgmpty != null" >
+        dcsgmpty = #{dcsgmpty,jdbcType=BIT},
+      </if>
+      <if test="cshwzrx != null" >
+        cshwzrx = #{cshwzrx,jdbcType=BIT},
+      </if>
+      <if test="scxlwpssx != null" >
+        scxlwpssx = #{scxlwpssx,jdbcType=BIT},
+      </if>
+      <if test="jlcty != null" >
+        jlcty = #{jlcty,jdbcType=BIT},
+      </if>
+      <if test="jdctsssx != null" >
+        jdctsssx = #{jdctsssx,jdbcType=BIT},
+      </if>
+      <if test="tzckzx != null" >
+        tzckzx = #{tzckzx,jdbcType=BIT},
+      </if>
+      <if test="jsshfwjzrx != null" >
+        jsshfwjzrx = #{jsshfwjzrx,jdbcType=BIT},
+      </if>
+      <if test="xlqjfybcx != null" >
+        xlqjfybcx = #{xlqjfybcx,jdbcType=BIT},
+      </if>
+      <if test="jdcssbxwfzddsftyx != null" >
+        jdcssbxwfzddsftyx = #{jdcssbxwfzddsftyx,jdbcType=BIT},
+      </if>
+      <if test="sgzrmpltytk != null" >
+        sgzrmpltytk = #{sgzrmpltytk,jdbcType=VARCHAR},
+      </if>
+      <if test="dcjcdssx != null" >
+        dcjcdssx = #{dcjcdssx,jdbcType=VARCHAR},
+      </if>
+      <if test="bjmpx != null" >
+        bjmpx = #{bjmpx,jdbcType=BIT},
+      </if>
+      <if test="xzsbssxBjmp != null" >
+        xzsbssx_bjmp = #{xzsbssxBjmp,jdbcType=BIT},
+      </if>
+      <if test="fjxBjmp != null" >
+        fjx_bjmp = #{fjxBjmp,jdbcType=BIT},
+      </if>
+      <if test="jbxBjmp != null" >
+        jbx_bjmp = #{jbxBjmp,jdbcType=BIT},
+      </if>
+      <if test="cshwzrxBjmp != null" >
+        cshwzrx_bjmp = #{cshwzrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="fjcsryzrxBjmp != null" >
+        fjcsryzrx_bjmp = #{fjcsryzrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="szxBjmp != null" >
+        szx_bjmp = #{szxBjmp,jdbcType=BIT},
+      </if>
+      <if test="csxBjmp != null" >
+        csx_bjmp = #{csxBjmp,jdbcType=BIT},
+      </if>
+      <if test="ckxBjmp != null" >
+        ckx_bjmp = #{ckxBjmp,jdbcType=BIT},
+      </if>
+      <if test="ssxBjmp != null" >
+        ssx_bjmp = #{ssxBjmp,jdbcType=BIT},
+      </if>
+      <if test="dqxBjmp != null" >
+        dqx_bjmp = #{dqxBjmp,jdbcType=BIT},
+      </if>
+      <if test="blxBjmp != null" >
+        blx_bjmp = #{blxBjmp,jdbcType=BIT},
+      </if>
+      <if test="hfxBjmp != null" >
+        hfx_bjmp = #{hfxBjmp,jdbcType=BIT},
+      </if>
+      <if test="zrxBjmp != null" >
+        zrx_bjmp = #{zrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="ssx != null" >
+        ssx = #{ssx,jdbcType=VARCHAR},
+      </if>
+      <if test="sjzrxBjmp != null" >
+        sjzrx_bjmp = #{sjzrxBjmp,jdbcType=BIT},
+      </if>
+      <if test="sjzrx != null" >
+        sjzrx = #{sjzrx,jdbcType=VARCHAR},
+      </if>
+      <if test="tyx != null" >
+        tyx = #{tyx,jdbcType=BIT},
+      </if>
+      <if test="operatorId != null" >
+        operator_id = #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorName != null" >
+        operator_name = #{operatorName,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reportTime != null" >
+        report_time = #{reportTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="message != null" >
+        message = #{message,jdbcType=VARCHAR},
+      </if>
+      <if test="failType != null" >
+        fail_type = #{failType,jdbcType=INTEGER},
+      </if>
+      <if test="operationStatus != null" >
+        operation_status = #{operationStatus,jdbcType=INTEGER},
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null" >
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelPrice != null" >
+        vehicle_model_price = #{vehicleModelPrice,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleModelCode != null" >
+        vehicle_model_code = #{vehicleModelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="jqxStartDate != null" >
+        jqx_start_date = #{jqxStartDate,jdbcType=DATE},
+      </if>
+      <if test="vehicleModelName != null" >
+        vehicle_model_name = #{vehicleModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="syxStartDate != null" >
+        syx_start_date = #{syxStartDate,jdbcType=DATE},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        user_type = #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="mediaStatus != null">
+        media_status = #{mediaStatus,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR} and status !=1
+  </update>
+  <select id="page" resultMap="BaseResultMapExt" parameterType="com.kplus.orders.rpc.dto.PageSearchVO" >
+   select a.*,b.pic as baoxianCompanyPic,b.remark as baoxianCompanyRemark from (select <include refid="Base_Column_List" />,up.* from baoxian_underwriting u 
+   LEFT JOIN ( select * from (select  id as baoxianUnderwritingReportId,jqx_start_date as jqxStartDate,quote_id,underwriting_status,expire_time,total_price,policy_status,orders_num,syx_start_date as syxStartDate,express_status,baoxian_underwriting_id,pay_status,status as orderStatus from baoxian_underwriting_report where  user_id = #{userId,jdbcType=VARCHAR} and  user_type = #{userType,jdbcType=INTEGER} order by create_time desc ) tm group by tm.baoxian_underwriting_id desc ) up 
+   on u.id=up.baoxian_underwriting_id  where  u.user_id = #{userId,jdbcType=VARCHAR} and  u.user_type = #{userType,jdbcType=INTEGER}  and u.deleted=0
+   	<if test="status != null" > and  u.status= #{status,jdbcType=VARCHAR} </if> 
+   	  <if test="payStatus != null" > and up.pay_status= #{payStatus,jdbcType=VARCHAR} </if> order by u.create_time desc) a LEFT JOIN baoxian_company b on a.baoxian_company_code =b.code
+   	and a.city_code =b.city_code
+    order by a.create_time desc
+    <include refid="common.page"></include>
+  </select>
+   <update id="updateInsuerInfoStatus" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    update baoxian_underwriting set  baoxian_insure_info_id = #{baoxianInsureInfoId,jdbcType=VARCHAR}
+     where id = #{id,jdbcType=VARCHAR}
+  </update>
+   <select id="pageCount" resultType="int" parameterType="com.kplus.orders.rpc.dto.PageSearchVO" >
+    select   count(*) from baoxian_underwriting u 
+    <if test="payStatus != null" > inner JOIN baoxian_underwriting_report p where u.id=p.baoxian_underwriting_id and p.pay_status= #{payStatus,jdbcType=VARCHAR} and </if>
+     <if test="payStatus == null" >where</if> u.user_id = #{userId,jdbcType=VARCHAR} and u.deleted=0
+	 <if test="status != null" > and  u.status= #{status,jdbcType=VARCHAR}  </if> 
+	  and u.user_type = #{userType,jdbcType=INTEGER} 
+  </select>
+  <update id="updateStatus" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    update baoxian_underwriting 
+    set status = #{status,jdbcType=INTEGER}
+      <if test="baoxianInformalReportId != null">
+        ,baoxian_informal_report_id = #{baoxianInformalReportId,jdbcType=VARCHAR}
+      </if>
+      <if test="automaticStatus != null" >
+       ,automatic_status = #{automaticStatus,jdbcType=INTEGER}
+      </if>
+      <if test="failType != null" >
+        ,fail_type = #{failType,jdbcType=INTEGER}
+      </if>
+      <if test="message != null" >
+        ,message = #{message,jdbcType=VARCHAR}
+      </if>
+      <if test="automaticMessage != null" >
+        , automatic_message = #{automaticMessage,jdbcType=VARCHAR}
+      </if>
+      <if test="mediaStatus != null">
+        , media_status = #{mediaStatus,jdbcType=INTEGER}
+      </if>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+   <update id="updateMediaStatus" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    update baoxian_underwriting 
+    set  media_status = #{mediaStatus,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+<update id="close" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    update  baoxian_underwriting set deleted=1
+    where id = #{id,jdbcType=VARCHAR} and user_id = #{userId,jdbcType=VARCHAR} and  user_type = #{userType,jdbcType=INTEGER} 
+  </update> 
+   <update id="updateAutomatic" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    update baoxian_underwriting 
+    set automatic_status = #{automaticStatus,jdbcType=INTEGER},fail_type = 0, last_automatic_time=#{lastAutomaticTime,jdbcType=TIMESTAMP},
+    <if test="automaticStatus != null and automaticStatus==0" >
+     automatic_count=IFNULL(automatic_count,0) +1,
+       </if>
+      automatic_message = #{automaticMessage,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateStatusReported" parameterType="com.chengniu.client.pojo.BaoxianUnderwriting" >
+    update baoxian_underwriting 
+    set status = #{status,jdbcType=INTEGER} 
+      <if test="automaticStatus != null" >
+       ,automatic_status = #{automaticStatus,jdbcType=INTEGER}
+      </if>
+      <if test="csx != null" >
+        ,csx = #{csx,jdbcType=VARCHAR}
+      </if>
+      <if test="sjzrx != null" >
+          ,sjzrx = #{sjzrx,jdbcType=VARCHAR}
+      </if>
+      <if test="szx != null" >
+        ,szx = #{szx,jdbcType=VARCHAR}
+      </if>
+      <if test="blx != null" >
+          ,blx = #{blx,jdbcType=VARCHAR}
+      </if>
+      <if test="hfx != null" >
+          ,hfx = #{hfx,jdbcType=VARCHAR}
+      </if>
+      <if test="zrx != null" >
+          ,zrx = #{zrx,jdbcType=VARCHAR}
+      </if>
+      <if test="ckx != null" >
+        ,ckx = #{ckx,jdbcType=VARCHAR}
+      </if>
+      <if test="jqx != null" >
+          ,jqx = #{jqx,jdbcType=VARCHAR}
+      </if>
+      <if test="dqx != null" >
+          ,dqx = #{dqx,jdbcType=VARCHAR}
+      </if>
+      <if test="csxBjmp != null" >
+         ,csx_bjmp = #{csxBjmp,jdbcType=BIT}
+      </if>
+      <if test="dqxBjmp != null" >
+          ,dqx_bjmp = #{dqxBjmp,jdbcType=BIT}
+      </if>
+      <if test="blxBjmp != null" >
+          ,blx_bjmp = #{blxBjmp,jdbcType=BIT}
+      </if>
+      <if test="szxBjmp != null">
+          ,szx_bjmp = #{szxBjmp,jdbcType=BIT}
+      </if>
+      <if test="zrxBjmp != null" >
+          ,zrx_bjmp = #{zrxBjmp,jdbcType=BIT}
+      </if>
+      <if test="ckxBjmp != null" >
+          ,ckx_bjmp = #{ckxBjmp,jdbcType=BIT}
+      </if>
+      <if test="ssxBjmp != null" >
+          ,ssx_bjmp = #{ssxBjmp,jdbcType=BIT}
+      </if>
+      <if test="sjzrxBjmp != null" >
+          ,sjzrx_bjmp = #{sjzrxBjmp,jdbcType=BIT}
+      </if>
+      <if test="hfxBjmp != null" >
+          ,hfx_bjmp = #{hfxBjmp,jdbcType=BIT}
+      </if>
+      <if test="failType != null" >
+        ,fail_type = #{failType,jdbcType=INTEGER}
+      </if>
+      <if test="message != null" >
+        ,message = #{message,jdbcType=VARCHAR}
+      </if>
+      <if test="automaticMessage != null" >
+        , automatic_message = #{automaticMessage,jdbcType=VARCHAR}
+     </if>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

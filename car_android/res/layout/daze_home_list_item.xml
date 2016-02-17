@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/daze_bgcolor" >
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvHomeListItemTop"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/daze_bgcolor" />
+    <RelativeLayout
+        android:id="@+id/home_listItem_imgLayout"
+        android:layout_below="@+id/tvHomeListItemTop"
+        android:layout_width="96dp"
+        android:layout_height="67dp" >
+        <ImageView
+            android:id="@+id/imageBg"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:src="@drawable/vehicle_item_head"
+            android:scaleType="fitXY" />        
+        <ImageView
+            android:id="@+id/home_listItem_img"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/daze_home_vehicle_item_head"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="3dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llRight"
+        android:layout_below="@+id/tvHomeListItemTop"
+        android:layout_toRightOf="@id/home_listItem_imgLayout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:orientation="horizontal"
+            android:background="@color/daze_bgcolor"
+            android:gravity="center_vertical" >
+            <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/home_listItem_vehicleNumTxt"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="浙A360HE"
+	            android:textSize="22dp"
+	            android:textColor="@color/daze_black2" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical" >
+                <com.kplus.car.widget.RegularTextView
+	                android:id="@+id/tvAuthStatus"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:paddingLeft="2.5dp"
+	                android:paddingRight="2.5dp"
+	                android:textSize="10dp"
+	                android:gravity="center"
+	                android:textColor="@color/daze_white"/>
+	            <com.kplus.car.widget.RegularTextView
+		            android:id="@+id/home_listItem_vehicleNameTxt"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="10dp"
+	                android:textColor="#969696"
+		            android:singleLine="true"
+		            android:ellipsize="end"
+		            android:paddingLeft="2.5dp"
+	                android:paddingRight="2.5dp" />
+            </LinearLayout>            
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/daze_white"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+            <com.kplus.car.widget.RegularTextView
+	            android:id="@+id/home_listItem_noNewTxt"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/now_has_no_new_against_record"
+	            style="@style/font_body2"
+	            android:drawableLeft="@drawable/icon_no_peccancy"
+	            android:drawablePadding="3dp"
+	            android:visibility="gone" />
+            <LinearLayout
+                android:id="@+id/home_listItem_peccancy_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:gravity="center_vertical" >
+                <com.kplus.car.widget.RegularTextView
+	                android:id="@+id/home_listItem_peccancyTxt"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:text="0"
+	                android:textColor="@color/daze_orangered5"
+	                android:textSize="16sp"
+	                android:drawableLeft="@drawable/icon_peccancy"
+	                android:drawablePadding="3dp"
+	                android:layout_weight="1"
+	                android:gravity="center_vertical" />
+	            <com.kplus.car.widget.RegularTextView
+	                android:id="@+id/home_listItem_scoreTxt"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:text="0"
+	                android:textColor="@color/daze_orangered5"
+	                android:textSize="16sp"
+	                android:drawableLeft="@drawable/icon_score"
+	                android:drawablePadding="3dp"
+	                android:layout_weight="1" 
+	                android:gravity="center_vertical"/>
+	            <com.kplus.car.widget.RegularTextView
+	                android:id="@+id/home_listItem_forfeitTxt"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:text="0"
+	                android:textColor="@color/daze_orangered5"
+	                android:textSize="16sp"
+	                android:drawableLeft="@drawable/icon_forfeit"
+	                android:drawablePadding="3dp"
+	                android:layout_weight="1"
+	                android:gravity="center_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llAuthAndSearch"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/home_listItem_imgLayout"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/daze_bgcolor" >
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="查违章"
+            android:background="@color/daze_white"
+            android:textSize="15dp"
+            android:textColor="@color/daze_textcolor2"
+            android:visibility="visible" />
+        <com.kplus.car.widget.RegularTextView
+	        android:id="@+id/tvVehicleAuth"
+	        android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="1dp"
+	        android:gravity="center"
+	        android:text="车辆认证"
+	        android:background="@color/daze_white"
+	        android:textSize="15dp"
+	        android:textColor="@color/daze_textcolor2"
+	        android:visibility="gone" />
+    </LinearLayout>
+    <com.kplus.car.widget.RegularTextView
+	    android:id="@+id/tvShadow"
+	    android:layout_below="@id/llAuthAndSearch"
+	    android:layout_width="match_parent"
+	    android:layout_height="4dp"
+	    android:background="@drawable/daze_shadow"
+	    android:visibility="visible"/>
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/authenticationBenefit"
+        android:layout_below="@+id/tvShadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="车辆认证，查违章快32%"
+        android:textColor="@color/daze_orangered5"
+        android:textSize="12dp"
+        android:padding="6dp"
+        android:background="@color/daze_bgcolor" />
+    <com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvHomeListItemBottom"
+        android:layout_below="@+id/authenticationBenefit"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/daze_bgcolor" />
+</RelativeLayout>

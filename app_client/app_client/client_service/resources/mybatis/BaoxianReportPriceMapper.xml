@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianReportPriceMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianReportPrice" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+    <result column="vehicle_model_price" property="vehicleModelPrice" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="baoxian_company_name" property="baoxianCompanyName" jdbcType="VARCHAR" />
+    <result column="baoxian_company_code" property="baoxianCompanyCode" jdbcType="VARCHAR" />
+    <result column="szx" property="szx" jdbcType="VARCHAR" />
+    <result column="csx" property="csx" jdbcType="VARCHAR" />
+    <result column="ckx" property="ckx" jdbcType="VARCHAR" />
+    <result column="dqx" property="dqx" jdbcType="VARCHAR" />
+    <result column="blx" property="blx" jdbcType="VARCHAR" />
+    <result column="hfx" property="hfx" jdbcType="VARCHAR" />
+    <result column="bjmp" property="bjmp" jdbcType="VARCHAR" />
+    <result column="zrx" property="zrx" jdbcType="VARCHAR" />
+    <result column="total_price" property="totalPrice" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="task_code" property="taskCode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, city_code, city_name, vehicle_model_price, type, baoxian_company_name, baoxian_company_code, 
+    szx, csx, ckx, dqx, blx, hfx, bjmp, zrx, total_price, update_time, task_code
+  </sql>
+    <select id="queryPrice" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_report_price
+    where city_code = #{cityCode,jdbcType=VARCHAR} and vehicle_model_price = #{vehicleModelPrice,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_report_price
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+   <select id="queryMinPrice" resultMap="BaseResultMap" parameterType="java.lang.String" >
+ select vehicle_model_price
+    where city_code = #{cityCode,jdbcType=VARCHAR} and vehicle_model_price >= #{vehicleModelPrice,jdbcType=INTEGER}  GROUP BY vehicle_model_price limit 0,1;
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianReportPrice" >
+    insert into baoxian_report_price (id, city_code, city_name, 
+      vehicle_model_price, type, baoxian_company_name, 
+      baoxian_company_code, szx, csx, 
+      ckx, dqx, blx, hfx, 
+      bjmp, zrx, total_price, 
+      update_time, task_code)
+    values (#{id,jdbcType=VARCHAR}, #{cityCode,jdbcType=VARCHAR}, #{cityName,jdbcType=VARCHAR}, 
+      #{vehicleModelPrice,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{baoxianCompanyName,jdbcType=VARCHAR}, 
+      #{baoxianCompanyCode,jdbcType=VARCHAR}, #{szx,jdbcType=VARCHAR}, #{csx,jdbcType=VARCHAR}, 
+      #{ckx,jdbcType=VARCHAR}, #{dqx,jdbcType=VARCHAR}, #{blx,jdbcType=VARCHAR}, #{hfx,jdbcType=VARCHAR}, 
+      #{bjmp,jdbcType=VARCHAR}, #{zrx,jdbcType=VARCHAR}, #{totalPrice,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{taskCode,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.chengniu.client.pojo.BaoxianReportPrice" >
+    insert into baoxian_report_price
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="cityCode != null" >
+        city_code,
+      </if>
+      <if test="cityName != null" >
+        city_name,
+      </if>
+      <if test="vehicleModelPrice != null" >
+        vehicle_model_price,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="baoxianCompanyName != null" >
+        baoxian_company_name,
+      </if>
+      <if test="baoxianCompanyCode != null" >
+        baoxian_company_code,
+      </if>
+      <if test="szx != null" >
+        szx,
+      </if>
+      <if test="csx != null" >
+        csx,
+      </if>
+      <if test="ckx != null" >
+        ckx,
+      </if>
+      <if test="dqx != null" >
+        dqx,
+      </if>
+      <if test="blx != null" >
+        blx,
+      </if>
+      <if test="hfx != null" >
+        hfx,
+      </if>
+      <if test="bjmp != null" >
+        bjmp,
+      </if>
+      <if test="zrx != null" >
+        zrx,
+      </if>
+      <if test="totalPrice != null" >
+        total_price,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="taskCode != null" >
+        task_code,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null" >
+        #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelPrice != null" >
+        #{vehicleModelPrice,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianCompanyName != null" >
+        #{baoxianCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianCompanyCode != null" >
+        #{baoxianCompanyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="szx != null" >
+        #{szx,jdbcType=VARCHAR},
+      </if>
+      <if test="csx != null" >
+        #{csx,jdbcType=VARCHAR},
+      </if>
+      <if test="ckx != null" >
+        #{ckx,jdbcType=VARCHAR},
+      </if>
+      <if test="dqx != null" >
+        #{dqx,jdbcType=VARCHAR},
+      </if>
+      <if test="blx != null" >
+        #{blx,jdbcType=VARCHAR},
+      </if>
+      <if test="hfx != null" >
+        #{hfx,jdbcType=VARCHAR},
+      </if>
+      <if test="bjmp != null" >
+        #{bjmp,jdbcType=VARCHAR},
+      </if>
+      <if test="zrx != null" >
+        #{zrx,jdbcType=VARCHAR},
+      </if>
+      <if test="totalPrice != null" >
+        #{totalPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="taskCode != null" >
+        #{taskCode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chengniu.client.pojo.BaoxianReportPrice" >
+    update baoxian_report_price
+    <set >
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null" >
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelPrice != null" >
+        vehicle_model_price = #{vehicleModelPrice,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianCompanyName != null" >
+        baoxian_company_name = #{baoxianCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianCompanyCode != null" >
+        baoxian_company_code = #{baoxianCompanyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="szx != null" >
+        szx = #{szx,jdbcType=VARCHAR},
+      </if>
+      <if test="csx != null" >
+        csx = #{csx,jdbcType=VARCHAR},
+      </if>
+      <if test="ckx != null" >
+        ckx = #{ckx,jdbcType=VARCHAR},
+      </if>
+      <if test="dqx != null" >
+        dqx = #{dqx,jdbcType=VARCHAR},
+      </if>
+      <if test="blx != null" >
+        blx = #{blx,jdbcType=VARCHAR},
+      </if>
+      <if test="hfx != null" >
+        hfx = #{hfx,jdbcType=VARCHAR},
+      </if>
+      <if test="bjmp != null" >
+        bjmp = #{bjmp,jdbcType=VARCHAR},
+      </if>
+      <if test="zrx != null" >
+        zrx = #{zrx,jdbcType=VARCHAR},
+      </if>
+      <if test="totalPrice != null" >
+        total_price = #{totalPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="taskCode != null" >
+        task_code = #{taskCode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chengniu.client.pojo.BaoxianReportPrice" >
+    update baoxian_report_price
+    set city_code = #{cityCode,jdbcType=VARCHAR},
+      city_name = #{cityName,jdbcType=VARCHAR},
+      vehicle_model_price = #{vehicleModelPrice,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      baoxian_company_name = #{baoxianCompanyName,jdbcType=VARCHAR},
+      baoxian_company_code = #{baoxianCompanyCode,jdbcType=VARCHAR},
+      szx = #{szx,jdbcType=VARCHAR},
+      csx = #{csx,jdbcType=VARCHAR},
+      ckx = #{ckx,jdbcType=VARCHAR},
+      dqx = #{dqx,jdbcType=VARCHAR},
+      blx = #{blx,jdbcType=VARCHAR},
+      hfx = #{hfx,jdbcType=VARCHAR},
+      bjmp = #{bjmp,jdbcType=VARCHAR},
+      zrx = #{zrx,jdbcType=VARCHAR},
+      total_price = #{totalPrice,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      task_code = #{taskCode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

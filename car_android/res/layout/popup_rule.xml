@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/daze_translucence2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_gravity="center_vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/top_corner">
+
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/daze_black2"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/close_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/close"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp"/>
+
+        </FrameLayout>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:textSize="14sp"
+            android:textColor="@color/daze_black2"
+            android:background="@drawable/bottom_corner"/>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<resources>
+
+    <dimen name="daze_activity_horizontal_margin">10dp</dimen>
+    <dimen name="daze_activity_vertical_margin">10dp</dimen>
+    <dimen name="daze_text_horizontal_margin">4dp</dimen>
+    <dimen name="daze_btn_radius">5dp</dimen>
+    <dimen name="daze_load_radius">10dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="delete_action_len">90dp</dimen>
+
+    <dimen name="daze_item_top">9dp</dimen>
+
+    <!--洗车指数的配置-->
+    <dimen name="w_a_day_marginTop">20dp</dimen>
+    <dimen name="w_a_day_textsize">22sp</dimen>
+    <dimen name="w_a_icon_wh">110dp</dimen>
+    <dimen name="w_a_weather_marginTop">2dp</dimen>
+    <dimen name="w_a_weather_textsize">16sp</dimen>
+    <dimen name="w_a_washing_marginTop">36dp</dimen>
+    <dimen name="w_a_washing_marginBottom">36dp</dimen>
+    <dimen name="w_a_washing_tv_padding">10dp</dimen>
+    <dimen name="w_a_washing_tv_textsize">30sp</dimen>
+    <dimen name="w_a_washing_tips_tv_textsize">20sp</dimen>
+
+    <dimen name="w_i_day_marginTop">18dp</dimen>
+    <dimen name="w_i_tw_Height">63dp</dimen>
+    <dimen name="w_i_weather_height">42dp</dimen>
+    <dimen name="w_i_textsize">16sp</dimen>
+    <dimen name="w_i_icon_wh">55dp</dimen>
+    <dimen name="w_i_weather_marginTop">7dp</dimen>
+    <dimen name="w_i_temperature_marginTop">6dp</dimen>
+
+    <dimen name="w_i_washDescr_marginTop">33dp</dimen>
+    <dimen name="w_i_washDescr_marginBottom">27dp</dimen>
+    <!--洗车指数的配置End-->
+
+    <dimen name="services_margin">15dp</dimen>
+
+</resources>

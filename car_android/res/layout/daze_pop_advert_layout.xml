@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="264dp" android:layout_height="424dp"
+    android:background="#00000000">
+    <LinearLayout
+        android:id="@+id/advertContainer"
+        android:layout_width="240dp"
+        android:layout_height="400dp"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:background="@color/daze_white"></LinearLayout>
+    <ImageView
+        android:id="@+id/ivCloseAD"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/daze_white_round_bg_24dp"
+        android:padding="3dp"
+        android:src="@drawable/daze_closebanner_18"/>
+</RelativeLayout>

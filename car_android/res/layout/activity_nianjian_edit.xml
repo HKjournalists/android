@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kplus.car.activity.NianjianActivity"
+    android:orientation="vertical"
+    android:background="@color/daze_white_smoke6"
+    android:id="@+id/root">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/vl_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginLeft="24dp"
+            android:text="年检日期"
+            android:textColor="@color/daze_darkgrey9"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/info"
+            android:paddingRight="10dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:textSize="18sp"
+            android:textColor="@color/daze_black2"
+            android:hint="必填"
+            android:textColorHint="@color/daze_white_smoke2"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/go_to"
+            android:paddingRight="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/daze_white"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="提醒时间"
+            android:textColor="@color/daze_darkgrey9"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="24dp"/>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/remind_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:hint="必填"
+            android:textColorHint="@color/daze_white_smoke2"
+            android:textSize="18sp"
+            android:textColor="@color/daze_black2"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/go_to"
+            android:paddingRight="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

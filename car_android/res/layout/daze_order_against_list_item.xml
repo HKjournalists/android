@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/daze_white_smoke4"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+		<com.kplus.car.widget.RegularTextView
+	        android:id="@+id/tvAgainstDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/font_body2"
+	        android:singleLine="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true" />
+		<com.kplus.car.widget.RegularTextView
+	        android:id="@+id/tvAgainstScore"
+	        android:layout_width="60dp"
+	        android:layout_height="wrap_content"
+	        style="@style/font_body1"
+	        android:layout_centerVertical="true"  />
+        <com.kplus.car.widget.RegularTextView
+	        android:id="@+id/tvAgainstMoney"
+	        android:layout_toRightOf="@+id/tvAgainstScore"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/font_body1"
+	        android:layout_centerVertical="true" />
+	</RelativeLayout>
+	<com.kplus.car.widget.RegularTextView
+	     android:id="@+id/tvAgainstBehavor"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     style="@style/font_body2"
+	     android:layout_marginTop="1dp"
+	     android:singleLine="true" />  
+	<com.kplus.car.widget.RegularTextView
+        android:id="@+id/tvAgainstAddress"
+        android:layout_marginTop="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/font_caption"
+        android:singleLine="true" />
+	<com.kplus.car.widget.DashLineView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp" />  
+</LinearLayout>

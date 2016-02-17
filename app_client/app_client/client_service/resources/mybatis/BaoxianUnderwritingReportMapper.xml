@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.xml.BaoxianUnderwritingReportMapper" >
+  <resultMap id="BaseResultMap" type="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="baoxian_intent_id" property="baoxianIntentId" jdbcType="VARCHAR" />
+    <result column="baoxian_informal_report_id" property="baoxianInformalReportId" jdbcType="VARCHAR" />
+    <result column="baoxian_underwriting_id" property="baoxianUnderwritingId" jdbcType="VARCHAR" />
+    <result column="baoxian_company_code" property="baoxianCompanyCode" jdbcType="VARCHAR" />
+    <result column="baoxian_company_name" property="baoxianCompanyName" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="jqx_price" property="jqxPrice" jdbcType="DECIMAL" />
+    <result column="syx_price" property="syxPrice" jdbcType="DECIMAL" />
+    <result column="ccs_price" property="ccsPrice" jdbcType="DECIMAL" />
+    <result column="szx_price" property="szxPrice" jdbcType="DECIMAL" />
+    <result column="csx_price" property="csxPrice" jdbcType="DECIMAL" />
+    <result column="ckx_price" property="ckxPrice" jdbcType="DECIMAL" />
+    <result column="dqx_price" property="dqxPrice" jdbcType="DECIMAL" />
+    <result column="sjzrx_price" property="sjzrxPrice" jdbcType="DECIMAL" />
+    <result column="ssx_price" property="ssxPrice" jdbcType="DECIMAL" />
+    <result column="blx_price" property="blxPrice" jdbcType="DECIMAL" />
+    <result column="hfx_price" property="hfxPrice" jdbcType="DECIMAL" />
+    <result column="zrx_price" property="zrxPrice" jdbcType="DECIMAL" />
+    <result column="szx_bjmp_price" property="szxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="csx_bjmp_price" property="csxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="ckx_bjmp_price" property="ckxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="dqx_bjmp_price" property="dqxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="sjzrx_bjmp_price" property="sjzrxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="blx_bjmp_price" property="blxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="hfx_bjmp_price" property="hfxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="ssx_bjmp_price" property="ssxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="zrx_bjmp_price" property="zrxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="orders_time" property="ordersTime" jdbcType="TIMESTAMP" />
+    <result column="orders_num" property="ordersNum" jdbcType="VARCHAR" />
+    <result column="total_price" property="totalPrice" jdbcType="DECIMAL" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="message" property="message" jdbcType="VARCHAR" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+    <result column="vehicle_model_price" property="vehicleModelPrice" jdbcType="INTEGER" />
+    <result column="vehicle_model_code" property="vehicleModelCode" jdbcType="VARCHAR" />
+    <result column="vehicle_model_name" property="vehicleModelName" jdbcType="VARCHAR" />
+    <result column="policy_no" property="policyNo" jdbcType="VARCHAR" />
+    <result column="pay_status" property="payStatus" jdbcType="INTEGER" />
+    <result column="pay_time" property="payTime" jdbcType="VARCHAR" />
+    <result column="operator_id" property="operatorId" jdbcType="VARCHAR" />
+    <result column="operator_name" property="operatorName" jdbcType="VARCHAR" />
+    <result column="operator_time" property="operatorTime" jdbcType="TIMESTAMP" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="user_type" property="userType" jdbcType="INTEGER" />
+    <result column="baoxian_insure_info_id" property="baoxianInsureInfoId" jdbcType="VARCHAR" />
+    <result column="policy_status" property="policyStatus" jdbcType="VARCHAR" />
+    <result column="jqx_start_date" property="jqxStartDate" jdbcType="DATE" />
+    <result column="syx_start_date" property="syxStartDate" jdbcType="DATE" />
+    <result column="enable_order" property="enableOrder" jdbcType="BIT" />
+    <result column="system_pay_status" property="systemPayStatus" jdbcType="INTEGER" />
+    <result column="system_pay_time" property="systemPayTime" jdbcType="TIMESTAMP" />
+    <result column="tyx_price" property="tyxPrice" jdbcType="DECIMAL" />
+    <result column="zdzxc_price" property="zdzxcPrice" jdbcType="DECIMAL" />
+    <result column="baoxian_policy_payinfo_id" property="baoxianPolicyPayinfoId" jdbcType="VARCHAR" />
+    <result column="express_status" property="expressStatus" jdbcType="INTEGER" />
+    <result column="baoxian_underwriting_express_id" property="baoxianUnderwritingExpressId" jdbcType="VARCHAR" />
+    <result column="market_price" property="marketPrice" jdbcType="DECIMAL" />
+    <result column="syx_policy_no" property="syxPolicyNo" jdbcType="VARCHAR" />
+    <result column="jqx_policy_no" property="jqxPolicyNo" jdbcType="VARCHAR" />
+    <result column="underwriting_status" property="underwritingStatus" jdbcType="INTEGER" />
+    <result column="expire_time" property="expireTime" jdbcType="TIMESTAMP" />
+    <result column="syx_prop_num" property="syxPropNum" jdbcType="VARCHAR" />
+    <result column="jqx_prop_num" property="jqxPropNum" jdbcType="VARCHAR" />
+    <result column="main_quote_id" property="mainQuoteId" jdbcType="VARCHAR" />
+    <result column="quote_id" property="quoteId" jdbcType="VARCHAR" />
+    <result column="syx_bjmp_price" property="syxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="cpcssx_price" property="cpcssxPrice" jdbcType="DECIMAL" />
+    <result column="zrmcty_price" property="zrmctyPrice" jdbcType="DECIMAL" />
+    <result column="ssmcty_price" property="ssmctyPrice" jdbcType="DECIMAL" />
+    <result column="kxmpty_price" property="kxmptyPrice" jdbcType="DECIMAL" />
+    <result column="dcsgmpty_price" property="dcsgmptyPrice" jdbcType="DECIMAL" />
+    <result column="xzsbssx_price" property="xzsbssxPrice" jdbcType="DECIMAL" />
+    <result column="xzsbssx_bjmp_price" property="xzsbssxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="cshwzrx_price" property="cshwzrxPrice" jdbcType="DECIMAL" />
+    <result column="cshwzrx_bjmp_price" property="cshwzrxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="ssxlwpssx_price" property="ssxlwpssxPrice" jdbcType="DECIMAL" />
+    <result column="fjcsryzrx_bjmp_price" property="fjcsryzrxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="jdctsssx_price" property="jdctsssxPrice" jdbcType="DECIMAL" />
+    <result column="jbx_bjmp_price" property="jbxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="fjx_bjmp_price" property="fjxBjmpPrice" jdbcType="DECIMAL" />
+    <result column="dcjcdshx_price" property="dcjcdshxPrice" jdbcType="DECIMAL" />
+    <result column="jlcty_price" property="jlctyPrice" jdbcType="DECIMAL" />
+    <result column="sgzrmplty_price" property="sgzrmpltyPrice" jdbcType="DECIMAL" />
+    <result column="tzckzx_price" property="tzckzxPrice" jdbcType="DECIMAL" />
+    <result column="jdcssbxwfzddsftyx_price" property="jdcssbxwfzddsftyxPrice" jdbcType="DECIMAL" />
+    <result column="xlqjfybcx_price" property="xlqjfybcxPrice" jdbcType="DECIMAL" />
+    <result column="jsshfwjzrx_pirce" property="jsshfwjzrxPirce" jdbcType="DECIMAL" />
+    <result column="other_price" property="otherPrice" jdbcType="DECIMAL" />
+    <result column="bjmpx_price" property="bjmpxPrice" jdbcType="DECIMAL" />
+    <result column="channel" property="channel" jdbcType="VARCHAR" />
+    <result column="un" property="un" jdbcType="DOUBLE" />
+  </resultMap>
+   <resultMap id="statisticsMap" type="com.chengniu.client.pojo.StatisticsMap" >
+  	 	<result column="date" property="date" jdbcType="VARCHAR" />
+   		<result column="total" property="total" jdbcType="INTEGER" />
+   </resultMap>
+  <sql id="Base_Column_List" >
+    id, baoxian_intent_id, baoxian_informal_report_id, baoxian_underwriting_id, baoxian_company_code, 
+    baoxian_company_name, status, mobile, jqx_price, syx_price, ccs_price, szx_price, 
+    csx_price, ckx_price, dqx_price, sjzrx_price, ssx_price, blx_price, hfx_price, zrx_price, 
+    szx_bjmp_price, csx_bjmp_price, ckx_bjmp_price, dqx_bjmp_price, sjzrx_bjmp_price, 
+    blx_bjmp_price, hfx_bjmp_price, ssx_bjmp_price, zrx_bjmp_price, create_time, orders_time, 
+    orders_num, total_price, update_time, message, city_code, city_name, vehicle_model_price, 
+    vehicle_model_code, vehicle_model_name, policy_no, pay_status, pay_time, operator_id, 
+    operator_name, operator_time, user_id, user_type, baoxian_insure_info_id, policy_status, 
+    jqx_start_date, syx_start_date, enable_order, system_pay_status, system_pay_time, 
+    tyx_price, zdzxc_price, baoxian_policy_payinfo_id, express_status, baoxian_underwriting_express_id, 
+    market_price, syx_policy_no, jqx_policy_no, underwriting_status, expire_time, syx_prop_num, 
+    jqx_prop_num, main_quote_id, quote_id, syx_bjmp_price, cpcssx_price, zrmcty_price, 
+    ssmcty_price, kxmpty_price, dcsgmpty_price, xzsbssx_price, xzsbssx_bjmp_price, cshwzrx_price, 
+    cshwzrx_bjmp_price, ssxlwpssx_price, fjcsryzrx_bjmp_price, jdctsssx_price, jbx_bjmp_price, 
+    fjx_bjmp_price, dcjcdshx_price, jlcty_price, sgzrmplty_price, tzckzx_price, jdcssbxwfzddsftyx_price, 
+    xlqjfybcx_price, jsshfwjzrx_pirce, other_price, bjmpx_price, channel, un
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_report
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <insert id="insert" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    insert into baoxian_underwriting_report (id,
+      baoxian_intent_id, baoxian_underwriting_id, baoxian_company_code,
+      baoxian_company_name, status, mobile, 
+      jqx_price, channel,syx_price, ccs_price, 
+      szx_price, csx_price, ckx_price, 
+      dqx_price, sjzrx_price, ssx_price, 
+      blx_price, hfx_price, zrx_price, 
+      szx_bjmp_price, csx_bjmp_price, ckx_bjmp_price, 
+      dqx_bjmp_price, sjzrx_bjmp_price, blx_bjmp_price, 
+      hfx_bjmp_price, ssx_bjmp_price, zrx_bjmp_price, 
+      create_time, orders_time, orders_num, 
+      total_price, update_time, message, 
+      city_code, city_name, vehicle_model_price, 
+      vehicle_model_code, vehicle_model_name, policy_no, 
+      pay_status, pay_time, operator_id, 
+      operator_name, operator_time, user_id, 
+      user_type, baoxian_insure_info_id, policy_status, 
+      jqx_start_date, syx_start_date, enable_order, 
+      system_pay_status, system_pay_time, tyx_price, 
+      zdzxc_price, baoxian_policy_payinfo_id, express_status, 
+      baoxian_underwriting_express_id, market_price, 
+      syx_policy_no, jqx_policy_no, underwriting_status, 
+      expire_time, syx_prop_num, jqx_prop_num, 
+      quote_id, main_quote_id, syx_bjmp_price, cpcssx_price,
+      zrmcty_price, ssmcty_price, kxmpty_price, 
+      dcsgmpty_price, xzsbssx_price, xzsbssx_bjmp_price, 
+      cshwzrx_price, cshwzrx_bjmp_price, ssxlwpssx_price, 
+      fjcsryzrx_bjmp_price, jdctsssx_price, jbx_bjmp_price, 
+      fjx_bjmp_price, dcjcdshx_price, jlcty_price, 
+      sgzrmplty_price, tzckzx_price, jdcssbxwfzddsftyx_price, 
+      xlqjfybcx_price, jsshfwjzrx_pirce, other_price, 
+      bjmpx_price)
+    values (#{id,jdbcType=VARCHAR}, #{baoxianIntentId,jdbcType=VARCHAR}, #{baoxianUnderwritingId,jdbcType=VARCHAR}, #{baoxianCompanyCode,jdbcType=VARCHAR},
+      #{baoxianCompanyName,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{mobile,jdbcType=VARCHAR}, 
+      #{jqxPrice,jdbcType=DECIMAL},  #{channel,jdbcType=VARCHAR}, #{syxPrice,jdbcType=DECIMAL}, #{ccsPrice,jdbcType=DECIMAL}, 
+      #{szxPrice,jdbcType=DECIMAL}, #{csxPrice,jdbcType=DECIMAL}, #{ckxPrice,jdbcType=DECIMAL}, 
+      #{dqxPrice,jdbcType=DECIMAL}, #{sjzrxPrice,jdbcType=DECIMAL}, #{ssxPrice,jdbcType=DECIMAL}, 
+      #{blxPrice,jdbcType=DECIMAL}, #{hfxPrice,jdbcType=DECIMAL}, #{zrxPrice,jdbcType=DECIMAL}, 
+      #{szxBjmpPrice,jdbcType=DECIMAL}, #{csxBjmpPrice,jdbcType=DECIMAL}, #{ckxBjmpPrice,jdbcType=DECIMAL}, 
+      #{dqxBjmpPrice,jdbcType=DECIMAL}, #{sjzrxBjmpPrice,jdbcType=DECIMAL}, #{blxBjmpPrice,jdbcType=DECIMAL}, 
+      #{hfxBjmpPrice,jdbcType=DECIMAL}, #{ssxBjmpPrice,jdbcType=DECIMAL}, #{zrxBjmpPrice,jdbcType=DECIMAL}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{ordersTime,jdbcType=TIMESTAMP}, #{ordersNum,jdbcType=VARCHAR}, 
+      #{totalPrice,jdbcType=DECIMAL}, #{updateTime,jdbcType=TIMESTAMP}, #{message,jdbcType=VARCHAR}, 
+      #{cityCode,jdbcType=VARCHAR}, #{cityName,jdbcType=VARCHAR}, #{vehicleModelPrice,jdbcType=INTEGER}, 
+      #{vehicleModelCode,jdbcType=VARCHAR}, #{vehicleModelName,jdbcType=VARCHAR}, #{policyNo,jdbcType=VARCHAR}, 
+      #{payStatus,jdbcType=INTEGER}, #{payTime,jdbcType=VARCHAR}, #{operatorId,jdbcType=VARCHAR}, 
+      #{operatorName,jdbcType=VARCHAR}, #{operatorTime,jdbcType=TIMESTAMP}, #{userId,jdbcType=VARCHAR}, 
+      #{userType,jdbcType=INTEGER}, #{baoxianInsureInfoId,jdbcType=VARCHAR}, #{policyStatus,jdbcType=VARCHAR}, 
+      #{jqxStartDate,jdbcType=DATE}, #{syxStartDate,jdbcType=DATE}, #{enableOrder,jdbcType=BIT}, 
+      #{systemPayStatus,jdbcType=INTEGER}, #{systemPayTime,jdbcType=TIMESTAMP}, #{tyxPrice,jdbcType=DECIMAL}, 
+      #{zdzxcPrice,jdbcType=DECIMAL}, #{baoxianPolicyPayinfoId,jdbcType=VARCHAR}, #{expressStatus,jdbcType=INTEGER}, 
+      #{baoxianUnderwritingExpressId,jdbcType=VARCHAR}, #{marketPrice,jdbcType=DECIMAL}, 
+      #{syxPolicyNo,jdbcType=VARCHAR}, #{jqxPolicyNo,jdbcType=VARCHAR}, #{underwritingStatus,jdbcType=INTEGER}, 
+      #{expireTime,jdbcType=TIMESTAMP}, #{syxPropNum,jdbcType=VARCHAR}, #{jqxPropNum,jdbcType=VARCHAR}, 
+      #{quoteId,jdbcType=VARCHAR}, #{mainQuoteId,jdbcType=VARCHAR}, #{syxBjmpPrice,jdbcType=DECIMAL}, #{cpcssxPrice,jdbcType=DECIMAL},
+      #{zrmctyPrice,jdbcType=DECIMAL}, #{ssmctyPrice,jdbcType=DECIMAL}, #{kxmptyPrice,jdbcType=DECIMAL}, 
+      #{dcsgmptyPrice,jdbcType=DECIMAL}, #{xzsbssxPrice,jdbcType=DECIMAL}, #{xzsbssxBjmpPrice,jdbcType=DECIMAL}, 
+      #{cshwzrxPrice,jdbcType=DECIMAL}, #{cshwzrxBjmpPrice,jdbcType=DECIMAL}, #{ssxlwpssxPrice,jdbcType=DECIMAL}, 
+      #{fjcsryzrxBjmpPrice,jdbcType=DECIMAL}, #{jdctsssxPrice,jdbcType=DECIMAL}, #{jbxBjmpPrice,jdbcType=DECIMAL}, 
+      #{fjxBjmpPrice,jdbcType=DECIMAL}, #{dcjcdshxPrice,jdbcType=DECIMAL}, #{jlctyPrice,jdbcType=DECIMAL}, 
+      #{sgzrmpltyPrice,jdbcType=DECIMAL}, #{tzckzxPrice,jdbcType=DECIMAL}, #{jdcssbxwfzddsftyxPrice,jdbcType=DECIMAL}, 
+      #{xlqjfybcxPrice,jdbcType=DECIMAL}, #{jsshfwjzrxPirce,jdbcType=DECIMAL}, #{otherPrice,jdbcType=DECIMAL}, 
+      #{bjmpxPrice,jdbcType=DECIMAL})
+  </insert>
+   <select id="queryByUnderwritingId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_report
+    where baoxian_underwriting_id = #{baoxianUnderwritingId,jdbcType=VARCHAR} order by create_time desc limit 0,1
+  </select>
+  <select id="queryCount" resultType="int" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    select 
+    count(*)
+    from baoxian_underwriting_report
+    where user_id = #{userId,jdbcType=VARCHAR} and status = 1 and pay_status=1 and  user_type = #{userType,jdbcType=INTEGER} 
+  </select>
+   <select id="statistics" resultMap="statisticsMap" parameterType="com.kplus.orders.rpc.dto.PageSearchVO">
+	SELECT a.date,count(*) total from
+			(select  DATE_FORMAT(t.create_time,"%Y%m%d") date,t.id  from 
+ 		  baoxian_underwriting_report r LEFT JOIN  baoxian_intent t on r.baoxian_intent_id=t.id 
+		where <if test="userType != null" >
+        r.user_type = #{userType,jdbcType=INTEGER} and
+      </if>
+       <if test="cityCode != null" >
+        r.city_code = #{cityCode,jdbcType=INTEGER} and
+      </if> 
+        <if test="status != null and status == 1" >
+			 r.pay_status = #{status,jdbcType=VARCHAR}  and
+ 		 </if>
+       t.create_time> #{startDate,jdbcType=TIMESTAMP} and  #{endDate,jdbcType=TIMESTAMP}> t.create_time 
+      	<if test="statisticsType != null and statisticsType == 1" >
+			 GROUP BY date,t.user_id, t.user_type 
+ 		 </if>  <if test="statisticsType ==null or   statisticsType != 1" >
+			 GROUP BY t.id
+ 		 </if> ) a
+ 		   GROUP BY date
+ 		   </select>
+   <select id="queryByOrderNum" resultMap="BaseResultMap" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    select 
+    <include refid="Base_Column_List" />
+    from baoxian_underwriting_report
+    where  orders_num = #{ordersNum,jdbcType=VARCHAR} and user_type = #{userType,jdbcType=INTEGER}
+  </select>
+  <update id="update" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    update baoxian_underwriting_report
+    <set >
+      <if test="baoxianUnderwritingId != null" >
+        baoxian_underwriting_id = #{baoxianUnderwritingId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="baoxianCompanyName != null" >
+        baoxian_company_name = #{baoxianCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianCompanyCode != null" >
+        baoxian_company_code = #{baoxianCompanyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="jqxPrice != null" >
+        jqx_price = #{jqxPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="syxPrice != null" >
+        syx_price = #{syxPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="ccsPrice != null" >
+        ccs_price = #{ccsPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="szxPrice != null" >
+        szx_price = #{szxPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="csxPrice != null" >
+        csx_price = #{csxPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="ckxPrice != null" >
+        ckx_price = #{ckxPrice,jdbcType=DECIMAL},
+      </if>
+       <if test="marketPrice != null" >
+        market_price = #{marketPrice,jdbcType=DECIMAL},
+      </if>
+        <if test="un != null" >
+        un = #{un,jdbcType=DOUBLE},
+      </if>
+      <if test="dqxPrice != null" >
+        dqx_price = #{dqxPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="ssxPrice != null" >
+        ssx_price = #{ssxPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="blxPrice != null" >
+        blx_price = #{blxPrice,jdbcType=DECIMAL},
+      </if> 
+      <if test="baoxianIntentId != null" >
+        baoxian_intent_id = #{baoxianIntentId,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianInformalReportId != null" >
+        baoxian_informal_report_id = #{baoxianInformalReportId,jdbcType=VARCHAR},
+      </if>
+      <if test="baoxianUnderwritingId != null" >
+        baoxian_underwriting_id = #{baoxianUnderwritingId,jdbcType=VARCHAR},
+      </if>
+      <if test="hfxPrice != null" >
+        hfx_price = #{hfxPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="zrxPrice != null" >
+        zrx_price = #{zrxPrice,jdbcType=DECIMAL},
+      </if>
+        <if test="quoteId != null" >
+        quote_id = #{quoteId,jdbcType=VARCHAR},
+      </if>
+      <if test="szxBjmpPrice != null" >
+        szx_bjmp_price = #{szxBjmpPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="csxBjmpPrice != null" >
+        csx_bjmp_price = #{csxBjmpPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="ckxBjmpPrice != null" >
+        ckx_bjmp_price = #{ckxBjmpPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="dqxBjmpPrice != null" >
+        dqx_bjmp_price = #{dqxBjmpPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="blxBjmpPrice != null" >
+        blx_bjmp_price = #{blxBjmpPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="hfxBjmpPrice != null" >
+        hfx_bjmp_price = #{hfxBjmpPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="ssxBjmpPrice != null" >
+        ssx_bjmp_price = #{ssxBjmpPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="zrxBjmpPrice != null" >
+        zrx_bjmp_price = #{zrxBjmpPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ordersTime != null" >
+        orders_time = #{ordersTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ordersNum != null" >
+        orders_num = #{ordersNum,jdbcType=VARCHAR},
+      </if>
+      <if test="totalPrice != null" >
+        total_price = #{totalPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="message != null" >
+        message = #{message,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null" >
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+       <if test="expireTime != null" >
+        expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="syxPolicyNo != null" >
+        syx_policy_no = #{syxPolicyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="jqxPolicyNo != null" >
+        jqx_policy_no = #{jqxPolicyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelPrice != null" >
+        vehicle_model_price = #{vehicleModelPrice,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleModelCode != null" >
+        vehicle_model_code = #{vehicleModelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleModelName != null" >
+        vehicle_model_name = #{vehicleModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="policyNo != null" >
+        policy_no = #{policyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="payStatus != null" >
+        pay_status = #{payStatus,jdbcType=INTEGER},
+      </if>
+      <if test="payTime != null" >
+        pay_time = #{payTime,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorId != null" >
+        operator_id = #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorName != null" >
+        operator_name = #{operatorName,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorTime != null" >
+        operator_time = #{operatorTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        user_type = #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="enableOrder != null" >
+        enable_order = #{enableOrder,jdbcType=BIT},
+      </if>
+      <if test="baoxianInsureInfoId != null" >
+        baoxian_insure_info_id = #{baoxianInsureInfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="policyStatus != null" >
+        policy_status = #{policyStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="jqxStartDate != null" >
+        jqx_start_date = #{jqxStartDate,jdbcType=DATE},
+      </if>
+      <if test="syxStartDate != null" >
+        syx_start_date = #{syxStartDate,jdbcType=DATE},
+      </if>
+      <if test="systemPayStatus != null" >
+        system_pay_status = #{systemPayStatus,jdbcType=INTEGER},
+      </if>
+      <if test="systemPayTime != null" >
+        system_pay_time = #{systemPayTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sjzrxPrice != null" >
+        sjzrx_price = #{sjzrxPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="sjzrxBjmpPrice != null" >
+        sjzrx_bjmp_price = #{sjzrxBjmpPrice,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateSubmitOrders" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    update baoxian_underwriting_report
+     set status = #{status,jdbcType=INTEGER},
+      orders_num = #{ordersNum,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      orders_time = #{ordersTime,jdbcType=TIMESTAMP},
+      pay_status = #{payStatus,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR} and  user_id = #{userId,jdbcType=VARCHAR} and  user_type = #{userType,jdbcType=INTEGER}
+  </update> 
+  <!-- 修改支付状态 -->
+  <update id="updatePayStatus" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    update baoxian_underwriting_report
+     set  <if test="policyStatus != null" >
+        policy_status = #{policyStatus,jdbcType=VARCHAR},
+      </if>
+      pay_status = #{payStatus,jdbcType=INTEGER}
+    where  id = #{id,jdbcType=VARCHAR} and pay_status != 1
+  </update>
+   <update id="updatePolicyStatus" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    update baoxian_underwriting_report 
+    set policy_status = #{policyStatus,jdbcType=VARCHAR},
+     <if test="expireTime != null" >
+        expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="syxPolicyNo != null" >
+        syx_policy_no = #{syxPolicyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="jqxPolicyNo != null" >
+        jqx_policy_no = #{jqxPolicyNo,jdbcType=VARCHAR},
+      </if>
+    underwriting_status = #{underwritingStatus,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR} 
+  </update>
+    <update id="updateStatus" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    update baoxian_underwriting_report 
+    set status = #{status,jdbcType=VARCHAR} 
+    where id = #{id,jdbcType=VARCHAR} 
+  </update>
+  <update id="updatePropNum" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    update baoxian_underwriting_report set  syx_prop_num = #{syxPolicyNo,jdbcType=VARCHAR}, jqx_prop_num = #{jqxPolicyNo,jdbcType=VARCHAR}
+     where id = #{id,jdbcType=VARCHAR} and channel='yangguang'
+  </update>
+  <update id="updatePolicyNo" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    update baoxian_underwriting_report set  policy_no = #{policyNo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+   <update id="updateInsuerInfoStatus" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+    update baoxian_underwriting_report set  baoxian_insure_info_id = #{baoxianInsureInfoId,jdbcType=VARCHAR}
+     where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateExpressStatus" parameterType="com.chengniu.client.pojo.BaoxianUnderwritingReport" >
+   update baoxian_underwriting_report 
+    set express_status = #{expressStatus,jdbcType=VARCHAR},baoxian_underwriting_express_id= #{baoxianUnderwritingExpressId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR} 
+  </update>
+</mapper>

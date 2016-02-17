@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_white_smoke6"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/daze_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp"
+                android:orientation="vertical">
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="常规项"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:textSize="16sp"/>
+
+                <com.kplus.car.widget.FlowLayout
+                    android:id="@+id/rlRoutineItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="13dp"
+                    android:gravity="center_vertical">
+
+                </com.kplus.car.widget.FlowLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewMoreTopLine"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/daze_darkgrey7"/>
+
+            <LinearLayout
+                android:id="@+id/llMoreItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp"
+                android:orientation="vertical">
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="更多"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:textSize="16sp"/>
+
+                <com.kplus.car.widget.FlowLayout
+                    android:id="@+id/rlMoreItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="13dp"
+                    android:gravity="center_vertical">
+                </com.kplus.car.widget.FlowLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/daze_darkgrey7"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp"
+                android:orientation="vertical">
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="自定义"
+                    android:textColor="@color/daze_darkgrey9"
+                    android:textSize="16sp"/>
+
+                <com.kplus.car.widget.FlowLayout
+                    android:id="@+id/rlCustomItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="13dp"
+                    android:gravity="center_vertical">
+
+                    <include layout="@layout/baoyang_custom_add_item"/>
+
+                </com.kplus.car.widget.FlowLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

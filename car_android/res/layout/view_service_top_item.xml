@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llCellItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/daze_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/ivServiceIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@null"/>
+
+            <!--优惠图标-->
+            <ImageView
+                android:id="@+id/ivIconFavorableTag"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_alignLeft="@+id/ivServiceIcon"
+                android:layout_alignTop="@+id/ivServiceIcon"
+                android:layout_marginLeft="40dp"
+                android:src="@null"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <com.kplus.car.widget.RegularTextView
+            android:id="@+id/tvServiceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@null"
+            android:textColor="@color/daze_black4"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+    <com.kplus.car.widget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@drawable/daze_shadow"
+        android:alpha="0.5" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="24dp"
+        android:orientation="vertical"
+        android:background="#f8f8f8" >
+        <com.kplus.car.widget.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享到"
+            style="@style/font_body1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#f8f8f8"
+            android:layout_marginTop="16dp">
+            <LinearLayout
+                android:id="@+id/toWechatmoment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="#f8f8f8">
+                <ImageView
+                    android:id="@+id/ivWechatmoment"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="6dp"
+                    android:background="@drawable/daze_button_background4"
+                    android:src="@drawable/share_wechatmoment"
+                    android:alpha="1"
+                    android:scaleType="fitXY" />
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/tvWechatmoment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朋友圈"
+                    android:layout_marginTop="8dp"
+                    style="@style/font_caption"
+                    android:alpha="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/toWechatFriend"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="#f8f8f8">
+                <ImageView
+                    android:id="@+id/ivWechatFriend"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="6dp"
+                    android:src="@drawable/share_wechatfriend"
+                    android:background="@drawable/daze_button_background4"
+                    android:alpha="1"
+                    android:scaleType="fitXY" />
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/tvWechatFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信"
+                    android:layout_marginTop="8dp"
+                    style="@style/font_caption"
+                    android:alpha="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btCancelShare"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/daze_button_background3"
+        android:text="取消"
+        style="@style/font_body1"
+        android:gravity="center"/>
+</LinearLayout>

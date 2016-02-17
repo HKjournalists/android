@@ -1,0 +1,141 @@
+﻿<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar"/>
+
+    <style name="daze_Theme.Foo" parent="android:style/Theme.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="daze_Theme.Foo1" parent="android:style/Theme.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="daze_Theme.Foo2" parent="android:style/Theme.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/daze_translucence2</item>
+    </style>
+
+    <style name="daze_Theme.Foo3" parent="android:style/Theme.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/daze_translucence2</item>
+        <item name="android:windowTitleSize">44dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+
+    <style name="daze_Theme.AnimBottom" parent="android:style/Theme.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimBottom1</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+    <style name="AnimBottom1" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+    </style>
+
+    <style name="daze_Theme.MyDialogStyleBottom" parent="android:Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="daze_Theme.MyDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <!-- 修改标题样式表 -->
+    <style name="CustomWindowTitleBackground">
+        <item name="android:background">@drawable/daze_title_bar</item>
+    </style>
+
+    <style name="title" parent="android:Theme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTitleSize">44dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+    <style name="title1" parent="android:Theme">
+        <item name="android:windowTitleSize">44dp</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+
+    <!-- 银联支付 -->
+    <style name="Theme.UPPay" parent="android:style/Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--字体  -->
+    <style name="font_title1">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/daze_black2</item>
+    </style>
+    <style name="font_title2">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/daze_black2</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="font_subhead1">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/daze_black2</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="font_subhead2">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#989898</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="font_body1">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/daze_black2</item>
+    </style>
+    <style name="font_body2">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#989898</item>
+    </style>
+    <style name="font_body3">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/daze_silver</item>
+    </style>
+    <style name="font_caption">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#989898</item>
+    </style>
+    <style name="font_caption2">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/daze_orangered5</item>
+    </style>
+
+</resources>

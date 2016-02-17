@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/daze_bgcolor" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/daze_white"
+                android:layout_marginTop="16dp" >
+                <com.kplus.car.widget.RegularTextView
+                    style="@style/font_body2"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:text="收款方式"
+                    android:paddingLeft="24dp"
+                    android:layout_centerVertical="true" />
+                <com.kplus.car.widget.RegularTextView
+                    android:id="@+id/receivables"
+                    style="@style/font_title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="银行卡"
+                    android:layout_marginLeft="96dp" />
+                <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:src="@drawable/daze_gonext_24"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="16dp" />                
+            </RelativeLayout>
+            <com.kplus.car.widget.RegularTextView
+                android:id="@+id/tvReceivablesInfo"
+                style="@style/font_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/daze_bgcolor"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="请仔细核对您的收款账号，以免给您带来不必要的损失" />
+
+            <LinearLayout
+                android:id="@+id/bankMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daze_white"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/bankUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp" >
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/userName"
+                        style="@style/font_body2"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:text="持卡人姓名" />
+                    <com.kplus.car.widget.RegularEditText
+                        android:id="@+id/userCardName"
+                        style="@style/font_body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="请填写持卡人姓名"
+                        android:textColorHint="@color/daze_darkgrey7"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/daze_bgcolor" />
+
+                <LinearLayout
+                    android:id="@+id/bankCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp" >
+
+                    <com.kplus.car.widget.RegularTextView
+                        android:id="@+id/tvNumberLabel"
+                        style="@style/font_body2"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:text="借记卡卡号 " />
+
+                    <com.kplus.car.widget.RegularEditText
+                        android:id="@+id/tvCardNumber"
+                        style="@style/font_body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="请填写借记卡卡号"
+                        android:textColorHint="@color/daze_darkgrey7"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:gravity="center_vertical" />
+                </LinearLayout> 
+                
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/daze_bgcolor" />
+                
+                <LinearLayout
+                    android:id="@+id/bankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp" >
+
+                    <com.kplus.car.widget.RegularTextView
+                        style="@style/font_body2"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:text="开户行" />
+
+                    <com.kplus.car.widget.RegularEditText
+                        android:id="@+id/userBankName"
+                        style="@style/font_body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="请填写开户银行"
+                        android:textColorHint="@color/daze_darkgrey7"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+                <LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+	                android:paddingTop="8dp"
+				    android:orientation="horizontal"
+				    android:background="@color/daze_bgcolor">
+		            <com.kplus.car.widget.RegularTextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="24dp"	                
+		                android:background="@color/daze_bgcolor"
+		                style="@style/font_caption"
+		                android:text="仅支持借记卡(储蓄卡)," />
+		            <com.kplus.car.widget.RegularTextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"	               
+		                android:background="@color/daze_bgcolor"
+		                style="@style/font_caption2"
+		                android:text="不支持信用卡" />
+	            </LinearLayout>
+                               
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ailMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daze_white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">                              
+                <LinearLayout
+                    android:id="@+id/alipayName"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"                     >
+
+                    <com.kplus.car.widget.RegularTextView
+                        style="@style/font_body2"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:text="真实姓名" />
+
+                    <com.kplus.car.widget.RegularEditText
+                        android:id="@+id/userAlipayName"
+                        style="@style/font_body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="请填写您支付宝真实姓名"
+                        android:textColorHint="@color/daze_darkgrey7"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+                
+                <com.kplus.car.widget.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/daze_bgcolor" />
+                
+                <LinearLayout
+                    android:id="@+id/alipayNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp">
+                    <com.kplus.car.widget.RegularTextView
+                        style="@style/font_body2"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:text="支付宝账号" />
+
+                    <com.kplus.car.widget.RegularEditText
+                        android:id="@+id/userAlipayNumber"
+                        style="@style/font_body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="请填写您的支付宝账号"
+                        android:textColorHint="@color/daze_darkgrey7"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+            </LinearLayout>
+			
+            <Button
+                android:id="@+id/orderButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/daze_btn_bg"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/daze_textcolor2"
+                android:textSize="13sp"
+                android:text="提交" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/daze_card_select"/>
+</RelativeLayout>
